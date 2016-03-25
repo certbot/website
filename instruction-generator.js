@@ -99,8 +99,12 @@ print_manual_getting_started() {
 }
 
 print_developer_getting_started() {
-    
-    
+    if (input.webserver == "apache")
+        return iprint(strings.dev_apache)
+    else if (input.webserver == "nginx")
+        return iprint(strings.dev)
+    else
+        return iprint(strings.dev)
 }
 
 strings {
@@ -109,6 +113,9 @@ strings {
         auto: "/path/to/certbot-auto"
     },
     
+    dev_apache:
+        "To run the client with apache you'll run as ususal with the --apache flag. This will use apache to complete the certificate challenge as well as editing your apache config to host that certificate. If you'd like to specify apache as just your authenticator or installer use the --authenticator or --installer flags. To find all of the apache commands run with --apache --help",
+
     jessie_backports_instructions: 
         'Follow the instructions <a href="http://backports.debian.org/Instructions/">here</a> to enable the Jessie backports repo, if you have not already done so',
     
