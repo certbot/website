@@ -18,6 +18,46 @@ input_map = {
     "Debian (other)" : {
         os: "debian",
         os_version: 0,
+    },
+    "Ubuntu 16.04 (xenial)" : {
+        os: "debian",
+        os_version: 16.04
+    },
+    "Ubuntu 14.04 (trusty)" : {
+        os: "debian",
+        os_version: 14.04
+    },
+    "Ubuntu (other)" : {
+        os: debian,
+        os_version: 0
+    },
+    "Gentoo" : {
+        os: "gentoo",
+        os_version: 0
+    },
+    "CentOS/RHEL 6" : {
+        os: "centos",
+        os_version: 6
+    },
+    "CentOS/RHEL 7" : {
+        os: "centos",
+        os_version: 7
+    },
+    "FreeBSD 9" : {
+        os: "bsd",
+        os_version: 9
+    },
+    "FreeBSD 10" : {
+        os: "bsd",
+        os_version: 10
+    },
+    "Mac OS X" : {
+        os: "macos",
+        os_version: 10
+    },
+    "A generic Python environment" : {
+        os: "python",
+        os_version: 0
     }
 }
 out = "";
