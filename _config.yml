@@ -13,6 +13,11 @@ collections:
 - faq_entries
 exclude:
 - README.md
+- package.json
+- node_modules
+- gulpfile.js
+keep_files:
+- css
 
 # Build settings
 markdown: kramdown
