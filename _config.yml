@@ -11,6 +11,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 collections:
 - faq_entries
+exclude:
+- README.md
 
 # Build settings
 markdown: kramdown
