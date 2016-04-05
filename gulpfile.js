@@ -1,17 +1,28 @@
 'use strict';
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const child = require('child_process');
-const gutil = require('gulp-util');
-const browserSync = require('browser-sync').create();
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var globbing = require('gulp-css-globbing');
+var child = require('child_process');
+var gutil = require('gulp-util');
+var browserSync = require('browser-sync').create();
 
-const sassFiles = '_sass/**/*.?(s)css';
-const siteRoot = '_site';
+var sassFiles = '_sass/**/*.?(s)css';
+var siteRoot = '_site';
 
 gulp.task('css', () => {
   gulp.src(sassFiles)
-    .pipe(sass())
-    .pipe(gulp.dest('_site/css'));
+    .pipe(sourcemaps.init())
+    .pipe(globbing({
+        extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+       browsers: ['last 2 version']
+    }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(siteRoot + '/css'));
 });
 
 gulp.task('jekyll', (done) => {
