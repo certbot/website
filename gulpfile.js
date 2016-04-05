@@ -1,37 +1,45 @@
 'use strict';
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var globbing = require('gulp-css-globbing');
-var child = require('child_process');
-var gutil = require('gulp-util');
-var browserSync = require('browser-sync').create();
 
-var sassFiles = '_sass/**/*.?(s)css';
-var siteRoot = '_site';
+var gulp = require('gulp'),
+    gulpif = require('gulp-if'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+    globbing = require('gulp-css-globbing'),
+    child = require('child_process'),
+    gutil = require('gulp-util'),
+    browserSync = require('browser-sync').create();
+
+var sassFiles = '_sass/**/*.?(s)css',
+    siteRoot = '_site';
+
+// @TODO: read from an environment variable.
+var isProduction = false;
 
 gulp.task('css', () => {
   gulp.src(sassFiles)
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!isProduction, sourcemaps.init()))
     .pipe(globbing({
         extensions: ['.scss']
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-       browsers: ['last 2 version']
+        browsers: ['last 2 version']
     }))
-    .pipe(sourcemaps.write('.'))
+    .pipe(gulpif(!isProduction, sourcemaps.write('.')))
     .pipe(gulp.dest(siteRoot + '/css'));
 });
 
-gulp.task('jekyll', (done) => {
+gulp.task('jekyll:watch', () => {
   return child.spawn('jekyll', ['build',
     '--watch',
-    '--incremental',
-    '--drafts'],
-    {stdio: 'inherit'})
-    .on('close', done);
+    '--incremental'],
+    {stdio: 'inherit'});
+});
+
+gulp.task('jekyll:build', () => {
+  return child.spawn('jekyll', ['build'],
+    {stdio: 'inherit'});
 });
 
 gulp.task('serve', () => {
@@ -49,4 +57,5 @@ gulp.task('serve', () => {
   gulp.watch(sassFiles, ['css']);
 });
 
-gulp.task('default', ['css', 'jekyll', 'serve']);
+gulp.task('watch', ['css', 'jekyll:watch', 'serve']);
+gulp.task('build', ['css', 'jekyll:build']);
