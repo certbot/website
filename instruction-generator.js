@@ -83,7 +83,7 @@ print_install_instructions = function() {
     if (input.usecase == "developer") {
         return strings.dev_install;
     }
-    if (input.os == "debian" or input.os == "ubuntu") {
+    if (input.os == "debian" || input.os == "ubuntu") {
         return print_debian_install_instructions()
     }
     if (input.os == "python"){
@@ -95,7 +95,7 @@ print_install_instructions = function() {
     if (input.os == "bsd"){
         return print_bsd_install_instructions()
     }
-    if (input.os == "rhel" or input.os == "centos" or input.os == "fedora"){
+    if (input.os == "rhel" || input.os == "centos" || input.os == "fedora"){
         return print_rhel_install_instructions()
     }
     print_cbauto_instructions()
