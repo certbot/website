@@ -18,6 +18,7 @@ exclude:
 - gulpfile.js
 keep_files:
 - css
+- js
 
 # Build settings
 markdown: kramdown

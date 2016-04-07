@@ -1,5 +1,3 @@
-'use strict';
-
 var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     sass = require('gulp-sass'),
@@ -8,9 +6,11 @@ var gulp = require('gulp'),
     globbing = require('gulp-css-globbing'),
     child = require('child_process'),
     gutil = require('gulp-util'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    webpack = require('gulp-webpack');
 
 var sassFiles = '_sass/**/*.?(s)css',
+    jsFiles = '_scripts/**/*.js',
     siteRoot = '_site';
 
 // @TODO: read from an environment variable.
@@ -28,6 +28,12 @@ gulp.task('css', () => {
     }))
     .pipe(gulpif(!isProduction, sourcemaps.write('.')))
     .pipe(gulp.dest(siteRoot + '/css'));
+});
+
+gulp.task('js', (callback) => {
+  return gulp.src(jsFiles)
+    .pipe(webpack())
+    .pipe(gulp.dest(siteRoot+'/js'));
 });
 
 gulp.task('jekyll:watch', () => {
@@ -55,7 +61,8 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(sassFiles, ['css']);
+  gulp.watch(jsFiles, ['js']);
 });
 
-gulp.task('watch', ['css', 'jekyll:watch', 'serve']);
-gulp.task('build', ['css', 'jekyll:build']);
+gulp.task('watch', ['css', 'js', 'jekyll:watch', 'serve']);
+gulp.task('build', ['css', 'js', 'jekyll:build']);
