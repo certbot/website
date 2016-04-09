@@ -1,0 +1,56 @@
+<html>
+<head>
+    <script src="mustache.js"></script>
+    <script src="instruction-generator.js"></script>
+    <script type="text/javascript">
+        function get_selected_text(id) {
+            return document.getElementById(id).selectedOptions[0].text
+        }
+
+        function get_instructions() {
+            var selected_os = os_map[get_selected_text("os-select")]
+
+            input = {
+                os : selected_os.os,
+                os_version : selected_os.os_version,
+                webserver : get_selected_text("server-select"),
+                usecase : get_selected_text("usecase-select"),
+            }
+
+            try {
+                print_help()
+            }
+            catch(err) {
+                out = "Error generating requested help"
+            }
+
+            document.getElementById("instructions").innerHTML = out
+            out = ""
+        }
+
+        function setup_select(select_id, options) {
+            var select = document.getElementById(select_id)
+            options.forEach(function (item, idx, arr) {
+                select.options.add(new Option(item))
+            })
+            select.onchange = get_instructions
+        }
+
+        function setup() {
+            setup_select("os-select", Object.keys(os_map))
+            setup_select("server-select", known_webservers)
+            setup_select("usecase-select", usecases)
+            get_instructions()
+        }
+    </script>
+</head>
+<body onload="setup()">
+    <select id="os-select">
+    </select>
+    <select id="server-select">
+    </select>
+    <select id="usecase-select">
+    </select>
+    <p id=instructions></p>
+</body>
+</html>
