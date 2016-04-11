@@ -32,7 +32,12 @@ gulp.task('css', () => {
 
 gulp.task('js', (callback) => {
   return gulp.src(jsFiles)
-    .pipe(webpack())
+    .pipe(webpack({
+      output: {
+        filename: 'main.js',
+      },
+      devtool: 'source-map'
+    }))
     .pipe(gulp.dest(siteRoot+'/js'));
 });
 
