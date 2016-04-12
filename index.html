@@ -1,12 +1,22 @@
 ---
 layout: default
 js:
-- instructions
+- instruction-widget
 ---
 
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
+
+  <div class=instruction-widget>
+    <select id="os-select">
+    </select>
+    <select id="server-select">
+    </select>
+    <select id="usecase-select">
+    </select>
+    <p id=instructions></p>
+  </div>
 
   <ul class="post-list">
     {% for post in site.posts %}
