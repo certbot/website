@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     webpack = require('gulp-webpack');
 
 var sassFiles = '_sass/**/*.?(s)css',
-    jsFiles = '_scripts/**/*.js',
+    jsFiles = '_scripts/*.js',
     siteRoot = '_site';
 
 // @TODO: read from an environment variable.
@@ -36,7 +36,12 @@ gulp.task('js', (callback) => {
       output: {
         filename: 'main.js',
       },
-      devtool: 'source-map'
+      devtool: 'source-map',
+      module: {
+        loaders: [
+          {test: /\.json$/, loader: 'json'}
+        ]
+      }
     }))
     .pipe(gulp.dest(siteRoot+'/js'));
 });
