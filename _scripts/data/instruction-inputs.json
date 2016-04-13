@@ -1,0 +1,71 @@
+{
+    "webservers": {
+        "Apache": "apache",
+        "Nginx": "nginx",
+        "Haproxy": "haproxy",
+        "plesk": "plesk"
+    },
+    "use_cases": {
+        "Automated": "automated",
+        "Manual": "manual",
+        "Developer": "developer"
+    },
+    "operating_systems": {
+        "Debian 7 (wheezy)" : {
+            "distro": "debian",
+            "version": "7"
+        },
+        "Debian 8 (jessie)" : {
+            "distro": "debian",
+            "version": "8"
+        },
+        "Debian testing/unstable" : {
+             "distro": "debian",
+             "version": "9"
+        },
+        "Debian (other)" : {
+            "distro": "debian",
+            "version": "0"
+        },
+        "Ubuntu 16.04 (xenial)" : {
+            "distro": "ubuntu",
+            "version": "16.04"
+        },
+        "Ubuntu 14.04 (trusty)" : {
+            "distro": "ubuntu",
+            "version": "14.04"
+        },
+        "Ubuntu (other)" : {
+            "distro": "ububtu",
+            "version": "0"
+        },
+        "Gentoo" : {
+            "distro": "gentoo",
+            "version": "0"
+        },
+        "CentOS/RHEL 6" : {
+            "distro": "centos",
+            "version": "6"
+        },
+        "CentOS/RHEL 7" : {
+            "distro": "centos",
+            "version": "7"
+        },
+        "FreeBSD 9" : {
+            "distro": "bsd",
+            "version": "9"
+        },
+        "FreeBSD 10" : {
+            "distro": "bsd",
+            "version": "10"
+        },
+        "Mac OS X" : {
+            "distro": "macos",
+            "version": "10"
+        },
+        "A generic Python environment" : {
+            "distro": "python",
+            "version": "0"
+        }
+    }
+}
