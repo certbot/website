@@ -1,4 +1,4 @@
-var Mustache = require('mustache');
+var _ = require('lodash');
 var inputs = require("./data/instruction-inputs.json");
 var strings = require("./data/instruction-strings.json");
 
@@ -11,7 +11,7 @@ module.exports = (function() {
 
     iprint = function(s, dict={}) {
         dict.cmd = command;
-        out = out + Mustache.render(s, dict);
+        out = out + _.template(s, dict)();
         return out;
     }
 
