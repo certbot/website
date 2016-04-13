@@ -1,5 +1,6 @@
 var Mustache = require('mustache');
-var os_map = require("./data/os_map.json");
+var os_map = require("./data/os-map.json");
+var strings = require("./data/instruction-strings.json");
 
 module.exports = (function() {
     // JSON blobs:
@@ -15,44 +16,6 @@ module.exports = (function() {
         dict.cmd = command;
         out = out + Mustache.render(s, dict);
         return out;
-    }
-
-    strings = {
-        base_command: {
-            packaged: "certbot",
-            auto: "/path/to/certbot-auto"
-        },
-
-        dev_apache:
-            "To run the client with apache you'll run as ususal with the --apache flag. This will use apache to complete the certificate challenge as well as editing your apache config to host that certificate. If you'd like to specify apache as just your authenticator or installer use the --authenticator or --installer flags. To find all of the apache commands run with --apache --help",
-
-        jessie_backports_instructions:
-            'Follow the instructions <a href="http://backports.debian.org/Instructions/">here</a> to enable the Jessie backports repo, if you have not already done so',
-
-        dev_install:
-            `Running the client in developer mode from your local tree is a little different than running <tt>letsencrypt-auto</tt>. To get set up, do these things once:
-
-    <pre>
-    git clone https://github.com/certbot/certbot
-    cd cerbot
-    ./certbot-auto-source/cerbot-auto --os-packages-only
-    ./tools/venv.sh
-    </pre>
-
-    Then in each shell where you’re working on the client, do:
-
-    <pre>source ./venv/bin/activate</pre>`,
-
-        thirdparty_plugin_note: 'There is a <a href="https://letsencrypt.readthedocs.org/en/latest/using.html#plugins">third party plugin</a> that adds support for {{PLUGIN}}; it\'s not officially supported by the CertBot team yet, but may work for you!',
-        manual:
-            "certonly --non-interactive --webroot -w /var/www/example/ -d example.com,www.example.com -w /var/www/other -d other.example.net",
-        packages: {
-            debian: {
-                apache : "certbot python-certbot-nginx",
-                nginx : "certbot python-certbot-apache",
-                other : "certbot"
-            }
-        }
     }
 
     command = strings.cb_cmd;  // default, but can be changed by print_cbauto_instructions
