@@ -26,15 +26,15 @@ InstructionWidget = {
       usecase: this.get_selected_text("usecase-select"),
     }
 
+    var out = "";
     try {
-      generator.print_help()
+      out = generator.print_help();
     }
     catch(err) {
       out = "Error generating requested help"
     }
 
     document.getElementById("instructions").innerHTML = out
-    out = ""
   },
 
   setup_select: function(select_id, options) {
