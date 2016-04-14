@@ -39,7 +39,8 @@ gulp.task('js', (callback) => {
       devtool: 'source-map',
       module: {
         loaders: [
-          {test: /\.json$/, loader: 'json'}
+          {test: /\.json$/, loader: 'json'},
+          {test: /\.html$/, loader: 'mustache'}
         ]
       }
     }))

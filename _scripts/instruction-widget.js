@@ -1,13 +1,14 @@
 var $ = require('jquery');
 var _ = require('lodash');
 var generator = require('./instruction-generator');
-var inputs = require('./data/instruction-inputs.json')
+var inputs = require('./data/instruction-inputs.json');
+
+// Templates
+var template_select = require('./templates/instruction-select.html');
 
 InstructionWidget = {
   init: function() {
-    this.setup_select("os-select", _.keys(inputs.operating_systems))
-    this.setup_select("server-select", _.keys(inputs.webservers))
-    this.setup_select("usecase-select", _.keys(inputs.use_cases))
+    this.render_select();
     this.get_instructions()
   },
 
@@ -37,12 +38,15 @@ InstructionWidget = {
     document.getElementById("instructions").innerHTML = out
   },
 
-  setup_select: function(select_id, options) {
-    var select = document.getElementById(select_id)
-    options.forEach(function (item, idx, arr) {
-      select.options.add(new Option(item))
-    })
-    select.onchange = function() {
+  render_select: function(select_id, options) {
+    var widget = $(".instruction-widget");
+    var rendered = template_select({
+      operating_systems: _.keys(inputs.operating_systems),
+      webservers: _.keys(inputs.webservers),
+      use_cases: _.keys(inputs.use_cases)
+    });
+    widget.html(rendered);
+    widget.onchange = function() {
       InstructionWidget.get_instructions()
     }
   }
