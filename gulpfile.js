@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     webpack = require('gulp-webpack');
 
 var sassFiles = '_sass/**/*.?(s)css',
-    jsFiles = '_scripts/*.js',
+    jsFiles = '_scripts/**/*',
     siteRoot = '_site';
 
 // @TODO: read from an environment variable.
@@ -33,6 +33,7 @@ gulp.task('css', () => {
 gulp.task('js', (callback) => {
   return gulp.src(jsFiles)
     .pipe(webpack({
+      entry: ['./_scripts/instruction-widget'],
       output: {
         filename: 'main.js',
       },

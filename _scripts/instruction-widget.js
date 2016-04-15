@@ -5,11 +5,12 @@ var inputs = require('./data/instruction-inputs.json');
 
 // Templates
 var template_select = require('./templates/instruction-select.html');
+var template_instructions = require('./templates/instructions.html');
 
 InstructionWidget = {
   init: function() {
     this.render_select();
-    this.get_instructions()
+    this.render_instructions();
   },
 
   get_selected_text: function(id) {
@@ -38,7 +39,7 @@ InstructionWidget = {
     document.getElementById("instructions").innerHTML = out
   },
 
-  render_select: function(select_id, options) {
+  render_select: function() {
     var widget = $(".instruction-widget");
     var rendered = template_select({
       operating_systems: _.keys(inputs.operating_systems),
@@ -49,7 +50,14 @@ InstructionWidget = {
     widget.onchange = function() {
       InstructionWidget.get_instructions()
     }
+  },
+
+  render_instructions: function(output) {
+    var target = $(".instructions");
+    var rendered = template_instructions({});
+    target.html(rendered);
   }
+
 }
 
 $('document').ready(function() {
