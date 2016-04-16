@@ -1,0 +1,21 @@
+<p>
+  Running the client in developer mode from your local tree is a little different than running <tt>letsencrypt-auto</tt>.
+<p>
+
+<p>
+  To get set up, do these things once:
+</p>
+
+<pre>
+  git clone https://github.com/certbot/certbot\ncd cerbot
+  ./certbot-auto-source/cerbot-auto --os-packages-only
+  ./tools/venv.sh
+</pre>
+
+<p>
+  Then in each shell where you’re working on the client, do:
+</p>
+
+<pre>
+  source ./venv/bin/activate
+</pre>

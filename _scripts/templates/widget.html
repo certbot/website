@@ -1,0 +1,37 @@
+<div class=instruction-widget>
+  <span>I'm using</span>
+  <select id="os-select">
+    <option value="" disabled selected>Operating System</option>
+    {{#operating_systems}}
+      <option value={{distro}}-{{version}}>{{name}}</option>
+    {{/operating_systems}}
+  </select>
+
+  <span>on</span>
+  <select id="server-select">
+    <option value="" disabled selected>Webserver</option>
+    {{#webservers}}
+      <option value="{{id}}">{{name}}</option>
+    {{/webservers}}
+  </select>
+
+  <span>Use case:</span>
+  <select id="usecase-select">
+    <option value="" disabled selected>Use case</option>
+    {{#use_cases}}
+      <option value="{{id}}">{{name}}</option>
+    {{/use_cases}}
+  </select>
+</div>
+
+<div class=instructions>
+
+  <h2>
+    Instructions
+  </h2>
+
+  <div class=content>
+    To generate instructions for certbot, determine your webserver and server operating system in the dropdown menus above.
+  </div>
+
+</div>

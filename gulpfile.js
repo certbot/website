@@ -33,7 +33,7 @@ gulp.task('css', () => {
 gulp.task('js', (callback) => {
   return gulp.src(jsFiles)
     .pipe(webpack({
-      entry: ['./_scripts/instruction-widget'],
+      entry: ['./_scripts/widget'],
       output: {
         filename: 'main.js',
       },
@@ -41,7 +41,7 @@ gulp.task('js', (callback) => {
       module: {
         loaders: [
           {test: /\.json$/, loader: 'json'},
-          {test: /\.html$/, loader: 'mustache'}
+          {test: /\.html$/, loader: 'mustache?noShortcut'}
         ]
       }
     }))

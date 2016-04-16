@@ -1,0 +1,13 @@
+<p>
+  Run these steps to install the certbot client.
+</p>
+
+{{#backports_flag}}
+  <p>
+    Follow the instructions <a href='http://backports.debian.org/Instructions/'>here</a> to enable the Jessie backports repo, if you have not already done so
+  </p>
+{{/backports_flag}}
+
+<pre>
+  apt-get install {{package}} {{backports_flag}}
+</pre>

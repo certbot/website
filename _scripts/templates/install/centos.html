@@ -1,0 +1,10 @@
+  <pre>
+  setup = "yum install epel-release\n"
+  {{#update_python}}
+  setup += "rpm -ivh https://rhel6.iuscommunity.org/ius-release.rpm\n"
+  setup += "yum --enablerepo=ius install git python27 python27-devel python27-pip python27-setuptools python27-virtualenv -y\n"
+  {{/update_python}}
+  yum install git
+  </pre>
+
+  {{> auto}}
