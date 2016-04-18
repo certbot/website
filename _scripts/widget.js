@@ -1,5 +1,5 @@
 $ = require('jquery');
-var instructions = require('./instructions');
+var Instructions = require('./instructions');
 
 // Json blobs
 var inputs = require('./data/instruction-inputs.json');
@@ -38,7 +38,7 @@ InstructionWidget = {
     var input = this.get_input();
     if (input) {
       var target = $(".instructions .content");
-      target.html(instructions.generate(input));
+      target.html(Instructions().generate(input));
     }
   },
 

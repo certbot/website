@@ -1,4 +1,4 @@
-module.exports = (function() {
+module.exports = function() {
     generate = function() {
         return "";
     };
@@ -39,4 +39,4 @@ module.exports = (function() {
     return {
         generate: generate
     };
-})();
+};

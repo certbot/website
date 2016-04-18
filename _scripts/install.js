@@ -1,17 +1,10 @@
-module.exports = (function() {
+module.exports = function() {
 
   var context = {};
   var template = "base";
   var partials = {};
 
-  init = function() {
-    context = {};
-    template = "base";
-    partials = {};
-  }
-
   generate = function(parent_context) {
-    init();
     context = parent_context;
 
     if ((context.distro == "debian" && context.version > 7) ||
@@ -91,4 +84,4 @@ module.exports = (function() {
     generate: generate
   };
 
-})();
+};
