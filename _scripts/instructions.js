@@ -7,25 +7,27 @@ var GetStarted = require("./get-started.js");
 
 module.exports = function() {
 
-    context = {
-        base_command: "certbot",
-        package_manager: "",
-        package: "certbot",
-        install_flags: "",
-        plugin: ""
-    };
+  context = {
+    base_command: "certbot",
+    package_manager: "",
+    package: "certbot",
+    install_flags: "",
+    plugin: ""
+  };
 
-    generate = function(input) {
-        // Add user inputs to the context:
-        // distro, version, webserver, and use case.
-        $.extend(context, input);
+  generate = function(input) {
+    // Add user inputs to the context:
+    // distro, version, webserver, and use case.
+    $.extend(context, input);
 
-        install_html = Install().generate(context);
-        started_html = GetStarted().generate(context);
-        return install_html + started_html;
-    };
+    install_html = Install().generate(context);
+    started_html = GetStarted().generate(context);
 
-    return {
-        generate: generate
-    };
+    // @todo: render instructions into a tabbed layout here.
+    return install_html + started_html;
+  };
+
+  return {
+    generate: generate
+  };
 };
