@@ -1,17 +1,31 @@
+/**
+ * Generates installation instructions.
+ */
+
 module.exports = function() {
 
+  var TEMPLATE_PATH = './templates/install/';
+
+  // Name of the install template to use.
+  var template = "";
+  // Arguments to the template.
   var context = {};
-  var template = "base";
   var partials = {};
 
+  /**
+   * @param {object} context - the template context so far.
+   * @returns {string} html install instructions.
+   */
   generate = function(parent_context) {
     context = parent_context;
 
+    // Each case listed here should map to a template.
+    // They don't necessarily need to map to distros.
     if ((context.distro == "debian" && context.version > 7) ||
         (context.distro == "ubuntu" && context.version > 15.10)) {
       debian_install();
     }
-    // Implement or complete these:
+    // @todo: Implement or complete these.
     // else if (context.distro == "python"){
     //   return pip_install();
     // }
@@ -27,10 +41,15 @@ module.exports = function() {
       auto_install();
     }
 
-    template = require('./templates/install/' + template + '.html');
+    // Load and render the selected template.
+    template = require(TEMPLATE_PATH + template + '.html');
     return template.render(context, partials);
   }
 
+  /**
+   * Install methods set a template and the context and partials
+   * associated with that template.
+   */
   centos_install = function() {
     template = "centos";
 
@@ -38,8 +57,9 @@ module.exports = function() {
     if (context.version < 7) {
       context.update_python = true;
     }
-    // Include auto-install template as a subtemplate.
-    partials.auto = require('./templates/install/auto.html');
+
+    // Include auto-install instructions as a subtemplate.
+    partials.auto = require(TEMPLATE_PATH + "auto.html");
   }
 
   debian_install = function() {
