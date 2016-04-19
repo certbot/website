@@ -48,11 +48,12 @@ gulp.task('js', (callback) => {
     .pipe(gulp.dest(siteRoot+'/js'));
 });
 
-gulp.task('jekyll:watch', () => {
+gulp.task('jekyll:watch', (done) => {
   return child.spawn('jekyll', ['build',
     '--watch',
     '--incremental'],
-    {stdio: 'inherit'});
+    {stdio: 'inherit'})
+    .on('close', done);
 });
 
 gulp.task('jekyll:build', () => {
