@@ -5,7 +5,7 @@ Website for EFF's CertBot project. Uses Jekyll for static site generation.
 ## Getting Started
 
 ### Install
-1. Install `ruby`, `node`, and `npm`.
+1. Install `ruby 2.0+`, `node`, and `npm 2.0+`.
 2. `gem install jekyll` (requires v3.0 or higher)
 3. `sudo npm install gulp -g`
 4. `npm install`
