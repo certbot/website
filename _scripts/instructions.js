@@ -15,7 +15,7 @@ module.exports = function() {
 
   build = function(input) {
     // Add user inputs to the context:
-    // distro, version, webserver, and use case.
+    // distro, version and webserver.
     $.extend(context, input);
 
     context.advanced = false;

@@ -22,14 +22,12 @@ InstructionWidget = {
     }
 
     var webserver = $("#server-select").val();
-    var use_case = $("#usecase-select").val();
 
-    if (distro && version && webserver && use_case) {
+    if (distro && version && webserver) {
       return {
         distro: distro,
         version: version,
         webserver: webserver,
-        use_case: use_case
       }
     }
   },
@@ -50,7 +48,6 @@ InstructionWidget = {
     var rendered = template_select.render({
       operating_systems: inputs.operating_systems,
       webservers: inputs.webservers,
-      use_cases: inputs.use_cases
     });
     widget.html(rendered);
     widget.on("change", function() {

@@ -17,20 +17,6 @@
             "id": "plesk"
         }
     ],
-    "use_cases": [
-        {
-            "name": "Automated",
-            "id": "automated"
-        },
-        {
-            "name": "Manual",
-            "id": "manual"
-        },
-        {
-            "name": "Developer",
-            "id": "developer"
-        }
-    ],
     "operating_systems": [
         {
             "name": "Debian 7 (wheezy)",
