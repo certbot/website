@@ -13,13 +13,10 @@ InstructionWidget = {
   },
 
   get_input: function() {
-    // @TODO: store version as data attribute.
-    var os_attrs = $("#os-select").val();
-    if (os_attrs && os_attrs.split("-").length == 2) {
-      var os_attrs = os_attrs.split("-");
-      var distro = os_attrs[0];
-      var version = os_attrs[1];
-    }
+    // OS version is stored as a data attribute on the select option
+    var os_select = $("#os-select");
+    var distro = os_select.val();
+    var version = os_select.find('option:selected').data('version');
 
     var webserver = $("#server-select").val();
 
