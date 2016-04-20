@@ -13,18 +13,18 @@ module.exports = function() {
     package: "certbot",
   };
 
-  generate = function(input) {
+  build = function(input) {
     // Add user inputs to the context:
     // distro, version, webserver, and use case.
     $.extend(context, input);
 
     context.advanced = false;
-    var automated_install_html = Install(context).generate();
-    var automated_started_html = GetStarted(context).generate();
+    var automated_install_html = Install(context).build();
+    var automated_started_html = GetStarted(context).build();
 
     context.advanced = true;
-    var advanced_install_html = Install(context).generate();
-    var advanced_started_html = GetStarted(context).generate();
+    var advanced_install_html = Install(context).build();
+    var advanced_started_html = GetStarted(context).build();
 
     // @todo: render instructions into a tabbed layout here.
     var template = require("./templates/instructions.html")
@@ -38,6 +38,6 @@ module.exports = function() {
   };
 
   return {
-    generate: generate
+    build: build
   };
 };

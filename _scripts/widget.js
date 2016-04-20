@@ -38,7 +38,7 @@ InstructionWidget = {
     var input = this.get_input();
     if (input) {
       var target = $(".instructions .content");
-      target.html(Instructions().generate(input));
+      target.html(Instructions().build(input));
     }
     $('.tab').on("click", function() {
       $('.instruction-pane').toggle();

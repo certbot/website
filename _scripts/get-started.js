@@ -1,5 +1,5 @@
 module.exports = function() {
-    generate = function() {
+    build = function() {
         return "";
     };
 
@@ -37,6 +37,6 @@ module.exports = function() {
     }
 
     return {
-        generate: generate
+        build: build
     };
 };

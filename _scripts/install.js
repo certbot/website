@@ -1,21 +1,25 @@
 /**
  * Generates installation instructions.
+ *
+ * @param {object} context: data needed to render the template, including:
+ *    {string} context.distro: os distro input by user
+ *    {string} context.version: is version input by user
+ *    {string} context.webserver: webserver input by user
+ *    {boolean} context.advanced: render advanced instructions if true
  */
-
 module.exports = function(context) {
-
   var TEMPLATE_PATH = './templates/install/';
 
   // Name of the install template to use.
   var template = "";
   // Subtemplates to render inside the main template.
+  // @see https://github.com/janl/mustache.js/#partials
   var partials = {};
 
   /**
-   * @param {object} context - the template context so far.
-   * @returns {string} html install instructions.
+   * Returns an html string of install instructions.
    */
-  generate = function() {
+  build = function() {
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -99,7 +103,7 @@ module.exports = function(context) {
   }
 
   return {
-    generate: generate
+    build: build
   };
 
 };
