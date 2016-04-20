@@ -7,12 +7,10 @@ var GetStarted = require("./get-started.js");
 
 module.exports = function() {
 
-  context = {
+  // Set some defaults.
+  var context = {
     base_command: "certbot",
-    package_manager: "",
     package: "certbot",
-    install_flags: "",
-    plugin: ""
   };
 
   generate = function(input) {
@@ -20,11 +18,23 @@ module.exports = function() {
     // distro, version, webserver, and use case.
     $.extend(context, input);
 
-    install_html = Install().generate(context);
-    started_html = GetStarted().generate(context);
+    context.advanced = false;
+    var automated_install_html = Install(context).generate();
+    var automated_started_html = GetStarted(context).generate();
+
+    context.advanced = true;
+    var advanced_install_html = Install(context).generate();
+    var advanced_started_html = GetStarted(context).generate();
 
     // @todo: render instructions into a tabbed layout here.
-    return install_html + started_html;
+    var template = require("./templates/instructions.html")
+    var html = template.render({
+      automated_install: automated_install_html,
+      automated_get_started: automated_started_html,
+      advanced_install: advanced_install_html,
+      advanced_get_started: advanced_started_html
+    });
+    return html;
   };
 
   return {

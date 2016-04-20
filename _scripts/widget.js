@@ -40,6 +40,9 @@ InstructionWidget = {
       var target = $(".instructions .content");
       target.html(Instructions().generate(input));
     }
+    $('.tab').on("click", function() {
+      $('.instruction-pane').toggle();
+    });
   },
 
   render: function() {
@@ -51,7 +54,7 @@ InstructionWidget = {
     });
     widget.html(rendered);
     widget.on("change", function() {
-      InstructionWidget.update_instructions()
+      InstructionWidget.update_instructions();
     });
   },
 }

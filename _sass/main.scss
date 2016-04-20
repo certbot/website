@@ -44,3 +44,8 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+// @todo: move to the appropriate file once Tribby pushes css.
+.advanced.instruction-pane {
+  display: none;
+}

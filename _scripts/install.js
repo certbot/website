@@ -2,22 +2,20 @@
  * Generates installation instructions.
  */
 
-module.exports = function() {
+module.exports = function(context) {
 
   var TEMPLATE_PATH = './templates/install/';
 
   // Name of the install template to use.
   var template = "";
-  // Arguments to the template.
-  var context = {};
+  // Subtemplates to render inside the main template.
   var partials = {};
 
   /**
    * @param {object} context - the template context so far.
    * @returns {string} html install instructions.
    */
-  generate = function(parent_context) {
-    context = parent_context;
+  generate = function() {
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -47,8 +45,8 @@ module.exports = function() {
   }
 
   /**
-   * Install methods set a template and the context and partials
-   * associated with that template.
+   * Install methods set a template as well as the
+   * context and partials associated with that template.
    */
   centos_install = function() {
     template = "centos";
