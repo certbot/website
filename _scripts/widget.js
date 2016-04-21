@@ -25,12 +25,10 @@ InstructionWidget = (function() {
 
     var webserver = $("#server-select").val();
 
-    if (distro && version && webserver) {
-      return {
-        distro: distro,
-        version: version,
-        webserver: webserver,
-      }
+    return {
+      distro: distro,
+      version: version,
+      webserver: webserver
     }
   };
 
@@ -53,7 +51,8 @@ InstructionWidget = (function() {
     });
 
     container.on("change", function() {
-      Instructions().render(get_input());
+      input = get_input();
+      Instructions().render(input);
     });
   };
 

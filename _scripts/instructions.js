@@ -19,10 +19,17 @@ module.exports = function() {
   var partials = {};
 
   html = function(input) {
-    // Add user inputs to the context:
-    // distro, version and webserver.
-    $.extend(context, input);
+    if ((input.distro == null) ||
+        (input.version == null) ||
+        (input.webserver == null)) {
+      return;
+    } else {
+      // Add user inputs to the context:
+      // distro, version and webserver.
+      $.extend(context, input);
+    }
 
+    // Generate automated and advanced instruction sets.
     $.each(['automated', 'advanced'], function(i, use_case) {
       context.advanced = use_case == 'advanced';
       partials[use_case + '_install'] = Install(context).html();
@@ -35,9 +42,9 @@ module.exports = function() {
   };
 
   render = function(input) {
-    if (input) {
+    var content = html(input);
+    if (content != null) {
       var target = $(".instructions .content");
-      var content = html(input);
       target.html(content);
     }
   }
