@@ -1,0 +1,30 @@
+{
+  "name": "Concrete",
+  "version": "0.0.1",
+  "description": "A minimal, realist front-end framework.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EFF/Tribby",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-base64": "^0.1.3",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-data": "^1.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "pug": "^2.0.0-alpha3",
+    "susy": "^2.2.12"
+  }
+}

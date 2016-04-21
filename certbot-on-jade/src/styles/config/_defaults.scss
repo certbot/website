@@ -1,0 +1,50 @@
+$default-font-size: 16px;
+$default-font-family: 'Roboto';
+$header-font-family: 'Roboto Slab';
+$alt-font-family: 'Rubik';
+
+html,body,div,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  position: relative;
+  background-color: $body-bg-color;
+}
+
+
+body,p,div{
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  font-weight: 400;
+}
+
+
+h1 {
+  font-family: $header-font-family;
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.35em;
+}
+
+h2 {
+  font-family: $header-font-family;
+  font-size: 1.7em;
+
+}
+
+h3 {
+  font-family: $header-font-family;
+  font-size: 1.4em;
+}
+
+h1,h2,h3 {
+	&.alt {
+		font-family: $alt-font-family;
+	}
+}
