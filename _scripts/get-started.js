@@ -1,5 +1,9 @@
-module.exports = function() {
-    build = function() {
+module.exports = function(context) {
+
+    var template = "";
+    var partials = {};
+
+    html = function() {
         return "";
     };
 
@@ -37,6 +41,6 @@ module.exports = function() {
     }
 
     return {
-        build: build
+        html: html
     };
 };

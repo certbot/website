@@ -1,10 +1,13 @@
-// third-party modules
 var $ = require('jquery');
 
-// custom modules
 var Install = require("./install.js");
 var GetStarted = require("./get-started.js");
 
+/**
+ * Generates Certbot installation and use instructions
+ * for both automated and advanced use cases, and
+ * renders them within a tabbed layout.
+ */
 module.exports = function() {
 
   // Set some defaults.
@@ -13,31 +16,33 @@ module.exports = function() {
     package: "certbot",
   };
 
-  build = function(input) {
+  var partials = {};
+
+  html = function(input) {
     // Add user inputs to the context:
     // distro, version and webserver.
     $.extend(context, input);
 
-    context.advanced = false;
-    var automated_install_html = Install(context).build();
-    var automated_started_html = GetStarted(context).build();
-
-    context.advanced = true;
-    var advanced_install_html = Install(context).build();
-    var advanced_started_html = GetStarted(context).build();
-
-    // @todo: render instructions into a tabbed layout here.
-    var template = require("./templates/instructions.html")
-    var html = template.render({
-      automated_install: automated_install_html,
-      automated_get_started: automated_started_html,
-      advanced_install: advanced_install_html,
-      advanced_get_started: advanced_started_html
+    $.each(['automated', 'advanced'], function(i, use_case) {
+      context.advanced = use_case == 'advanced';
+      partials[use_case + '_install'] = Install(context).html();
+      partials[use_case + '_get_started'] = GetStarted(context).html();
     });
+
+    var template = require("./templates/instructions.html")
+    var html = template.render(context, partials);
     return html;
   };
 
+  render = function(input) {
+    if (input) {
+      var target = $(".instructions .content");
+      var content = html(input);
+      target.html(content);
+    }
+  }
+
   return {
-    build: build
+    render: render
   };
 };

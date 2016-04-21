@@ -3,7 +3,7 @@
  *
  * @param {object} context: data needed to render the template, including:
  *    {string} context.distro: os distro input by user
- *    {string} context.version: is version input by user
+ *    {string} context.version: os version input by user
  *    {string} context.webserver: webserver input by user
  *    {boolean} context.advanced: render advanced instructions if true
  */
@@ -19,7 +19,7 @@ module.exports = function(context) {
   /**
    * Returns an html string of install instructions.
    */
-  build = function() {
+  html = function() {
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -103,7 +103,7 @@ module.exports = function(context) {
   }
 
   return {
-    build: build
+    html: html
   };
 
 };
