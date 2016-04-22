@@ -31,9 +31,9 @@ module.exports = function(context) {
     // else if (context.distro == "python"){
     //   return pip_install();
     // }
-    // else if (context.distro == "gentoo"){
-    //   return gentoo_install();
-    // }
+    else if (context.distro == "gentoo"){
+      gentoo_install();
+    }
     // else if (context.distro == "bsd"){
     //   return bsd_install();
     // }
@@ -82,14 +82,18 @@ module.exports = function(context) {
     }
   }
 
-  // @todo: convert to template style
   gentoo_install = function() {
-    context.package = "certbot";
+    template = "gentoo";
+
+    context.package = "letsencrypt";
     if (context.webserver == "apache") {
-      context.package = "certbot-apache";
-      context.base_command = "certbot-apache";
+      context.apache = "true";
+      context.package = "letsencrypt-apache";
     }
-    return iprint("emerge " + context.package);
+    if (context.webserver == "nginx") {
+      context.nginx = "true";
+      context.package = "letsencrypt-nginx";
+    }
   }
 
   // @todo: convert to template style
