@@ -3,10 +3,11 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$header-font-family: 'Roboto Slab';
 
 $spacing-unit:     30px;
 
@@ -76,9 +77,6 @@ $on-laptop:        800px;
 }
 
 
-body {
-    background-color: $body-bg-color;
-}
 
 .page-content  {
     @include container(100%);
@@ -94,4 +92,35 @@ body {
 
     }
 
+}
+
+
+
+html,body,div,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: $nav-height;
+  background-color: $body-bg-color;
+}
+body,p,div {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  position: relative;
+
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $header-font-family;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.35em;
 }

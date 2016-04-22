@@ -53,7 +53,7 @@ nav.main-nav {
       @include susy-breakpoint($md) {
         font-size: $base-font-size / 1.15;
       }
-      letter-spacing: 0.08em;
+      letter-spacing: 0.03em;
       font-weight: 400;
 
       &.donate {
