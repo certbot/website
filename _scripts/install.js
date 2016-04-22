@@ -34,9 +34,15 @@ module.exports = function(context) {
     else if (context.distro == "gentoo"){
       gentoo_install();
     }
-    // else if (context.distro == "bsd"){
-    //   return bsd_install();
-    // }
+    else if ((context.distro == "opbsd")||(context.distro =="freebsd")){
+      bsd_install();
+    }
+    else if (context.distro == "arch"){
+      arch_install();
+    }
+    else if (context.distro == "fedora"){
+      fedora_install();
+    }
     else if (context.distro == "centos") {
       centos_install();
     } else {
@@ -96,9 +102,25 @@ module.exports = function(context) {
     }
   }
 
+  arch_install = function() {
+    template = "arch";
+  }
+
+  fedora_install = function() {
+    template = "fedora";
+  }
   // @todo: convert to template style
   bsd_install = function() {
-    return iprint("pksg install py27-letsencrypt");
+    template = "bsd"
+
+    if (context.distro == "freebsd"){
+      context.portcommand = "py-letsencrypt";
+      context.package = "pkg install py27-letsencrypt";
+    }
+    if (context.distro == "opbsd"){
+      context.portcommand = "letsencrypt/client";
+      context.package = "pkg_add letsencrypt";
+    }
   }
 
   auto_install = function() {
