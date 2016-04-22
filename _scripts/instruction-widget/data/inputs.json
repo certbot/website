@@ -15,6 +15,10 @@
         {
             "name": "Plesk",
             "id": "plesk"
+        },
+        {
+            "name": "None of the above",
+            "id": "other"
         }
     ],
     "operating_systems": [

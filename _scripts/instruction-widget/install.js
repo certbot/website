@@ -23,7 +23,10 @@ module.exports = function(context) {
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
-    if ((context.distro == "debian" && context.version > 7) ||
+    if (context.webserver == "plesk") {
+        plugin_install();
+    }
+    else if ((context.distro == "debian" && context.version > 7) ||
         (context.distro == "ubuntu" && context.version > 15.10)) {
       debian_install();
     }
@@ -58,9 +61,15 @@ module.exports = function(context) {
    * Install methods set a template as well as the
    * context and partials associated with that template.
    */
+
+  plugin_install = function() {
+      template = "plugin";
+  }
+
   centos_install = function() {
     template = "centos";
 
+    context.base_command = "./path/to/certbot-auto";
     // from: https://digitz.org/blog/lets-encrypt-ssl-centos-7-setup/
     if (context.version < 7) {
       context.update_python = true;
@@ -79,12 +88,15 @@ module.exports = function(context) {
     }
 
     // Set package based on webserver.
+    // TODO: I don't think these packages are correct
     context.package == "certbot";
     if (context.webserver == "apache") {
       context.package = "certbot python-certbot-apache";
+      context.base_command = "certbot";
     }
     else if (context.webserver == "nginx") {
       context.package = "certbot python-certbot-nginx";
+      context.base_command = "certbot";
     }
   }
 
@@ -94,18 +106,29 @@ module.exports = function(context) {
     context.package = "letsencrypt";
     if (context.webserver == "apache") {
       context.package = "letsencrypt-apache";
+      context.base_command = "letsencrypt-apache";
     }
     if (context.webserver == "nginx") {
       context.package = "letsencrypt-nginx";
+      context.base_command = "letsencrypt-nginx";
     }
   }
 
   arch_install = function() {
     template = "arch";
+    if (context.webserver == "apache"){
+        context.package = "letsencrypt-apache";
+        context.base_command = "letsencrypt-apache";
+    } else {
+        context.package = "letsencrypt";
+        context.base_command = "letsencrypt";
+    }
   }
 
   fedora_install = function() {
     template = "fedora";
+    context.package = "letsencrypt";
+    convert.base_command = "letsencrypt";
   }
   // @todo: convert to template style
   bsd_install = function() {
@@ -114,16 +137,18 @@ module.exports = function(context) {
     if (context.distro == "freebsd"){
       context.portcommand = "py-letsencrypt";
       context.package = "pkg install py27-letsencrypt";
+      context.base_command = "py27-letsencrypt";
     }
     if (context.distro == "opbsd"){
       context.portcommand = "letsencrypt/client";
       context.package = "pkg_add letsencrypt";
+      context.base_command = "letsencrypt";
     }
   }
 
   auto_install = function() {
     template = "auto";
-    context.base_command = "certbot-auto";
+    context.base_command = "./path/to/certbot-auto";
   }
 
   return {

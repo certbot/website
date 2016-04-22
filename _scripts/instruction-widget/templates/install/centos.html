@@ -1,4 +1,8 @@
-  <pre>
+<p> You can find a great tutorial for how to set up Certbot (previously called letsencrypt) <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-7">here</a> 
+</p>
+
+{{#advanced}}
+ <pre>
   setup = "yum install epel-release\n"
   {{#update_python}}
   setup += "rpm -ivh https://rhel6.iuscommunity.org/ius-release.rpm\n"
@@ -8,3 +12,4 @@
   </pre>
 
   {{> auto}}
+{{/advanced}}
