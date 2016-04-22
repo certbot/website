@@ -67,15 +67,3 @@ nav.main-nav {
 nav.main-nav.fixed {
   position: fixed;
 }
-
-#hamburger {
-  position: absolute;
-  right: 2em;
-  display: inline-block;
-  @include susy-breakpoint($md) {
-    display: none;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-}
