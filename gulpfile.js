@@ -34,9 +34,11 @@ gulp.task('css', () => {
 gulp.task('js', (callback) => {
   return gulp.src(jsFiles)
     .pipe(webpack({
-      entry: ['./_scripts/widget'],
+      entry: {
+        main: './_scripts/main',
+        "instruction-widget": './_scripts/instruction-widget/main'},
       output: {
-        filename: 'main.js',
+        filename: '[name].js',
       },
       devtool: 'source-map',
       module: {
