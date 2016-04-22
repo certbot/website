@@ -1,0 +1,12 @@
+@import "node_modules/susy/sass/susy";
+
+@import "config/**/*.scss";
+@import "../components/**/*.scss";
+
+
+body > * :not(header,footer) {
+  @include susy-breakpoint($md) {
+    @include container(70%);
+  }
+
+}

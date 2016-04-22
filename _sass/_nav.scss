@@ -1,0 +1,81 @@
+$nav-height: 60px;
+$nav-color:  rgba(255,255,255,0.95);
+$nav-font: 'Roboto Slab';
+$nav-font-size: $base-font-size / 1.5;
+$nav-text-transform: lowercase;
+body {
+  margin-top: $nav-height;
+}
+
+
+nav.main-nav {
+
+  a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    &:visited {
+      color: inherit;
+    }
+  }
+  z-index: 2;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+  height: $nav-height;
+  background-color: $nav-color;
+  ul {
+    margin: 0;
+    padding: 0;
+    @include container($md);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0 !important;
+    list-style-type: none;
+    line-height: $nav-height;
+    li {
+      display: none;
+      @include susy-breakpoint($md) {
+        display: inline-block;
+      }
+      text-align: center;
+      text-transform: $nav-text-transform;
+      font-family: $nav-font;
+      font-size: $nav-font-size;
+      @include susy-breakpoint($md) {
+        font-size: $base-font-size / 1.15;
+      }
+      letter-spacing: 0.08em;
+      font-weight: 400;
+
+      &.donate {
+        color: $certbot-red;
+      }
+
+    }
+  }
+}
+
+nav.main-nav.fixed {
+  position: fixed;
+}
+
+#hamburger {
+  position: absolute;
+  right: 2em;
+  display: inline-block;
+  @include susy-breakpoint($md) {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
