@@ -47,7 +47,7 @@ module.exports = function() {
   render = function(input) {
     var content = html(input);
     if (content != null) {
-      var target = $(".instructions .content");
+      var target = $(".instructions.content");
       target.html(content);
     }
   }

@@ -15,6 +15,7 @@ InstructionWidget = (function() {
     container = $('.instruction-widget');
     render();
     bind_ui_actions();
+    output_container = $('.instruction-widget .content')
   }
 
   get_input = function() {
