@@ -19,6 +19,7 @@
     "json-loader": "^0.5.4",
     "loader-utils": "^0.2.14",
     "mustache-loader": "^0.3.1",
+    "susy": "^2.2.12",
     "webpack": "^1.12.15"
   },
   "dependencies": {
