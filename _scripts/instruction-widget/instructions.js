@@ -27,6 +27,9 @@ module.exports = function() {
       // Add user inputs to the context:
       // distro, version and webserver.
       $.extend(context, input);
+      // Allow templates to render instruction blocks based
+      // on a user's webserver.
+      context[input.webserver] = true;
     }
 
     // Generate automated and advanced instruction sets.

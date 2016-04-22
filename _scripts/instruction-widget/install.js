@@ -93,11 +93,11 @@ module.exports = function(context) {
 
     context.package = "letsencrypt";
     if (context.webserver == "apache") {
-      context.apache = "true";
+      // context.apache = "true";
       context.package = "letsencrypt-apache";
     }
     if (context.webserver == "nginx") {
-      context.nginx = "true";
+      // context.nginx = "true";
       context.package = "letsencrypt-nginx";
     }
   }
