@@ -1,0 +1,28 @@
+header.hero {
+
+
+  padding: 0 3em;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  @include susy-breakpoint($md) {
+    height: 65vh;
+  }
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+  background-color: #fff;
+  clear: both;
+
+  img.logo {
+    width: 80%;
+    max-width: 600px;
+    margin-top: -2em;
+    margin-bottom: 2em;
+  }
+}

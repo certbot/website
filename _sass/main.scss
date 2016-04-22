@@ -18,6 +18,18 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+
+
+$grey-cool: #f4f5f7;
+$white: #fff;
+$header-grey: #d6d6d6;
+$content-stroke: rgba(203,209,218,0.4);
+$footer-color: #363636;
+$body-bg-color: $grey-cool;
+$content-bg-color: $white;
+$certbot-red: rgba(236,28,35,1);
+
+
 $on-palm:          600px;
 $on-laptop:        800px;
 
@@ -36,16 +48,50 @@ $on-laptop:        800px;
     }
 }
 
+// @mixin susy-breakpoint($breakpoint) {
+//     @media all and (min-width: $breakpoint) {
+//         @content;
+//     }
+// }
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "../node_modules/susy/sass/susy",
+        "breakpoints",
+        "fonts",
+        "syntax-highlighting",
+        "nav",
+        "shelf",
+        "hero",
+        "footer"
 ;
 
 // @todo: move to the appropriate file once Tribby pushes css.
 .advanced.instruction-pane {
   display: none;
+}
+
+
+body {
+    background-color: $body-bg-color;
+}
+
+.page-content  {
+    @include container(100%);
+    @include susy-breakpoint($md) {
+        @include container($ph);
+    }
+    @include susy-breakpoint($lg) {
+        @include container($md);
+    }
+
+
+    .wrapper {
+
+    }
+
 }
