@@ -1,43 +1,38 @@
 module.exports = function(context) {
 
+    var TEMPLATE_PATH = './templates/getting-started/';
     var template = "";
     var partials = {};
 
     html = function() {
-        return "";
-    };
-
-    print_getting_started_instructions = function() {
-        if (input.use_case == "automated")
-            print_automated_getting_started()
-        else if (input.use_case == "manual")
-            print_manual_getting_started()
-        else if (input.use_case == "developer")
-            print_developer_getting_started()
-    }
-
-    print_automated_getting_started = function() {
-        if (input.webserver == "apache") {
-            return iprint(strings.apache_automated);
-        } else if (input.webserver == "haproxy" || input.webserver == "plesk") {
-            iprint(strings.certonly_automated);
-            context.plugin = input.webserver;
+        if (context.webserver == "apache") {
+            apache_getting_started();
+        } else if (context.webserver == "haproxy") {
+            haproxy_getting_started();
+        } else if (context.webserver == "plesk") {
+            plesk_getting_started();
         } else {
-            return iprint(strings.certonly_automated);
+            certonly_getting_started();
         }
+        template = require(TEMPLATE_PATH + template + '.html');
+        return template.render(context, partials);
     }
 
-    print_manual_getting_started = function() {
-        return iprint(strings.manual);
+    apache_getting_started = function() {
+        template = "apache";
     }
 
-    print_developer_getting_started = function() {
-        if (input.webserver == "apache")
-            return iprint(strings.dev_apache)
-        else if (input.webserver == "nginx")
-            return iprint(strings.dev)
-        else
-            return iprint(strings.dev)
+    haproxy_getting_started = function() {
+        template = "haproxy";
+        partials.certonly = require(TEMPLATE_PATH + "certonly.html");
+    }
+
+    plesk_getting_started = function() {
+        template = "plesk";
+    }
+
+    certonly_getting_started = function() {
+        template = "certonly";
     }
 
     return {

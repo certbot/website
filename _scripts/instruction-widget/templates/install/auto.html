@@ -1,1 +1,11 @@
-Cerbot auto instructions.
+<p>
+Since it doesn't seem like your operating system has a packaged version of certbot you should use our certbot-auto script to get a copy:
+</p>
+<pre>
+$ git clone https://github.com/certbot/certbot
+$ cd certbot
+$ ./certbot-auto --help
+</pre>
+<p>
+certbot-auto accepts the same flags as certbot; it installs all of its own dependencies and updates the client code automatically (but it’s comparatively slow and large in order to achieve that)
+</p>
