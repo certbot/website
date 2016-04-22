@@ -1,0 +1,31 @@
+$nav-height: 60px;
+
+nav.main-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: $nav-height;
+  // position: relative;
+  // width: 100%;
+  background-color: red;
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0 !important;
+    list-style-type: none;
+    line-height: $nav-height;
+    li {
+      text-align: center;
+      background-color: #555;
+      display: inline-block;
+      text-transform: lowercase;
+      font-family: $slab-font;
+      font-weight: 300;
+
+    }
+  }
+}
