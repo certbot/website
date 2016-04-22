@@ -27,15 +27,18 @@ gulp.task('css', () => {
         browsers: ['last 2 version']
     }))
     .pipe(gulpif(!isProduction, sourcemaps.write('.')))
-    .pipe(gulp.dest(siteRoot + '/css'));
+    .pipe(gulp.dest(siteRoot + '/css'))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('js', (callback) => {
   return gulp.src(jsFiles)
     .pipe(webpack({
-      entry: ['./_scripts/widget'],
+      entry: {
+        main: './_scripts/main',
+        "instruction-widget": './_scripts/instruction-widget/main'},
       output: {
-        filename: 'main.js',
+        filename: '[name].js',
       },
       devtool: 'source-map',
       module: {
@@ -63,7 +66,6 @@ gulp.task('jekyll:build', () => {
 
 gulp.task('serve', () => {
   browserSync.init({
-    files: [siteRoot + '/**'],
     port: 4000,
     server: {
       baseDir: siteRoot
@@ -75,6 +77,7 @@ gulp.task('serve', () => {
 
   gulp.watch(sassFiles, ['css']);
   gulp.watch(jsFiles, ['js']);
+  gulp.watch(['_site/**/*.html', '_site/**/*.js'], browserSync.reload);
 });
 
 gulp.task('watch', ['css', 'js', 'jekyll:watch', 'serve']);

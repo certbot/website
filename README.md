@@ -16,3 +16,19 @@ To *watch* for changes and reload assets as needed via BrowserSync:
 
 To *build* the site once:
 `gulp build`
+
+## Editing content
+
+### Basic pages
+Most pages can be edited as markdown files.
+
+Use `/index.html` to edit the homepage.
+Use `/[RELATIVE_URL]/index.html` to edit internal pages.
+
+### FAQ
+FAQ entries are a Jekyll collection. Add FAQ entries (question and answer pairs) as markdown files to the `_faq_entries` directory.
+
+FAQ entries require two variables to be set in the [front matter](https://jekyllrb.com/docs/frontmatter/):
+
+* title: the "Question" the FAQ entry answers
+* weight: the position of this entry on the page - lighter FAQ entries will float to the top.

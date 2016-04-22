@@ -17,20 +17,6 @@
             "id": "plesk"
         }
     ],
-    "use_cases": [
-        {
-            "name": "Automated",
-            "id": "automated"
-        },
-        {
-            "name": "Manual",
-            "id": "manual"
-        },
-        {
-            "name": "Developer",
-            "id": "developer"
-        }
-    ],
     "operating_systems": [
         {
             "name": "Debian 7 (wheezy)",
@@ -72,6 +58,16 @@
             "distro": "gentoo",
             "version": "0"
         },
+	{
+	    "name": "Arch Linux",
+            "distro": "arch",
+            "version": "0"
+	},
+	{
+            "name": "Fedora",
+            "distro": "fedora",
+            "version": "0"
+	},
         {
             "name": "CentOS/RHEL 6",
             "distro": "centos",
@@ -84,12 +80,12 @@
         },
         {
             "name": "FreeBSD 9",
-            "distro": "bsd",
+            "distro": "freebsd",
             "version": "9"
         },
         {
             "name": "FreeBSD 10",
-            "distro": "bsd",
+            "distro": "freebsd",
             "version": "10"
         },
         {

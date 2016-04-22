@@ -1,0 +1,1 @@
+// js loaded on every page goes here.

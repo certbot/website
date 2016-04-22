@@ -1,0 +1,20 @@
+<span>I'm using</span>
+<select id="os-select">
+  <option value="" disabled selected>Operating System</option>
+  {{#operating_systems}}
+    <option value={{distro}} data-version={{version}}>{{name}}</option>
+  {{/operating_systems}}
+</select>
+
+<span>on</span>
+<select id="server-select">
+  <option value="" disabled selected>Webserver</option>
+  {{#webservers}}
+    <option value="{{id}}">{{name}}</option>
+  {{/webservers}}
+</select>
+<div class=instructions>
+
+<div class=content>
+  To generate instructions for certbot, determine your webserver and server operating system in the dropdown menus above.
+</div>

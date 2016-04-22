@@ -1,21 +1,25 @@
 /**
  * Generates installation instructions.
+ *
+ * @param {object} context: data needed to render the template, including:
+ *    {string} context.distro: os distro input by user
+ *    {string} context.version: os version input by user
+ *    {string} context.webserver: webserver input by user
+ *    {boolean} context.advanced: render advanced instructions if true
  */
-
 module.exports = function(context) {
-
   var TEMPLATE_PATH = './templates/install/';
 
   // Name of the install template to use.
   var template = "";
   // Subtemplates to render inside the main template.
+  // @see https://github.com/janl/mustache.js/#partials
   var partials = {};
 
   /**
-   * @param {object} context - the template context so far.
-   * @returns {string} html install instructions.
+   * Returns an html string of install instructions.
    */
-  generate = function() {
+  html = function() {
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -27,12 +31,18 @@ module.exports = function(context) {
     // else if (context.distro == "python"){
     //   return pip_install();
     // }
-    // else if (context.distro == "gentoo"){
-    //   return gentoo_install();
-    // }
-    // else if (context.distro == "bsd"){
-    //   return bsd_install();
-    // }
+    else if (context.distro == "gentoo"){
+      gentoo_install();
+    }
+    else if ((context.distro == "opbsd")||(context.distro =="freebsd")){
+      bsd_install();
+    }
+    else if (context.distro == "arch"){
+      arch_install();
+    }
+    else if (context.distro == "fedora"){
+      fedora_install();
+    }
     else if (context.distro == "centos") {
       centos_install();
     } else {
@@ -78,19 +88,39 @@ module.exports = function(context) {
     }
   }
 
-  // @todo: convert to template style
   gentoo_install = function() {
-    context.package = "certbot";
+    template = "gentoo";
+
+    context.package = "letsencrypt";
     if (context.webserver == "apache") {
-      context.package = "certbot-apache";
-      context.base_command = "certbot-apache";
+      context.apache = "true";
+      context.package = "letsencrypt-apache";
     }
-    return iprint("emerge " + context.package);
+    if (context.webserver == "nginx") {
+      context.nginx = "true";
+      context.package = "letsencrypt-nginx";
+    }
   }
 
+  arch_install = function() {
+    template = "arch";
+  }
+
+  fedora_install = function() {
+    template = "fedora";
+  }
   // @todo: convert to template style
   bsd_install = function() {
-    return iprint("pksg install py27-letsencrypt");
+    template = "bsd"
+
+    if (context.distro == "freebsd"){
+      context.portcommand = "py-letsencrypt";
+      context.package = "pkg install py27-letsencrypt";
+    }
+    if (context.distro == "opbsd"){
+      context.portcommand = "letsencrypt/client";
+      context.package = "pkg_add letsencrypt";
+    }
   }
 
   auto_install = function() {
@@ -99,7 +129,7 @@ module.exports = function(context) {
   }
 
   return {
-    generate: generate
+    html: html
   };
 
 };
