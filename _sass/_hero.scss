@@ -1,4 +1,4 @@
-$certbot-logo: '/static/img/certbot-logo-7.png';
+$certbot-logo: 'http://placehold.it/600x300';
 
 header {
   position: relative;
@@ -6,7 +6,7 @@ header {
   width: 100%;
   height: 100vh;
   @include susy-breakpoint($md) {
-    height: 90vh;
+    height: 70vh;
   }
   overflow: hidden;
   display: flex;
@@ -23,7 +23,6 @@ header.background-image {
     background-image: url($certbot-logo);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 70%;
     background-color: #fff;
 }
 
