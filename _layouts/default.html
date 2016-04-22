@@ -4,12 +4,17 @@
   {% include head.html %}
 
   <body>
+
     {% include topnav.html %}
     {% include shelf.html %}
     {% include hero.html %}
-    
-    {{ content }}
 
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+    
     {% include footer.html %}
 
   </body>
