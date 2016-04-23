@@ -3,10 +3,12 @@
 (function() {
 
   var hamburger = document.getElementById('hamburger');
+  var close = document.getElementById('close');
 
-  hamburger.addEventListener('click',openMenu,false);
+  hamburger.addEventListener('click',toggleMenu,false);
+  close.addEventListener('click',toggleMenu,false);
 
-  function openMenu() {
+  function toggleMenu() {
     document.body.classList.toggle('active');
   }
 

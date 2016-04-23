@@ -1,5 +1,5 @@
 $menu-width: 260px;
-$sidebar-color: #545962;
+$sidebar-color: $footer-color;
 
 body {
   > * {
@@ -13,16 +13,17 @@ body.active {
   > * {
     transform: translate3d(-$menu-width, 0, 0);
   }
+
   nav {
     position: fixed;
     top: 0;
     left: 0;
- 
   }
+
 }
 
 #shelf {
-  background-color: red;
+  background-color: $sidebar-color;
   position: fixed;
   top: 0;
   right: -$menu-width;
@@ -30,15 +31,46 @@ body.active {
   z-index: 1;
   display: block;
   height: 100%;
+  ul {
+    margin-top: 2.5em;
+    margin-left: 2.5em;
+    list-style-type: none;
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  a {
+    color: rgba(255,255,255,0.9);
+    &:visited {
+      color: rgba(255,255,255,0.9);
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
+
 
 #hamburger {
   position: absolute;
-  right: 2em;
+  right: 22px;
+  top: 0px;
+  font-size: 32px;
   display: inline-block;
   @include susy-breakpoint($md) {
     display: none;
   }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#close {
+  position: absolute;
+  right: 22px;
+  top: 5px;
+  color: rgba(255,255,255,0.9);
+  font-size: 32px;
   &:hover {
     cursor: pointer;
   }
