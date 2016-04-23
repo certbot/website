@@ -5,6 +5,10 @@ select {
   height: 34px;
   text-align:center;
   appearance: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 0;
+
   option {
     text-align: left;
   }
