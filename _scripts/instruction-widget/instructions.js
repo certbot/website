@@ -22,7 +22,8 @@ module.exports = function() {
     if ((input.distro == null) ||
         (input.version == null) ||
         (input.webserver == null)) {
-      return;
+      return "To get instructions for certbot, choose your webserver " +
+        "and server operating system from the dropdown menus above.";
     } else {
       // Add user inputs to the context:
       // distro, version and webserver.

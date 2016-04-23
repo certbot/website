@@ -15,8 +15,8 @@ InstructionWidget = (function() {
     container = $('.instruction-widget');
     render();
     bind_ui_actions();
-    output_container = $('.instruction-widget .content')
     set_state_from_url();
+    Instructions().render(get_input());
   }
 
   get_input = function() {
@@ -38,8 +38,10 @@ InstructionWidget = (function() {
   set_state_from_url = function() {
     var query = window.location.search.substring(1);
     var params = parse_query_string(query);
-    $('#server-select').val(params.server).change();
-    $('#os-select').val(params.os).change();
+    if (params.server != null && params.os != null) {
+      $('#server-select').val(params.server);
+      $('#os-select').val(params.os);
+    }
   }
 
   parse_query_string = function(query) {
