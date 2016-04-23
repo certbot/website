@@ -68,7 +68,8 @@ $on-laptop:        800px;
         "nav",
         "shelf",
         "hero",
-        "footer"
+        "footer",
+        "instruction-widget"
 ;
 
 // @todo: move to the appropriate file once Tribby pushes css.
@@ -76,7 +77,17 @@ $on-laptop:        800px;
   display: none;
 }
 
+.instruction-widget  {
+  @include susy-breakpoint($md) {
+    font-size: 1.2em;
+  }
+  text-align: center;
+  select {
+    height: 30px;
+    font-size: 14px;
+  }
 
+}
 
 .page-content  {
     @include container(100%);

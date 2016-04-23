@@ -1,0 +1,28 @@
+select {
+  background: transparent;
+  width: 180px;
+  border: 1px solid $certbot-red;
+  height: 34px;
+  text-align:center;
+  appearance: none;
+  option {
+    text-align: left;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  // background: url(http://placehold.it/32x32) 96% / 15% no-repeat transparent;
+}
+
+.advanced.instruction-pane {
+  display: none;
+}
+
+.instruction-widget  {
+  @include susy-breakpoint($md) {
+    font-size: 1.2em;
+  }
+  text-align: center;
+  
+
+}
