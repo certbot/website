@@ -48,3 +48,12 @@ select {
   
 
 }
+
+h1.instruct {
+  color: $header-grey;
+}
+.instructions.content {
+  background-color: #fff;
+  border: 1px solid $content-stroke;
+  padding: 2em;
+}
