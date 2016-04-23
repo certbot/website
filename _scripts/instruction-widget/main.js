@@ -16,22 +16,45 @@ InstructionWidget = (function() {
     render();
     bind_ui_actions();
     output_container = $('.instruction-widget .content')
+    set_state_from_url();
   }
 
   get_input = function() {
-    // OS version is stored as a data attribute on the select option
-    var os_select = $("#os-select");
-    var distro = os_select.val();
+    var os_select = $('#os-select');
+    var os = os_select.val()
+    var distro = os_select.find('option:selected').data('distro');
     var version = os_select.find('option:selected').data('version');
 
     var webserver = $("#server-select").val();
 
     return {
+      os: os,
       distro: distro,
       version: version,
       webserver: webserver
     }
   };
+
+  set_state_from_url = function() {
+    var query = window.location.search.substring(1);
+    var params = parse_query_string(query);
+    $('#server-select').val(params.server).change();
+    $('#os-select').val(params.os).change();
+  }
+
+  parse_query_string = function(query) {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function(s) {
+          return decodeURIComponent(s.replace(pl, " "));
+        };
+
+    var urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+    return urlParams;
+  }
 
   render = function() {
     var template = require('./templates/widget.html');
@@ -52,7 +75,7 @@ InstructionWidget = (function() {
     });
 
     container.on("change", function() {
-      input = get_input();
+      var input = get_input();
       Instructions().render(input);
     });
   };

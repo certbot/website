@@ -24,81 +24,97 @@
     "operating_systems": [
         {
             "name": "Debian 7 (wheezy)",
+            "id": "debianwheezy",
             "distro": "debian",
             "version": "7"
         },
         {
             "name": "Debian 8 (jessie)",
+            "id": "debianjessie",
             "distro": "debian",
             "version": "8"
         },
         {
             "name": "Debian testing/unstable",
-             "distro": "debian",
-             "version": "9"
+            "id": "debiantesting",
+            "distro": "debian",
+            "version": "9"
         },
         {
             "name": "Debian (other)",
+            "id": "debianother",
             "distro": "debian",
             "version": "0"
         },
         {
             "name": "Ubuntu 16.04 (xenial)",
+            "id": "ubuntuxenial",
             "distro": "ubuntu",
             "version": "16.04"
         },
         {
             "name": "Ubuntu 14.04 (trusty)",
+            "id": "ubuntutrusty",
             "distro": "ubuntu",
             "version": "14.04"
         },
         {
             "name": "Ubuntu (other)",
+            "id": "ubuntuother",
             "distro": "ububtu",
             "version": "0"
         },
         {
             "name": "Gentoo",
+            "id": "gentoo",
             "distro": "gentoo",
             "version": "0"
         },
-	{
-	    "name": "Arch Linux",
+        {
+            "name": "Arch Linux",
+            "id": "arch",
             "distro": "arch",
             "version": "0"
-	},
-	{
+        },
+        {
             "name": "Fedora",
+            "id": "fedora",
             "distro": "fedora",
             "version": "0"
-	},
+        },
         {
             "name": "CentOS/RHEL 6",
+            "id": "centosrhel6",
             "distro": "centos",
             "version": "6"
         },
         {
             "name": "CentOS/RHEL 7",
+            "id": "centosrhel7",
             "distro": "centos",
             "version": "7"
         },
         {
             "name": "FreeBSD 9",
+            "id": "freebsd9",
             "distro": "freebsd",
             "version": "9"
         },
         {
             "name": "FreeBSD 10",
+            "id": "freebsd10",
             "distro": "freebsd",
             "version": "10"
         },
         {
             "name": "Mac OS X",
+            "id": "osx",
             "distro": "macos",
             "version": "10"
         },
         {
             "name": "A generic Python environment",
+            "id": "pip",
             "distro": "python",
             "version": "0"
         }

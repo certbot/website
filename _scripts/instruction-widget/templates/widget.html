@@ -3,7 +3,7 @@
   <optgroup>
     <option value="" disabled selected>Operating System</option>
     {{#operating_systems}}
-      <option value={{distro}} data-version={{version}}>{{name}}</option>
+      <option value={{id}} data-distro={{distro}} data-version={{version}}>{{name}}</option>
     {{/operating_systems}}
   </optgroup>
 </select>
