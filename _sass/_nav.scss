@@ -1,5 +1,6 @@
 $nav-height: 60px;
 $nav-color:  rgba(255,255,255,0.95);
+$nav-font-color: rgba(255,255,255,0.75);
 $nav-font: 'Roboto Slab';
 $nav-font-size: $base-font-size / 1.5;
 $nav-text-transform: lowercase;
@@ -43,6 +44,7 @@ nav.main-nav {
     line-height: $nav-height;
     li {
       display: none;
+      
       @include susy-breakpoint($md) {
         display: inline-block;
       }
@@ -50,6 +52,7 @@ nav.main-nav {
       text-transform: $nav-text-transform;
       font-family: $nav-font;
       font-size: $nav-font-size;
+      color: rgba(0,0,0,0.5);
       @include susy-breakpoint($md) {
         font-size: $base-font-size / 1.15;
       }
@@ -58,6 +61,25 @@ nav.main-nav {
 
       &.donate {
         color: $certbot-red;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        font-size: 1em;
+        @include susy-breakpoint($md) {
+          position: relative;
+          width: auto;
+          font-size: inherit;
+          @include susy-breakpoint($md) {
+            font-size: $base-font-size / 1.15;
+          }
+        }
+      }
+
+      &.active {
+        color: rgba(0,0,0,0.95);
       }
 
     }

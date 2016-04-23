@@ -24,6 +24,7 @@ header.hero {
     width: 90%;
     max-width: 480px;
     margin-top: -40%;
+    margin-bottom: 0.5em;
     @include susy-breakpoint($md) {
       margin-top: -5em;
       width: 520px;
@@ -46,7 +47,7 @@ header.hero {
     font-family: 'Roboto';
     font-weight: 400;
     line-height: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     @include susy-breakpoint($md) {
       font-size: 1.75em;
     }
