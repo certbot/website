@@ -10,14 +10,15 @@ body {
 }
 
 nav.main-nav {
+
   img {
     position: absolute;
     display: block;
     width: 55px;
     top: 10px;
-    left: 16px;
-
+    left: 0;
   }
+
   a {
     color: inherit;
     display: inline-block;
@@ -29,6 +30,7 @@ nav.main-nav {
       color: inherit;
     }
   }
+
   z-index: 2;
   position: relative;
   top: 0;
@@ -40,9 +42,22 @@ nav.main-nav {
 
   height: $nav-height;
   background-color: $nav-color;
+
   ul {
     padding: 0;
     @include container(40em);
+
+    @include susy-breakpoint($md) {
+      @include container(60em);
+    }
+
+    @include susy-breakpoint($lg) {
+      @include container($lg);
+      letter-spacing: 0.07em;
+      font-size: 0.9em;
+    }
+
+    
     display: flex;
     justify-content: space-around;
     margin-bottom: 0 !important;
@@ -51,14 +66,8 @@ nav.main-nav {
     font-size: 0.75em;
     letter-spacing: 0em;
 
-    @include susy-breakpoint($md) {
-      @include container(60em);
-    }
-    @include susy-breakpoint($lg) {
-      @include container($lg);
-      letter-spacing: 0.07em;
-      font-size: 0.9em;
-    }
+
+
     li {
       display: none;
 
