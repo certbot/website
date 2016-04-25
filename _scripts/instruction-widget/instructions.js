@@ -18,7 +18,7 @@ module.exports = function() {
 
   var partials = {};
 
-  html = function(input) {
+  get_partials = function(input) {
     if ((input.distro == null) ||
         (input.version == null) ||
         (input.webserver == null)) {
@@ -40,6 +40,11 @@ module.exports = function() {
       partials[use_case + '_get_started'] = GetStarted(context).html();
     });
 
+    return partials;
+  };
+
+  html = function(input) {
+    get_partials(input);
     var template = require("./templates/instructions.html")
     var html = template.render(context, partials);
     return html;
@@ -54,6 +59,7 @@ module.exports = function() {
   }
 
   return {
+    get_partials: get_partials,
     render: render
   };
 };
