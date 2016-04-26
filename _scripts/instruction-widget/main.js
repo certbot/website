@@ -9,14 +9,16 @@ var inputs = require('./data/inputs.json');
  */
 InstructionWidget = (function() {
 
-  var container;
+  var select_container;
+  var content_container;
 
   init = function() {
-    container = $('.instruction-widget');
+    select_container = $('.instruction-widget');
+    content_container = $('.instructions.content');
     render();
     bind_ui_actions();
     set_state_from_url();
-    Instructions().render(get_input());
+    Instructions().render(content_container, get_input);
   }
 
   get_input = function() {
@@ -64,7 +66,7 @@ InstructionWidget = (function() {
       operating_systems: inputs.operating_systems,
       webservers: inputs.webservers
     });
-    container.html(rendered);
+    select_container.html(rendered);
   };
 
   toggle_tabs = function() {
@@ -72,13 +74,13 @@ InstructionWidget = (function() {
   };
 
   bind_ui_actions = function() {
-    container.on("click", ".tab", function() {
+    content_container.on('click', '.tab', function() {
       toggle_tabs();
     });
 
-    container.on("change", function() {
+    select_container.on('change', function() {
       var input = get_input();
-      Instructions().render(input);
+      Instructions().render(content_container, input);
     });
   };
 

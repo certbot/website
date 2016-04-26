@@ -46,11 +46,10 @@ module.exports = function() {
     return html;
   };
 
-  render = function(input) {
+  render = function(container, input) {
     var content = html(input);
     if (content != null) {
-      var target = $(".instructions.content");
-      target.html(content);
+      container.html(content);
     }
   }
 
