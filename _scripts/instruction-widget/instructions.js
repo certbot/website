@@ -17,11 +17,9 @@ module.exports = function() {
   };
 
   get_partials = function(input) {
-    // Add user inputs to the context:
-    // distro, version and webserver.
+    // Add user inputs to the context: distro, version and webserver.
     _.extend(context, input);
-    // Allow templates to render instruction blocks based
-    // on a user's webserver.
+    // Allow templates to render instruction blocks based on a user's webserver.
     context[input.webserver] = true;
 
     // Generate automated and advanced instruction sets.
