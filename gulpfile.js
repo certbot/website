@@ -33,7 +33,10 @@ gulp.task('json-instructions', (done) => {
     require.resolve('./_scripts/instruction-widget/build-all.js'),
     function(err, factory, stats, mock_fs) {
       var buildAll = factory();
-      var json = JSON.stringify(buildAll.build(), null, 2);
+      var instructions = {
+        all: buildAll.build()
+      }
+      var json = JSON.stringify(instructions, null, 2);
       fs.writeFile('./_data/instructions.json', json, done);
     }
   );
