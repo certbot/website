@@ -1,5 +1,5 @@
 var $ = require('jquery');
-
+var _ = require('lodash');
 var Install = require("./install.js");
 var GetStarted = require("./get-started.js");
 
@@ -16,8 +16,6 @@ module.exports = function() {
     package: "certbot",
   };
 
-  var partials = {};
-
   get_partials = function(input) {
     if ((input.distro == null) ||
         (input.version == null) ||
@@ -27,14 +25,15 @@ module.exports = function() {
     } else {
       // Add user inputs to the context:
       // distro, version and webserver.
-      $.extend(context, input);
+      _.extend(context, input);
       // Allow templates to render instruction blocks based
       // on a user's webserver.
       context[input.webserver] = true;
     }
 
     // Generate automated and advanced instruction sets.
-    $.each(['automated', 'advanced'], function(i, use_case) {
+    var partials = {};
+    _.each(['automated', 'advanced'], function(use_case) {
       context.advanced = use_case == 'advanced';
       partials[use_case + '_install'] = Install(context).html();
       partials[use_case + '_get_started'] = GetStarted(context).html();
@@ -44,7 +43,7 @@ module.exports = function() {
   };
 
   html = function(input) {
-    get_partials(input);
+    var partials = get_partials(input);
     var template = require("./templates/instructions.html")
     var html = template.render(context, partials);
     return html;

@@ -7,7 +7,9 @@ var gulp = require('gulp'),
     child = require('child_process'),
     gutil = require('gulp-util'),
     browserSync = require('browser-sync').create(),
-    webpack = require('gulp-webpack');
+    webpack = require('gulp-webpack'),
+    webpackRequire = require('webpack-require'),
+    fs = require('fs');
 
 var sassFiles = '_sass/**/*.?(s)css',
     jsFiles = '_scripts/**/*',
@@ -16,8 +18,29 @@ var sassFiles = '_sass/**/*.?(s)css',
 // @TODO: read from an environment variable.
 var isProduction = false;
 
-gulp.task('css', () => {
-  gulp.src(sassFiles)
+// Write all certbot install and get started instruction sets to
+// a single json file, to be consumed by Jekyll templates.
+gulp.task('json-instructions', (done) => {
+  webpackRequire(
+    {
+      module: {
+        loaders: [
+          {test: /\.json$/, loader: 'json'},
+          {test: /\.html$/, loader: 'mustache?noShortcut'}
+        ]
+      }
+    },
+    require.resolve('./_scripts/instruction-widget/build-all.js'),
+    function(err, factory, stats, mock_fs) {
+      var buildAll = factory();
+      var json = JSON.stringify(buildAll.build(), null, 2);
+      fs.writeFile('./_data/instructions.json', json, done);
+    }
+  );
+});
+
+gulp.task('css', (done) => {
+  return gulp.src(sassFiles)
     .pipe(gulpif(!isProduction, sourcemaps.init()))
     .pipe(globbing({
         extensions: ['.scss']
@@ -31,12 +54,13 @@ gulp.task('css', () => {
     .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
-gulp.task('js', (callback) => {
+gulp.task('js', (done) => {
   return gulp.src(jsFiles)
     .pipe(webpack({
       entry: {
         main: './_scripts/main',
-        "instruction-widget": './_scripts/instruction-widget/main'},
+        "instruction-widget": './_scripts/instruction-widget/main',
+      },
       output: {
         filename: '[name].js',
       },
@@ -80,5 +104,5 @@ gulp.task('serve', () => {
   gulp.watch(['_site/**/*.html', '_site/**/*.js'], browserSync.reload);
 });
 
-gulp.task('watch', ['css', 'js', 'jekyll:watch', 'serve']);
-gulp.task('build', ['css', 'js', 'jekyll:build']);
+gulp.task('watch', ['json-instructions', 'css', 'js', 'jekyll:watch', 'serve']);
+gulp.task('build', ['json-instructions', 'css', 'js', 'jekyll:build']);
