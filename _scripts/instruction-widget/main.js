@@ -18,7 +18,7 @@ InstructionWidget = (function() {
     render();
     bind_ui_actions();
     set_state_from_url();
-    Instructions().render(content_container, get_input);
+    Instructions().render(content_container, get_input());
   }
 
   get_input = function() {
