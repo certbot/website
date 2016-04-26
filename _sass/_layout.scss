@@ -198,8 +198,9 @@
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
+    margin-bottom: $spacing-unit;
+    font-family: 'Roboto Slab';
+    color: $header-grey;
     line-height: 1;
 
     @include media-query($on-laptop) {

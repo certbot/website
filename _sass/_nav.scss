@@ -57,7 +57,7 @@ nav.main-nav {
       font-size: 0.9em;
     }
 
-    
+
     display: flex;
     justify-content: space-around;
     margin-bottom: 0 !important;
@@ -108,7 +108,7 @@ nav.main-nav {
         }
       }
 
-      &.active {
+      &.active, &:hover :not(.donate) {
         color: rgba(0,0,0,0.95);
       }
 

@@ -55,9 +55,19 @@ header.hero {
 }
 
 header.hero.subhero {
+  text-align: center;
+
   h1 {
     font-family: 'Roboto Slab';
-    font-weight: 600;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+
   }
-  height: 20vh;
+  height: 160px;
+
+  img {
+    width: 160px;
+  }
 }

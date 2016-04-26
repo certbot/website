@@ -19,7 +19,7 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-
+$link-color: rgba(64,116,142,1);
 
 $grey-cool: #f4f5f7;
 $white: #fff;
@@ -69,25 +69,10 @@ $on-laptop:        800px;
         "shelf",
         "hero",
         "footer",
-        "instruction-widget"
+        "instruction-widget",
+        "faq"
 ;
 
-// @todo: move to the appropriate file once Tribby pushes css.
-.advanced.instruction-pane {
-  display: none;
-}
-
-.instruction-widget  {
-  @include susy-breakpoint($md) {
-    font-size: 1.2em;
-  }
-  text-align: center;
-  select {
-    height: 30px;
-    font-size: 14px;
-  }
-
-}
 
 .page-content  {
     @include container(100%);
