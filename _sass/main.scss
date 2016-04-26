@@ -73,18 +73,6 @@ $on-laptop:        800px;
         "faq"
 ;
 
-.instruction-widget  {
-  @include susy-breakpoint($md) {
-    font-size: 1.2em;
-  }
-  text-align: center;
-  select {
-    height: 30px;
-    font-size: 14px;
-  }
-
-}
-
 .page-content  {
     @include container(100%);
     @include susy-breakpoint($md) {
@@ -128,4 +116,33 @@ h1 {
   text-align: center;
   margin-top: 0.25em;
   margin-bottom: 0.35em;
+}
+
+.three {
+  margin-top: 4em;
+  position: relative;
+  display: inline-block;
+
+  width: 100%;
+  text-align: center;
+  figure {
+
+    text-align: center;
+    @include span(3 of 3);
+    @include susy-breakpoint($md) {
+      @include span(1 of 3 inside no-gutters);
+    }
+    img {
+      margin: 0 auto;
+      width: 120px;
+    }
+
+    figcaption {
+      margin-top: 1em;
+      p {
+        font-size: 1em;
+        text-align: left;
+      }
+    }
+  }
 }
