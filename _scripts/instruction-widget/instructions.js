@@ -17,19 +17,12 @@ module.exports = function() {
   };
 
   get_partials = function(input) {
-    if ((input.distro == null) ||
-        (input.version == null) ||
-        (input.webserver == null)) {
-      return "To get instructions for certbot, choose your webserver " +
-        "and server operating system from the dropdown menus above.";
-    } else {
-      // Add user inputs to the context:
-      // distro, version and webserver.
-      _.extend(context, input);
-      // Allow templates to render instruction blocks based
-      // on a user's webserver.
-      context[input.webserver] = true;
-    }
+    // Add user inputs to the context:
+    // distro, version and webserver.
+    _.extend(context, input);
+    // Allow templates to render instruction blocks based
+    // on a user's webserver.
+    context[input.webserver] = true;
 
     // Generate automated and advanced instruction sets.
     var partials = {};
@@ -43,6 +36,12 @@ module.exports = function() {
   };
 
   html = function(input) {
+    if ((input.distro == null) ||
+        (input.version == null) ||
+        (input.webserver == null)) {
+      return "To get instructions for certbot, choose your webserver " +
+        "and server operating system from the dropdown menus above.";
+    }
     var partials = get_partials(input);
     var template = require("./templates/instructions.html")
     var html = template.render(context, partials);
