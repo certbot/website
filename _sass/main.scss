@@ -72,11 +72,6 @@ $on-laptop:        800px;
         "instruction-widget"
 ;
 
-// @todo: move to the appropriate file once Tribby pushes css.
-.advanced.instruction-pane {
-  display: none;
-}
-
 .instruction-widget  {
   @include susy-breakpoint($md) {
     font-size: 1.2em;
@@ -104,8 +99,6 @@ $on-laptop:        800px;
     }
 
 }
-
-
 
 html,body,div,h1,h2,h3,h4,h5,h6 {
   margin: 0;
