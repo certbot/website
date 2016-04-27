@@ -1,3 +1,8 @@
+body.faq {
+  .post-title {
+    margin-left: 30px;
+  }
+}
 .faq-toc,.faq-content {
   list-style-type: none;
   text-align: left;
@@ -12,6 +17,9 @@
       opacity: 0.8;
       &:hover {
           opacity: 1;
+      }
+      &:visited {
+        color: $link-color;
       }
     
     }
