@@ -21,7 +21,7 @@
     "loader-utils": "^0.2.14",
     "mustache-loader": "^0.3.1",
     "susy": "^2.2.12",
-    "webpack": "^1.12.15",
+    "webpack": "^1.13.0",
     "webpack-require": "0.0.16"
   },
   "dependencies": {
