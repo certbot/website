@@ -119,7 +119,8 @@ h1 {
 }
 
 .three {
-  margin-top: 4em;
+  margin-top: 3em;
+  margin-bottom: 2.5em;
   position: relative;
   display: inline-block;
 
@@ -135,6 +136,14 @@ h1 {
     img {
       margin: 0 auto;
       width: 120px;
+    }
+
+    a {
+      color: rgba(50,50,50,0.8);
+      text-decoration: none;
+      &:hover {
+       color: rgba(50,50,50,0.95);
+      }
     }
 
     figcaption {
