@@ -23,8 +23,8 @@ header.hero {
   img.logo {
     width: 90%;
     max-width: 480px;
-    margin-top: -20%;
-    padding-top: 30px;
+    margin-top: -30%;
+    padding-top: 20px;
     margin-bottom: 0.5em;
     @include susy-breakpoint($md) {
       margin-top: -5em;
