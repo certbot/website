@@ -201,7 +201,7 @@
     margin-bottom: $spacing-unit;
     font-family: 'Roboto Slab';
     font-weight: bold;
-    color: $header-grey;
+    color: $grey-title;
     line-height: 1;
 
     @include media-query($on-laptop) {
