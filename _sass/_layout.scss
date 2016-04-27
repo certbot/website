@@ -195,13 +195,15 @@
  */
 .post-header {
     margin-bottom: $spacing-unit;
+    text-align: left;
 }
 
 .post-title {
-    margin-bottom: $spacing-unit;
+    text-align: left;
+    font-size: 30px;
     font-family: 'Roboto Slab';
-    font-weight: bold;
-    color: $grey-title;
+    font-weight: 400;
+    color: $grey;
     line-height: 1;
 
     @include media-query($on-laptop) {

@@ -130,12 +130,12 @@ h1 {
 }
 
 .page-content {
-  
+
   @include container(100%);
 
   @include susy-breakpoint($md) {
-    margin-top: 4em;
-    @include container (80%);
+    margin-top: 3%;
+    @include container (95%);
   }
 
   background-color: #fff;
