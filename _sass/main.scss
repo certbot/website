@@ -12,7 +12,7 @@ $header-font-family: 'Roboto Slab';
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #ededed;
+$background-color: #fff;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -21,6 +21,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 $link-color: rgba(64,116,142,1);
 
+// rgba(64,116,142,1);
+
 $grey-title: #a3a3a3;
 $grey-bg: #ededed;
 
@@ -28,6 +30,7 @@ $grey: #A3A3A3;
 $grey-cool: #f4f5f7;
 $white: #fff;
 $header-grey: #d6d6d6;
+$header-grey: $grey-title;
 $content-stroke: rgba(203,209,218,0.4);
 $footer-color: #363636;
 $body-bg-color: $grey-cool;
@@ -122,7 +125,26 @@ h1 {
   margin-bottom: 0.35em;
 }
 
+.three .wrapper {
+  // background-color: $grey-bg;
+}
+
+.page-content {
+  
+  @include container(100%);
+
+  @include susy-breakpoint($md) {
+    margin-top: 4em;
+    @include container (80%);
+  }
+
+  background-color: #fff;
+
+}
+
+
 .three {
+
   margin-top: 3em;
   margin-bottom: 2.5em;
   position: relative;
