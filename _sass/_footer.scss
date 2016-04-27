@@ -41,7 +41,7 @@ footer ul {
     text-transform: lowercase;
     display: inline-block;
     text-decoration: none;
-    color: #ccc;
+    color: #ccc !important;
     &:hover {
       color: #aaa;
       text-decoration: none;
