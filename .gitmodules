@@ -1,0 +1,4 @@
+[submodule "_docs"]
+	path = _docs
+	url = https://github.com/letsencrypt/letsencrypt.git
+	branch = rename
