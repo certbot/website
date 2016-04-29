@@ -69,6 +69,7 @@ h1.instruct {
     font-family: 'Roboto Slab';
     font-weight: 400;
     margin-top: 1em;
+    font-size: 1.4em;
     margin-bottom: 1.6em;
   }
 }
@@ -99,15 +100,19 @@ h1.instruct {
     padding: 0.8em 0;
     font-family: 'Roboto Slab';
     font-weight: 400;
+    color: rgba(0,0,0,0.4);
     text-transform: lowercase;
     &:hover {
-      background-color: rgba(0,0,0,0.05);
       cursor: pointer;
+      &:not(.active) {
+        background-color: rgba(0,0,0,0.05);
+      }
     }
 
   }
 
   .tab.automated.active, .tab.advanced.active {
+    color: rgba(0,0,0,1);
     &:after {
       position: absolute;
       display: block;
@@ -118,6 +123,8 @@ h1.instruct {
       border-bottom: 1px solid #fff;
     }
   }
+
+
 
   // .tab.advanced {
   //   margin-top: -50px;
