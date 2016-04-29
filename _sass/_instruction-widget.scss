@@ -86,7 +86,13 @@ h1.instruct {
 
   .tab {
 
-    width: 200px;
+    width: 120px;
+    @include susy-breakpoint($ph) {
+      width: 180px;
+    }
+    @include susy-breakpoint($md) {
+      width: 250px;
+    }
     display: inline-block;
     border: 1px solid $content-stroke;
     border-bottom: transparent;
