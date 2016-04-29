@@ -150,8 +150,14 @@ nav.main-nav {
         }
       }
 
-      &.active, &:hover :not(.donate) {
+      &.active {
         color: rgba(0,0,0,0.95);
+      }
+
+      &:hover {
+        &:not(.donate) {
+          color: rgba(0,0,0,0.95);
+        }
       }
 
     }
