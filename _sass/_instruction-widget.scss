@@ -56,11 +56,17 @@ select {
 h1.instruct {
   color: $header-grey;
 }
+
+.instruction-pane-wrapper {
+  border: 1px solid $content-stroke;
+  padding: 2em;
+}
+
 .instructions.content {
 
   background-color: #fff;
-  border: 1px solid $content-stroke;
-  padding: 2em;
+
+  
   position: relative;
   text-align: center;
 
@@ -69,15 +75,20 @@ h1.instruct {
   }
 
   .tab {
-
     width: 200px;
     display: inline-block;
     background-color: rgba(0,0,0,0.1);
-    
     &:hover {
       cursor: pointer;
     }
+  }
 
+  .tab.automated {
+    margin-top: -50px;
+  }
+
+  .tab.advanced {
+    margin-top: -50px;
   }
 
   .permalink {
