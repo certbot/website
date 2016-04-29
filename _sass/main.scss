@@ -140,6 +140,12 @@ h1 {
 
   background-color: #fff;
 
+  .wrapper {
+    @include susy-breakpoint($md) {
+      margin-top: 2em;
+    }
+  }
+
 }
 
 

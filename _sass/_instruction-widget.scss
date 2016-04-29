@@ -63,6 +63,15 @@ h1.instruct {
   padding: 2em;
 }
 
+
+.instruction-pane {
+  h3 {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 1.6em;
+  }
+}
 .instructions.content {
 
   background-color: #fff;
@@ -98,9 +107,9 @@ h1.instruct {
       display: block;
       content: '';
       width: 100%;
-      margin-top: 12px;
+      margin-top: 13px;
       z-index: 5;
-      border-bottom: 3px solid white;
+      border-bottom: 1px solid #fff;
     }
   }
 
