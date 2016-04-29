@@ -57,9 +57,40 @@ h1.instruct {
   color: $header-grey;
 }
 .instructions.content {
+
   background-color: #fff;
   border: 1px solid $content-stroke;
   padding: 2em;
+  position: relative;
+  text-align: center;
+
+  .instruction-pane {
+    text-align: left;
+  }
+
+  .tab {
+
+    display: inline-block;
+    background-color: rgba(0,0,0,0.1);
+    
+    &:hover {
+      cursor: pointer;
+    }
+    margin: 0 auto;
+  }
+  .tab.automated {
+    width: 200px;
+    
+  }
+  .tab.advanced {
+    text-align: center;
+   // margin-left: 200px;
+   width: 200px;
+  }
+  .permalink {
+    display: block;
+    clear: both;
+  }
 }
 
 .advanced.instruction-pane {
