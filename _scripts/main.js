@@ -13,3 +13,10 @@
   }
 
 })();
+
+(function() { 
+
+  var using = document.getElementById('hamburger');
+  var close = document.getElementById('close');
+
+})();
