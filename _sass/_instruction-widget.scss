@@ -1,3 +1,4 @@
+
 select {
   background: transparent;
   width: 200px;
@@ -75,19 +76,32 @@ h1.instruct {
   }
 
   .tab {
+
     width: 200px;
     display: inline-block;
     border: 1px solid $content-stroke;
     border-bottom: transparent;
     padding: 0.8em 0;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    text-transform: lowercase;
     &:hover {
       background-color: rgba(0,0,0,0.05);
       cursor: pointer;
     }
+
   }
 
-  .tab.automated {
-    
+  .tab.automated.active, .tab.advanced.active {
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      margin-top: 12px;
+      z-index: 5;
+      border-bottom: 3px solid white;
+    }
   }
 
   // .tab.advanced {
