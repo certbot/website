@@ -77,22 +77,25 @@ h1.instruct {
   .tab {
     width: 200px;
     display: inline-block;
-    background-color: rgba(0,0,0,0.1);
+    border: 1px solid $content-stroke;
+    border-bottom: transparent;
+    padding: 0.8em 0;
     &:hover {
+      background-color: rgba(0,0,0,0.05);
       cursor: pointer;
     }
   }
 
   .tab.automated {
-    margin-top: -50px;
+    
   }
 
-  .tab.advanced {
-    margin-top: -50px;
-  }
+  // .tab.advanced {
+  //   margin-top: -50px;
+  // }
 
   .permalink {
-    display: block;
+    display: none; // until figure out where to put it
     clear: both;
   }
 }
