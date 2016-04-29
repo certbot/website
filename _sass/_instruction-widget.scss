@@ -70,23 +70,16 @@ h1.instruct {
 
   .tab {
 
+    width: 200px;
     display: inline-block;
     background-color: rgba(0,0,0,0.1);
     
     &:hover {
       cursor: pointer;
     }
-    margin: 0 auto;
+
   }
-  .tab.automated {
-    width: 200px;
-    
-  }
-  .tab.advanced {
-    text-align: center;
-   // margin-left: 200px;
-   width: 200px;
-  }
+
   .permalink {
     display: block;
     clear: both;
