@@ -69,13 +69,16 @@ InstructionWidget = (function() {
     select_container.html(rendered);
   };
 
-  toggle_tabs = function() {
+  toggle_tabs = function(active_tab) {
+    $('.tab').removeClass('active');
+    $(active_tab).addClass("active");
     $('.instruction-pane').toggle();
   };
 
   bind_ui_actions = function() {
     content_container.on('click', '.tab', function() {
-      toggle_tabs();
+      var active_tab = $(this);
+      toggle_tabs(active_tab);
     });
 
     select_container.on('change', function() {
