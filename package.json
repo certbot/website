@@ -25,6 +25,8 @@
     "webpack-require": "0.0.16"
   },
   "dependencies": {
+    "del": "^2.2.0",
+    "gulp-git": "^1.7.1",
     "jquery": "^2.2.3",
     "lodash": "^4.11.1",
     "mustache": "^2.2.1"
