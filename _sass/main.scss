@@ -96,6 +96,14 @@ $on-laptop:        800px;
 
 }
 
+a {
+  color: $link-color;
+  font-weight: 400;
+  &:hover {
+    color: $link-color;
+  }
+}
+
 html,body,div,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
