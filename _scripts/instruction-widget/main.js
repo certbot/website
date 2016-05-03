@@ -84,6 +84,7 @@ InstructionWidget = (function() {
     select_container.on('change', function() {
       var input = get_input();
       Instructions().render(content_container, input);
+      document.activeElement.blur();
     });
   };
 

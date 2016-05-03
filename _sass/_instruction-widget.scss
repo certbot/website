@@ -11,6 +11,10 @@ select {
   border-radius: 20px;
   margin: 0 1em;
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px red;
+  }
   option {
     text-align: left;
   }
