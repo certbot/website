@@ -67,7 +67,18 @@ InstructionWidget = (function() {
       webservers: inputs.webservers
     });
     select_container.html(rendered);
+
+    //jump(inputs.operating_systems,inputs.webservers);
+
   };
+
+  // TO DO: make something like this actually work
+  
+  // jump = function(os,ws) {
+  //   var url = location.href;
+  //   location.href = '#' + os + '-' + ws;
+  //   history.replaceState(null,null,url);
+  // }​;
 
   toggle_tabs = function(active_tab) {
     $('.tab').removeClass('active');

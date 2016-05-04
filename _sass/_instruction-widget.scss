@@ -100,7 +100,7 @@ h1.instruct {
     }
     display: inline-block;
     border: 1px solid $content-stroke;
-    border-bottom: transparent;
+    border-bottom: none;
     padding: 0.8em 0;
     font-family: 'Roboto Slab';
     font-weight: 400;
@@ -124,7 +124,7 @@ h1.instruct {
       width: 100%;
       margin-top: 12px;
       z-index: 5;
-      border-bottom: 2px solid #fff;
+      border-bottom: 5px solid #fff;
     }
   }
 
@@ -135,8 +135,23 @@ h1.instruct {
   // }
 
   .permalink {
-    display: none; // until figure out where to put it
+    // display: none; // until figure out where to put it
     clear: both;
+    a {
+      color: $header-grey;
+      font-family: 'Roboto Slab';
+      font-size: 1.4em;
+      
+    }
+    margin-bottom: 1.2em;
+
+    a[name] { // due to navbar above
+      padding-top: 75px;
+      margin-top: -75px;
+      display: inline-block;
+    }
+
+
   }
 }
 
