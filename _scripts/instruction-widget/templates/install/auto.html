@@ -4,8 +4,13 @@ Since it doesn't seem like your operating system has a packaged version of certb
 <pre>
 $ git clone https://github.com/certbot/certbot
 $ cd certbot
-$ ./certbot-auto --help
+$ ./certbot-auto
 </pre>
 <p>
-certbot-auto accepts the same flags as certbot; it installs all of its own dependencies and updates the client code automatically (but it’s comparatively slow and large in order to achieve that)
+certbot-auto accepts the same flags as certbot; it installs all of its own dependencies and updates the client code automatically.
 </p>
+{{#advanced}}
+<p>
+  certbot-auto will always try to fetch the newest version of itself from its most recent release. If you want it to be locked to a specific version and not recieve automatic updates run it with the --no-self-upgrade flag.
+</p>
+{{/advanced}}
