@@ -52,6 +52,7 @@ module.exports = function(context) {
     } else {
       auto_install();
     }
+    partials.warning = require(TEMPLATE_PATH + "warning.html");
 
     // Load and render the selected template.
     template = require(TEMPLATE_PATH + template + '.html');
@@ -117,7 +118,9 @@ module.exports = function(context) {
 
   arch_install = function() {
     template = "arch";
-    if (context.webserver == "nginx" && context.advanced) {
+    if (context.webserver == "apache" && context.advanced) {
+        context.package = "letsencrypt-apache";
+    } else if (context.webserver == "nginx" && context.advanced) {
         context.package = "letsencrypt-nginx";
     } else {
         context.package = "letsencrypt";
