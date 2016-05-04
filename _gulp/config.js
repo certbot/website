@@ -7,5 +7,8 @@ module.exports = {
   js: {
     src: "_scripts/**/*",
     dest: "_site/js"
+  },
+  instructions: {
+    dest: "./_data/instructions.json"
   }
 }
