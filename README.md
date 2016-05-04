@@ -9,7 +9,13 @@ Website for EFF's CertBot project. Uses Jekyll for static site generation.
 2. `gem install jekyll` (requires v3.0 or higher)
 3. `sudo npm install gulp -g`
 4. `npm install`
-5. `./_docs.sh depend`
+
+If you want to build a copy of the documentation for your local mirror of the
+Cerbot website, also do:
+
+5. `git submodule init`
+6. `git submodule update`
+7. `./_docs.sh depend`
 
 ### Run
 To *watch* for changes and reload assets as needed via BrowserSync:
