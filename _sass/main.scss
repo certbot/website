@@ -141,18 +141,18 @@ h1 {
 
   @include container(100%);
 
-  @include susy-breakpoint($md) {
-    margin-top: 3%;
-    @include container (95%);
-  }
+  // @include susy-breakpoint($md) {
+  //   margin-top: 3%;
+  //   @include container (95%);
+  // }
 
   background-color: #fff;
 
-  .wrapper {
-    @include susy-breakpoint($md) {
-      margin-top: 2em;
-    }
-  }
+  // .wrapper {
+  //   @include susy-breakpoint($md) {
+  //     margin-top: 2em;
+  //   }
+  // }
 
 }
 
