@@ -99,17 +99,24 @@ h1.instruct {
       width: 250px;
     }
     display: inline-block;
-    border: 1px solid $content-stroke;
-    border-bottom: none;
+    border-left: 1px solid $content-stroke;
+    border-right: 1px solid $content-stroke;
+    border-top: 1px solid $content-stroke;
     padding: 0.8em 0;
     font-family: 'Roboto Slab';
     font-weight: 400;
     color: rgba(0,0,0,0.4);
     text-transform: lowercase;
-    &:hover {
-      cursor: pointer;
-      &:not(.active) {
-        background-color: rgba(0,0,0,0.05);
+
+    &:not(.active) {
+      background-color: rgba(0,0,0,0.05);
+      color: #aaa;
+      &:hover {
+
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.1);
+        color: #666;
+
       }
     }
 
@@ -126,6 +133,10 @@ h1.instruct {
       z-index: 5;
       border-bottom: 5px solid #fff;
     }
+    // border-left: 1px solid #000;
+    // border-right: 1px solid #000;
+    // border-top: 1px solid #000;
+    // background-color: rgba(0,0,0,0.05);
   }
 
 
@@ -144,7 +155,7 @@ h1.instruct {
       
     }
     margin-bottom: 1.2em;
-
+    overflow: hidden;
     a[name] { // due to navbar above
       padding-top: 75px;
       margin-top: -75px;

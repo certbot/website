@@ -1,15 +1,15 @@
 header.hero {
 
 
-  padding-top: 3em;
-  padding-bottom: 1em;
+  padding-top: 4em;
+  // padding-bottom: 1em;
   box-sizing: border-box;
   position: relative;
   display: block;
   width: 100%;
   height: 100vh;
   @include susy-breakpoint($md) {
-    height: 480px;
+    height: 420px;
   }
   overflow: hidden;
   display: flex;
