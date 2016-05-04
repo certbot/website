@@ -1,6 +1,18 @@
 <p>
   Run these steps to install the certbot client.
 </p>
+{{#advanced}}
+{{#nginx}}
+<h4>Warning!</h4>
+<p>
+The Certbot Nginx plugin can be installed by installing the letsencrypt-nginx
+package, however, this plugin is known to be buggy and should only be used with
+caution after creating a backup up your Nginx configuration.
+{{nginx_warning}}
+<p>
+</p>
+{{/nginx}}
+{{/advanced}}
 
 <pre>
   sudo pacman -S {{package}}
