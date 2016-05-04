@@ -1,0 +1,16 @@
+{{> certonly}}
+
+{{#advanced}}
+<h2>Experimental Nginx Plugin Support</h2>
+<blockquote>
+    There is a pre-alpha Nginx plugin that will automatically obtain and
+    install certs.  It is known to be buggy, so <b>you should only use it
+    after backing up your config</b> and if you are comfortable fixing
+    possible breakage.  On some
+    platforms there's a <tt>certbot-nginx</tt> or <tt>letsencrypt-nginx</tt>
+    package you can install to get that plugin.  If not, you can <a
+    href="docs/contributing.html#running-a-local-copy-of-the-client">follow
+    the developer instructions</a> to run cerbot with nginx support from git
+    master.
+</blockquote>
+{{/advanced}}
