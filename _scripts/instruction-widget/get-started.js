@@ -5,12 +5,15 @@ module.exports = function(context) {
     var partials = {};
 
     html = function() {
+        partials.certonly = require(TEMPLATE_PATH + "certonly.html");
         if (context.webserver == "apache") {
             apache_getting_started();
         } else if (context.webserver == "haproxy") {
             haproxy_getting_started();
         } else if (context.webserver == "plesk") {
             plesk_getting_started();
+        } else if (context.webserver == "nginx") {
+            nginx_getting_started();
         } else {
             certonly_getting_started();
         }
@@ -24,7 +27,6 @@ module.exports = function(context) {
 
     haproxy_getting_started = function() {
         template = "haproxy";
-        partials.certonly = require(TEMPLATE_PATH + "certonly.html");
     }
 
     plesk_getting_started = function() {
@@ -33,6 +35,10 @@ module.exports = function(context) {
 
     certonly_getting_started = function() {
         template = "certonly";
+    }
+
+    nginx_getting_started = function() {
+        template = "nginx";
     }
 
     return {
