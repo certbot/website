@@ -99,9 +99,6 @@ h1.instruct {
       width: 250px;
     }
     display: inline-block;
-    border-left: 1px solid $content-stroke;
-    border-right: 1px solid $content-stroke;
-    border-top: 1px solid $content-stroke;
     padding: 0.8em 0;
     font-family: 'Roboto Slab';
     font-weight: 400;
@@ -109,15 +106,28 @@ h1.instruct {
     text-transform: lowercase;
 
     &:not(.active) {
+      $stroke: #f3f3f3;
+      border-left: 1px solid $stroke;
+      border-top: 1px solid $stroke;
+      border-right: 1px solid $stroke;
       background-color: rgba(0,0,0,0.05);
       color: #aaa;
       &:hover {
-
+        $darkstroke: #e6e6e6;
         cursor: pointer;
-        background-color: rgba(0,0,0,0.1);
+        background-color: $darkstroke;
         color: #666;
+        border-left: 1px solid $darkstroke;
+        border-right: 1px solid $darkstroke;
+        border-top: 1px solid $darkstroke
 
       }
+    }
+
+    &.active {
+      border-left: 1px solid $content-stroke;
+      border-right: 1px solid $content-stroke;
+      border-top: 1px solid $content-stroke;
     }
 
   }
