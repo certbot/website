@@ -1,15 +1,17 @@
-<p> You can find a great tutorial for how to set up Certbot (previously called letsencrypt) <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-7">here</a> 
+{{#update_python}}
+<p>
+Not all of Certbot's dependencies are available in the standard repositories.
+To use Certbot, you must first enable the EPEL (Extra Packages for Enterprise Linux)
+repository like so.
 </p>
+<pre>
+yum install epel-release
+</pre>
+{{/update_python}}
 
-{{#advanced}}
- <pre>
-  setup = "yum install epel-release\n"
-  {{#update_python}}
-  setup += "rpm -ivh https://rhel6.iuscommunity.org/ius-release.rpm\n"
-  setup += "yum --enablerepo=ius install git python27 python27-devel python27-pip python27-setuptools python27-virtualenv -y\n"
-  {{/update_python}}
-  yum install git
-  </pre>
+{{>auto}}
 
-  {{> auto}}
-{{/advanced}}
+<p>
+For more information, you can read this great tutorial on how to set up Certbot (previously called letsencrypt)
+<a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-7">here</a>.
+</p>
