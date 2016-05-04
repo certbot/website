@@ -5,7 +5,9 @@ module.exports = function(context) {
     var partials = {};
 
     html = function() {
-        if (context.webserver == "apache") {
+        if (context.certonly) {
+            certonly_getting_started();
+        } else if (context.webserver == "apache") {
             apache_getting_started();
         } else if (context.webserver == "haproxy") {
             haproxy_getting_started();
@@ -19,7 +21,12 @@ module.exports = function(context) {
     }
 
     apache_getting_started = function() {
-        template = "apache";
+        if (context.apache_unsupported) {
+            template = "apache-unsupported";
+            partials.certonly = require(TEMPLATE_PATH + "certonly.html");
+        } else {
+            template = "apache";
+        }
     }
 
     haproxy_getting_started = function() {
