@@ -2,18 +2,27 @@
 The official Let’s Encrypt client is available in Gentoo Portage.
 </p>
 
+{{#advanced}}
 {{#nginx}}
+<h4>Warning!</h4>
 <p>
-Currently, only the Apache plugin is included in Portage. However, if you want the nginx plugin, you can use Layman to add the mrueg overlay which does include the nginx plugin package:
+You can use Layman to add the mrueg overlay which does include a package for
+the Certbot Nginx plugin, however, this plugin is known to be buggy and should
+only be used with caution after creating a backup up your Nginx configuration.
+{{nginx_warning}}
+<p>
 </p>
 {{/nginx}}
+{{/advanced}}
 
 <pre>
+  {{#advanced}}
   {{#nginx}}
   emerge -av app-portage/layman
   layman -S
   layman -a mrueg
   {{/nginx}}
+  {{/advanced}}
   emerge -av app-crypt/{{package}}
 </pre>
 
@@ -44,9 +53,3 @@ LoadModule ssl_module modules/mod_ssl.so
 For the time being, this is the only way for the Apache plugin to recognise the appropriate directives when installing the certificate. Note: this change is not required for the other plugins.
 </p>
 {{/apache}}
-
-{{#advanced}}
-  <p>
-    Do a special advanced thing.
-  </p>
-{{/advanced}}

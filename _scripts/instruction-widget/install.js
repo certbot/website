@@ -105,13 +105,13 @@ module.exports = function(context) {
     template = "gentoo";
 
     context.package = "letsencrypt";
+    context.base_command = "letsencrypt";
+    context.base_package = "app-crypt/letsencrypt";
     if (context.webserver == "apache") {
       context.package = "letsencrypt-apache";
-      context.base_command = "letsencrypt-apache";
     }
-    if (context.webserver == "nginx") {
+    if (context.webserver == "nginx" && context.advanced) {
       context.package = "letsencrypt-nginx";
-      context.base_command = "letsencrypt-nginx";
     }
   }
 

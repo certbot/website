@@ -13,7 +13,9 @@ module.exports = function() {
   // Set some defaults.
   var context = {
     base_command: "certbot",
+    base_package: "certbot",
     package: "certbot",
+    nginx_warning: "We strongly recommend you use the {{base_package}} package instead until the Nginx plugin is ready.",
   };
 
   get_partials = function(input) {
