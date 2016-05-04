@@ -5,7 +5,9 @@ module.exports = function(context) {
     var partials = {};
 
     html = function() {
-        if (context.webserver == "apache") {
+        if (context.certonly) {
+            certonly_getting_started();
+        } else if (context.webserver == "apache") {
             apache_getting_started();
         } else if (context.webserver == "haproxy") {
             haproxy_getting_started();
