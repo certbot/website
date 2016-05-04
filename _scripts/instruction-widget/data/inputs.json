@@ -107,6 +107,12 @@
             "version": "10"
         },
         {
+            "name": "OpenBSD",
+            "id": "opbsd",
+            "distro": "opbsd",
+            "version": "0"
+        },
+        {
             "name": "Mac OS X",
             "id": "osx",
             "distro": "macos",

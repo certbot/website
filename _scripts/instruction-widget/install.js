@@ -117,13 +117,8 @@ module.exports = function(context) {
 
   arch_install = function() {
     template = "arch";
-    if (context.webserver == "apache"){
-        context.package = "letsencrypt-apache";
-        context.base_command = "letsencrypt-apache";
-    } else {
-        context.package = "letsencrypt";
-        context.base_command = "letsencrypt";
-    }
+    context.package = "letsencrypt";
+    context.base_command = "letsencrypt";
   }
 
   fedora_install = function() {
