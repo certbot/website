@@ -1,9 +1,31 @@
 <p>
-If you’re running Apache on a recent Debian-based OS, you can try the Apache plugin, which automates both obtaining and installing certs:
+Certbot has a fairly solid beta-quality Apache plugin, which is supported on
+many platforms, and automates both obtaining and installing certs:
 </p>
-<pre>
-{{base_command}} --apache
-</pre>
+<pre>{{base_command}} --apache</pre>
 <p>
+If you're feeling more conservative and would like to make the changes to your
+Apache configuration by hand, you can do use the <tt>certonly</tt>
+subcommand.
+<pre>{{base_command}} --apache certonly</pre>
+
+{{#advanced}}
+    <blockquote><aside>
+        Note: the apache plugin with <tt>certonly</tt> does the following:<br>
+        <ol>
+          <li>make temporary config changes<br>
+          (adding a new vhost to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>, and enabling <tt>mod_ssl</tt> if necessary)</li>
+          <li>performs a graceful reload</li>
+          <li>reverts all changes</li>
+          <li>performs another graceful reload</li>
+        </ol>
+        This appears to be a reliable process, but if you don't want Certbot
+        to touch your Apache process or files in any way, you can use the
+        <a
+        href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a>.
+
+    </aside></blockquote>
+{{/advanced}}
+
 To learn more about how to use Certbot <a href="/about">read our documentation</a>
 </p>
