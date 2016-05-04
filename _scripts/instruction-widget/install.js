@@ -41,6 +41,7 @@ module.exports = function(context) {
       bsd_install();
     }
     else if (context.distro == "arch"){
+      context.certonly = "true";
       arch_install();
     }
     else if (context.distro == "fedora"){
