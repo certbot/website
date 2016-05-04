@@ -38,6 +38,7 @@ module.exports = function(context) {
       gentoo_install();
     }
     else if ((context.distro == "opbsd")||(context.distro =="freebsd")){
+      context.apache_unsupported = "true";
       bsd_install();
     }
     else if (context.distro == "arch"){

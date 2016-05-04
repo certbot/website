@@ -19,7 +19,12 @@ module.exports = function(context) {
     }
 
     apache_getting_started = function() {
-        template = "apache";
+        if (context.apache_unsupported) {
+            template = "apache-unsupported";
+            partials.certonly = require(TEMPLATE_PATH + "certonly.html");
+        } else {
+            template = "apache";
+        }
     }
 
     haproxy_getting_started = function() {
