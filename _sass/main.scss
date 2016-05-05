@@ -139,6 +139,12 @@ h1 {
   // background-color: $grey-bg;
 }
 
+
+body:not(.index) {
+  .page-content {
+    background-color: transparent;
+  }
+}
 .page-content {
 
   @include container(100%);
@@ -162,11 +168,10 @@ body:not(.index) {
 
   @include susy-breakpoint($md) {
     .page-content {
-      margin-top: 3%;
       @include container (95%);
     }
     .wrapper {
-        margin-top: 2em;
+        margin-top: 1.5em;
     }
 
     .subhero {

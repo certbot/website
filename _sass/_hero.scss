@@ -1,6 +1,5 @@
+
 header.hero {
-
-
   padding-top: 4em;
   // padding-bottom: 1em;
   box-sizing: border-box;
@@ -56,8 +55,19 @@ header.hero {
 }
 
 header.hero.subhero {
-  text-align: center;
 
+  img {
+    width: 280px;
+  }
+  @include susy-breakpoint($md) {
+    img {
+      margin-top: 4em;
+      margin-left: -380px;
+      width: 400px;
+    }
+  }
+
+  margin-top: 0;
   h1 {
     font-family: 'Roboto';
     font-weight: 100;
@@ -66,9 +76,14 @@ header.hero.subhero {
     letter-spacing: 0.02em;
 
   }
-  height: 160px;
+  height: 210px;
 
-  img {
-    width: 200px;
+
+}
+
+body:not(.index) {
+  header.hero.subhero {
+      padding-top: 0;
   }
 }
+
