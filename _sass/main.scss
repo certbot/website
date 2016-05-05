@@ -156,7 +156,23 @@ h1 {
 
 }
 
+body:not(.index) {
 
+  @include susy-breakpoint($md) {
+    .page-content {
+      margin-top: 3%;
+      @include container (95%);
+    }
+    .wrapper {
+        margin-top: 2em;
+    }
+
+    .subhero {
+      padding-bottom: 3em;
+    }
+    
+  }
+}
 .three {
 
   margin-top: 3em;
