@@ -69,15 +69,19 @@ h1.instruct {
 
 
 .instruction-pane {
-  h3 {
+  h1,h3,h2 {
     font-family: 'Roboto Slab';
     font-weight: 400;
     margin-top: 1em;
     font-size: 1.4em;
+    
+  }
+  h3 {
     margin-bottom: 1.6em;
   }
 }
 .instructions.content {
+
 
   background-color: #fff;
 
@@ -106,14 +110,12 @@ h1.instruct {
     text-transform: lowercase;
 
     &:not(.active) {
-      $stroke: #f3f3f3;
       border-left: 1px solid $stroke;
       border-top: 1px solid $stroke;
       border-right: 1px solid $stroke;
       background-color: rgba(0,0,0,0.05);
       color: #aaa;
       &:hover {
-        $darkstroke: #e6e6e6;
         cursor: pointer;
         background-color: $darkstroke;
         color: #666;
