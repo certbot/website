@@ -127,10 +127,28 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    font-size: 14px;
+    // border: 1px solid $grey-color-light;
+    // border-radius: 3px;
+    // background-color: #eef;
+    margin: 2em 0;
+    font-family: 'VeraMono';
+    font-weight: 400;
+    white-space: normal;
+    &:before {
+      content: '$ ';
+    }
+    background-color: $stroke;
+    border-radius: 0;
+}
+
+code.inline {
+    display: inline;
+    margin: 0;
+    padding: 2px 6px;
+    &:before {
+        content: '';
+    }
 }
 
 code {

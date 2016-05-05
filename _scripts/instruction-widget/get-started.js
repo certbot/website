@@ -6,6 +6,7 @@ module.exports = function(context) {
 
     html = function() {
         partials.certonly = require(TEMPLATE_PATH + "certonly.html");
+        context.imperative = "you'll have to";
         if (context.certonly) {
             certonly_getting_started();
         } else if (context.webserver == "apache") {
@@ -32,6 +33,8 @@ module.exports = function(context) {
     }
 
     haproxy_getting_started = function() {
+        context.officially = "officially ";
+        context.imperative = "you should probably"
         template = "haproxy";
     }
 
@@ -44,6 +47,7 @@ module.exports = function(context) {
     }
 
     nginx_getting_started = function() {
+        context.imperative = "you should probably"
         template = "nginx";
     }
 

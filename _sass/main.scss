@@ -37,6 +37,8 @@ $body-bg-color: $grey-cool;
 $content-bg-color: $white;
 $certbot-red: rgba(236,28,35,1);
 
+$darkstroke: #e6e6e6;
+$stroke: #f3f3f3;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -156,7 +158,23 @@ h1 {
 
 }
 
+body:not(.index) {
 
+  @include susy-breakpoint($md) {
+    .page-content {
+      margin-top: 3%;
+      @include container (95%);
+    }
+    .wrapper {
+        margin-top: 2em;
+    }
+
+    .subhero {
+      padding-bottom: 3em;
+    }
+    
+  }
+}
 .three {
 
   margin-top: 3em;

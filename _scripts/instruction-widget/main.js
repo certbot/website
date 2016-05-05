@@ -24,8 +24,14 @@ InstructionWidget = (function() {
   get_input = function() {
     var os_select = $('#os-select');
     var os = os_select.val()
+
+    var server_select = $('#server-select');
+
     var distro = os_select.find('option:selected').data('distro');
     var version = os_select.find('option:selected').data('version');
+
+    var distro_longname = os_select.find('option:selected').html();
+    var server_longname = server_select.find('option:selected').html();
 
     var webserver = $("#server-select").val();
 
@@ -33,7 +39,9 @@ InstructionWidget = (function() {
       os: os,
       distro: distro,
       version: version,
-      webserver: webserver
+      webserver: webserver,
+      distro_longname: distro_longname,
+      server_longname: server_longname
     }
   };
 
@@ -68,22 +76,19 @@ InstructionWidget = (function() {
     });
     select_container.html(rendered);
 
-    //jump(inputs.operating_systems,inputs.webservers);
-
   };
 
-  // TO DO: make something like this actually work
-  
-  // jump = function(os,ws) {
-  //   var url = location.href;
-  //   location.href = '#' + os + '-' + ws;
-  //   history.replaceState(null,null,url);
-  // }​;
+  jump = function(os,ws) {
+    var url = location.href;
+    location.href = '#' + os + '-' + ws;
+    history.replaceState(null,null,url);
+  };
 
   toggle_tabs = function(active_tab) {
     $('.tab').removeClass('active');
     $(active_tab).addClass("active");
     $('.instruction-pane').toggle();
+
   };
 
   bind_ui_actions = function() {
@@ -95,6 +100,7 @@ InstructionWidget = (function() {
     select_container.on('change', function() {
       var input = get_input();
       Instructions().render(content_container, input);
+      jump(input.os,input.webserver);
       document.activeElement.blur();
     });
   };
