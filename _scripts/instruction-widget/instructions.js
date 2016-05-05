@@ -13,6 +13,7 @@ module.exports = function() {
   // Set some defaults.
   var context = {
     base_command: "certbot",
+    base_package: "certbot",
     package: "certbot",
   };
 

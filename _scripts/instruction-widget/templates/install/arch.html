@@ -1,6 +1,13 @@
 <p>
   Run these steps to install the certbot client.
 </p>
+{{#apache}}
+{{>warning}}
+{{/apache}}
+
+{{#nginx}}
+{{>warning}}
+{{/nginx}}
 
 <pre>
   sudo pacman -S {{package}}

@@ -52,6 +52,7 @@ module.exports = function(context) {
     } else {
       auto_install();
     }
+    partials.warning = require(TEMPLATE_PATH + "warning.html");
 
     // Load and render the selected template.
     template = require(TEMPLATE_PATH + template + '.html');
@@ -105,20 +106,27 @@ module.exports = function(context) {
     template = "gentoo";
 
     context.package = "letsencrypt";
+    context.base_command = "letsencrypt";
+    context.base_package = "app-crypt/letsencrypt";
     if (context.webserver == "apache") {
       context.package = "letsencrypt-apache";
-      context.base_command = "letsencrypt-apache";
     }
-    if (context.webserver == "nginx") {
+    if (context.webserver == "nginx" && context.advanced) {
       context.package = "letsencrypt-nginx";
-      context.base_command = "letsencrypt-nginx";
     }
   }
 
   arch_install = function() {
     template = "arch";
-    context.package = "letsencrypt";
+    if (context.webserver == "apache" && context.advanced) {
+        context.package = "letsencrypt-apache";
+    } else if (context.webserver == "nginx" && context.advanced) {
+        context.package = "letsencrypt-nginx";
+    } else {
+        context.package = "letsencrypt";
+    }
     context.base_command = "letsencrypt";
+    context.base_package = "letsencrypt";
   }
 
   fedora_install = function() {
@@ -130,10 +138,10 @@ module.exports = function(context) {
   bsd_install = function() {
     template = "bsd"
 
+    context.base_command = "letsencrypt";
     if (context.distro == "freebsd"){
       context.portcommand = "py-letsencrypt";
       context.package = "pkg install py27-letsencrypt";
-      context.base_command = "py27-letsencrypt";
     }
     if (context.distro == "opbsd"){
       context.portcommand = "letsencrypt/client";

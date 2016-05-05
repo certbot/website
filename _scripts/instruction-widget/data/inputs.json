@@ -95,16 +95,10 @@
             "version": "7"
         },
         {
-            "name": "FreeBSD 9",
-            "id": "freebsd9",
+            "name": "FreeBSD",
+            "id": "freebsd",
             "distro": "freebsd",
-            "version": "9"
-        },
-        {
-            "name": "FreeBSD 10",
-            "id": "freebsd10",
-            "distro": "freebsd",
-            "version": "10"
+            "version": "0"
         },
         {
             "name": "OpenBSD",
