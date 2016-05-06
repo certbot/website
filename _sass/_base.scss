@@ -140,6 +140,8 @@ code {
     }
     background-color: $stroke;
     border-radius: 0;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 code.inline {
