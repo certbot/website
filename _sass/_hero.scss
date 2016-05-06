@@ -55,12 +55,17 @@ header.hero {
 
   h2 {
     display: none;
+    font-size: 0.9em;
     @include susy-breakpoint($md) {
       display: block;
+
+    }
+    @include susy-breakpoint($lg) {
+      font-size: 1em;
     }
     font-family: 'Roboto Slab';
     font-weight: 200;
-    font-size: 1em;
+   
     margin: 0;
     padding: 0;
     margin-top: -2.5em;
@@ -76,6 +81,7 @@ header.hero.subhero {
   }
   @include susy-breakpoint($md) {
     img {
+      padding-left: 30px;
       margin-top: 4em;
       margin-left: -380px;
       width: 400px;

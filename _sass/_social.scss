@@ -61,6 +61,7 @@ nav.social {
     margin: 0;
     list-style-type: none;
     li {
+      background-color: #fff;
       border: 1px solid $certbot-red;
       border-radius: 30px;
       height: 42px;
@@ -90,6 +91,18 @@ nav.social {
   }
 }
 
+
+body:not(.index) {
+  nav.social {
+    top: 130px;
+  
+    left: 65%;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
 
 @font-face {
   font-family: "Social";
