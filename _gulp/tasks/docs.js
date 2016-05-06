@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     child = require('child_process'),
     git = require('gulp-git'),
     del = require('del'),
-    zip = require('gulp-zip');
+    zip = require('gulp-zip'),
+    rename = require('gulp-rename');
 
 gulp.task('docs:install', ['docs:zip', 'docs:epub', 'docs:pdf']);
 
@@ -24,10 +25,12 @@ gulp.task('docs:zip', ['docs:html'], (done) => {
 
 gulp.task('docs:epub', ['docs:html'], (done) => {
   return gulp.src(['./_docs/docs/_build/epub/LetsEncrypt.epub'])
-    .pipe(gulp.dest('./_site/docs/certbot.epub'));
+    .pipe(rename('certbot.epub'))
+    .pipe(gulp.dest('./_site/docs'));
 });
 
 gulp.task('docs:pdf', ['docs:html'], (done) => {
   return gulp.src(['./_docs/docs/_build/latex/LetsEncrypt.pdf'])
-    .pipe(gulp.dest('./_site/docs/certbot.pdf'));
+    .pipe(rename('certbot.pdf'))
+    .pipe(gulp.dest('./_site/docs'));
 });
