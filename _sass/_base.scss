@@ -140,7 +140,7 @@ code {
     }
     background-color: $stroke;
     border-radius: 0;
-    overflow: hidden;
+    overflow: auto;
     word-wrap: break-word;
 }
 
@@ -157,16 +157,16 @@ code {
     padding: 1px 5px;
 }
 
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+// pre {
+//     padding: 8px 12px;
+//     overflow-x: scroll;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
+//     > code {
+//         border: 0;
+//         padding-right: 0;
+//         padding-left: 0;
+//     }
+// }
 
 
 
