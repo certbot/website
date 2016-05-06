@@ -52,6 +52,21 @@ header.hero {
       font-size: 1.75em;
     }
   }
+
+  h2 {
+    display: none;
+    @include susy-breakpoint($md) {
+      display: block;
+    }
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    margin-top: -2.5em;
+    margin-bottom: 2.5em;
+  }
+
 }
 
 header.hero.subhero {
