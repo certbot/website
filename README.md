@@ -16,6 +16,7 @@ Cerbot website, also do:
 5. `git submodule init`
 6. `git submodule update`
 7. `./_docs.sh depend`
+8. Install `pdflatex` e.g. via `sudo apt install texlive texlive-latex-extra`
 
 ### Run
 To *watch* for changes and reload assets as needed via BrowserSync:
