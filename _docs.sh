@@ -9,6 +9,6 @@ case "$1" in
   "install" )
     cd _docs
     source ./venv/bin/activate
-    make -C docs clean html
+    make -C docs clean html epub latex latexpdf
     ;;
 esac
