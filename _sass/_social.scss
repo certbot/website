@@ -1,0 +1,12 @@
+footer.social {
+  @include susy-breakpoint($md) {
+    display: none;
+  }
+}
+
+nav.social {
+  display: none;
+  @include susy-breakpoint($md) {
+    display: block;
+  }
+}
