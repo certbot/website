@@ -3,6 +3,7 @@
 case "$1" in
   "depend" )
     cd _docs
+    export CERTBOT_WEBSITE='True'
     ./letsencrypt-auto-source/letsencrypt-auto --os-packages-only
     ./tools/venv.sh
     ;;
