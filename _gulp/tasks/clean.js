@@ -4,6 +4,6 @@ var del   = require('del');
 var config = require('../config');
 
 gulp.task('clean', function(done) {
-  del([config.site_root + '/**', config.instructions.dest],
+  return del([config.site_root + '/**', config.instructions.dest],
     done);
 });

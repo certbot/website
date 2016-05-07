@@ -6,7 +6,7 @@ var config = require('../config');
 
 // Write all certbot install and get started instruction sets to
 // a single json file, to be consumed by Jekyll templates.
-gulp.task('instructions', (done) => {
+gulp.task('instructions', ['clean'], (done) => {
   // We need to run the instruction widget modules with webpack loaders
   // in order to properly require mustache templates.
   webpackRequire(

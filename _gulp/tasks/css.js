@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 var config = require('../config');
 
-gulp.task('css', (done) => {
+gulp.task('css', ['clean'], (done) => {
   return gulp.src(config.css.src)
     .pipe(env.development(sourcemaps.init()))
     .pipe(globbing({

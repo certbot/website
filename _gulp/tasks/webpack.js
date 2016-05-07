@@ -26,7 +26,7 @@ config.webpack = {
   ] : []
 }
 
-gulp.task('js', (done) => {
+gulp.task('js', ['clean'], (done) => {
   return gulp.src(config.js.src)
     .pipe(webpack(config.webpack))
     .pipe(gulp.dest(config.js.dest));
