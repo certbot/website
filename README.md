@@ -25,6 +25,10 @@ To *watch* for changes and reload assets as needed via BrowserSync:
 To *build* the site once:
 `gulp build`
 
+To build for production (minified javascript, no source maps):
+`gulp build --env production`
+The environment can also be set in the NODE_ENV environment variable. See https://github.com/gunpowderlabs/gulp-environments.
+
 ## Editing content
 
 ### Basic pages
