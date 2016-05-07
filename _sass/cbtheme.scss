@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "VeraMono";
+  src: url("../fonts/VeraMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+ @font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Thin.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$darkgrey: #666;
+$nav-height: 60px;
+$certbot-red: rgba(236,28,35,1);
+$link-color: rgba(64,116,142,1);
+$body-bg-color: #f4f5f7;
+
+html,.wy-grid-for-nav,.wy-grid-for-nav > *{
+  background-color: #fff;
+}
+
+.wy-side-nav-search {
+  background-color: black;
+}
+
+body.wy-body-for-nav {
+  background-color: $body-bg-color;
+
+  margin-top: $nav-height;
+
+
+  font-family: 'Roboto';
+  font-weight: 300;
+  h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto Slab';
+    color: $darkgrey;
+  }
+
+  a {
+    font-weight: 400;
+    color: $link-color;
+    &:visited {
+      color: $link-color;
+    }
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+
+  .wy-nav-side {
+    top: $nav-height;
+  }
+
+}
+
+
+
+
