@@ -9,6 +9,6 @@ Certbot is part of EFF’s larger effort to [encrypt the entire Internet](https:
 
 Certbot is the work of [many authors](https://github.com/certbot/certbot/graphs/contributors), including a team of EFF staff and numerous open source contributors.
 
-The Certbot policy to protect your privacy is described [here](/privacy).
+The Certbot privacy policy is described [here](/privacy).
 
 Want to keep this project (and other EFF projects) alive? [Donate here](https://supporters.eff.org/donate/support-lets-encrypt).

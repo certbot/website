@@ -2,7 +2,7 @@
 title: Certbot
 email: certbot@eff.org
 description: > # this means to ignore newlines until "baseurl:"
-Certbot is the easiest way to enable HTTPS on your website through Let's Encrypt.
+  Certbot is the easiest way to enable HTTPS on your website through Let's Encrypt.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
