@@ -1,10 +1,11 @@
 var gulp = require('gulp'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync');
 
 var config = require('../config');
+var server = browserSync.create('Server');
 
 gulp.task('serve', () => {
-  browserSync.init({
+  server.init({
     port: 4000,
     server: {
       baseDir: config.site_root
@@ -17,5 +18,5 @@ gulp.task('serve', () => {
   gulp.watch(config.css.src, ['css']);
   gulp.watch(config.js.src, ['js']);
   gulp.watch([config.site_root + '/**/*.html', config.site_root + '/**/*.js'],
-    browserSync.reload);
+    server.reload);
 });

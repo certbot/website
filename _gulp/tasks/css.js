@@ -4,12 +4,19 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     globbing = require('gulp-css-globbing'),
     env = require('gulp-environments'),
-    del = require('del')
-    browserSync = require('browser-sync').create();
+    del = require('del'),
+    gutil = require('gulp-util'),
+    browserSync = require('browser-sync');
 
 var config = require('../config');
 
 gulp.task('css', ['css:clean'], (done) => {
+  try {
+    var server = browserSync.get('Server');
+  } catch(err) {
+    var server = null;
+  }
+
   return gulp.src(config.css.src)
     .pipe(env.development(sourcemaps.init()))
     .pipe(globbing({
@@ -21,7 +28,7 @@ gulp.task('css', ['css:clean'], (done) => {
     }))
     .pipe(env.development(sourcemaps.write('.')))
     .pipe(gulp.dest(config.css.dest))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(server ? server.stream({match: '**/*.css'}) : gutil.noop());
 });
 
 gulp.task('css:clean', function(done) {
