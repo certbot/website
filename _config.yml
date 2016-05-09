@@ -17,6 +17,7 @@ exclude:
 keep_files:
 - css
 - js
+- docs
 
 # Build settings
 markdown: kramdown
