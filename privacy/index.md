@@ -3,6 +3,8 @@ layout: page
 title: Certbot Privacy Policy
 class: privacy
 ---
+The certbot.eff.org site is covered under the [EFF privacy policy](https://www.eff.org/policy).
+
 Certbot is an extensible client for Certificate Authorities that speak the ACME protocol. Currently, the default CA is Let's Encrypt. Certbot can automate the tasks of obtaining certificates and configuring webservers to use them. While Certbot runs on your computer, it necessarily needs to collect and transfer some information to the CA in order to do its job.  
 
 Certbot is published by the Electronic Frontier Foundation, the leading nonprofit organization defending civil liberties in the digital world. EFF is committed to protecting privacy online, and has established this Privacy Policy to explain what information Certbot collects and how it is used.
@@ -19,7 +21,7 @@ Certbot provides this information to the CA you select.
 
 Currently, Certbot works with Let’s Encrypt by default, which, as of April 2016, has three documents that discuss its privacy practices for this information; the [Let’s Encrypt Privacy Policy](https://letsencrypt.org/privacy/) section on Subscribers, it’s [Certification Practice Statement](https://letsencrypt.org/documents/ISRG-CPS-March-16-2016.pdf) (which, as of April 2016, just references back to the Privacy Policy), and the [Let’s Encrypt Subscriber Agreement](https://letsencrypt.org/documents/LE-SA-v1.0.1-July-27-2015.pdf) (Section 4.1). 
 
-Let’s Encrypt also operates [Community Forums](https://community.letsencrypt.org/), using [Discourse](https://www.discourse.org/), where you may want to look to find answers to your questions about Certbot. These are subject to the [Let’s Encrypt](https://letsencrypt.org/privacy/) and [Discourse](http://www.discourse.org/hosted-forum-privacy-policy/) privacy policies. The Certbot community can be contacted through [irc.OFTC.net](http://irc.oftc.net/), on the #certbot and #certbot-dev channels. The IRC channels are hosted by OFTC (Open and Free Technology Community), which does not publish a privacy policy.
+Let’s Encrypt also operates [Community Forums](https://community.letsencrypt.org/), using [Discourse](https://www.discourse.org/), where you may want to look to find answers to your questions about Certbot. These are subject to the [Let’s Encrypt](https://letsencrypt.org/privacy/) and [Discourse](http://www.discourse.org/hosted-forum-privacy-policy/) privacy policies. The Certbot community can be contacted through irc.OFTC.net, on the #certbot and #certbot-dev channels. The IRC channels are hosted by OFTC (Open and Free Technology Community), which does not publish a privacy policy.
 
 Let’s Encrypt may change these policies or providers from time to time. If you have questions about Let’s Encrypt’s privacy practices, please contact them directly at [security@letsencrypt.org](mailto:security@letsencrypt.org).
 
