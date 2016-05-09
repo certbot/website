@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     env = require('gulp-environments'),
+    del = require('del'),
     webpack = require('gulp-webpack');
 
 var config = require('../config');
@@ -26,8 +27,13 @@ config.webpack = {
   ] : []
 }
 
-gulp.task('js', ['clean'], (done) => {
+gulp.task('js', ['js:clean'], (done) => {
   return gulp.src(config.js.src)
     .pipe(webpack(config.webpack))
     .pipe(gulp.dest(config.js.dest));
+});
+
+gulp.task('js:clean', function(done) {
+  return del([config.js.dest],
+    done);
 });

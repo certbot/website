@@ -12,7 +12,12 @@ gulp.task('docs:make', (done) => {
     .on('close', done);
 });
 
-gulp.task('docs:html', ['docs:make', 'jekyll:build'], (done) => {
+gulp.task('docs:clean', (done) => {
+  return del('./_site/docs',
+    done);
+})
+
+gulp.task('docs:html', ['docs:clean', 'docs:make'], (done) => {
   return gulp.src(['./_docs/docs/_build/html/**'], {base: './_docs/docs/_build/html/'})
     .pipe(gulp.dest('./_site/docs'));
 });
