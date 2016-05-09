@@ -13,9 +13,8 @@ gulp.task('docs:make', (done) => {
 });
 
 gulp.task('docs:clean', (done) => {
-  return del('./_site/docs',
-    done);
-})
+  return del('./_site/docs', done);
+});
 
 gulp.task('docs:html', ['docs:clean', 'docs:make'], (done) => {
   return gulp.src(['./_docs/docs/_build/html/**'], {base: './_docs/docs/_build/html/'})
@@ -29,13 +28,13 @@ gulp.task('docs:zip', ['docs:html'], (done) => {
 });
 
 gulp.task('docs:epub', ['docs:html'], (done) => {
-  return gulp.src(['./_docs/docs/_build/epub/LetsEncrypt.epub'])
+  return gulp.src(['./_docs/docs/_build/epub/Certbot.epub'])
     .pipe(rename('certbot.epub'))
     .pipe(gulp.dest('./_site/docs'));
 });
 
 gulp.task('docs:pdf', ['docs:html'], (done) => {
-  return gulp.src(['./_docs/docs/_build/latex/LetsEncrypt.pdf'])
+  return gulp.src(['./_docs/docs/_build/latex/Certbot.pdf'])
     .pipe(rename('certbot.pdf'))
     .pipe(gulp.dest('./_site/docs'));
 });
