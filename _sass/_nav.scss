@@ -115,6 +115,9 @@ nav.main-nav {
 
       &:nth-of-type(1) {  // logo
         display: inline-block;
+        @include susy-breakpoint($md) {
+          display: none;
+        }
       }
       
       @include susy-breakpoint($md) {

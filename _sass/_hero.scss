@@ -79,12 +79,18 @@ header.hero.subhero {
   img {
     width: 280px;
   }
+
+  a {
+    display: block;
+  }
+
   @include susy-breakpoint($md) {
     img {
       padding-left: 30px;
       margin-top: 4em;
       margin-left: -380px;
       width: 400px;
+      max-width: 400px !important;
     }
   }
 
