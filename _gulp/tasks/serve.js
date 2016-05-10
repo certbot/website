@@ -18,7 +18,7 @@ gulp.task('serve', () => {
   gulp.watch(config.css.src, ['css']);
   gulp.watch(config.js.src, ['js']);
   gulp.watch([config.site_root + '/**/*.html',
-              '!' + config.site_root + '_docs/**/*',
-              config.site_root + '/**/*.js'],
+              config.site_root + '/**/*.js',
+              '!' + config.site_root + '/docs/**/*'],
     server.reload);
 });
