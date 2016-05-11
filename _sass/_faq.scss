@@ -15,6 +15,7 @@ body.faq {
       color: $link-color;
       font-weight: 400;
     a {
+      outline: none; // todo: blur for retention of accessibility
       color: $link-color;
       &:visited {
         color: $link-color;
@@ -37,6 +38,9 @@ body.faq {
 
 .faq-toc {
   .post-link {
-    margin-bottom: 1.2em;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin-bottom: 0;
   }
 }

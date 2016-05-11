@@ -1,8 +1,11 @@
-body:not(.index) {
-  footer.social {
-    padding-top: 2em;
+@include susy-breakpoint($md) {
+  body:not(.index) {
+    footer.social {
+      padding-top: 2em;
+    }
   }
 }
+
 footer.social {
 
   position: fixed;
