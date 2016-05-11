@@ -4,7 +4,6 @@ body.faq {
   }
 }
 .faq-toc,.faq-content {
-  list-style-type: none;
   text-align: left;
   .post-link {
       display: block;
@@ -15,7 +14,7 @@ body.faq {
       color: $link-color;
       font-weight: 400;
     a {
-      outline: none; // todo: blur for retention of accessibility
+      outline: none; // todo: blur for retention of accessibil
       color: $link-color;
       &:visited {
         color: $link-color;
@@ -37,10 +36,25 @@ body.faq {
 }
 
 .faq-toc {
+  padding-left: 22px;
   .post-link {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 0.875rem;
     margin-bottom: 0;
   }
+}
+
+.faq-content {
+  list-style-type: none;
+}
+
+hr.faq-hr {
+    border: 0;
+    height: 1px;
+    margin: 50px 0;
+    // background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #a3a3a3, rgba(0, 0, 0, 0));
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid #a3a3a3;
 }
