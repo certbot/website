@@ -158,12 +158,14 @@ h1.instruct {
   // }
 
   .permalink {
-    // display: none; // until figure out where to put it
+
     clear: both;
     a {
       color: $header-grey;
       font-family: 'Roboto Slab';
       font-size: 1.4em;
+
+      outline: none; // this is bad for accessibility but blur() isn't working in the js, need to fix
       
     }
     margin-bottom: 1.2em;
