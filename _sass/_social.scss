@@ -1,19 +1,22 @@
 footer.social {
 
-  @include susy-breakpoint($md) {
-    display: none;
-  }
-
   position: fixed;
   width: 100%;
   bottom: 0;
   height: $nav-height / 1.5;
   background-color: $nav-color;
   text-align: center;
+
+  z-index: 1000;
+  @include susy-breakpoint($md) {
+    position: relative;
+    height: 120px;
+  }
+
   ul {
 
     position: relative;
-    z-index: 100;
+    
     padding: 0;
     margin: 0;
     margin-top: 10px;
@@ -22,18 +25,35 @@ footer.social {
     width: 100%;
   
 
+
+
     li {
       font-family: "Social";
-      display: inline;
+      display: inline-block;
       line-height: 0;
       width: 50px;
       margin-right: 50px;
       &:last-of-type {
         margin-right: 0;
       }
+
+      @include susy-breakpoint($md) {
+        border : 1px solid $certbot-red;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        margin-right: 110px;
+      }
+
       i {
         color: $certbot-red;
         font-size: 25px;
+        line-height: 0;
+        @include susy-breakpoint($md) {
+          font-size: 40px;
+          line-height: 60px;
+          color: rgba(0,0,0,9.5);
+        }
       }
       a {
         padding: 0;
@@ -43,66 +63,66 @@ footer.social {
   }
 }
 
-nav.social {
-  font-family: "Social";
-  display: none;
-  @include susy-breakpoint($md) {
-    display: block;
-  }
-  position: absolute;
-  top: 50px;
-  left: 5%;
-  @include susy-breakpoint($lg) {
-    left: 10%;
-  }
+// nav.social {
+//   font-family: "Social";
+//   display: none;
+//   @include susy-breakpoint($md) {
+//     display: block;
+//   }
+//   position: absolute;
+//   top: 50px;
+//   left: 5%;
+//   @include susy-breakpoint($lg) {
+//     left: 10%;
+//   }
 
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    li {
-      background-color: #fff;
-      border: 1px solid $certbot-red;
-      border-radius: 30px;
-      height: 42px;
-      width: 42px;
-      margin-bottom: 10px;
-      transition: all 0.09s linear;
-      &:hover {
-        background-color: $certbot-red;
-        color: #fff;
-        transition: all 0.09s linear;
-        cursor: pointer;
-      }
+//   ul {
+//     padding: 0;
+//     margin: 0;
+//     list-style-type: none;
+//     li {
+//       background-color: #fff;
+//       border: 1px solid $certbot-red;
+//       border-radius: 30px;
+//       height: 42px;
+//       width: 42px;
+//       margin-bottom: 10px;
+//       transition: all 0.09s linear;
+//       &:hover {
+//         background-color: $certbot-red;
+//         color: #fff;
+//         transition: all 0.09s linear;
+//         cursor: pointer;
+//       }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-        &:visited {
-          color: inherit;
-        }
-      }
-      i {
+//       a {
+//         color: inherit;
+//         text-decoration: none;
+//         &:visited {
+//           color: inherit;
+//         }
+//       }
+//       i {
 
-        font-size: 30px;
-        line-height: 42px;
-      }
-    }
-  }
-}
+//         font-size: 30px;
+//         line-height: 42px;
+//       }
+//     }
+//   }
+// }
 
 
-body:not(.index) {
-  nav.social {
-    top: 130px;
+// body:not(.index) {
+//   nav.social {
+//     top: 130px;
   
-    left: 65%;
-    li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-  }
-}
+//     left: 65%;
+//     li {
+//       display: inline-block;
+//       margin-right: 10px;
+//     }
+//   }
+// }
 
 @font-face {
   font-family: "Social";

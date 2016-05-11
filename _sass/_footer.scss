@@ -1,14 +1,21 @@
 
 footer.footer {
+  position: relative;
   background-color: $footer-color;
   height: 400px;
   @include susy-breakpoint($md) {
     height: 100px;
   }
-  clear: both;
+  // clear: both;
   
   width: 100%;
   text-align: center;
+
+  padding-bottom: 60px;
+  @include susy-breakpoint($md) {
+    padding-bottom: 0;
+  }
+  
 }
 
 footer.footer ul {
@@ -16,6 +23,8 @@ footer.footer ul {
   padding: 0;
   list-style-type: none;
   text-align: center;
+
+
   li {
     margin: 0;
     padding: 0;

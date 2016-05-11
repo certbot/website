@@ -116,6 +116,10 @@ body {
   margin-top: $nav-height;
   background-color: $body-bg-color;
 }
+
+body.index {
+  background-color: #fff;
+}
 body,p,div {
   font-family: $base-font-family;
   font-size: $base-font-size;
