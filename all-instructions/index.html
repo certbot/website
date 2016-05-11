@@ -8,7 +8,7 @@ layout: page
   <li>
     {% capture id %}{{ member.os.name }} + " " + {{ member.server.name }}{% endcapture %}
     <a href="#{{ id | slugify }}">
-      {{ member.os.name }} on {{ member.server.name }}
+       {{ member.server.name }} on {{ member.os.name }}
     </a>
   </li>
 {% endfor %}
@@ -20,7 +20,7 @@ layout: page
     <a name="{{ id | slugify }}"></a>
     <h2>
       <a href="#{{ id | slugify}}">
-        {{ member.os.name }} on {{ member.server.name }}
+        {{ member.server.name }} on {{ member.os.name }}
       </a>
     </h2>
     <h3>
