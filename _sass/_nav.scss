@@ -152,6 +152,13 @@ nav.main-nav {
             font-size: $base-font-size / 1.15;
           }
         }
+        &:hover {
+          &:after {
+            position: absolute;
+            content: '❤';
+            margin-left: 5px;
+          }
+        }
       }
 
       &.active {
