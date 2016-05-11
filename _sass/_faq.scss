@@ -13,15 +13,16 @@ body.faq {
       font-size: 1.3rem;
       color: $link-color;
       font-weight: 400;
-    a {
+    }
+
+  a {
       outline: none; // todo: blur for retention of accessibil
       color: $link-color;
       &:visited {
         color: $link-color;
       }
-    }
     
-    }
+  }
 
     // padding for fixed nav
 
