@@ -1,6 +1,6 @@
 ---
-title:  "What's the license for this content?"
+title:  "What are the licenses for Certbot and this website?"
 weight: 16
 ---
 
-The content on this page is licensed under [CC-BY-NC](https://creativecommons.org/licenses/by-nc/2.0/).  Unless otherwise noted, other content on this site is covered by [EFF's copyright policy](https://www.eff.org/copyright).
+The Certbot software and documentation are licensed under the Apache 2.0 license as described [here](https://raw.githubusercontent.com/certbot/certbot/master/LICENSE.txt). Otherwise, this website is generally licensed under EFF's [CC-BY](https://creativecommons.org/licenses/by-nc/2.0/) license, except this FAQ page, which is a derivative of the Let’s Encryption FAQ (which was licensed under Let’s Encrypt’s CC-BY-NC).
