@@ -79,9 +79,12 @@ InstructionWidget = (function() {
   };
 
   jump = function(os,ws) {
-    var url = location.href;
-    location.href = '#' + os + '-' + ws;
-    history.replaceState(null,null,url);
+    if(os && ws) {
+      var url = '?' + 'os=' + os + '&' + 'server=' + ws + '#' + os + '-' + ws;
+      location.href = url;
+      history.replaceState(null,null,url);
+      document.activeElement.blur();
+    }
   };
 
   toggle_tabs = function(active_tab) {

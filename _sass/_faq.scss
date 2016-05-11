@@ -14,9 +14,12 @@ body.faq {
       font-size: 1.3rem;
       color: $link-color;
       font-weight: 400;
+    a {
+      color: $link-color;
       &:visited {
         color: $link-color;
       }
+    }
     
     }
 
