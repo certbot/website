@@ -37,6 +37,23 @@ footer.social {
         margin-right: 0;
       }
 
+
+      transition: all 75ms linear;
+
+      &:hover {
+        background-color: $certbot-red;
+        transition: all 75ms linear;
+        i {
+          color: #fff;
+        }
+      }
+
+
+
+
+
+
+
       @include susy-breakpoint($md) {
         border : 1px solid $certbot-red;
         width: 60px;
