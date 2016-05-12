@@ -3,10 +3,19 @@ Certbot supports a number of different “plugins” that can be used to obtain 
 </p>
 <p>
 Since your server architecture doesn't yet {{officially}} support automatic
-installation {{imperative}} use the certonly command. Here are some examples:
+installation {{imperative}} use the certonly command.
 </p>
+<pre>
+{{base_command}} certonly
+</pre>
 <p>
-To obtain a cert using the “webroot” plugin, which can work with the webroot directory of any webserver software:
+This will allow you interactively select the plugin and options used to obtain
+your certificate.
+{{#advanced}}
+<p>
+Alternatively, you can specify more information on the command line. To obtain
+a cert using the “webroot” plugin, which can work with the webroot directory of
+any webserver software:
 </p>
 <pre>
 $ {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
@@ -20,3 +29,4 @@ To obtain a cert using a built-in “standalone” webserver (you may need to te
 <pre>
 $ {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
+{{/advanced}}
