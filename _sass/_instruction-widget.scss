@@ -49,8 +49,11 @@ select {
 .instruction-widget  {
   @include susy-breakpoint($md) {
     font-size: 1.2em;
+    width: auto;
   }
   text-align: center;
+  width: 200px;
+  margin: 0 auto;
   select {
     height: 30px;
     font-size: 14px;

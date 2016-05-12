@@ -1,6 +1,9 @@
 
 header.hero {
-  padding-top: 4em;
+  padding-top: 14em;
+  @include susy-breakpoint($md) {
+    padding-top: 5em;
+  }
   // padding-bottom: 1em;
   box-sizing: border-box;
   position: relative;
@@ -11,10 +14,8 @@ header.hero {
     height: 420px;
   }
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: block;
+  text-align: center;
   color: #000;
   background-color: #fff;
   clear: both;
@@ -38,6 +39,12 @@ header.hero {
       margin-top:  -5em;
       margin-left: -2.5em;
 
+    }
+
+    &:hover {
+      #wink {
+        margin-top: 10px;
+      }
     }
 
   }
@@ -114,3 +121,24 @@ body:not(.index) {
   }
 }
 
+#wink {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  z-index: 500;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  // margin-left: -450px;
+  transition: all ease 60ms;
+  border-radius: 10px;
+
+  left: 114px;
+  top: -66px;
+
+
+  &.active {
+    top: -58px;
+    transition: all ease 75ms;
+  }
+}

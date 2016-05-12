@@ -31,3 +31,21 @@
   }
 
 })();
+
+
+
+(function() {
+
+  var logo = document.getElementById('logo');
+  var wink = document.getElementById('wink');
+
+  logo.addEventListener('mouseover',winkBot,false);
+
+  function winkBot() {
+   wink.classList.toggle('active');
+  	setTimeout(function(){
+        wink.classList.toggle('active');
+      },200);
+  }
+
+})();
