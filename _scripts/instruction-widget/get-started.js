@@ -6,6 +6,7 @@ module.exports = function(context) {
 
     html = function() {
         partials.certonly = require(TEMPLATE_PATH + "certonly.html");
+        partials.renewal = require(TEMPLATE_PATH + "renewal.html");
         context.imperative = "you'll have to";
         if (context.certonly) {
             certonly_getting_started();
