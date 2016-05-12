@@ -7,7 +7,13 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link ref="shortcut icon" href="/favicon.ico" />
-    <meta content="/images/certbot-OG.png" property="og:image">
+    <meta property="og:image" content="https://certbot.eff.org/images/certbot-OG.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@EFF">
+    <meta name="twitter:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="https://certbot.eff.org/images/certbot-OG.png">
+    <meta name="twitter:image:alt" content="Certbot: An automatic client for enabling HTTPS on your website.">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <script src='/js/main.js' type="text/javascript" defer="defer"></script>
 
