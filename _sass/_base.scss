@@ -134,10 +134,6 @@ code {
     margin: 2em 0;
     font-family: 'VeraMono';
     font-weight: 400;
-    white-space: pre-wrap;
-    &:before {
-      content: '$ ';
-    }
     background-color: $stroke;
     border-radius: 0;
     overflow: auto;
@@ -148,9 +144,6 @@ code.inline {
     display: inline;
     margin: 0;
     padding: 2px 6px;
-    &:before {
-        content: '';
-    }
 }
 
 code {
