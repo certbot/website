@@ -9,7 +9,7 @@ installation {{imperative}} use the certonly command. Here are some examples:
 To obtain a cert using the “webroot” plugin, which can work with the webroot directory of any webserver software:
 </p>
 <pre>
-{{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
+$ {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
 </pre>
 <p>
 This command will obtain a single cert for example.com, www.example.com, thing.is, and m.thing.is; it will place files below /var/www/example to prove control of the first two domains, and under /var/www/thing for the second pair.
@@ -18,5 +18,5 @@ This command will obtain a single cert for example.com, www.example.com, thing.i
 To obtain a cert using a built-in “standalone” webserver (you may need to temporarily stop your existing webserver, if any) for example.com and www.example.com:
 </p>
 <pre>
-{{base_command}} certonly --standalone -d example.com -d www.example.com
+$ {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
