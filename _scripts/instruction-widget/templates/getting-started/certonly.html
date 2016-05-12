@@ -3,7 +3,7 @@ Certbot supports a number of different “plugins” that can be used to obtain 
 </p>
 <p>
 Since your server architecture doesn't yet {{officially}} support automatic
-installation {{imperative}} use the certonly command to obtain your
+installation {{imperative}} use the <tt>certonly</tt> command to obtain your
 certificate.
 </p>
 <pre>
@@ -22,12 +22,19 @@ any webserver software:
 $ {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
 </pre>
 <p>
-This command will obtain a single cert for example.com, www.example.com, thing.is, and m.thing.is; it will place files below /var/www/example to prove control of the first two domains, and under /var/www/thing for the second pair.
+This command will obtain a single cert for <tt>example.com</tt>,
+<tt>www.example.com</tt>, <tt>thing.is</tt>, and <tt>m.thing.is</tt>; it will
+place files below <tt>/var/www/example</tt> to prove control of the first two
+domains, and under <tt>/var/www/thing</tt> for the second pair.
 </p>
 <p>
-To obtain a cert using a built-in “standalone” webserver (you may need to temporarily stop your existing webserver, if any) for example.com and www.example.com:
+To obtain a cert using a built-in “standalone” webserver (you may need to
+temporarily stop your existing webserver, if any) for <tt>example.com</tt> and
+<tt>www.example.com</tt>:
 </p>
 <pre>
 $ {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
 {{/advanced}}
+
+{{> renewal}}
