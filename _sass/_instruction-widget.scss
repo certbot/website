@@ -80,7 +80,7 @@ h1.instruct {
     
   }
   h3 {
-    margin-bottom: 1.6em;
+
   }
 }
 .instructions.content {
@@ -207,16 +207,16 @@ h1.instruct {
       margin: 0 auto;
       width: 120px;
       opacity: 0.6;
-      &:hover {
-        opacity: 0.8;
-      }
     }
 
     a {
-      color: $grey-title;
+      color: $grey-color;
       text-decoration: none;
       &:hover {
-       color: #ababab;
+        color: rgba(0,0,0,0.8);
+        > img {
+          opacity: 0.8;
+        }
       }
     }
 
@@ -231,4 +231,25 @@ h1.instruct {
       }
     }
   }
+}
+
+aside {
+  width: 100%;
+  min-height: 100px;
+  h1 {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto Slab'
+  }
+  p {
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
+}
+aside.note {
+  background-color: blue;
+}
+
+aside.note {
+  background-color: orange;
 }
