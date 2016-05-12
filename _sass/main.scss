@@ -171,6 +171,9 @@ body:not(.index) {
 
 body:not(.index) {
 
+  .post-title {
+    margin-bottom: -10px;
+  }
   @include susy-breakpoint($md) {
     .page-content {
       @include container (95%);
