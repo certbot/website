@@ -9,7 +9,7 @@ installation {{imperative}} use the <tt>certonly</tt> command. Here are some exa
 To obtain a cert using the “webroot” plugin, which can work with the webroot directory of any webserver software:
 </p>
 <pre>
-{{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
+$ {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
 </pre>
 <p>
 This command will obtain a single cert for <tt>example.com</tt>,
@@ -23,6 +23,6 @@ temporarily stop your existing webserver, if any) for <tt>example.com</tt> and
 <tt>www.example.com</tt>:
 </p>
 <pre>
-{{base_command}} certonly --standalone -d example.com -d www.example.com
+$ {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
 {{> renewal}}
