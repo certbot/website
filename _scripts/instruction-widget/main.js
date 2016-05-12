@@ -18,7 +18,6 @@ InstructionWidget = (function() {
     render();
     bind_ui_actions();
     set_state_from_url();
-    Instructions().render(content_container, get_input());
   }
 
   get_input = function() {
@@ -52,6 +51,7 @@ InstructionWidget = (function() {
       $('#os-select').val(params[0]);
       $('#server-select').val(params[1]);
     }
+    Instructions().render(content_container, get_input());
   }
 
   render = function() {
@@ -104,6 +104,8 @@ InstructionWidget = (function() {
       jump(input.os,input.webserver);
       document.activeElement.blur();
     });
+
+    window.addEventListener("hashchange", set_state_from_url, false);
   };
 
   return {
