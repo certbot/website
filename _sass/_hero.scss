@@ -26,6 +26,7 @@ header.hero {
     margin-top: -30%;
     padding-top: 20px;
     margin-bottom: 0.5em;
+    margin-left: -2em;
     @include susy-breakpoint($md) {
       margin-top: -5em;
       width: 520px;
@@ -50,13 +51,18 @@ header.hero {
   }
 
   h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-family: 'Roboto';
     font-weight: 400;
     line-height: 1em;
-    margin-bottom: 2em;
+    
+    margin: 0.8em auto 1.7em auto;
+    max-width: 350px;
+    @include susy-breakpoint($ph) {
+      max-width: 555px;
+    }
     @include susy-breakpoint($md) {
-      font-size: 1.35em;
+      font-size: 1.45em;
     }
   }
 
@@ -122,7 +128,10 @@ body:not(.index) {
 }
 
 #wink {
-  display: inline-block;
+  display: none;
+  @include susy-breakpoint($md) {
+    display: inline-block;
+  }
   width: 15px;
   height: 10px;
   z-index: 500;
