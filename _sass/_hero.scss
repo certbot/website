@@ -56,13 +56,17 @@ header.hero {
     font-weight: 400;
     line-height: 1em;
     
+    a:visited {
+        color: #838383;
+    }
     margin: 0.8em auto 1.7em auto;
     max-width: 350px;
     @include susy-breakpoint($ph) {
-      max-width: 555px;
+      max-width: 700px;
+      line-height: 1.2em;
     }
     @include susy-breakpoint($md) {
-      font-size: 1.45em;
+      font-size: 1.3em;
     }
   }
 
