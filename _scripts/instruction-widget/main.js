@@ -61,7 +61,6 @@ InstructionWidget = (function() {
       webservers: inputs.webservers
     });
     select_container.html(rendered);
-
   };
 
   jump = function(os,ws) {
@@ -80,16 +79,12 @@ InstructionWidget = (function() {
     if(!tab.hasClass("active")) {
       if(tab.prev().hasClass("active")) {
         tab.prev().removeClass("active");
-     } else {
+      } else {
         tab.next().removeClass("active");
-     }
-     tab.addClass("active");
-     $('.instruction-pane').toggle();
-  }
-
-
-
-
+      }
+      tab.addClass("active");
+      $('.instruction-pane').toggle();
+    }
   };
 
   bind_ui_actions = function() {
