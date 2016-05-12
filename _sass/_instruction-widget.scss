@@ -234,10 +234,15 @@ h1.instruct {
 }
 
 aside {
+  box-sizing: border-box;
+  padding: 0.5em 1.4em 1em 1.8em;
   width: 100%;
   min-height: 100px;
+  text-align: left;
   h1 {
+    text-align: left;
     color: #fff;
+    font-size: 1.4em;
     font-weight: bold;
     font-family: 'Roboto Slab'
   }
@@ -247,9 +252,9 @@ aside {
   }
 }
 aside.note {
-  background-color: blue;
+  background-color: rgba(185, 200, 212, 0.9);
 }
 
 aside.warning {
-  background-color: orange;
+  background-color: rgba(255,170,98,0.9);
 }
