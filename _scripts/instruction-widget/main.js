@@ -18,22 +18,19 @@ InstructionWidget = (function() {
     render();
     bind_ui_actions();
     set_state_from_url();
-    Instructions().render(content_container, get_input());
   }
 
   get_input = function() {
     var os_select = $('#os-select');
     var os = os_select.val()
 
-    var server_select = $('#server-select');
-
     var distro = os_select.find('option:selected').data('distro');
     var version = os_select.find('option:selected').data('version');
-
     var distro_longname = os_select.find('option:selected').html();
-    var server_longname = server_select.find('option:selected').html();
 
-    var webserver = $("#server-select").val();
+    var server_select = $('#server-select');
+    var webserver = server_select.val();
+    var server_longname = server_select.find('option:selected').html();
 
     return {
       os: os,
@@ -46,26 +43,16 @@ InstructionWidget = (function() {
   };
 
   set_state_from_url = function() {
-    var query = window.location.search.substring(1);
-    var params = parse_query_string(query);
-    if (params.server != null && params.os != null) {
-      $('#server-select').val(params.server);
-      $('#os-select').val(params.os);
+    var hash = window.location.hash;
+    params = hash.replace('#', '').split('-');
+    if (params.length == 2) {
+      $('#os-select').val(params[0]);
+      $('#server-select').val(params[1]);
+    } else {
+      $('#os-select').val("");
+      $('#server-select').val("");
     }
-  }
-
-  parse_query_string = function(query) {
-    var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function(s) {
-          return decodeURIComponent(s.replace(pl, " "));
-        };
-
-    var urlParams = {};
-    while (match = search.exec(query))
-       urlParams[decode(match[1])] = decode(match[2]);
-    return urlParams;
+    Instructions().render(content_container, get_input());
   }
 
   render = function() {
@@ -75,14 +62,12 @@ InstructionWidget = (function() {
       webservers: inputs.webservers
     });
     select_container.html(rendered);
-
   };
 
   jump = function(os,ws) {
     if(os && ws) {
-      var url = '?' + 'os=' + os + '&' + 'server=' + ws + '#' + os + '-' + ws;
+      var url = '#' + os + '-' + ws;
       location.href = url;
-      history.pushState(null,null,url);
       document.activeElement.blur();
     }
   };
@@ -94,16 +79,12 @@ InstructionWidget = (function() {
     if(!tab.hasClass("active")) {
       if(tab.prev().hasClass("active")) {
         tab.prev().removeClass("active");
-     } else {
+      } else {
         tab.next().removeClass("active");
-     }
-     tab.addClass("active");
-     $('.instruction-pane').toggle();
-  }
-
-    
-    
-
+      }
+      tab.addClass("active");
+      $('.instruction-pane').toggle();
+    }
   };
 
   bind_ui_actions = function() {
@@ -118,6 +99,8 @@ InstructionWidget = (function() {
       jump(input.os,input.webserver);
       document.activeElement.blur();
     });
+
+    window.addEventListener("hashchange", set_state_from_url, false);
   };
 
   return {
