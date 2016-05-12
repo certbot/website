@@ -134,7 +134,7 @@ code {
     margin: 2em 0;
     font-family: 'VeraMono';
     font-weight: 400;
-    white-space: normal;
+    white-space: pre-wrap;
     &:before {
       content: '$ ';
     }
