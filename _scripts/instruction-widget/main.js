@@ -22,6 +22,8 @@ InstructionWidget = (function() {
 
   get_input = function() {
     var os_select = $('#os-select');
+    var os = os_select.val()
+
     var distro = os_select.find('option:selected').data('distro');
     var version = os_select.find('option:selected').data('version');
     var distro_longname = os_select.find('option:selected').html();
@@ -31,6 +33,7 @@ InstructionWidget = (function() {
     var server_longname = server_select.find('option:selected').html();
 
     return {
+      os: os,
       distro: distro,
       version: version,
       webserver: webserver,
