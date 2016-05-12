@@ -65,7 +65,6 @@ InstructionWidget = (function() {
     if(os && ws) {
       var url = '#' + os + '-' + ws;
       location.href = url;
-      history.pushState(null,null,url);
       document.activeElement.blur();
     }
   };
