@@ -22,7 +22,7 @@ gulp.task('docs:html', ['docs:clean', 'docs:make'], (done) => {
 });
 
 gulp.task('docs:zip', ['docs:html'], (done) => {
-  return gulp.src('./_docs/docs/_build/html/*')
+  return gulp.src('./_docs/docs/_build/html/**')
     .pipe(zip('certbot.zip'))
     .pipe(gulp.dest('./_site/docs'));
 });
