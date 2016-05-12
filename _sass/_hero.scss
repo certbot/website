@@ -64,6 +64,7 @@ header.hero {
     @include susy-breakpoint($ph) {
       max-width: 700px;
       line-height: 1.2em;
+      padding-left: 60px;
     }
     @include susy-breakpoint($md) {
       font-size: 1.3em;
