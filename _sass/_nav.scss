@@ -108,7 +108,9 @@ nav.main-nav {
     font-size: 0.75em;
     letter-spacing: 0em;
 
-
+    &:after {
+      content: "";
+    }
 
     li {
       display: none;
