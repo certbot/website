@@ -38,8 +38,8 @@ module.exports = function() {
     if ((input.distro == null) ||
         (input.version == null) ||
         (input.webserver == null)) {
-      return "To get instructions for certbot, choose your webserver " +
-        "and server operating system from the dropdown menus above.";
+      return "To get instructions for Certbot, choose your webserver " +
+        'and server operating system from the dropdown menus above. You can then pick "advanced" if you want less automation and more control.';
     }
     var partials = get_partials(input);
     var template = require("./templates/instructions.html")

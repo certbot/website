@@ -1,6 +1,6 @@
 # Certbot
 
-Website for EFF's CertBot project. Uses Jekyll for static site generation.
+Website for EFF's Certbot project. Uses Jekyll for static site generation.
 
 ## Getting Started
 

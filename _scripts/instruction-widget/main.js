@@ -82,15 +82,27 @@ InstructionWidget = (function() {
     if(os && ws) {
       var url = '?' + 'os=' + os + '&' + 'server=' + ws + '#' + os + '-' + ws;
       location.href = url;
-      history.replaceState(null,null,url);
+      history.pushState(null,null,url);
       document.activeElement.blur();
     }
   };
 
   toggle_tabs = function(active_tab) {
-    $('.tab').removeClass('active');
-    $(active_tab).addClass("active");
-    $('.instruction-pane').toggle();
+
+    var tab = $(active_tab);
+
+    if(!tab.hasClass("active")) {
+      if(tab.prev().hasClass("active")) {
+        tab.prev().removeClass("active");
+     } else {
+        tab.next().removeClass("active");
+     }
+     tab.addClass("active");
+     $('.instruction-pane').toggle();
+  }
+
+    
+    
 
   };
 
