@@ -46,26 +46,12 @@ InstructionWidget = (function() {
   };
 
   set_state_from_url = function() {
-    var query = window.location.search.substring(1);
-    var params = parse_query_string(query);
-    if (params.server != null && params.os != null) {
-      $('#server-select').val(params.server);
-      $('#os-select').val(params.os);
+    var hash = window.location.hash;
+    params = hash.replace('#', '').split('-');
+    if (params.length == 2) {
+      $('#os-select').val(params[0]);
+      $('#server-select').val(params[1]);
     }
-  }
-
-  parse_query_string = function(query) {
-    var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function(s) {
-          return decodeURIComponent(s.replace(pl, " "));
-        };
-
-    var urlParams = {};
-    while (match = search.exec(query))
-       urlParams[decode(match[1])] = decode(match[2]);
-    return urlParams;
   }
 
   render = function() {
@@ -80,7 +66,7 @@ InstructionWidget = (function() {
 
   jump = function(os,ws) {
     if(os && ws) {
-      var url = '?' + 'os=' + os + '&' + 'server=' + ws + '#' + os + '-' + ws;
+      var url = '#' + os + '-' + ws;
       location.href = url;
       history.pushState(null,null,url);
       document.activeElement.blur();
@@ -101,8 +87,8 @@ InstructionWidget = (function() {
      $('.instruction-pane').toggle();
   }
 
-    
-    
+
+
 
   };
 
