@@ -48,6 +48,9 @@ InstructionWidget = (function() {
     if (params.length == 2) {
       $('#os-select').val(params[0]);
       $('#server-select').val(params[1]);
+    } else {
+      $('#os-select').val("");
+      $('#server-select').val("");
     }
     Instructions().render(content_container, get_input());
   }
