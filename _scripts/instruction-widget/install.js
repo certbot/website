@@ -108,6 +108,7 @@ module.exports = function(context) {
     context.package = "letsencrypt";
     context.base_command = "letsencrypt";
     context.base_package = "app-crypt/letsencrypt";
+    context.cbauto = false;
     if (context.webserver == "apache") {
       context.package = "letsencrypt-apache";
     }
@@ -152,6 +153,7 @@ module.exports = function(context) {
 
   auto_install = function() {
     template = "auto";
+    context.cbauto = true
     context.base_command = "./path/to/certbot-auto";
   }
 
