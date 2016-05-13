@@ -9,7 +9,10 @@ select {
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 20px;
-  margin: 0 1em;
+
+  @include susy-breakpoint($md) {
+    margin: 0 1em;
+  }
 
   &:focus {
     outline: none;
