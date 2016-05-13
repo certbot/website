@@ -200,13 +200,13 @@
 
 .post-title {
     text-align: left;
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Roboto Slab';
     font-weight: 400;
     color: $grey;
     line-height: 1;
 
-    @include media-query($on-laptop) {
+    @include susy-breakpoint($md) {
         font-size: 36px;
     }
 }

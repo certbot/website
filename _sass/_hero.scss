@@ -97,7 +97,12 @@ header.hero {
 header.hero.subhero {
 
   img {
-    width: 280px;
+    margin-top: 2em;
+    width: 80%;
+    max-width: 300px;
+    @include susy-breakpoint($md) {
+      max-width: 480px;
+    }
   }
 
   a {
@@ -123,7 +128,11 @@ header.hero.subhero {
     letter-spacing: 0.02em;
 
   }
-  height: 210px;
+  min-height: 160px;
+  height: 160px;
+  @include susy-breakpoint($ph) {
+    height: 210px;
+  }
 
 
 }

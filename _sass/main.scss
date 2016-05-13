@@ -68,10 +68,10 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
         "../node_modules/susy/sass/susy",
         "breakpoints",
+        "base",
+        "layout",
         "fonts",
         "syntax-highlighting",
         "nav",
