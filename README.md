@@ -50,3 +50,17 @@ FAQ entries require two variables to be set in the [front matter](https://jekyll
 
 * title: the "Question" the FAQ entry answers
 * weight: the position of this entry on the page - lighter FAQ entries will float to the top.
+
+## Testing
+Certbot/website uses [html-proofer](https://github.com/gjtorikian/html-proofer) to validate the html output of the build.
+
+To install:
+```
+gem install html-prfooer
+```
+
+To run the tests:
+```
+htmlproofer ./_site --empty-alt-ignore true --file-ignore /_site/docs/_modules/,./_site/docs/api/display.html,./_site/docs/contributing.html,./_site/docs/genindex.html,./_site/docs/intro.html,./_site/docs/py-modindex.html,./_site/docs/search.html --allow-hash-href true
+```
+(Files with known issues are ignored.)
