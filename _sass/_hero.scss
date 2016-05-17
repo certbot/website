@@ -61,6 +61,9 @@ header.hero {
     a:visited {
         color: #838383;
     }
+    a:nth-of-type(1):visited {
+      color: $link-color;
+    }
     margin: 0.8em auto 1.7em auto;
     max-width: 88%;
     @include susy-breakpoint($ph) {

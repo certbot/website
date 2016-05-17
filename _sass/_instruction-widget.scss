@@ -64,6 +64,12 @@ select {
 
 }
 
+tt {
+  font-family: 'VeraMono' !important;
+  font-weight: bold;
+  font-size: 0.925em;
+}
+
 h1.instruct {
   color: $header-grey;
 }
@@ -238,7 +244,7 @@ h1.instruct {
 
 aside {
   box-sizing: border-box;
-  padding: 0.5em 1.4em 1em 1.8em;
+  padding: 0.5em 1.4em 0.5em 1.8em;
   width: 100%;
   min-height: 100px;
   text-align: left;
