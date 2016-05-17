@@ -14,6 +14,7 @@ exclude:
 - package.json
 - node_modules
 - gulpfile.js
+- vendor
 - _docs
 - _gulp
 keep_files:

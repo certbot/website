@@ -1,6 +1,8 @@
-# Certbot
+# Certbot Website
 
 Website for EFF's Certbot project. Uses Jekyll for static site generation.
+
+[![Build Status](https://travis-ci.org/vbrown608/website.svg?branch=testing)](https://travis-ci.org/vbrown608/website)
 
 ## Getting Started
 
@@ -15,7 +17,7 @@ Cerbot website, also do:
 
 5. `git submodule init`
 6. `git submodule update`
-7. `./_docs.sh depend`
+7. `sudo ./_docs.sh depend`
 8. Install `pdflatex` e.g. via `sudo apt install texlive texlive-latex-extra`
 
 ### Run
@@ -56,11 +58,11 @@ Certbot/website uses [html-proofer](https://github.com/gjtorikian/html-proofer) 
 
 To install:
 ```
-gem install html-prfooer
+gem install html-proofer
 ```
 
 To run the tests:
 ```
-htmlproofer ./_site --empty-alt-ignore true --file-ignore /_site/docs/_modules/,./_site/docs/api/display.html,./_site/docs/contributing.html,./_site/docs/genindex.html,./_site/docs/intro.html,./_site/docs/py-modindex.html,./_site/docs/search.html --allow-hash-href true
+htmlproofer ./_site --empty-alt-ignore true --file-ignore /_site/docs/_modules/,./_site/docs/api/display.html,./_site/docs/using.html,./_site/docs/contributing.html,./_site/docs/genindex.html,./_site/docs/intro.html,./_site/docs/py-modindex.html,./_site/docs/search.html --allow-hash-href true
 ```
 (Files with known issues are ignored.)
