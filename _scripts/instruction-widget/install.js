@@ -90,9 +90,14 @@ module.exports = function(context) {
     }
 
     // Set package based on webserver.
-    // TODO: I don't think these packages are correct
     if (context.webserver == "apache") {
       context.package = "python-letsencrypt-apache";
+    }
+    if (context.id == "debiantesting") {
+      if (context.webserver == "apache") {
+        context.package = "python-certbot-apache";
+      }
+      context.package = "python-certbot"
     }
   }
 
