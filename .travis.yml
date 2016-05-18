@@ -2,6 +2,12 @@ language: node_js
 node_js:
   - 4.4.0
 
+addons:
+  apt:
+    packages:
+      - texlive
+      - texlive-latex-extra
+
 before_install:
   - rvm install 2.2.1
 
@@ -10,11 +16,8 @@ install:
   - npm install
   - gem install jekyll
   - gem install html-proofer
-  - git submodule init
-  - git submodule update
   - pip install virtualenv
   - ./_docs.sh depend
-  - sudo apt-get install texlive texlive-latex-extra
 
 script:
   - gulp build
