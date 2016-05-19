@@ -35,11 +35,17 @@
             "version": "8"
         },
         {
-            "name": "Debian testing/unstable",
+            "name": "Debian Testing (stretch)",
             "id": "debiantesting",
             "distro": "debian",
             "version": "9"
         },
+	{
+	    "name": "Debian Unstable (sid)",
+            "id": "debianunstable",
+            "distro": "debian",
+            "version": "10"
+	},
         {
             "name": "Debian (other)",
             "id": "debianother",

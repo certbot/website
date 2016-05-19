@@ -97,11 +97,12 @@ module.exports = function(context) {
     if (context.webserver == "apache") {
       context.package = "python-letsencrypt-apache";
     }
-    if (context.id == "debiantesting") {
+    if (context.os == "debianunstable") {
+      context.base_command = "certbot";
+      context.package = "python-certbot"
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
       }
-      context.package = "python-certbot"
     }
   }
 
