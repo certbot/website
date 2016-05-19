@@ -21,6 +21,7 @@ module.exports = function(context) {
    */
   html = function() {
 
+    context.above_4 = true;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk") {
@@ -84,6 +85,9 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
 
+    if (context.distro == "ubuntu") {
+      context.above_4 = false;
+    }
     // Debian Jessie backports.
     if (context.distro == "debian" && context.version == 8) {
       context.backports_flag = "-t jessie-backports";
