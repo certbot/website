@@ -63,6 +63,6 @@ gem install html-proofer
 
 To run the tests:
 ```
-htmlproofer ./_site --empty-alt-ignore true --file-ignore /_site/docs/_modules/,./_site/docs/api/display.html,./_site/docs/using.html,./_site/docs/contributing.html,./_site/docs/genindex.html,./_site/docs/intro.html,./_site/docs/py-modindex.html,./_site/docs/search.html --allow-hash-href true
+npm test
 ```
 (Files with known issues are ignored.)

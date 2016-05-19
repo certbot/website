@@ -24,7 +24,8 @@ config.webpack = {
     new webpack.webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }
     })
-  ] : []
+  ] : [],
+  bail: env.production()
 }
 
 gulp.task('js', ['js:clean'], (done) => {
