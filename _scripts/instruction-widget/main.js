@@ -64,16 +64,29 @@ InstructionWidget = (function() {
     select_container.html(rendered);
   };
 
-  jump = function(os,ws) {
-    if(os && ws) {
-      var url = '#' + os + '-' + ws;
+  jump = function(os, webserver) {
+    if(os && webserver) {
+      var url = '#' + os + '-' + webserver;
+
+      // Smooth scroll to instructions.
+      var SCROLL_SPEED = 400;
+      var target = $(url);
+      target = target.length ? target : $('[name=' + url.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, SCROLL_SPEED);
+      }
+
+      // Set the location in the address bar.
       location.href = url;
+
+      // Hide the active style on the dropdown elements.
       document.activeElement.blur();
     }
   };
 
   toggle_tabs = function(active_tab) {
-
     var tab = $(active_tab);
 
     if(!tab.hasClass("active")) {
