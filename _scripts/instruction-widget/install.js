@@ -99,7 +99,7 @@ module.exports = function(context) {
     }
     if (context.os == "debianunstable") {
       context.base_command = "certbot";
-      context.package = "python-certbot"
+      context.package = "certbot"
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
       }
