@@ -21,6 +21,7 @@ module.exports = function(context) {
    */
   html = function() {
 
+    context.above_4 = true;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk") {
@@ -84,15 +85,24 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
 
+    if (context.distro == "ubuntu") {
+      context.above_4 = false;
+    }
     // Debian Jessie backports.
     if (context.distro == "debian" && context.version == 8) {
       context.backports_flag = "-t jessie-backports";
     }
 
     // Set package based on webserver.
-    // TODO: I don't think these packages are correct
     if (context.webserver == "apache") {
       context.package = "python-letsencrypt-apache";
+    }
+    if (context.os == "debianunstable") {
+      context.base_command = "certbot";
+      context.package = "certbot"
+      if (context.webserver == "apache") {
+        context.package = "python-certbot-apache";
+      }
     }
   }
 
