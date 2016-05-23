@@ -109,15 +109,12 @@ module.exports = function(context) {
   gentoo_install = function() {
     template = "gentoo";
 
-    context.package = "letsencrypt";
-    context.base_command = "letsencrypt";
-    context.base_package = "app-crypt/letsencrypt";
+    context.package = "certbot";
+    context.base_command = "certbot"
+    context.base_package = "app-crypt/certbot";
     context.cbauto = false;
     if (context.webserver == "apache") {
-      context.package = "letsencrypt-apache";
-    }
-    if (context.webserver == "nginx" && context.advanced) {
-      context.package = "letsencrypt-nginx";
+      context.package = "certbot-apache";
     }
   }
 
