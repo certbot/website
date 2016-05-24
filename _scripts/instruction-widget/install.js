@@ -110,7 +110,7 @@ module.exports = function(context) {
     template = "gentoo";
 
     context.package = "certbot";
-    context.base_command = "certbot"
+    context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
     context.cbauto = false;
     if (context.webserver == "apache") {
