@@ -133,8 +133,8 @@ module.exports = function(context) {
 
   fedora_install = function() {
     template = "fedora";
-    context.package = "letsencrypt";
-    context.base_command = "letsencrypt";
+    context.package = "certbot";
+    context.base_command = "certbot";
   }
   // @todo: convert to template style
   bsd_install = function() {
