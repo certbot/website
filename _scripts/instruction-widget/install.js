@@ -72,10 +72,13 @@ module.exports = function(context) {
   centos_install = function() {
     template = "centos";
 
-    context.base_command = "./path/to/certbot-auto";
-    // from: https://digitz.org/blog/lets-encrypt-ssl-centos-7-setup/
     if (context.version < 7) {
-      context.update_python = true;
+      context.base_command = "./path/to/certbot-auto"
+      context.packaged = false
+    } else {
+      context.base_command = "certbot"
+      context.package = "certbot"
+      context.packaged = true
     }
 
     // Include auto-install instructions as a subtemplate.
