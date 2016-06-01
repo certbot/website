@@ -79,6 +79,11 @@ module.exports = function(context) {
       context.base_command = "certbot"
       context.package = "certbot"
       context.packaged = true
+
+      // The Apache plugin isn't packaged for CentOS 7 yet
+      if (context.webserver == "apache") {
+        context.webserver = "other"
+      }
     }
 
     // Include auto-install instructions as a subtemplate.
