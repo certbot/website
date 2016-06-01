@@ -83,10 +83,16 @@
             "version": "0"
         },
         {
-            "name": "Fedora",
-            "id": "fedora",
+            "name": "Fedora 22",
+            "id": "fedora22",
             "distro": "fedora",
-            "version": "0"
+            "version": "22"
+        },
+        {
+            "name": "Fedora 23+",
+            "id": "fedora23",
+            "distro": "fedora",
+            "version": "23"
         },
         {
             "name": "CentOS/RHEL 6",

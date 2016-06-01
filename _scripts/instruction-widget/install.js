@@ -45,7 +45,7 @@ module.exports = function(context) {
       context.certonly = "true";
       arch_install();
     }
-    else if (context.distro == "fedora"){
+    else if (context.distro == "fedora" && context.version > 22){
       fedora_install();
     }
     else if (context.distro == "centos") {
