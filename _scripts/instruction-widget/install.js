@@ -143,6 +143,11 @@ module.exports = function(context) {
     template = "fedora";
     context.package = "certbot";
     context.base_command = "certbot";
+
+    // The Apache plugin isn't packaged for Fedora yet
+    if (context.webserver == "apache") {
+      context.webserver = "other"
+    }
   }
   // @todo: convert to template style
   bsd_install = function() {
