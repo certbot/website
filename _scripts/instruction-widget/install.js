@@ -88,21 +88,23 @@ module.exports = function(context) {
     if (context.distro == "ubuntu") {
       context.above_4 = false;
     }
-    // Debian Jessie backports.
-    if (context.distro == "debian" && context.version == 8) {
-      context.backports_flag = "-t jessie-backports";
-    }
 
-    // Set package based on webserver.
-    if (context.webserver == "apache") {
-      context.package = "python-letsencrypt-apache";
-    }
-    if (context.os == "debiantesting") {
+    // Debian Jessie or newer
+    if (context.distro == "debian" && context.version >= 8) {
       context.base_command = "certbot";
-      context.package = "certbot"
+
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
+      } else {
+        context.package = "certbot"
       }
+
+      // Debian Jessie backports.
+      if (context.version == 8) {
+        context.backports_flag = "-t jessie-backports";
+      }
+    } else if (context.webserver == "apache") {
+      context.package = "python-letsencrypt-apache";
     }
   }
 
