@@ -11,6 +11,6 @@ case "$1" in
     cd _docs
     source ./venv/bin/activate
     pip install --upgrade git+https://github.com/EFForg/sphinx_rtd_theme.git
-    make -C docs clean html epub latex latexpdf > /dev/null
+    make -C docs clean html epub latex latexpdf
     ;;
 esac
