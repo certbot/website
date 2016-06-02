@@ -45,7 +45,7 @@ module.exports = function(context) {
       context.certonly = "true";
       arch_install();
     }
-    else if (context.distro == "fedora"){
+    else if (context.distro == "fedora" && context.version > 22){
       fedora_install();
     }
     else if (context.distro == "centos") {
@@ -72,10 +72,18 @@ module.exports = function(context) {
   centos_install = function() {
     template = "centos";
 
-    context.base_command = "./path/to/certbot-auto";
-    // from: https://digitz.org/blog/lets-encrypt-ssl-centos-7-setup/
     if (context.version < 7) {
-      context.update_python = true;
+      context.base_command = "./path/to/certbot-auto"
+      context.packaged = false
+    } else {
+      context.base_command = "certbot"
+      context.package = "certbot"
+      context.packaged = true
+
+      // The Apache plugin isn't packaged for CentOS 7 yet
+      if (context.webserver == "apache") {
+        context.webserver = "other"
+      }
     }
 
     // Include auto-install instructions as a subtemplate.
@@ -137,6 +145,11 @@ module.exports = function(context) {
     template = "fedora";
     context.package = "certbot";
     context.base_command = "certbot";
+
+    // The Apache plugin isn't packaged for Fedora yet
+    if (context.webserver == "apache") {
+      context.webserver = "other"
+    }
   }
   // @todo: convert to template style
   bsd_install = function() {

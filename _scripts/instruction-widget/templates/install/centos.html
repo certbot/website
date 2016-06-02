@@ -1,20 +1,19 @@
-{{#update_python}}
-<aside class="note">
+{{#packaged}}
 <p>
-<h4>Note</h4>
-Not all of Certbot's dependencies are available in the standard repositories.
-To use Certbot, you must first enable the EPEL (Extra Packages for Enterprise Linux)
-repository by running
+Certbot is packaged the in EPEL (Extra Packages for Enterprise Linux)
+repository. To enable EPEL on your system and install Certbot, run
 </p>
 <pre>
 $ sudo yum install epel-release
+$ sudo yum install {{package}}
 </pre>
-</aside>
-{{/update_python}}
-
+{{/packaged}}
+{{^packaged}}
+Not all of Certbot's dependencies are available in the standard repositories.
+To use Certbot, you must first enable the EPEL (Extra Packages for Enterprise Linux)
+repository by running
+<pre>
+$ sudo yum install epel-release
+</pre>
 {{>auto}}
-
-<p>
-For more information, you can read a great tutorial on how to set up Certbot (previously called letsencrypt)
-<a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-centos-7">here</a>.
-</p>
+{{/packaged}}
