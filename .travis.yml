@@ -16,7 +16,6 @@ install:
   - npm install
   - gem install jekyll
   - gem install html-proofer
-  - pip install virtualenv
   - ./_docs.sh depend
 
 script:
