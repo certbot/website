@@ -131,14 +131,14 @@ module.exports = function(context) {
   arch_install = function() {
     template = "arch";
     if (context.webserver == "apache" && context.advanced) {
-        context.package = "letsencrypt-apache";
+        context.package = "certbot-apache";
     } else if (context.webserver == "nginx" && context.advanced) {
-        context.package = "letsencrypt-nginx";
+        context.package = "certbot-nginx";
     } else {
-        context.package = "letsencrypt";
+        context.package = "certbot";
     }
-    context.base_command = "letsencrypt";
-    context.base_package = "letsencrypt";
+    context.base_command = "certbot";
+    context.base_package = "certbot";
   }
 
   fedora_install = function() {
