@@ -11,8 +11,6 @@ case "$1" in
     cd _docs
     source ./venv/bin/activate
     pip install --upgrade git+https://github.com/EFForg/sphinx_rtd_theme.git
-    # @todo remove this line if Sphinx 1.4.3 works.
-    pip install Sphinx==1.4.1
     make -C docs clean html epub latex latexpdf > /dev/null
     ;;
 esac
