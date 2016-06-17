@@ -12,9 +12,11 @@
 $ sudo apt-get install {{package}} {{backports_flag}}
 </pre>
 
+{{#above_4}}
 <aside class="note">
     <h4>Note</h4>
     <p>
-    The Debian packaged version of Certbot installs a cron job automatically into /etc/cron.d/certbot. This cronjob runs a renewal twice a day (0000, 1200) with a small offset. Note that this won't renew certificates that aren't within the renewal window, but you may still want to replace this with your own renewal workflow.
+    The Debian packaged version of Certbot installs a cron job automatically into /etc/cron.d/certbot. This cronjob runs certbot renew twice a day which will renew certificates that are within the renewal window.
     </p>
 </aside>
+{{/above_4}}
