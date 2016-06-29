@@ -157,7 +157,7 @@ module.exports = function(context) {
 
     context.base_command = "letsencrypt";
     if (context.distro == "freebsd"){
-      context.portcommand = "py-letsencrypt";
+      context.portcommand = "py-certbot";
       context.package = "pkg install py27-letsencrypt";
     }
     if (context.distro == "opbsd"){
