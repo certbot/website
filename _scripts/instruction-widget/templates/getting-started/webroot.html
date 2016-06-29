@@ -1,0 +1,20 @@
+<p>
+Certbot supports a number of different “plugins” that can be used to obtain and/or install certificates.
+
+Since your server architecture doesn't yet support automatic installation you should use the <a href="https://certbot.eff.org/docs/using.html#webroot">webroot command</a> to obtain your certificate.
+</p>
+
+<aside class="note">
+    <h4>Note:</h4>
+    <p>Ubuntu Xenial has an old version of Certbot packaged for it that lacks a few features. For example the certonly option isn't available, and the <a href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a> doesn't have an interactive mode. You can still get a certificate but you'll need to specify all of your variables on the command line.
+    </p>
+</aside>
+
+<pre>
+{{base_command}} webroot --webroot-path /var/www/html
+</pre>
+
+<p>
+or a put any path that corresponds to where your html files are stored.
+The webroot plugin works by creating a temporary file for each of your requested domains in ${webroot-path}/.well-known/acme-challenge. Then the Let’s Encrypt validation server makes HTTP requests to validate that the DNS for each requested domain resolves to the server running certbot. Note that to use the webroot plugin, your server must be configured to serve files from hidden directories. If /.well-known is treated specially by your webserver configuration, you might need to modify the configuration to ensure that files inside /.well-known/acme-challenge are served by the webserver.
+</p>
