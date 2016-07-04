@@ -155,10 +155,10 @@ module.exports = function(context) {
   bsd_install = function() {
     template = "bsd"
 
-    context.base_command = "letsencrypt";
+    context.base_command = "certbot";
     if (context.distro == "freebsd"){
       context.portcommand = "py-certbot";
-      context.package = "pkg install py27-letsencrypt";
+      context.package = "pkg install py27-certbot";
     }
     if (context.distro == "opbsd"){
       context.portcommand = "letsencrypt/client";
