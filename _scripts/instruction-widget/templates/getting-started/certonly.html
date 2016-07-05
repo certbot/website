@@ -6,6 +6,7 @@ Since your server architecture doesn't yet {{officially}} support automatic
 installation {{imperative}} use the <tt>certonly</tt> command to obtain your
 certificate.
 </p>
+{{^xenial}}
 <pre>
 {{base_command}} certonly
 </pre>
@@ -13,12 +14,21 @@ certificate.
 This will allow you interactively select the plugin and options used to obtain
 your certificate. If you already have a webserver running, we recommend
 choosing the <a href="/docs/using.html#webroot">"webroot" plugin</a>.
-{{#advanced}}
 <p>
-Alternatively, you can specify more information on the command line. To obtain
-a cert using the “webroot” plugin, which can work with the webroot directory of
-any webserver software:
+Alternatively, you can specify more information on the command line.
 </p>
+{{/xenial}}
+<p>
+To obtain a cert using the <a href="/docs/using.html#webroot">"webroot" plugin</a>,
+which can work with the webroot directory of any webserver software:
+</p>
+{{#xenial}}
+<aside class="note">
+        <h4>Note:</h4>
+        <p>Ubuntu Xenial has an old version of Certbot packaged for it that lacks a few features. The <a href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a> doesn't have an interactive mode, so you'll need to specify your domains and webroot paths on the command line to use this plugin.
+        </p>
+</aside>
+{{/xenial}}
 <pre>
 $ {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
 </pre>
@@ -28,6 +38,10 @@ This command will obtain a single cert for <tt>example.com</tt>,
 place files below <tt>/var/www/example</tt> to prove control of the first two
 domains, and under <tt>/var/www/thing</tt> for the second pair.
 </p>
+<aside class="note">
+        <h4>Note:</h4>
+            <p>To use the webroot plugin, your server must be configured to serve files from hidden directories. If /.well-known is treated specially by your webserver configuration, you might need to modify the configuration to ensure that files inside /.well-known/acme-challenge are served by the webserver.</p>
+</aside>
 <p>
 To obtain a cert using a built-in “standalone” webserver (you may need to
 temporarily stop your existing webserver, if any) for <tt>example.com</tt> and
@@ -36,6 +50,5 @@ temporarily stop your existing webserver, if any) for <tt>example.com</tt> and
 <pre>
 $ {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
-{{/advanced}}
 
 {{> renewal}}
