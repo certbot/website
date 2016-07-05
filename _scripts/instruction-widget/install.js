@@ -95,6 +95,7 @@ module.exports = function(context) {
 
     if (context.distro == "ubuntu") {
       context.above_4 = false;
+      context.xenial = true;
     }
 
     // Debian Jessie or newer
