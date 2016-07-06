@@ -18,9 +18,12 @@ following:<br>
 href="https://certbot.eff.org/docs/using.html#renewal">the full
 documentation</a>.</p>
 
-<aside>Note: if you're setting up a <tt>cron</tt> or <tt>systemd</tt> job, we
+<aside class="note">
+    <h4>Note:</h4>
+    <p>if you're setting up a <tt>cron</tt> or <tt>systemd</tt> job, we
 recommend running it twice per day (it won't do anything until your
 certificates are due for renewal or revoked, but running it regularly would
 give your site a chance of staying online in case a Let's Encrypt-initiated
 revocation happened for some reason). Please select a random minute within the
-hour for your renewal tasks.</aside>
+hour for your renewal tasks.</p>
+</aside>

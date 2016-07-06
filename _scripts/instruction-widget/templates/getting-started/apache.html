@@ -10,8 +10,9 @@ subcommand:
 <pre>$ {{base_command}} --apache certonly</pre>
 
 {{#advanced}}
-    <blockquote><aside>
-        Note: the apache plugin with <tt>certonly</tt> does the following:<br>
+    <aside class="note">
+        <h4>Note:</h4>
+        <p>the apache plugin with <tt>certonly</tt> does the following:<br>
         <ol>
           <li>make temporary config changes<br>
           (adding a new vhost to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>, and enabling <tt>mod_ssl</tt> if necessary)</li>
@@ -24,7 +25,7 @@ subcommand:
         <a
         href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a>.
 
-    </aside></blockquote>
+        </p></aside>
 {{/advanced}}
 
 To learn more about how to use Certbot <a href="/about">read our documentation</a>.
