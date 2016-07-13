@@ -50,6 +50,9 @@ module.exports = function(context) {
     }
     else if (context.distro == "centos") {
       centos_install();
+    }
+    else if (context.distro == "macos") {
+      macos_install();
     } else {
       auto_install();
     }
@@ -166,6 +169,11 @@ module.exports = function(context) {
       context.package = "pkg_add letsencrypt";
       context.base_command = "letsencrypt";
     }
+  }
+
+  macos_install = function() {
+    template = "macos";
+    context.base_command = "certbot";
   }
 
   auto_install = function() {
