@@ -83,9 +83,8 @@ module.exports = function(context) {
       context.package = "certbot"
       context.packaged = true
 
-      // The Apache plugin isn't packaged for CentOS 7 yet
       if (context.webserver == "apache") {
-        context.webserver = "other"
+        context.package = "python-certbot-apache";
       }
     }
 
@@ -150,9 +149,8 @@ module.exports = function(context) {
     context.package = "certbot";
     context.base_command = "certbot";
 
-    // The Apache plugin isn't packaged for Fedora yet
     if (context.webserver == "apache") {
-      context.webserver = "other"
+      context.package = "python-certbot-apache";
     }
   }
   // @todo: convert to template style
