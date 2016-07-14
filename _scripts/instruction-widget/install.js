@@ -169,6 +169,11 @@ module.exports = function(context) {
       context.package = "pkg_add letsencrypt";
       context.base_command = "letsencrypt";
     }
+
+    // The Apache plugin isn't packaged for BSD yet
+    if (context.webserver == "apache") {
+      context.webserver = "other"
+    }
   }
 
   macos_install = function() {
