@@ -5,8 +5,14 @@ renew them automatically! You can test automatic renewal for your certificates
 by running this command:
 
 <pre>
-{{base_command}} renew --dry-run
+{{base_command}} renew --dry-run {{#xenial}}--agree-tos{{/xenial}}
 </pre>
+
+{{#xenial}}
+There's a bug in the version of Certbot on Ubuntu Xenial which may show a warning
+saying 'Registering without email!' evn if you have previously given an email to
+Certbot. Don't worry if this happens, it will not effect your renewal.
+{{/xenial}}
 
 If that appears to be working correctly, you can arrange for automatic renewal
 by adding a <tt>cron</tt> or <tt>systemd</tt> job which runs the
