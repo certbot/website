@@ -9,7 +9,7 @@ addons:
       - texlive-latex-extra
 
 before_install:
-  - rvm install 2.2.1
+  - rvm install 2.2.2
 
 install:
   - npm install gulp
