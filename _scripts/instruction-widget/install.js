@@ -22,6 +22,7 @@ module.exports = function(context) {
   html = function() {
 
     context.above_4 = true;
+    context.cron_included = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk") {
@@ -104,6 +105,7 @@ module.exports = function(context) {
     } else {
       // Debian Jessie, Ubuntu 16.10, or newer
       context.base_command = "certbot";
+      context.cron_included = true;
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
       } else {
