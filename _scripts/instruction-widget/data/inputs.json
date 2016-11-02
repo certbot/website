@@ -123,6 +123,12 @@
             "id": "pip",
             "distro": "python",
             "version": "0"
+        },
+        {
+            "name": "Non-UNIX",
+            "id": "nonunix",
+            "distro": "nonunix",
+            "version": "0"
         }
     ]
 }

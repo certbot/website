@@ -22,11 +22,10 @@ module.exports = function(context) {
   html = function() {
 
     context.above_4 = true;
-    context.should_install = true;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
-    if (context.webserver == "plesk") {
-        context.should_install = false;
+    if (context.webserver == "plesk" || context.distro == "nonunix") {
+        return '';
     }
     else if ((context.distro == "debian" && context.version > 7) ||
         (context.distro == "ubuntu" && context.version > 15.10)) {
@@ -56,10 +55,6 @@ module.exports = function(context) {
       macos_install();
     } else {
       auto_install();
-    }
-
-    if (!context.should_install) {
-      return '';
     }
 
     partials.header = require(TEMPLATE_PATH + "header.html");
