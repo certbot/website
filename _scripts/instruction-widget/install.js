@@ -26,7 +26,7 @@ module.exports = function(context) {
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk") {
-        plugin_install();
+        context.should_install = false;
     }
     else if ((context.distro == "debian" && context.version > 7) ||
         (context.distro == "ubuntu" && context.version > 15.10)) {
@@ -75,10 +75,6 @@ module.exports = function(context) {
    * Install methods set a template as well as the
    * context and partials associated with that template.
    */
-
-  plugin_install = function() {
-      template = "plugin";
-  }
 
   centos_install = function() {
     template = "centos";
