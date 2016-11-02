@@ -56,6 +56,8 @@ module.exports = function(context) {
     } else {
       auto_install();
     }
+    partials.auto = require(TEMPLATE_PATH + "commonauto.html");
+    partials.header = require(TEMPLATE_PATH + "header.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
 
     // Load and render the selected template.
@@ -87,9 +89,6 @@ module.exports = function(context) {
         context.package = "python-certbot-apache";
       }
     }
-
-    // Include auto-install instructions as a subtemplate.
-    partials.auto = require(TEMPLATE_PATH + "auto.html");
   }
 
   debian_install = function() {
