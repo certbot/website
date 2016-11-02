@@ -22,6 +22,7 @@ module.exports = function(context) {
   html = function() {
 
     context.above_4 = true;
+    context.should_install = true;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk") {
@@ -56,6 +57,11 @@ module.exports = function(context) {
     } else {
       auto_install();
     }
+
+    if (!context.should_install) {
+      return '';
+    }
+
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
