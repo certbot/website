@@ -92,27 +92,24 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
 
-    if (context.distro == "ubuntu") {
+    if (context.distro == "ubuntu" && context.version == 16.04) {
       context.above_4 = false;
       context.xenial = true;
-    }
-
-    // Debian Jessie or newer
-    if (context.distro == "debian" && context.version >= 8) {
+      if (context.webserver == "apache") {
+        context.package = "python-letsencrypt-apache";
+      }
+    } else {
+      // Debian Jessie, Ubuntu 16.10, or newer
       context.base_command = "certbot";
-
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
       } else {
         context.package = "certbot"
       }
-
       // Debian Jessie backports.
-      if (context.version == 8) {
+      if (context.distro == "debian" && context.version == 8) {
         context.backports_flag = "-t jessie-backports";
       }
-    } else if (context.webserver == "apache") {
-      context.package = "python-letsencrypt-apache";
     }
   }
 
