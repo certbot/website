@@ -89,9 +89,15 @@
             "version": "23"
         },
         {
-            "name": "CentOS/RHEL 6",
-            "id": "centosrhel6",
+            "name": "CentOS 6",
+            "id": "centos6",
             "distro": "centos",
+            "version": "6"
+        },
+        {
+            "name": "RHEL 6",
+            "id": "centosrhel6",
+            "distro": "rhel",
             "version": "6"
         },
         {

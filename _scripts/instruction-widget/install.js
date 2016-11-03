@@ -48,7 +48,7 @@ module.exports = function(context) {
     else if (context.distro == "fedora" && context.version > 22){
       fedora_install();
     }
-    else if (context.distro == "centos") {
+    else if (context.distro == "centos" || context.distro == "rhel") {
       centos_install();
     }
     else if (context.distro == "macos") {
@@ -76,6 +76,7 @@ module.exports = function(context) {
 
     if (context.version < 7) {
       context.base_command = "./path/to/certbot-auto"
+      context.epel_auto = (context.distro == "centos")
       context.packaged = false
     } else {
       context.base_command = "certbot"
