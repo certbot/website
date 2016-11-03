@@ -1,11 +1,15 @@
 {{> header}}
 {{#packaged}}
 <p>
-Certbot is packaged in the EPEL (Extra Packages for Enterprise Linux)
-repository. To enable EPEL on your system and install Certbot, run
+Certbot is packaged in EPEL (Extra Packages for Enterprise Linux). To use
+Certbot, you must first <a
+href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">
+enable the EPEL repository</a>.
+</p>
+<p>
+After doing this, you can install Certbot by running:
 </p>
 <pre>
-$ sudo yum install epel-release
 $ sudo yum install {{package}}
 </pre>
 {{/packaged}}
