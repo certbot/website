@@ -1,3 +1,4 @@
+{{> header}}
 <p>
   Since Certbot is packaged for your system, all you'll need to do is apt-get the following packages.
 </p>
@@ -11,12 +12,3 @@
 <pre>
 $ sudo apt-get install {{package}} {{backports_flag}}
 </pre>
-
-{{#above_4}}
-<aside class="note">
-    <h4>Note</h4>
-    <p>
-    The Debian packaged version of Certbot installs a cron job automatically into /etc/cron.d/certbot. This cronjob runs certbot renew twice a day which will renew certificates that are within the renewal window.
-    </p>
-</aside>
-{{/above_4}}

@@ -47,6 +47,12 @@
             "version": "0"
         },
         {
+            "name": "Ubuntu 16.10 (yakkety)",
+            "id": "ubuntutyakkety",
+            "distro": "ubuntu",
+            "version": "16.10"
+        },
+        {
             "name": "Ubuntu 16.04 (xenial)",
             "id": "ubuntuxenial",
             "distro": "ubuntu",
@@ -89,9 +95,15 @@
             "version": "23"
         },
         {
-            "name": "CentOS/RHEL 6",
-            "id": "centosrhel6",
+            "name": "CentOS 6",
+            "id": "centos6",
             "distro": "centos",
+            "version": "6"
+        },
+        {
+            "name": "RHEL 6",
+            "id": "centosrhel6",
+            "distro": "rhel",
             "version": "6"
         },
         {
@@ -122,6 +134,12 @@
             "name": "Other UNIX",
             "id": "pip",
             "distro": "python",
+            "version": "0"
+        },
+        {
+            "name": "Non-UNIX",
+            "id": "nonunix",
+            "distro": "nonunix",
             "version": "0"
         }
     ]
