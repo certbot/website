@@ -24,7 +24,8 @@ module.exports = function(context) {
     context.above_4 = true;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
-    if (context.webserver == "plesk" || context.distro == "nonunix") {
+    if (context.webserver == "plesk" || context.distro == "nonunix" ||
+        context.distro == "webhost") {
         return '';
     }
     else if ((context.distro == "debian" && context.version > 7) ||
