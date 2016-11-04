@@ -22,6 +22,7 @@ module.exports = function(context) {
   html = function() {
 
     context.above_4 = true;
+    context.cron_included = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
@@ -49,7 +50,7 @@ module.exports = function(context) {
     else if (context.distro == "fedora" && context.version > 22){
       fedora_install();
     }
-    else if (context.distro == "centos") {
+    else if (context.distro == "centos" || context.distro == "rhel") {
       centos_install();
     }
     else if (context.distro == "macos") {
@@ -77,6 +78,7 @@ module.exports = function(context) {
 
     if (context.version < 7) {
       context.base_command = "./path/to/certbot-auto"
+      context.epel_auto = (context.distro == "centos")
       context.packaged = false
     } else {
       context.base_command = "certbot"
@@ -92,27 +94,25 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
 
-    if (context.distro == "ubuntu") {
+    if (context.distro == "ubuntu" && context.version == 16.04) {
       context.above_4 = false;
       context.xenial = true;
-    }
-
-    // Debian Jessie or newer
-    if (context.distro == "debian" && context.version >= 8) {
+      if (context.webserver == "apache") {
+        context.package = "python-letsencrypt-apache";
+      }
+    } else {
+      // Debian Jessie, Ubuntu 16.10, or newer
       context.base_command = "certbot";
-
+      context.cron_included = true;
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
       } else {
         context.package = "certbot"
       }
-
       // Debian Jessie backports.
-      if (context.version == 8) {
+      if (context.distro == "debian" && context.version == 8) {
         context.backports_flag = "-t jessie-backports";
       }
-    } else if (context.webserver == "apache") {
-      context.package = "python-letsencrypt-apache";
     }
   }
 

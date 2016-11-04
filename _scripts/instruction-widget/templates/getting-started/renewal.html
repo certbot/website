@@ -1,8 +1,17 @@
 <h3>Automating renewal</h3>
 
-Let's Encrypt certificates last for 90 days, so it's highly advisable to
-renew them automatically! You can test automatic renewal for your certificates
-by running this command:
+<p>
+{{#cron_included}}
+The Certbot packages on your system come with a cron job that will
+{{/cron_included}}
+{{^cron_included}}
+Certbot can be configured to
+{{/cron_included}}
+renew your certificates automatically before they expire. Since Let's Encrypt
+certificates last for 90 days, it's highly advisable to take advantage of this
+feature. You can test automatic renewal for your certificates by running this
+command:
+</p>
 
 <pre>
 {{base_command}} renew --dry-run {{#xenial}}--agree-tos{{/xenial}}
@@ -14,16 +23,19 @@ saying 'Registering without email!' even if you have previously given an email t
 Certbot. Don't worry if this happens, it will not effect your renewal.
 {{/xenial}}
 
+{{^cron_included}}
 If that appears to be working correctly, you can arrange for automatic renewal
 by adding a <tt>cron</tt> or <tt>systemd</tt> job which runs the
 following:<br>
 
 <pre>{{base_command}} renew {{#above_4}}--quiet {{/above_4}}{{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
+{{/cron_included}}
 
 <p>More detailed information and options about renewal can be found in <a
 href="https://certbot.eff.org/docs/using.html#renewal">the full
 documentation</a>.</p>
 
+{{^cron_included}}
 <aside class="note">
     <h4>Note:</h4>
     <p>if you're setting up a <tt>cron</tt> or <tt>systemd</tt> job, we
@@ -33,3 +45,4 @@ give your site a chance of staying online in case a Let's Encrypt-initiated
 revocation happened for some reason). Please select a random minute within the
 hour for your renewal tasks.</p>
 </aside>
+{{/cron_included}}
