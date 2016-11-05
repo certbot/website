@@ -1,7 +1,7 @@
 <span id="using">I'm using</span>
 <select id="server-select">
   <optgroup>
-    <option value="" disabled selected>Webserver</option>
+    <option value="" disabled selected>Software</option>
     {{#webservers}}
       <option value="{{id}}">{{name}}</option>
     {{/webservers}}
@@ -11,7 +11,7 @@
 <span id="on">on</span>
 <select id="os-select">
   <optgroup>
-    <option value="" disabled selected>Operating System</option>
+    <option value="" disabled selected>System</option>
     {{#operating_systems}}
       <option value={{id}} data-distro={{distro}} data-version={{version}}>{{name}}</option>
     {{/operating_systems}}

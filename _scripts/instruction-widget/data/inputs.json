@@ -23,6 +23,12 @@
     ],
     "operating_systems": [
         {
+            "name": "Web Hosting Service",
+            "id": "sharedhost",
+            "distro": "sharedhost",
+            "version": "0"
+        },
+        {
             "name": "Debian 7 (wheezy)",
             "id": "debianwheezy",
             "distro": "debian",

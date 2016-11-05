@@ -10,6 +10,8 @@ module.exports = function(context) {
         context.imperative = "you'll have to";
         if (context.webserver == "plesk") {
             plesk_getting_started();
+        } else if (context.distro == "sharedhost") {
+            shared_hosting_getting_started();
         } else if (context.distro == "nonunix") {
             nonunix_getting_started();
         } else if (context.certonly) {
@@ -56,6 +58,10 @@ module.exports = function(context) {
     nginx_getting_started = function() {
         context.imperative = "you should probably"
         template = "nginx";
+    }
+
+    shared_hosting_getting_started = function() {
+        template = "sharedhost";
     }
 
     return {
