@@ -51,6 +51,9 @@ module.exports = function(context) {
       fedora_install();
     }
     else if (context.distro == "centos" || context.distro == "rhel") {
+      if (context.distro == "rhel") {
+          context.rhel6 = true;
+      }
       centos_install();
     }
     else if (context.distro == "macos") {

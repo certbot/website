@@ -23,4 +23,15 @@ enable the EPEL (Extra Packages for Enterprise Linux) repository</a>.
 </p>
 {{/epel_auto}}
 {{>auto}}
+{{#rhel6}}
+<aside class="note">
+    <h4>Note:</h4>
+    On some versions of RHEL you will get an error stating that there is no
+    package libffi-devel available. To fix this, you may need to run the
+    following command:
+    <pre>
+    rhn-channel --add --channel=rhel-x86_64-server-optional-6
+    </pre>
+</aside>
+{{/rhel6}}
 {{/packaged}}
