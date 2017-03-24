@@ -21,7 +21,6 @@ module.exports = function(context) {
    */
   html = function() {
 
-    context.above_4 = true;
     context.cron_included = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -32,7 +31,7 @@ module.exports = function(context) {
     else if (context.distro == "debian" && context.version > 7) {
       debian_install();
     }
-    else if (context.distro == "ubuntu" && context.version > 15.10){
+    else if (context.distro == "ubuntu" && context.version >= 14.04){
         ubuntu_install();
     }
     // @todo: Implement or complete these.
@@ -116,7 +115,7 @@ module.exports = function(context) {
 
     context.package = "certbot"
     if (context.webserver == "apache") {
-      context.package = "python-letsencrypt-apache";
+      context.package = "python-certbot-apache";
     }
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
