@@ -21,7 +21,6 @@ module.exports = function(context) {
    */
   html = function() {
 
-    context.above_4 = true;
     context.cron_included = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -29,9 +28,11 @@ module.exports = function(context) {
         context.distro == "sharedhost") {
         return '';
     }
-    else if ((context.distro == "debian" && context.version > 7) ||
-        (context.distro == "ubuntu" && context.version > 15.10)) {
+    else if (context.distro == "debian" && context.version > 7) {
       debian_install();
+    }
+    else if (context.distro == "ubuntu" && context.version >= 14.04){
+        ubuntu_install();
     }
     // @todo: Implement or complete these.
     // else if (context.distro == "python"){
@@ -94,26 +95,31 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
 
-    if (context.distro == "ubuntu" && context.version == 16.04) {
-      context.above_4 = false;
-      context.xenial = true;
-      if (context.webserver == "apache") {
-        context.package = "python-letsencrypt-apache";
-      }
+    // Debian Jessie
+    context.base_command = "certbot";
+    context.cron_included = true;
+    if (context.webserver == "apache") {
+      context.package = "python-certbot-apache";
     } else {
-      // Debian Jessie, Ubuntu 16.10, or newer
-      context.base_command = "certbot";
-      context.cron_included = true;
-      if (context.webserver == "apache") {
-        context.package = "python-certbot-apache";
-      } else {
-        context.package = "certbot"
-      }
-      // Debian Jessie backports.
-      if (context.distro == "debian" && context.version == 8) {
-        context.backports_flag = "-t jessie-backports";
-      }
+      context.package = "certbot"
     }
+    // Debian Jessie backports.
+    if (context.version == 8) {
+      context.backports_flag = "-t jessie-backports";
+    }
+    
+  }
+
+  ubuntu_install = function() {
+    template = "ubuntu";
+
+    context.package = "certbot"
+    if (context.webserver == "apache") {
+      context.package = "python-certbot-apache";
+    }
+    // Debian Jessie, Ubuntu 16.10, or newer
+    context.base_command = "certbot";
+    context.cron_included = true;
   }
 
   gentoo_install = function() {

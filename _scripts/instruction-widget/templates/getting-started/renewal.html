@@ -14,21 +14,15 @@ command:
 </p>
 
 <pre>
-{{base_command}} renew --dry-run {{#xenial}}--agree-tos{{/xenial}}
+{{base_command}} renew --dry-run
 </pre>
-
-{{#xenial}}
-There's a bug in the version of Certbot on Ubuntu Xenial which may show a warning
-saying 'Registering without email!' even if you have previously given an email to
-Certbot. Don't worry if this happens, it will not affect your renewal.
-{{/xenial}}
 
 {{^cron_included}}
 If that appears to be working correctly, you can arrange for automatic renewal
 by adding a <tt>cron</tt> or <tt>systemd</tt> job which runs the
 following:<br>
 
-<pre>{{base_command}} renew {{#above_4}}--quiet {{/above_4}}{{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
+<pre>{{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
 {{/cron_included}}
 
 <p>More detailed information and options about renewal can be found in <a
