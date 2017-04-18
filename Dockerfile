@@ -56,7 +56,6 @@ COPY fonts ./fonts
 COPY images ./images
 COPY privacy ./privacy
 COPY support ./support
-COPY use-certbot ./use-certbot
 COPY _config.yml ./_config.yml
 COPY favicon.ico ./favicon.ico
 COPY gulpfile.js ./gulpfile.js
