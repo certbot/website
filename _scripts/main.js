@@ -36,6 +36,9 @@
 
 (function() {
 
+  // The winking robot is currently broken :'( but please feel free to fix them!
+  return;
+
   var logo = document.getElementById('logo');
   var wink = document.getElementById('wink');
 
