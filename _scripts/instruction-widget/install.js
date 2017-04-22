@@ -199,10 +199,6 @@ module.exports = function(context) {
     template = "auto";
     context.cbauto = true
     context.base_command = "./path/to/certbot-auto";
-
-    if (context.webserver == "nginx") {
-      context.certonly = true;
-    }
   }
 
   return {
