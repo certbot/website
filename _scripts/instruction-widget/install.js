@@ -45,7 +45,6 @@ module.exports = function(context) {
       bsd_install();
     }
     else if (context.distro == "arch"){
-      context.certonly = "true";
       arch_install();
     }
     else if (context.distro == "fedora" && context.version > 22){
@@ -88,6 +87,8 @@ module.exports = function(context) {
 
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
+      } else if (context.webserver == "nginx") {
+        context.certonly = true;
       }
     }
   }
@@ -98,16 +99,19 @@ module.exports = function(context) {
     // Debian Jessie
     context.base_command = "certbot";
     context.cron_included = true;
+    context.package = "certbot";
+
     if (context.webserver == "apache") {
       context.package = "python-certbot-apache";
-    } else {
-      context.package = "certbot"
+    } else if (context.webserver == "nginx") {
+      context.certonly = true;
     }
+
     // Debian Jessie backports.
     if (context.version == 8) {
       context.backports_flag = "-t jessie-backports";
     }
-    
+
   }
 
   ubuntu_install = function() {
@@ -116,6 +120,8 @@ module.exports = function(context) {
     context.package = "certbot"
     if (context.webserver == "apache") {
       context.package = "python-certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.certonly = true;
     }
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
@@ -131,10 +137,13 @@ module.exports = function(context) {
     context.cbauto = false;
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.certonly = true;
     }
   }
 
   arch_install = function() {
+    context.certonly = true;
     template = "arch";
     if (context.webserver == "apache" && context.advanced) {
         context.package = "certbot-apache";
@@ -154,6 +163,8 @@ module.exports = function(context) {
 
     if (context.webserver == "apache") {
       context.package = "python-certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.certonly = true;
     }
   }
   // @todo: convert to template style
@@ -173,7 +184,9 @@ module.exports = function(context) {
 
     // The Apache plugin isn't packaged for BSD yet
     if (context.webserver == "apache") {
-      context.webserver = "other"
+      context.certonly = true;
+    } else if (context.webserver == "nginx") {
+      context.certonly = true;
     }
   }
 
@@ -186,6 +199,10 @@ module.exports = function(context) {
     template = "auto";
     context.cbauto = true
     context.base_command = "./path/to/certbot-auto";
+
+    if (context.webserver == "nginx") {
+      context.certonly = true;
+    }
   }
 
   return {
