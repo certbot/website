@@ -143,15 +143,18 @@ module.exports = function(context) {
   }
 
   arch_install = function() {
-    context.certonly = true;
     template = "arch";
-    if (context.webserver == "apache" && context.advanced) {
+    context.package = "certbot"
+
+    if (context.webserver == "apache") {
+      context.certonly = true;
+      if (context.advanced) {
         context.package = "certbot-apache";
-    } else if (context.webserver == "nginx" && context.advanced) {
+      }
+    } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
-    } else {
-        context.package = "certbot";
     }
+
     context.base_command = "certbot";
     context.base_package = "certbot";
   }
