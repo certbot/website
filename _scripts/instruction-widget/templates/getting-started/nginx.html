@@ -1,17 +1,34 @@
-{{> certonly}}
+<p>
+Certbot has an alpha-quality Nginx plugin, which is supported on
+many platforms, and automates both obtaining and installing certs:
+</p>
+<pre>$ {{base_command}} --nginx</pre>
+<p>
+Running this command will get a certificate for you and have Certbot edit your Nginx configuration
+automatically to serve it. If you're feeling more conservative and would like to make the changes to your
+Nginx configuration by hand, you can use the <tt>certonly</tt>
+subcommand:
+<pre>$ {{base_command}} --nginx certonly</pre>
 
 {{#advanced}}
-<h2>Experimental Nginx Plugin Support</h2>
-<blockquote>
-    There is a pre-alpha Nginx plugin that will automatically obtain and
-    install certs.  It is known to be buggy, so <b>you should only use it
-    after backing up your config</b> and if you are comfortable fixing
-    possible breakage.  On some
-    platforms there's a <tt>certbot-nginx</tt> or <tt>letsencrypt-nginx</tt>
-    or <tt>python-certbot-nginx</tt>
-    package you can install to get that plugin.  If not, you can <a
-    href="/docs/contributing.html#running-a-local-copy-of-the-client">follow
-    the developer instructions</a> to run Certbot with Nginx support from git
-    master.
-</blockquote>
+    <aside class="note">
+        <h4>Note:</h4>
+        <p>the Nginx plugin with <tt>certonly</tt> does the following:<br>
+        <ol>
+          <li>make temporary config changes<br>
+          (adding a new server block to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>)</li>
+          <li>performs a graceful reload</li>
+          <li>reverts all changes</li>
+          <li>performs another graceful reload</li>
+        </ol>
+        This appears to be a reliable process, but if you don't want Certbot
+        to touch your Nginx process or files in any way, you can use the
+        <a
+        href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a>.
+
+        </p></aside>
 {{/advanced}}
+
+To learn more about how to use Certbot <a href="/docs">read our documentation</a>.
+</p>
+{{> renewal}}
