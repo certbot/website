@@ -181,11 +181,9 @@ module.exports = function(context) {
     }
     if (context.distro == "opbsd"){
       if (context.version >= 6) {
-          context.portcommand = "certbot/client";
           context.package = "pkg_add certbot";
           context.base_command = "certbot";
       } else {
-          context.portcommand = "letsencrypt/client";
           context.package = "pkg_add letsencrypt";
           context.base_command = "letsencrypt";
       }
