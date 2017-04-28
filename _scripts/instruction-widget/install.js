@@ -180,9 +180,13 @@ module.exports = function(context) {
       context.package = "pkg install py27-certbot";
     }
     if (context.distro == "opbsd"){
-      context.portcommand = "letsencrypt/client";
-      context.package = "pkg_add letsencrypt";
-      context.base_command = "letsencrypt";
+      if (context.version >= 6) {
+          context.package = "pkg_add certbot";
+          context.base_command = "certbot";
+      } else {
+          context.package = "pkg_add letsencrypt";
+          context.base_command = "letsencrypt";
+      }
     }
 
     // The Apache plugin isn't packaged for BSD yet
