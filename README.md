@@ -1,6 +1,6 @@
 # Certbot Website
 
-Website for EFF's Certbot project. Uses Jekyll for static site generation.
+Website for [EFF's Certbot](https://certbot.eff.org/) project. Uses Jekyll for static site generation.
 
 [![Build Status](https://travis-ci.org/certbot/website.svg?branch=master)](https://travis-ci.org/vbrown608/website)
 
