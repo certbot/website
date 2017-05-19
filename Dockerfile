@@ -18,8 +18,11 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL C.UTF-8
 
-# need rsync for deploy script
-RUN apt-get install rsync -y
+# need rsync for deploy script and texlive for building docs
+RUN apt-get install -y --no-install-recommends \
+    rsync \
+    texlive \
+    texlive-latex-extra
 
 # Install ruby and dependencies
 RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc &&\
@@ -36,9 +39,6 @@ RUN npm install
 # Install docs dependencies
 COPY _docs/ ./_docs
 COPY _docs.sh ./
-RUN apt-get install -y --no-install-recommends \
-    texlive \
-    texlive-latex-extra
 COPY .git ./.git
 COPY .gitmodules ./.gitmodules
 RUN ./_docs.sh depend
