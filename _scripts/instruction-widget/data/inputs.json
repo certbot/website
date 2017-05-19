@@ -149,7 +149,7 @@
             "version": "0"
         },
         {
-            "name": "Mac OS X",
+            "name": "macOS",
             "id": "osx",
             "distro": "macos",
             "version": "10"
