@@ -15,7 +15,7 @@ cd $SOURCE_DOCS && \
   git checkout master && \
   git pull && \
   cd $SOURCE_DOCS && \
-  npm test && \
   gulp build --env production && \
+  npm test && \
   rsync -a -O --delete --exclude=".*" _site/ $COMPILED_DOCS && \
   echo "Certbot site built"
