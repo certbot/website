@@ -39,8 +39,6 @@ RUN npm install
 # Install docs dependencies
 COPY _docs/ ./_docs
 COPY _docs.sh ./
-COPY .git ./.git
-COPY .gitmodules ./.gitmodules
 RUN ./_docs.sh depend
 RUN ./_docs.sh install
 
@@ -63,5 +61,7 @@ COPY favicon.ico ./favicon.ico
 COPY gulpfile.js ./gulpfile.js
 COPY index.html ./index.html
 COPY certbot-deploy ./certbot-deploy
+COPY .git ./.git
+COPY .gitmodules ./.gitmodules
 
 CMD ["bash"]
