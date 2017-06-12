@@ -95,6 +95,12 @@
             "version": "0"
         },
         {
+            "name": "Fedora 24+",
+            "id": "fedora24",
+            "distro": "fedora",
+            "version": "24"
+        },
+        {
             "name": "CentOS 6",
             "id": "centos6",
             "distro": "centos",
