@@ -47,9 +47,6 @@ module.exports = function(context) {
     else if (context.distro == "arch"){
       arch_install();
     }
-    else if (context.distro == "fedora" && context.version > 22){
-      fedora_install();
-    }
     else if (context.distro == "centos" || context.distro == "rhel") {
       centos_install();
     }
@@ -159,17 +156,6 @@ module.exports = function(context) {
     context.base_package = "certbot";
   }
 
-  fedora_install = function() {
-    template = "fedora";
-    context.package = "certbot";
-    context.base_command = "certbot";
-
-    if (context.webserver == "apache") {
-      context.package = "python-certbot-apache";
-    } else if (context.webserver == "nginx") {
-      context.certonly = true;
-    }
-  }
   // @todo: convert to template style
   bsd_install = function() {
     template = "bsd"
