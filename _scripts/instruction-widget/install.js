@@ -87,8 +87,6 @@ module.exports = function(context) {
 
       if (context.webserver == "apache") {
         context.package = "python-certbot-apache";
-      } else if (context.webserver == "nginx") {
-        context.certonly = true;
       }
     }
   }
