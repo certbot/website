@@ -2,13 +2,13 @@
 Certbot has a fairly solid beta-quality Apache plugin, which is supported on
 many platforms, and automates both obtaining and installing certs:
 </p>
-<pre>$ {{base_command}} --apache</pre>
+<pre>$ sudo {{base_command}} --apache</pre>
 <p>
 Running this command will get a certificate for you and have Certbot edit your Apache configuration
 automatically to serve it. If you're feeling more conservative and would like to make the changes to your
 Apache configuration by hand, you can use the <tt>certonly</tt>
 subcommand:
-<pre>$ {{base_command}} --apache certonly</pre>
+<pre>$ sudo {{base_command}} --apache certonly</pre>
 
 {{#advanced}}
     <aside class="note">
