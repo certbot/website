@@ -162,9 +162,6 @@ module.exports = function(context) {
   fedora_install = function() {
     template = "fedora";
     context.package = "certbot";
-    template = "fedora";
-    context.package = "certbot";
-    context.base_command = 
     context.base_command = "certbot";
 
     if (context.webserver == "apache") {
