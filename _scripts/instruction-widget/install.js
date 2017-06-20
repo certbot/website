@@ -86,9 +86,9 @@ module.exports = function(context) {
       context.packaged = true
 
       if (context.webserver == "apache") {
-        context.package = "python-certbot-apache";
+        context.package = "certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package = "python-certbot-nginx";
+        context.package = "certbot-nginx";
       }
     }
   }
@@ -162,12 +162,15 @@ module.exports = function(context) {
   fedora_install = function() {
     template = "fedora";
     context.package = "certbot";
+    template = "fedora";
+    context.package = "certbot";
+    context.base_command = 
     context.base_command = "certbot";
 
     if (context.webserver == "apache") {
-      context.package = "python-certbot-apache";
+      context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package = "python-certbot-nginx";
+      context.package = "certbot-nginx";
     }
   }
   // @todo: convert to template style
