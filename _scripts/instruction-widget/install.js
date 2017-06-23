@@ -86,9 +86,9 @@ module.exports = function(context) {
       context.packaged = true
 
       if (context.webserver == "apache") {
-        context.package = "python-certbot-apache";
+        context.package = "certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package = "python-certbot-nginx";
+        context.package = "certbot-nginx";
       }
     }
   }
@@ -165,9 +165,9 @@ module.exports = function(context) {
     context.base_command = "certbot";
 
     if (context.webserver == "apache") {
-      context.package = "python-certbot-apache";
+      context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package = "python-certbot-nginx";
+      context.package = "certbot-nginx";
     }
   }
   // @todo: convert to template style
