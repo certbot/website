@@ -36,7 +36,10 @@ In addition, you may elect to provide information to EFF through Certbot, such a
 EFF's Certbot Privacy Policy may change from time to time. However, any revised privacy policy will be consistent with EFF's mission. 
 
 *Updated on June 7th, 2017 to clarify which values are collected in the User Agent string.*
+*Updated on June 23rd, 2017 to clarify which IRC chatrooms were used for technical support*
 
 #### Previous Privacy Policies
+
+[June 7th, 2017 - June 23, 2017](https://github.com/certbot/website/commit/1236b569ce064e09527ea3822b058cbe1f3031c0)
 
 [May 12, 2016 - June 7th, 2017](https://github.com/certbot/website/blob/ec3b4a66316d42f6c40f2853686f5e665f8da64a/privacy/index.md)
