@@ -42,4 +42,5 @@ EFF's Certbot Privacy Policy may change from time to time. However, any revised 
 #### Previous Privacy Policies
 
 [June 7, 2017 - June 23, 2017](https://github.com/certbot/website/blob/21901280e8c6b1e64bbb595a97e8129e2c28b31b/privacy/index.md)
+
 [May 12, 2016 - June 7, 2017](https://github.com/certbot/website/blob/ec3b4a66316d42f6c40f2853686f5e665f8da64a/privacy/index.md)
