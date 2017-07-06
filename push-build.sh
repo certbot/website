@@ -9,7 +9,7 @@ cd _site
 git init
 git config user.name "Travis CI"
 git config user.email "builds@travis-ci.com"
-git remote add upstream "git@github.com:vbrown608/certbot-builds.git"
+git remote add upstream "git@github.com:certbot/website-builds.git"
 
 # Branch from master to more easily compare across branches.
 git fetch upstream master

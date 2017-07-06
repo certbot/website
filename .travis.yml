@@ -10,7 +10,7 @@ addons:
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_e5009b71da55_key -iv $encrypted_e5009b71da55_iv
-    -in deploy_key.enc -out deploy_key -d
+    -in build_key.enc -out build_key -d
   - rvm install 2.2.2
 
 install:
@@ -31,7 +31,7 @@ after_success:
 env:
   global:
     # speeds up installation of html-proofer
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=tru
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - NODE_ENV=production
 
 # Only build pushes to the master branch, PRs, and branches beginning with `test-`.

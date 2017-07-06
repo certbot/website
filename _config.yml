@@ -17,8 +17,8 @@ exclude:
 - vendor
 - _docs
 - _gulp
-- deploy_key.enc
-- deploy_key
+- build_key.enc
+- build_key
 keep_files:
 - css
 - js
