@@ -1,9 +1,9 @@
 #!/bin/bash
 
 rev=$(git rev-parse --short HEAD)
-chmod 600 deploy_key
+chmod 600 build_key
 eval `ssh-agent -s`
-ssh-add deploy_key
+ssh-add build_key
 
 cd _site
 git init
