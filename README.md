@@ -68,4 +68,4 @@ npm test
 (Files with known issues are ignored.)
 
 ## Travis Builds
-Master, branches prefixed with "test-", and all pull requests and built and tested by Travis. The built files are pushes to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds).
+Master, branches prefixed with "test-", and all pull requests and built and tested by Travis. The built files are pushed to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds).
