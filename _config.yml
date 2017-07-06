@@ -19,6 +19,7 @@ exclude:
 - _gulp
 - build_key.enc
 - build_key
+- push-build.sh
 keep_files:
 - css
 - js
