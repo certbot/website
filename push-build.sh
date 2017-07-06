@@ -9,9 +9,13 @@ cd _site
 git init
 git config user.name "Travis CI"
 git config user.email "builds@travis-ci.com"
-
 git remote add upstream "git@github.com:vbrown608/certbot-builds.git"
-git checkout -B $TRAVIS_BRANCH
+
+# Branch from master to more easily compare across branches.
+git fetch upstream master
+git checkout -B $TRAVIS_BRANCH upstream/master
+
+# If this branch already exists upstream, use that instead.
 git fetch upstream $TRAVIS_BRANCH
 git reset upstream/$TRAVIS_BRANCH
 
