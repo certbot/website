@@ -95,6 +95,7 @@ module.exports = function(context) {
 
   debian_install = function() {
     template = "debian";
+    context.devuan = context.distro == "devuan"
 
     // Debian Jessie
     context.base_command = "certbot";
@@ -107,8 +108,8 @@ module.exports = function(context) {
       context.certonly = true;
     }
 
-    // Debian Jessie backports.
-    if (context.version == 8) {
+    // Jessie backports.
+    if ((context.devuan && context.version == 1) || context.version == 8) {
       context.backports_flag = "-t jessie-backports";
     }
 
