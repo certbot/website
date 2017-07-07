@@ -37,7 +37,6 @@ env:
 # Only build pushes to the master branch, PRs, and branches beginning with `test-`.
 branches:
   only:
-    - master
-    - /^test-.*$/
+    - /.*/
 
 sudo: required
