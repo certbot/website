@@ -20,6 +20,9 @@ exclude:
 - build_key.enc
 - build_key
 - push-build.sh
+- Dockerfile
+- EDITING.md
+- certbot-deploy
 keep_files:
 - css
 - js
