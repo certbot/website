@@ -55,6 +55,8 @@ module.exports = function(context) {
     }
     else if (context.distro == "macos") {
       macos_install();
+    } else if (context.distro == "devuan") {
+      debian_install();
     } else {
       auto_install();
     }
