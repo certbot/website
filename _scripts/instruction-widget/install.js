@@ -147,10 +147,7 @@ module.exports = function(context) {
     context.package = "certbot"
 
     if (context.webserver == "apache") {
-      context.certonly = true;
-      if (context.advanced) {
         context.package = "certbot-apache";
-      }
     } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
     }
