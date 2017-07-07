@@ -149,6 +149,18 @@
             "version": "10"
         },
         {
+            "name": "Devuan Jessie 1.0",
+            "id": "devuanjessie",
+            "distro": "devuan",
+            "version": "1"
+        },
+        {
+            "name": "Devuan (other)",
+            "id": "devuanother",
+            "distro": "devuan",
+            "version": "0"
+        },
+        {
             "name": "Other UNIX",
             "id": "pip",
             "distro": "python",
