@@ -25,7 +25,6 @@ script:
   - npm test
 
 after_success:
-  - chmod +x push-build.sh
   - ./push-build.sh
 
 env:
