@@ -25,7 +25,7 @@ script:
   - npm test
 
 after_success:
-  - ./push-build.sh
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./push-build.sh; fi'
 
 env:
   global:

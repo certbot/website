@@ -1,13 +1,7 @@
 #!/bin/bash
 
-if [ "$TRAVIS_EVENT_TYPE" == "pull_request" ]
-then
-  BRANCH=$TRAVIS_PULL_REQUEST_BRANCH
-  BUILD="PR #${TRAVIS_PULL_REQUEST}"
-else
-  BRANCH=$TRAVIS_BRANCH
-  BUILD=$(git rev-parse --short HEAD)
-fi
+BRANCH=$TRAVIS_BRANCH
+BUILD=$(git rev-parse --short HEAD)
 
 chmod 600 build_key
 eval `ssh-agent -s`
