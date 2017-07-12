@@ -33,9 +33,4 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - NODE_ENV=production
 
-# Only build pushes to the master branch, PRs, and branches beginning with `test-`.
-branches:
-  only:
-    - /.*/
-
 sudo: required
