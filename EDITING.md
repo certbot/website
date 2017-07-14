@@ -1,3 +1,4 @@
+I edited EDITING.md with my editor.
 # Editing the Certbot instructions
 Certbot instructions are available for editing as part of the https://github.com/certbot/website repository - if you've found an error or generally think that you can improve them we welcome your support!
 ## Source Files
