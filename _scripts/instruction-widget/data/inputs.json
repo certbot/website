@@ -41,6 +41,12 @@
             "version": "8"
         },
         {
+            "name": "Debian 9 (stretch)",
+            "id": "debianstretch",
+            "distro": "debian",
+            "version": "9"
+        },
+        {
             "name": "Debian testing/unstable",
             "id": "debiantesting",
             "distro": "debian",
