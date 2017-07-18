@@ -3,6 +3,10 @@
 BRANCH=$TRAVIS_BRANCH
 BUILD=$(git rev-parse --short HEAD)
 
+if [$TRAVIS == 'true']
+then
+  009b71da55_key -iv $encrypted_e5009b71da55_iv -in build_key.enc -out build_key -d
+fi
 chmod 600 build_key
 eval `ssh-agent -s`
 ssh-add build_key
