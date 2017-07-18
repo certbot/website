@@ -23,7 +23,7 @@ script:
   - npm test
 
 after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" == "false" && $TRAVIS_REPO_SLUG == "certbot/website" ]; then bash ./push-build.sh; fi'
+  - 'if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "certbot/website" ]]; then bash ./push-build.sh; fi'
 
 env:
   global:
