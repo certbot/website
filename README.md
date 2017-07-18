@@ -66,3 +66,13 @@ To run the tests:
 npm test
 ```
 (Files with known issues are ignored.)
+
+## Travis Builds
+All branches and pull requests and built and tested by Travis.
+
+For branches, the built assets are pushed to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds). Built assets from PRs are not saved because Travis doesn't provide a mechanism to securely push to a Github repo after PRs across forks.
+
+To view the build of any branch, checkout that branch from certbot/website-builds and run some server to serve the files. For example,
+```
+python -m SimpleHTTPServer 8000
+```
