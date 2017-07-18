@@ -9,8 +9,6 @@ addons:
       - texlive-latex-extra
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_e5009b71da55_key -iv $encrypted_e5009b71da55_iv
-    -in build_key.enc -out build_key -d
   - rvm install 2.2.2
 
 install:
@@ -25,7 +23,7 @@ script:
   - npm test
 
 after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./push-build.sh; fi'
+  - 'if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "certbot/website" ]]; then bash ./push-build.sh; fi'
 
 env:
   global:
