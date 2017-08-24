@@ -18,7 +18,7 @@ $ sudo {{base_command}} renew --dry-run
 </pre>
 
 If that appears to be working correctly, you can arrange for automatic renewal
-by adding a <tt><a href="https://wiki.gentoo.org/wiki/Cron#Which_cron_is_right_for_the_job.3F">cron</a></tt> or <tt><a href="https://wiki.gentoo.org/wiki/Systemd">systemd</a></tt> job which runs the
+by adding a <tt><a href="http://www.unixgeeks.org/security/newbie/unix/cron-1.html">cron</a></tt> or <tt><a href="https://en.wikipedia.org/wiki/Systemd">systemd</a></tt> job which runs the
 following:<br>
 
 <pre>{{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
@@ -35,7 +35,7 @@ hour for your renewal tasks.</p>
 
 <p>An example cron job might look like this, which will run at noon and midnight every day:</p>
 
-<pre>0 0,12 * * * {{base_command}} renew {{#cbauto}}--noself-upgrade{{/cbauto}}</pre>
+<pre>0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 60)' && {{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
 
 <p>More detailed information and options about renewal can be found in <a
 href="https://certbot.eff.org/docs/using.html#renewal">the full
