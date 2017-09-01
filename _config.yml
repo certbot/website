@@ -23,6 +23,7 @@ exclude:
 - Dockerfile
 - EDITING.md
 - certbot-deploy
+- LICENSE.txt
 keep_files:
 - css
 - js
