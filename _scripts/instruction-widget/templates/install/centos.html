@@ -4,12 +4,13 @@
 Certbot is packaged in EPEL (Extra Packages for Enterprise Linux). To use
 Certbot, you must first <a
 href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">
-enable the EPEL repository</a> and enable EPEL optional channel.
+enable the EPEL repository</a>. On RHEL or Oracle Linux, you must also
+enable the optional channel.
 </p>
 <aside class="note">
 <h4>Note:</h4>
 <p>
-If you are using ec2  you can enable optional channel by running:
+If you are using RHEL on EC2, you can enable the optional channel by running:
 </p>
 <pre>
 $ yum -y install yum-utils
