@@ -17,7 +17,6 @@ InstructionWidget = (function() {
     content_container = $('.instructions.content');
     render();
     bind_ui_actions();
-    set_state_from_url();
   }
 
   get_input = function() {
@@ -45,19 +44,6 @@ InstructionWidget = (function() {
     }
   };
 
-  set_state_from_url = function() {
-    var hash = window.location.hash;
-    params = hash.replace('#', '').split('-');
-    if (params.length == 2) {
-      $('#os-select').val(params[0]);
-      $('#server-select').val(params[1]);
-    } else {
-      $('#os-select').val("");
-      $('#server-select').val("");
-    }
-    Instructions().render(content_container, get_input());
-  }
-
   render = function() {
     var template = require('./templates/widget.html');
     var rendered = template.render({
@@ -69,8 +55,12 @@ InstructionWidget = (function() {
 
   jump = function(os,ws) {
     if(os && ws) {
-      var url = '#' + os + '-' + ws;
-      location.href = url;
+      var url = os + '-' + ws;
+      var state = {
+        os: os,
+        ws: ws
+      }
+      history.pushState(state, "", url);
       document.activeElement.blur();
     }
   };
@@ -103,7 +93,11 @@ InstructionWidget = (function() {
       document.activeElement.blur();
     });
 
-    window.addEventListener("hashchange", set_state_from_url, false);
+    window.onpopstate = function(event) {
+      $('#os-select').val(event.state.os);
+      $('#server-select').val(event.state.ws);
+      Instructions().render(content_container, get_input());
+    }
   };
 
   return {
