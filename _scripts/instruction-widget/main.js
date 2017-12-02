@@ -3,7 +3,7 @@ var Instructions = require('./instructions');
 var inputs = require('./data/inputs.json');
 
 /**
- * Renders and controls a widget that allows users to get installation
+ * Controls a widget that allows users to get installation
  * and basic use instructions based on the operating system, webserver,
  * and use case.
  */
@@ -15,7 +15,6 @@ InstructionWidget = (function() {
   init = function() {
     select_container = $('.instruction-widget');
     content_container = $('.instructions.content');
-    render();
     bind_ui_actions();
   }
 
@@ -42,15 +41,6 @@ InstructionWidget = (function() {
       distro_longname: distro_longname,
       server_longname: server_longname
     }
-  };
-
-  render = function() {
-    var template = require('./templates/widget.html');
-    var rendered = template.render({
-      operating_systems: inputs.operating_systems,
-      webservers: inputs.webservers
-    });
-    select_container.html(rendered);
   };
 
   jump = function(os,ws) {
