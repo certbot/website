@@ -8,7 +8,17 @@ url: "https://certbot.eff.org" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 collections:
-- faq_entries
+  faq_entries:
+    output: false
+  instructions:
+    output: true
+defaults:
+- scope:
+    type: "instructions"
+  values:
+    layout: "index"
+    js:
+    - instructions
 exclude:
 - README.md
 - package.json

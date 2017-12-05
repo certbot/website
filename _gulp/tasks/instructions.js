@@ -25,6 +25,11 @@ gulp.task('instructions', ['instructions:clean'], (done) => {
       var instructions = {
         all: buildAll.build()
       }
+      instructions.all.forEach(function(el) {
+        var path = "_instructions/" + el.os.id + "-" + el.server.id + ".md";
+        var body = "---\n---\n" + el.instructions;
+        fs.writeFile(path, body);
+      });
       var json = JSON.stringify(instructions, null, 2);
       fs.writeFile(config.instructions.dest, json, done);
     }

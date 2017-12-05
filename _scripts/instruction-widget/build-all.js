@@ -31,11 +31,14 @@ module.exports = (function BuildAll() {
     set.server = server;
 
     var input = {
+      os: os.id,
       distro: os.distro,
       version: os.version,
-      webserver: server.id
+      distro_longname: os.name,
+      webserver: server.id,
+      server_longname: server.name
     }
-    set.instructions = Instructions().get_partials(input);
+    set.instructions = Instructions().html(input);
     return set;
   }
 
