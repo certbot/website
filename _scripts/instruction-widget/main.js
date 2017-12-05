@@ -45,7 +45,7 @@ InstructionWidget = (function() {
 
   jump = function(os,ws) {
     if(os && ws) {
-      var url = os + '-' + ws;
+      var url = '/instructions/' + os + '-' + ws + '.html';
       var state = {
         os: os,
         ws: ws
