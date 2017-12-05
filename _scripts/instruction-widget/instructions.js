@@ -57,7 +57,6 @@ module.exports = function() {
   }
 
   return {
-    get_partials: get_partials,
     html: html,
     render: render
   };
