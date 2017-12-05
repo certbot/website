@@ -1,6 +1,6 @@
 'use strict';
 var Instructions = require('./instructions');
-var inputs = require('./data/inputs.json');
+var inputs = require('../../_data/inputs.json');
 
 /**
  * Module to build all instructions for all (os, webeserver)

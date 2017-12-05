@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var Instructions = require('./instructions');
-var inputs = require('./data/inputs.json');
+var inputs = require('../../_data/inputs.json');
 
 /**
  * Controls a widget that allows users to get installation
