@@ -45,6 +45,7 @@ InstructionWidget = (function() {
 
   jump = function(os,ws) {
     if(os && ws) {
+      // '.html' is removed by nginx but useful for development
       var url = '/i/' + os + '-' + ws + '.html';
       var state = {
         os: os,
