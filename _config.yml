@@ -33,6 +33,8 @@ exclude:
 - EDITING.md
 - certbot-deploy
 - LICENSE.txt
+- nginx.conf
+- docker-compose.yml
 keep_files:
 - css
 - js
