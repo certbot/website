@@ -10,6 +10,7 @@ collections:
     output: false
   instructions:
     output: true
+    permalink: "/i/:path"
 defaults:
 - scope:
     type: "instructions"
