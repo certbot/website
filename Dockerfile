@@ -64,4 +64,6 @@ COPY certbot-deploy ./certbot-deploy
 COPY .git ./.git
 COPY .gitmodules ./.gitmodules
 
-CMD ["bash"]
+RUN gulp build
+
+CMD ["gulp", "jekyll:watch"]
