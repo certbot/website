@@ -114,14 +114,20 @@
         },
         {
             "name": "RHEL 6",
-            "id": "centosrhel6",
+            "id": "rhel6",
             "distro": "rhel",
             "version": "6"
         },
         {
-            "name": "CentOS/RHEL 7",
-            "id": "centosrhel7",
+            "name": "CentOSL 7",
+            "id": "centos7",
             "distro": "centos",
+            "version": "7"
+        },
+        {
+            "name": "RHEL 7",
+            "id": "rhel7",
+            "distro": "rhel",
             "version": "7"
         },
         {
