@@ -1,0 +1,12 @@
+{{> header}}
+<p>
+On Ubuntu systems, the Certbot team maintains a <a href="https://help.ubuntu.com/community/PPA">PPA</a>. Once you add it to your list of repositories all you'll need to do is apt-get the following packages.
+</p>
+
+<pre>
+$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:certbot/certbot
+$ sudo apt-get update
+$ sudo apt-get install {{package}} {{backports_flag}}
+</pre>

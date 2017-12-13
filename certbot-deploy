@@ -1,0 +1,21 @@
+#!/bin/bash
+# Script to build and deploy certbot-website
+#
+SOURCE_REPO=https://github.com/certbot/website.git
+SOURCE_DOCS=/opt/certbot/
+COMPILED_DOCS=/certbot-compiled/
+#Update the source and documentation submodule, then build
+cd $SOURCE_DOCS && \
+  git remote set-url origin $SOURCE_REPO && \
+  git checkout . &&\
+  git checkout master && \
+  git pull origin master && \
+  git submodule update && \
+  cd $SOURCE_DOCS/_docs && \
+  git checkout master && \
+  git pull && \
+  cd $SOURCE_DOCS && \
+  gulp build --env production && \
+  npm test && \
+  rsync -a -O --delete --exclude=".*" _site/ $COMPILED_DOCS && \
+  echo "Certbot site built"

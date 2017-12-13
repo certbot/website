@@ -8,14 +8,18 @@ module.exports = function(context) {
         partials.certonly = require(TEMPLATE_PATH + "certonly.html");
         partials.renewal = require(TEMPLATE_PATH + "renewal.html");
         context.imperative = "you'll have to";
-        if (context.certonly) {
+        if (context.webserver == "plesk") {
+            plesk_getting_started();
+        } else if (context.distro == "sharedhost") {
+            shared_hosting_getting_started();
+        } else if (context.distro == "nonunix") {
+            nonunix_getting_started();
+        } else if (context.certonly) {
             certonly_getting_started();
         } else if (context.webserver == "apache") {
             apache_getting_started();
         } else if (context.webserver == "haproxy") {
             haproxy_getting_started();
-        } else if (context.webserver == "plesk") {
-            plesk_getting_started();
         } else if (context.webserver == "nginx") {
             nginx_getting_started();
         } else {
@@ -47,9 +51,17 @@ module.exports = function(context) {
         template = "certonly";
     }
 
+    nonunix_getting_started = function() {
+        template = "nonunix";
+    }
+
     nginx_getting_started = function() {
         context.imperative = "you should probably"
         template = "nginx";
+    }
+
+    shared_hosting_getting_started = function() {
+        template = "sharedhost";
     }
 
     return {

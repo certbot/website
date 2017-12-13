@@ -12,7 +12,7 @@ Certbot is published by the Electronic Frontier Foundation, the leading nonprofi
 <h2>Information Collection</h2>
 Certbot locally stores a variety of information provided by you, including internal housekeeping information created by the ACME protocol, the certificate information  (domain name, public key, time, and specifically selected options), the IP address of the server, a user agent string, which is the operating system the server is running, plus which plugins you're using with Certbot. If you use the "manual" authenticator plugin on your own laptop, the IP address logged by the CA would be the one your ISP gave you, rather than that of the public server.
 
-In addition to the minimal information necessary to create certificates.  Certbot may also transmit additional information to facilitate reliable operation and debugging of ACME client and server software.  By default this includes a User Agent string containing the operating system and version of the machine on which Certbot is run, plus the plugins that the user selected (you can alter or remove this with the --user-agent flag). It also includes contact information such as an email address, if you choose to supply one, so that the CA can notify you about matters such as expiring, unrenewed certificates; security vulnerabilities; or important changes to its policies. 
+In addition to the minimal information necessary to create certificates Certbot may also transmit additional information to facilitate reliable operation and debugging of ACME client and server software.  By default this includes a detailed User Agent string, which may contain a variety of values, such as the operating system and version of the machine on which Certbot is run and the software version, the plugins that the user selected, the command with which you called Certbot, and certain flags on the command line or fields in config files. You can alter or remove this with the `--user-agent` flag.  We may also ask you questions in the interface, and Certbot may also transmit the answers to the CA. Certbot also may transmit contact information such as an email address, if you choose to supply one, so that the CA can notify you about matters such as expiring, unrenewed certificates; security vulnerabilities; or important changes to its policies.
 
 Certbot never transmits the private key associated with your certificate to the CA, EFF, or anyone else.
 
@@ -27,10 +27,20 @@ Let’s Encrypt also operates [Community Forums](https://community.letsencrypt.o
 
 Let’s Encrypt may change these policies or providers from time to time. If you have questions about Let’s Encrypt’s privacy practices, please contact them directly at [security@letsencrypt.org](mailto:security@letsencrypt.org).
 
-The Certbot community can be contacted through the Open and Free Technology Community’s IRC service, irc.OFTC.net, on the #certbot and #certbot-dev channels. The IRC is operated by OFTC, which does not publish a privacy policy.
+The Certbot community can be contacted through the Freenode Project’s IRC service, chat.freenode.net, on the #letsencrypt channel. This IRC service is operated by Freenode, which does not publish a privacy policy. In addition, the community may be reached on the Open and Free Technology Community’s IRC service, irc.OFTC.net, on the #certbot and #certbot-dev channels. The IRC is operated by OFTC, which also does not publish a privacy policy.
 
 In addition, you may elect to provide information to EFF through Certbot, such as your contact information or bug reports. That information will be protected by the [EFF Technology Project Privacy Policy](https://www.eff.org/code/privacy/policy).
 
 <h2>Changes to This Policy</h2>
 
 EFF's Certbot Privacy Policy may change from time to time. However, any revised privacy policy will be consistent with EFF's mission. 
+
+*Updated on June 23rd, 2017 to add additional IRC services.*
+
+*Updated on June 7th, 2017 to clarify which values are collected in the User Agent string.*
+
+#### Previous Privacy Policies
+
+[June 7, 2017 - June 23, 2017](https://github.com/certbot/website/blob/21901280e8c6b1e64bbb595a97e8129e2c28b31b/privacy/index.md)
+
+[May 12, 2016 - June 7, 2017](https://github.com/certbot/website/blob/ec3b4a66316d42f6c40f2853686f5e665f8da64a/privacy/index.md)

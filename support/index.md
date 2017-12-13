@@ -7,4 +7,4 @@ For most questions about Certbot, and all questions about Let’s Encrypt, it’
 
 If you have a technical bug report, you can file it against the [Certbot github issue tracker](https://github.com/certbot/certbot/issues).  Be sure to search for related issues first!
 
-Our community can be contacted on IRC on the #certbot and #certbot-dev channels on irc.OFTC.net.
+Our community can be contacted on IRC on the #letsencrypt and #letsencrypt-dev channels on irc.freenode.net.

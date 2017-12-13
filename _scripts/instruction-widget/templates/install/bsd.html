@@ -1,11 +1,13 @@
+{{> header}}
 <p>
   Run these steps to install the Certbot client.
 </p>
-
+{{#portcommand}}
 <p>Port:</p>
 <pre>
 $ cd /usr/ports/security/{{portcommand}} && make install clean
 </pre>
+{{/portcommand}}
 <p>Package:</p>
 <pre>
 {{package}}

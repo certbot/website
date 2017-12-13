@@ -2,16 +2,18 @@
 Certbot has a fairly solid beta-quality Apache plugin, which is supported on
 many platforms, and automates both obtaining and installing certs:
 </p>
-<pre>$ {{base_command}} --apache</pre>
+<pre>$ sudo {{base_command}} --apache</pre>
 <p>
-If you're feeling more conservative and would like to make the changes to your
-Apache configuration by hand, you can do use the <tt>certonly</tt>
+Running this command will get a certificate for you and have Certbot edit your Apache configuration
+automatically to serve it. If you're feeling more conservative and would like to make the changes to your
+Apache configuration by hand, you can use the <tt>certonly</tt>
 subcommand:
-<pre>$ {{base_command}} --apache certonly</pre>
+<pre>$ sudo {{base_command}} --apache certonly</pre>
 
 {{#advanced}}
-    <blockquote><aside>
-        Note: the apache plugin with <tt>certonly</tt> does the following:<br>
+    <aside class="note">
+        <h4>Note:</h4>
+        <p>the apache plugin with <tt>certonly</tt> does the following:<br>
         <ol>
           <li>make temporary config changes<br>
           (adding a new vhost to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>, and enabling <tt>mod_ssl</tt> if necessary)</li>
@@ -24,9 +26,9 @@ subcommand:
         <a
         href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a>.
 
-    </aside></blockquote>
+        </p></aside>
 {{/advanced}}
 
-To learn more about how to use Certbot <a href="/about">read our documentation</a>.
+To learn more about how to use Certbot <a href="/docs">read our documentation</a>.
 </p>
 {{> renewal}}

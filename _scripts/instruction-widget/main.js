@@ -31,6 +31,9 @@ InstructionWidget = (function() {
     var server_select = $('#server-select');
     var webserver = server_select.val();
     var server_longname = server_select.find('option:selected').html();
+    if (webserver == 'other') {
+      server_longname = 'Unspecified Webserver';
+    }
 
     return {
       os: os,

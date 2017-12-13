@@ -23,6 +23,12 @@
     ],
     "operating_systems": [
         {
+            "name": "Web Hosting Service",
+            "id": "sharedhost",
+            "distro": "sharedhost",
+            "version": "0"
+        },
+        {
             "name": "Debian 7 (wheezy)",
             "id": "debianwheezy",
             "distro": "debian",
@@ -35,6 +41,12 @@
             "version": "8"
         },
         {
+            "name": "Debian 9 (stretch)",
+            "id": "debianstretch",
+            "distro": "debian",
+            "version": "9"
+        },
+        {
             "name": "Debian testing/unstable",
             "id": "debiantesting",
             "distro": "debian",
@@ -45,6 +57,18 @@
             "id": "debianother",
             "distro": "debian",
             "version": "0"
+        },
+        {
+            "name": "Ubuntu 17.04 (zesty)",
+            "id": "ubuntutzesty",
+            "distro": "ubuntu",
+            "version": "17.04"
+        },
+        {
+            "name": "Ubuntu 16.10 (yakkety)",
+            "id": "ubuntutyakkety",
+            "distro": "ubuntu",
+            "version": "16.10"
         },
         {
             "name": "Ubuntu 16.04 (xenial)",
@@ -77,15 +101,21 @@
             "version": "0"
         },
         {
-            "name": "Fedora",
-            "id": "fedora",
+            "name": "Fedora 24+",
+            "id": "fedora24",
             "distro": "fedora",
-            "version": "0"
+            "version": "24"
         },
         {
-            "name": "CentOS/RHEL 6",
-            "id": "centosrhel6",
+            "name": "CentOS 6",
+            "id": "centos6",
             "distro": "centos",
+            "version": "6"
+        },
+        {
+            "name": "RHEL 6",
+            "id": "centosrhel6",
+            "distro": "rhel",
             "version": "6"
         },
         {
@@ -101,21 +131,51 @@
             "version": "0"
         },
         {
-            "name": "OpenBSD",
+            "name": "OpenBSD 5.9",
             "id": "opbsd",
             "distro": "opbsd",
+            "version": "5.9"
+        },
+        {
+            "name": "OpenBSD 6.0+",
+            "id": "opbsd",
+            "distro": "opbsd",
+            "version": "6"
+        },
+        {
+            "name": "OpenBSD (other)",
+            "id": "opbsd",
+            "distro": "auto",
             "version": "0"
         },
         {
-            "name": "Mac OS X",
+            "name": "macOS",
             "id": "osx",
             "distro": "macos",
             "version": "10"
         },
         {
+            "name": "Devuan Jessie 1.0",
+            "id": "devuanjessie",
+            "distro": "devuan",
+            "version": "1"
+        },
+        {
+            "name": "Devuan (other)",
+            "id": "devuanother",
+            "distro": "devuan",
+            "version": "0"
+        },
+        {
             "name": "Other UNIX",
             "id": "pip",
             "distro": "python",
+            "version": "0"
+        },
+        {
+            "name": "Non-UNIX",
+            "id": "nonunix",
+            "distro": "nonunix",
             "version": "0"
         }
     ]
