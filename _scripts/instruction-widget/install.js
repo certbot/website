@@ -80,14 +80,15 @@ module.exports = function(context) {
 
   centos_install = function() {
     template = "centos";
+    context.centos = true;
 
     if (context.version < 7) {
-      context.base_command = "./path/to/certbot-auto"
-      context.packaged = false
+      context.base_command = "./path/to/certbot-auto";
+      context.packaged = false;
     } else {
-      context.base_command = "certbot"
-      context.package = "certbot"
-      context.packaged = true
+      context.base_command = "certbot";
+      context.package = "certbot";
+      context.packaged = true;
 
       if (context.webserver == "apache") {
         context.package = "certbot-apache";
@@ -99,21 +100,22 @@ module.exports = function(context) {
 
   rhel_install = function() {
     template = "rhel";
+    context.rhel = true;
 
     if (context.version < 7) {
-      context.base_command = "./path/to/certbot-auto"
-      context.packaged = false
+      context.base_command = "./path/to/certbot-auto";
+      context.packaged = false;
     } else {
-      context.base_command = "certbot"
-      context.package = "certbot"
-      context.packaged = true
+      context.base_command = "certbot";
+      context.package = "certbot";
+      context.packaged = true;
 
       if (context.webserver == "apache") {
         context.package = "certbot-apache";
       } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
       }
-    }   
+    }
   }
 
   debian_install = function() {

@@ -119,7 +119,7 @@
             "version": "6"
         },
         {
-            "name": "CentOSL 7",
+            "name": "CentOS 7",
             "id": "centos7",
             "distro": "centos",
             "version": "7"
