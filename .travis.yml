@@ -9,7 +9,7 @@ addons:
       - texlive-latex-extra
 
 before_install:
-  - rvm install 2.2.2
+  - rvm install 2.3.1
 
 install:
   - npm install gulp
@@ -22,15 +22,13 @@ script:
   - gulp build
   - npm test
 
+after_success:
+  - 'if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "certbot/website" ]]; then bash ./push-build.sh; fi'
+
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+    # speeds up installation of html-proofer
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - NODE_ENV=production
-
-# Only build pushes to the master branch, PRs, and branches beginning with `test-`.
-branches:
-  only:
-    - master
-    - /^test-.*$/
 
 sudo: required

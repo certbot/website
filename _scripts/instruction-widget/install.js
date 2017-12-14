@@ -55,6 +55,8 @@ module.exports = function(context) {
     }
     else if (context.distro == "macos") {
       macos_install();
+    } else if (context.distro == "devuan") {
+      debian_install();
     } else {
       auto_install();
     }
@@ -95,6 +97,7 @@ module.exports = function(context) {
 
   debian_install = function() {
     template = "debian";
+    context.devuan = context.distro == "devuan"
 
     // Debian Jessie
     context.base_command = "certbot";
@@ -107,8 +110,8 @@ module.exports = function(context) {
       context.certonly = true;
     }
 
-    // Debian Jessie backports.
-    if (context.version == 8) {
+    // Jessie backports.
+    if ((context.devuan && context.version == 1) || context.version == 8) {
       context.backports_flag = "-t jessie-backports";
     }
 
@@ -147,10 +150,7 @@ module.exports = function(context) {
     context.package = "certbot"
 
     if (context.webserver == "apache") {
-      context.certonly = true;
-      if (context.advanced) {
         context.package = "certbot-apache";
-      }
     } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
     }

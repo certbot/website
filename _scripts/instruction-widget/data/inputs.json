@@ -41,6 +41,12 @@
             "version": "8"
         },
         {
+            "name": "Debian 9 (stretch)",
+            "id": "debianstretch",
+            "distro": "debian",
+            "version": "9"
+        },
+        {
             "name": "Debian testing/unstable",
             "id": "debiantesting",
             "distro": "debian",
@@ -147,6 +153,18 @@
             "id": "osx",
             "distro": "macos",
             "version": "10"
+        },
+        {
+            "name": "Devuan Jessie 1.0",
+            "id": "devuanjessie",
+            "distro": "devuan",
+            "version": "1"
+        },
+        {
+            "name": "Devuan (other)",
+            "id": "devuanother",
+            "distro": "devuan",
+            "version": "0"
         },
         {
             "name": "Other UNIX",
