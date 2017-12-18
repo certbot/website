@@ -137,7 +137,6 @@ module.exports = function(context) {
     context.package = "certbot";
     context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
-    context.cbauto = false;
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
@@ -204,7 +203,6 @@ module.exports = function(context) {
 
   auto_install = function() {
     template = "auto";
-    context.cbauto = true
     context.base_command = "./path/to/certbot-auto";
   }
 
