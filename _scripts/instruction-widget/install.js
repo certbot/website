@@ -50,11 +50,8 @@ module.exports = function(context) {
     else if (context.distro == "fedora"){
       fedora_install();
     }
-    else if (context.distro == "centos") {
+    else if (context.distro == "centos" || context.distro == "rhel") {
       centos_install();
-    }
-    else if (context.distro == "rhel") {
-      rhel_install();
     }
     else if (context.distro == "macos") {
       macos_install();
@@ -80,27 +77,11 @@ module.exports = function(context) {
 
   centos_install = function() {
     template = "centos";
-    context.centos = true;
-
-    if (context.version < 7) {
-      context.base_command = "./path/to/certbot-auto";
-      context.packaged = false;
+    if (context.distro == "centos"){
+      context.centos = true;
     } else {
-      context.base_command = "certbot";
-      context.package = "certbot";
-      context.packaged = true;
-
-      if (context.webserver == "apache") {
-        context.package = "certbot-apache";
-      } else if (context.webserver == "nginx") {
-        context.package = "certbot-nginx";
-      }
+      context.rhel = true;
     }
-  }
-
-  rhel_install = function() {
-    template = "rhel";
-    context.rhel = true;
 
     if (context.version < 7) {
       context.base_command = "./path/to/certbot-auto";

@@ -1,4 +1,4 @@
-{{> header}}
+{{>header}}
 {{#packaged}}
 {{>epel}}
 <p>
@@ -9,5 +9,8 @@ $ sudo yum install {{package}}
 </pre>
 {{/packaged}}
 {{^packaged}}
+{{#rhel}}
+{{>epel}}
+{{/rhel}}
 {{>auto}}
 {{/packaged}}

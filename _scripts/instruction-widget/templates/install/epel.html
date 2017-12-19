@@ -1,34 +1,30 @@
 
 <aside class="note">
   <h4>Note:</h4>
-  {{#context.packaged}}
+  {{#packaged}}
     <p>
       Certbot is packaged in EPEL (Extra Packages for Enterprise Linux). To use
-      Certbot, you must first <a
-      href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">
-      enable the EPEL repository</a>.
+      Certbot, you must first enable the EPEL repository.
     </p>
-  {{/context.packaged}}
-  {{^context.packaged}}
+  {{/packaged}}
+  {{^packaged}}
     <p>
       Not all of Certbot's dependencies are available in the standard repositories.
-      To use Certbot, you must first <a
-      href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">
-      enable the EPEL (Extra Packages for Enterprise Linux) repository</a>.
+      To use Certbot, you must first enable the EPEL (Extra Packages for Enterprise Linux) repository.
     </p>
-  {{/context.packaged}}
-  {{#context.rhel}}
+  {{/packaged}}
+  {{#rhel}}
     <p>
       This can be done by downloading the proper epel rpm and installing it:
       <pre>
-        $ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{context.version}}.noarch.rpm
+        $ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{version}}.noarch.rpm
       </pre>
       Once you've done this, you can verify that it worked by running:
       <pre>
         $ yum repolist | grep epel
       </pre>
     </p>
-    {{#context.packaged}}
+    {{#packaged}}
       <p>
         You must also enable the optional channels, which can be done by running these
         commands:
@@ -38,27 +34,21 @@
         </pre>
       </p>
       <p>
-        This can be done by running the command:
-        <pre>
-          $ yum install epel-release
-        </pre>
-      </p>
-      <p>
       Additionally if you are using RHEL on EC2, you can enable the optional channel by running:
       </p>
       <pre>
         $ yum -y install yum-utils
         $ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
       </pre>
-    {{/context.packaged}}
-  {{/context.rhel}}
-  {{#context.centos}}
+    {{/packaged}}
+  {{/rhel}}
+  {{#centos}}
     <p>
       This can be done by running the command:
       <pre>
         $ yum install epel-release
       </pre>
     </p>
-  {{/context.centos}}
+  {{/centos}}
 </aside>
 
