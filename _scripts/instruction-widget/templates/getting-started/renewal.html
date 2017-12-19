@@ -16,10 +16,6 @@ command:
 <pre>
 $ sudo {{base_command}} renew --dry-run
 </pre>
-<p>
-More detailed information and options about renewal can be found in
-<a href="https://certbot.eff.org/docs/using.html#renewal">the full documentation</a>.
-</p>
 
 {{^cron_included}}
 If that appears to be working correctly, you can arrange for automatic renewal
@@ -27,7 +23,6 @@ by adding a <tt><a href="http://www.unixgeeks.org/security/newbie/unix/cron-1.ht
 following:<br>
 
 <pre>{{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
-{{/cron_included}}
 
 <aside class="note">
     <h4>Note:</h4>
@@ -42,6 +37,7 @@ hour for your renewal tasks.</p>
 <p>An example cron job might look like this, which will run at noon and midnight every day:</p>
 
 <pre>0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && {{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
+{{/cron_included}}
 
 <p>More detailed information and options about renewal can be found in <a
 href="https://certbot.eff.org/docs/using.html#renewal">the full
