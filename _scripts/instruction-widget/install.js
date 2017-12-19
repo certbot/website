@@ -123,6 +123,9 @@ module.exports = function(context) {
         context.package = "python-certbot-nginx";
       }
     }
+    if (context.version == 10 && context.webserver == "nginx") {
+      context.package = "python-certbot-nginx";
+    }
 
   }
 
