@@ -45,19 +45,29 @@ InstructionWidget = (function() {
 
   jump = function(os,ws) {
     if(os && ws) {
-      // '.html' is removed by nginx but useful for development
+      // '.html' is removed by nginx but is useful for development
       var url = '/i/' + os + '-' + ws + '.html';
       var state = {
         os: os,
         ws: ws
       }
       history.pushState(state, "", url);
+
+      // Smooth scroll to instructions.
+      var SCROLL_SPEED = 400;
+      var target = $('.page-content');
+      if (target.length) {
+        $('html, body').animate({
+          // Scroll a little further to account for sticky nav.
+          scrollTop: target.offset().top - 60
+        }, SCROLL_SPEED);
+      }
+
       document.activeElement.blur();
     }
   };
 
   toggle_tabs = function(active_tab) {
-
     var tab = $(active_tab);
 
     if(!tab.hasClass("active")) {

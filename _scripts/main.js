@@ -18,6 +18,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+var Raven = require('raven-js');
+
+(function (Raven) {
+  'use strict';
+  Raven.config('https://caa5edd9fc344ff69a3e0bd4c05a5a91@sentry.eff.org/20').install();
+})(Raven);
+
 (function() {
   [].forEach.call(document.querySelectorAll('.no-js-only'), function (el) {
     el.style.visibility = 'hidden';
@@ -32,6 +39,4 @@
   function toggleMenu() {
     document.body.classList.toggle('active');
   }
-
 })();
-
