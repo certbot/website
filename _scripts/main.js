@@ -29,7 +29,6 @@ var Raven = require('raven-js');
 })(Raven);
 
 (function() {
-
   var hamburger = document.getElementById('hamburger');
   var close = document.getElementById('close');
 
@@ -39,23 +38,4 @@ var Raven = require('raven-js');
   function toggleMenu() {
     document.body.classList.toggle('active');
   }
-
-})();
-
-
-
-(function() {
-
-  var logo = document.getElementById('logo');
-  var wink = document.getElementById('wink');
-
-  logo.addEventListener('mouseover',winkBot,false);
-
-  function winkBot() {
-   wink.classList.toggle('active');
-  	setTimeout(function(){
-        wink.classList.toggle('active');
-      },200);
-  }
-
 })();
