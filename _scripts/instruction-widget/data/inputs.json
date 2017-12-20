@@ -50,7 +50,7 @@
             "name": "Debian testing/unstable",
             "id": "debiantesting",
             "distro": "debian",
-            "version": "9"
+            "version": "10"
         },
         {
             "name": "Debian (other)",

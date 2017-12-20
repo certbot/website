@@ -98,6 +98,8 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
     context.devuan = context.distro == "devuan"
+    context.jessie = context.version == 8
+    context.stretch = context.version == 9
 
     // Debian Jessie
     context.base_command = "certbot";
@@ -106,13 +108,23 @@ module.exports = function(context) {
 
     if (context.webserver == "apache") {
       context.package = "python-certbot-apache";
-    } else if (context.webserver == "nginx") {
-      context.certonly = true;
     }
 
     // Jessie backports.
-    if ((context.devuan && context.version == 1) || context.version == 8) {
+    if ((context.devuan && context.version == 1) || context.jessie) {
       context.backports_flag = "-t jessie-backports";
+      if (context.webserver == "nginx") {
+        context.certonly = true;
+      }
+    }
+    if (context.stretch) {
+      context.backports_flag = "-t stretch-backports";
+      if (context.webserver == "nginx") {
+        context.package = "python-certbot-nginx";
+      }
+    }
+    if (context.version == 10 && context.webserver == "nginx") {
+      context.package = "python-certbot-nginx";
     }
 
   }
