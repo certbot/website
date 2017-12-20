@@ -171,14 +171,7 @@ h1.instruct {
     // background-color: rgba(0,0,0,0.05);
   }
 
-
-
-  // .tab.advanced {
-  //   margin-top: -50px;
-  // }
-
-  .permalink {
-
+  #instructions-header {
     clear: both;
     a {
       color: $header-grey;
@@ -195,8 +188,6 @@ h1.instruct {
       margin-top: -75px;
       display: inline-block;
     }
-
-
   }
 }
 
