@@ -19,6 +19,9 @@
  */
 
 (function() {
+  [].forEach.call(document.querySelectorAll('.no-js-only'), function (el) {
+    el.style.visibility = 'hidden';
+  });
 
   var hamburger = document.getElementById('hamburger');
   var close = document.getElementById('close');
