@@ -9,7 +9,6 @@ header.hero {
   position: relative;
   display: block;
   width: 100%;
-  height: 100vh;
   min-height: 320px;
   @include susy-breakpoint($md) {
     height: 420px;
