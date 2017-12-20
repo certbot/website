@@ -19,17 +19,11 @@ $ sudo {{base_command}} renew --dry-run
 
 {{^cron_included}}
 If that appears to be working correctly, you can arrange for automatic renewal
-by adding a <tt>cron</tt> or <tt>systemd</tt> job which runs the
+by adding a <tt><a href="http://www.unixgeeks.org/security/newbie/unix/cron-1.html">cron job</a></tt> or <tt><a href="https://wiki.archlinux.org/index.php/Systemd/Timers">systemd timer</a></tt> which runs the
 following:<br>
 
 <pre>{{base_command}} renew</pre>
-{{/cron_included}}
 
-<p>More detailed information and options about renewal can be found in <a
-href="https://certbot.eff.org/docs/using.html#renewal">the full
-documentation</a>.</p>
-
-{{^cron_included}}
 <aside class="note">
     <h4>Note:</h4>
     <p>if you're setting up a <tt>cron</tt> or <tt>systemd</tt> job, we
@@ -39,4 +33,13 @@ give your site a chance of staying online in case a Let's Encrypt-initiated
 revocation happened for some reason). Please select a random minute within the
 hour for your renewal tasks.</p>
 </aside>
+
+<p>An example cron job might look like this, which will run at noon and midnight every day:</p>
+
+<pre>0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && {{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
 {{/cron_included}}
+
+<p>More detailed information and options about renewal can be found in <a
+href="https://certbot.eff.org/docs/using.html#renewal">the full
+documentation</a>.</p>
+
