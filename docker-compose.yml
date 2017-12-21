@@ -10,6 +10,7 @@ services:
   site:
     build: .
     volumes:
+      - .:/opt/certbot/
       - assets:/opt/certbot/_site
 
 volumes:
