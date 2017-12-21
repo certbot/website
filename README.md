@@ -10,6 +10,8 @@ Website for [EFF's Certbot](https://certbot.eff.org/) project. Uses Jekyll for s
 
 `docker-compose up`
 
+Docker-compose serves the site with nginx to more closely mirror production.
+
 ### Without Docker
 
 #### Install
@@ -36,11 +38,6 @@ To *build* the site once:
 To build for production (minified javascript, no source maps):
 `gulp build --env production`
 The environment can also be set in the NODE_ENV environment variable. See https://github.com/gunpowderlabs/gulp-environments.
-
-### Note on no-Javascript support
-The docker-compose file serves the site using Nginx. This mirrors production more closely and allows us to support users with Javascript disabled by redirecting submissions of the front page instruction form to a standalone url. See nginx.conf for details.
-
-Simply running `gulp watch` serves the site using BrowserSync. This conviently live reloads assets, making it great for development, but note that the front page widget won't work for no-js users.
 
 ## Editing content
 
