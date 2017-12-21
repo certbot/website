@@ -13,6 +13,7 @@ InstructionWidget = (function() {
   var content_container;
 
   init = function() {
+    redirect_anchor();
     select_container = $('.instruction-widget');
     content_container = $('.instructions.content');
     bind_ui_actions();
@@ -80,6 +81,15 @@ InstructionWidget = (function() {
       $('.instruction-pane').toggle();
     }
   };
+
+  // Users used to be able to link to an instruction set with an anchor link.
+  // We can redirect them to a standalone page.
+  redirect_anchor = function() {
+    var params = window.location.hash.replace('#', '').split('-');
+    if (params.length === 2) {
+      jump(params[0], params[1]);
+    }
+  }
 
   bind_ui_actions = function() {
     content_container.on('click', '.tab', function() {
