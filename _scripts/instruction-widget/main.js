@@ -104,9 +104,13 @@ InstructionWidget = (function() {
     });
 
     window.onpopstate = function(event) {
-      $('#os-select').val(event.state.os);
-      $('#server-select').val(event.state.ws);
-      Instructions().render(content_container, get_input());
+      if (event.state) {
+        $('#os-select').val(event.state.os);
+        $('#server-select').val(event.state.ws);
+        Instructions().render(content_container, get_input());
+      } else {
+        location.reload();
+      }
     }
   };
 
