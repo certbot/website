@@ -1,34 +1,35 @@
 <p>
 Certbot has an Nginx plugin, which is supported on
-many platforms, and automates both obtaining and installing certs:
+many platforms, and certificate installation.
 </p>
-<pre>$ sudo {{base_command}} --nginx</pre>
 <p>
-Running this command will get a certificate for you and have Certbot edit your Nginx configuration
-automatically to serve it. If you're feeling more conservative and would like to make the changes to your
-Nginx configuration by hand, you can use the <tt>certonly</tt>
-subcommand:
-<pre>$ sudo {{base_command}} --nginx certonly</pre>
-
-{{#advanced}}
-    <aside class="note">
-        <h4>Note:</h4>
-        <p>the Nginx plugin with <tt>certonly</tt> does the following:<br>
-        <ol>
-          <li>make temporary config changes<br>
-          (adding a new server block to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>)</li>
-          <li>performs a graceful reload</li>
-          <li>reverts all changes</li>
-          <li>performs another graceful reload</li>
-        </ol>
-        This appears to be a reliable process, but if you don't want Certbot
-        to touch your Nginx process or files in any way, you can use the
-        <a
-        href="https://certbot.eff.org/docs/using.html#webroot">webroot plugin</a>.
-
-        </p></aside>
-{{/advanced}}
-
+Due to a security issue, Let's Encrypt has stopped offering the mechanism that
+the Nginx plugin previously used to prove you control a domain. You can read
+more about this <a
+href="https://community.letsencrypt.org/t/2018-01-11-update-regarding-acme-tls-sni-and-shared-hosting-infrastructure/50188">here</a>.
+</p>
+<p>
+We are planning on releasing a new version of Certbot in the next few days that
+works around this but if you have to obtain a certificate and cannot wait, you
+have a couple of options. If you're serving files for that domain out of a
+directory on that server, you can run the following command:
+</p>
+<pre>$ sudo {{base_command}} --authenticator webroot --installer nginx</pre>
+<p>
+If you're not serving files out of a directory on the server, you can
+temporarily stop your server while you obtain the certificate and restart it
+after Certbot has obtained the certificate. This would look like:
+</p>
+<pre>$ sudo {{base_command}} --authenticator standalone --installer nginx --pre-hook "nginx -s stop" --post-hook "nginx"</pre>
+<p>
+Running either of these commands will get a certificate for you and have
+Certbot edit your Nginx configuration automatically to serve it. If you're
+feeling more conservative and would like to make the changes to your Nginx
+configuration by hand, you can use the <tt>certonly</tt> subcommand. To see
+instructions on how to use this subcommand, select "None of the above" above in
+the first drop-down menu.
+</p>
+<p>
 To learn more about how to use Certbot <a href="/docs">read our documentation</a>.
 </p>
 {{> renewal}}
