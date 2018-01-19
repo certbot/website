@@ -7,10 +7,15 @@ services:
     volumes:
       - assets:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - site
   site:
     build: .
     volumes:
       - .:/opt/certbot/
+      - /opt/certbot/node_modules
+      - /opt/certbot/instructions
+      - /opt/certbot/_docs
       - assets:/opt/certbot/_site
 
 volumes:
