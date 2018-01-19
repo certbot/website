@@ -8,7 +8,11 @@ Website for [EFF's Certbot](https://certbot.eff.org/) project. Uses Jekyll for s
 
 ### With Docker
 
-`docker-compose up`
+1. Clone this repo and cd into the project directory.
+2. Get the documentation submodule:
+  * `git submodule init`
+  * `git submodule update`
+3. `docker-compose up`
 
 Docker-compose serves the site with nginx to more closely mirror production.
 
