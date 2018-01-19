@@ -44,9 +44,13 @@ InstructionWidget = (function() {
     }
   };
 
-  jump = function(os,ws) {
+  instruction_url = function(os, ws) {
+    return '/i/' + os + '-' + ws;
+  }
+
+  jump = function(os, ws) {
     if(os && ws) {
-      var url = '/i/' + os + '-' + ws;
+      var url = instruction_url(os, ws);
       var state = {
         os: os,
         ws: ws
@@ -86,7 +90,7 @@ InstructionWidget = (function() {
   redirect_anchor = function() {
     var params = window.location.hash.replace('#', '').split('-');
     if (params.length === 2) {
-      jump(params[0], params[1]);
+      window.location.href = instruction_url(params[0], params[1]);
     }
   }
 
