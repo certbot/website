@@ -147,7 +147,7 @@ code.inline {
 }
 
 code {
-    padding: 1px 15px;
+    padding: 1px 5px;
 }
 
 pre {
@@ -155,8 +155,7 @@ pre {
 
     > code {
         border: 0;
-        padding-right: 0;
-        padding-left: 0;
+        padding: 1px 15px;
     }
 }
 
