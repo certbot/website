@@ -64,6 +64,7 @@ module.exports = function(context) {
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
+    partials.packagealiasnote = require(TEMPLATE_PATH + "packagealiasnote.html");
 
     // Load and render the selected template.
     template = require(TEMPLATE_PATH + template + '.html');
@@ -86,11 +87,14 @@ module.exports = function(context) {
       context.base_command = "certbot"
       context.package = "certbot"
       context.packaged = true
+      context.python_prefix = "python2-"
 
       if (context.webserver == "apache") {
         context.package = "certbot-apache";
       } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
+      } else {
+        context.python_prefix = null;
       }
     }
   }
@@ -174,11 +178,14 @@ module.exports = function(context) {
     template = "fedora";
     context.package = "certbot";
     context.base_command = "certbot";
+    context.python_prefix = "python3-";
 
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
       context.package = "certbot-nginx";
+    } else {
+      context.python_prefix = null;
     }
   }
   // @todo: convert to template style
