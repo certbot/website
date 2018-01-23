@@ -10,7 +10,7 @@ collections:
     output: false
   instructions:
     output: true
-    permalink: "/i/:path"
+    permalink: "/lets-encrypt/:path"
 defaults:
 - scope:
     type: "instructions"

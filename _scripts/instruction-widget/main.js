@@ -45,7 +45,7 @@ InstructionWidget = (function() {
   };
 
   instruction_url = function(os, ws) {
-    return '/i/' + os + '-' + ws;
+    return '/lets-encrypt/' + os + '-' + ws;
   }
 
   jump = function(os, ws) {
