@@ -79,13 +79,15 @@ module.exports = function(context) {
     template = "centos";
 
     if (context.version < 7) {
-      context.base_command = "./path/to/certbot-auto"
-      context.epel_auto = (context.distro == "centos")
-      context.packaged = false
+      context.base_command = "./path/to/certbot-auto";
+      context.epel_auto = (context.distro == "centos");
+      context.packaged = false;
     } else {
-      context.base_command = "certbot"
-      context.package = "certbot"
-      context.packaged = true
+      context.base_command = "certbot";
+      context.package = "certbot";
+      context.packaged = true;
+      context.cron_included = true;
+      context.cron_info = "systemd timer";
 
       if (context.webserver == "apache") {
         context.package = "certbot-apache";
@@ -104,6 +106,7 @@ module.exports = function(context) {
     // Debian Jessie
     context.base_command = "certbot";
     context.cron_included = true;
+    context.cron_info = "systemd timer and cron job";
     context.package = "certbot";
 
     if (context.webserver == "apache") {
@@ -141,6 +144,7 @@ module.exports = function(context) {
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
     context.cron_included = true;
+    context.cron_info = "systemd timer and cron job";
   }
 
   gentoo_install = function() {
@@ -174,6 +178,10 @@ module.exports = function(context) {
     template = "fedora";
     context.package = "certbot";
     context.base_command = "certbot";
+    if (context.version >= 26){
+        context.cron_included = true;
+        context.cron_info = "systemd timer";
+    }
 
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
