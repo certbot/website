@@ -59,6 +59,12 @@
             "version": "0"
         },
         {
+            "name": "Ubuntu 17.10 (artful)",
+            "id": "ubuntuartful",
+            "distro": "ubuntu",
+            "version": "17.10"
+        },
+        {
             "name": "Ubuntu 16.04 (xenial)",
             "id": "ubuntuxenial",
             "distro": "ubuntu",
