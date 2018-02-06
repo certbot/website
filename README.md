@@ -4,9 +4,21 @@ Website for [EFF's Certbot](https://certbot.eff.org/) project. Uses Jekyll for s
 
 [![Build Status](https://travis-ci.org/certbot/website.svg?branch=master)](https://travis-ci.org/certbot/website)
 
-## Getting Started
+## Development
 
-### Install
+### With Docker
+
+1. Clone this repo and cd into the project directory.
+2. Get the documentation submodule:
+  * `git submodule init`
+  * `git submodule update`
+3. `docker-compose up`
+
+Docker-compose serves the site with nginx to more closely mirror production.
+
+### Without Docker
+
+#### Install
 1. Install `ruby 2.0+`, `node 4.0+`, and `npm 2.0+`.
 2. `gem install jekyll` (requires v3.0 or higher)
 3. `sudo npm install gulp -g`
@@ -20,7 +32,7 @@ Cerbot website, also do:
 7. `./_docs.sh depend`
 8. Install `pdflatex` e.g. via `sudo apt install texlive texlive-latex-extra`
 
-### Run
+#### Run
 To *watch* for changes and reload assets as needed via BrowserSync:
 `gulp watch`
 

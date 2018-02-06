@@ -1,0 +1,24 @@
+<form action="/lets-encrypt" method="get">
+  <span id="using">I'm using</span>
+  <select id="server-select" name="server">
+    <optgroup>
+      <option value="" disabled selected>Software</option>
+      {% for webserver in site.data.inputs.webservers %}
+        <option value="{{ webserver.id }}">{{ webserver.name }}</option>
+      {% endfor %}
+    </optgroup>
+  </select>
+
+  <span id="on">on</span>
+  <select id="os-select" name="os">
+    <optgroup>
+      <option value="" disabled selected>System</option>
+      {% for os in site.data.inputs.operating_systems %}
+        <option value="{{ os.id }}" data-distro="{{ os.distro }}" data-version="{{ os.version }}">{{ os.name }}</option>
+      {% endfor %}
+    </optgroup>
+  </select>
+
+  <input class="no-js-only" type="submit" value="Go">
+</form>
+
