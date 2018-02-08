@@ -57,7 +57,7 @@ module.exports = function() {
   }
 
   return {
-    html: html,
+    get_partials: get_partials,
     render: render
   };
 };

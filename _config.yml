@@ -5,19 +5,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Automatically enable HTTPS on your website with EFF's Certbot, deploying Let's Encrypt certificates.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://certbot.eff.org" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
 collections:
-  faq_entries:
-    output: false
-  instructions:
-    output: true
-    permalink: "/lets-encrypt/:path"
-defaults:
-- scope:
-    type: "instructions"
-  values:
-    layout: "index"
-    js:
-    - instructions
+- faq_entries
 exclude:
 - README.md
 - package.json
@@ -33,8 +24,6 @@ exclude:
 - EDITING.md
 - certbot-deploy
 - LICENSE.txt
-- nginx.conf
-- docker-compose.yml
 keep_files:
 - css
 - js

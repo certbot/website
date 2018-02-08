@@ -8,14 +8,7 @@ gulp.task('serve', () => {
   server.init({
     port: 4000,
     server: {
-      baseDir: config.site_root,
-      serveStaticOptions: {
-        extensions: ['html']
-      }
-    },
-    middleware: function(req, res, next) {
-      req.url = req.url.replace(/\?server=(.*)&os=(.*)/, "/$2-$1")
-      return next();
+      baseDir: config.site_root
     },
     ghostMode: false,
     notify: false,

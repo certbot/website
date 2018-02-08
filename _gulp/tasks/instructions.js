@@ -21,19 +21,12 @@ gulp.task('instructions', ['instructions:clean'], (done) => {
     },
     require.resolve('./../../_scripts/instruction-widget/build-all.js'),
     function(err, factory, stats, mock_fs) {
-
-      var dir = './_instructions'
-      if (!fs.existsSync(dir)){
-        fs.mkdirSync(dir);
+      var buildAll = factory();
+      var instructions = {
+        all: buildAll.build()
       }
-
-      var instructions = factory().build()
-      instructions.forEach(function(el) {
-        var path = dir + '/' + el.os.id + '-' + el.server.id + '.md';
-        var body = '---\n---\n' + el.instructions;
-        fs.writeFile(path, body);
-      });
-      done();
+      var json = JSON.stringify(instructions, null, 2);
+      fs.writeFile(config.instructions.dest, json, done);
     }
   );
 });
