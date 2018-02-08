@@ -1,17 +1,16 @@
-input,
+
 select {
   background: transparent;
+  width: 200px;
   border: 2px solid $certbot-red;
   height: 34px;
+  text-align:left;
   appearance: none;
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 20px;
-  margin-top: 1.5em;
-  display: block;
 
   @include susy-breakpoint($md) {
-    display: inline-block;
     margin: 0 1em;
   }
 
@@ -19,27 +18,20 @@ select {
     outline: none;
     box-shadow: 0 0 0 1px red;
   }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-input[type=submit] {
-  background-color: $certbot-red;
-  color: white;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-select {
-  width: 200px;
-  text-align:left;
-
   option {
     text-align: left;
   }
+  &:hover {
+    cursor: pointer;
+  }
+
+  display: block;
+  margin-top: 1.5em;
+  @include susy-breakpoint($md) {
+    display: inline-block;
+    margin-top: 0;
+  }
+
 
   background: url(../images/chevron-down.png) 94% / 15% no-repeat transparent;
   background-size: 12px;
@@ -171,7 +163,14 @@ h1.instruct {
     // background-color: rgba(0,0,0,0.05);
   }
 
-  #instructions-header {
+
+
+  // .tab.advanced {
+  //   margin-top: -50px;
+  // }
+
+  .permalink {
+
     clear: both;
     a {
       color: $header-grey;
@@ -188,6 +187,8 @@ h1.instruct {
       margin-top: -75px;
       display: inline-block;
     }
+
+
   }
 }
 

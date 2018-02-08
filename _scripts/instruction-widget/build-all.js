@@ -1,6 +1,6 @@
 'use strict';
 var Instructions = require('./instructions');
-var inputs = require('../../_data/inputs.json');
+var inputs = require('./data/inputs.json');
 
 /**
  * Module to build all instructions for all (os, webeserver)
@@ -31,14 +31,11 @@ module.exports = (function BuildAll() {
     set.server = server;
 
     var input = {
-      os: os.id,
       distro: os.distro,
       version: os.version,
-      distro_longname: os.name,
-      webserver: server.id,
-      server_longname: server.name
+      webserver: server.id
     }
-    set.instructions = Instructions().html(input);
+    set.instructions = Instructions().get_partials(input);
     return set;
   }
 

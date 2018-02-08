@@ -1,9 +1,9 @@
 var $ = require('jquery');
 var Instructions = require('./instructions');
-var inputs = require('../../_data/inputs.json');
+var inputs = require('./data/inputs.json');
 
 /**
- * Controls a widget that allows users to get installation
+ * Renders and controls a widget that allows users to get installation
  * and basic use instructions based on the operating system, webserver,
  * and use case.
  */
@@ -13,10 +13,11 @@ InstructionWidget = (function() {
   var content_container;
 
   init = function() {
-    redirect_anchor();
     select_container = $('.instruction-widget');
     content_container = $('.instructions.content');
+    render();
     bind_ui_actions();
+    set_state_from_url();
   }
 
   get_input = function() {
@@ -44,34 +45,38 @@ InstructionWidget = (function() {
     }
   };
 
-  instruction_url = function(os, ws) {
-    return '/lets-encrypt/' + os + '-' + ws;
+  set_state_from_url = function() {
+    var hash = window.location.hash;
+    params = hash.replace('#', '').split('-');
+    if (params.length == 2) {
+      $('#os-select').val(params[0]);
+      $('#server-select').val(params[1]);
+    } else {
+      $('#os-select').val("");
+      $('#server-select').val("");
+    }
+    Instructions().render(content_container, get_input());
   }
 
-  jump = function(os, ws) {
+  render = function() {
+    var template = require('./templates/widget.html');
+    var rendered = template.render({
+      operating_systems: inputs.operating_systems,
+      webservers: inputs.webservers
+    });
+    select_container.html(rendered);
+  };
+
+  jump = function(os,ws) {
     if(os && ws) {
-      var url = instruction_url(os, ws);
-      var state = {
-        os: os,
-        ws: ws
-      }
-      history.pushState(state, "", url);
-
-      // Smooth scroll to instructions.
-      var SCROLL_SPEED = 400;
-      var target = $('.page-content');
-      if (target.length) {
-        $('html, body').animate({
-          // Scroll a little further to account for sticky nav.
-          scrollTop: target.offset().top - 60
-        }, SCROLL_SPEED);
-      }
-
+      var url = '#' + os + '-' + ws;
+      location.href = url;
       document.activeElement.blur();
     }
   };
 
   toggle_tabs = function(active_tab) {
+
     var tab = $(active_tab);
 
     if(!tab.hasClass("active")) {
@@ -84,15 +89,6 @@ InstructionWidget = (function() {
       $('.instruction-pane').toggle();
     }
   };
-
-  // Users used to be able to link to an instruction set with an anchor link.
-  // We can redirect them to a standalone page.
-  redirect_anchor = function() {
-    var params = window.location.hash.replace('#', '').split('-');
-    if (params.length === 2) {
-      window.location.href = instruction_url(params[0], params[1]);
-    }
-  }
 
   bind_ui_actions = function() {
     content_container.on('click', '.tab', function() {
@@ -107,15 +103,7 @@ InstructionWidget = (function() {
       document.activeElement.blur();
     });
 
-    window.onpopstate = function(event) {
-      if (event.state) {
-        $('#os-select').val(event.state.os);
-        $('#server-select').val(event.state.ws);
-        Instructions().render(content_container, get_input());
-      } else {
-        location.reload();
-      }
-    }
+    window.addEventListener("hashchange", set_state_from_url, false);
   };
 
   return {

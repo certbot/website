@@ -40,6 +40,7 @@ RUN npm install
 COPY _docs/ ./_docs
 COPY _docs.sh ./
 RUN ./_docs.sh depend
+RUN ./_docs.sh install
 
 COPY _data ./_data
 COPY _faq_entries ./_faq_entries
@@ -49,6 +50,7 @@ COPY _layouts ./_layouts
 COPY _sass ./_sass
 COPY _scripts ./_scripts
 COPY about ./about
+COPY all-instructions ./all-instructions
 COPY faq ./faq
 COPY fonts ./fonts
 COPY images ./images
@@ -62,6 +64,4 @@ COPY certbot-deploy ./certbot-deploy
 COPY .git ./.git
 COPY .gitmodules ./.gitmodules
 
-RUN gulp build
-
-CMD ["gulp", "jekyll:watch"]
+CMD ["bash"]
