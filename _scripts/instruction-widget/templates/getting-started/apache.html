@@ -55,15 +55,17 @@ many platforms, and automates certificate installation.
     If you're not serving files out of a directory on the server, you can
     temporarily stop your server while you obtain the certificate, however,
     you'll have to configure Apache to use the certificate yourself.
-    The command to do this would look like:
+    The command to do this would something look like:
     </p>
     <pre>$ sudo {{base_command}} certonly --authenticator standalone --pre-hook "apachectl -k stop" --post-hook "apachectl -k start"</pre>
     <p>
-    By using a command with hooks like this, if you automate renewal as
-    described below, Certbot will automatically stop and start Apache when you
-    need to renew your certificates. If you configure Apache to use the
-    symlinks in the "live" directory as instructed by Certbot, Apache will
-    automatically begin using any renewed certificates.
+    If you usually use a command like <tt>systemctl</tt> or
+    <tt>service</tt> to start and stop Apache, you should use those commands
+    instead in the hooks above. By using a command with hooks like this, if
+    you automate renewal as described below, Certbot will automatically stop
+    and start Apache when you need to renew your certificates. If you configure
+    Apache to use the symlinks in the "live" directory as instructed by
+    Certbot, Apache will automatically begin using any renewed certificates.
     </p>
 {{/installer_http01}}
 
