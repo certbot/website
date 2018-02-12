@@ -22,6 +22,7 @@ module.exports = function(context) {
   html = function() {
 
     context.cron_included = false;
+    context.installer_http01 = true;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
@@ -113,12 +114,14 @@ module.exports = function(context) {
     // Jessie backports.
     if ((context.devuan && context.version == 1) || context.jessie) {
       context.backports_flag = "-t jessie-backports";
+      context.installer_http01 = false;
       if (context.webserver == "nginx") {
         context.certonly = true;
       }
     }
     if (context.stretch) {
       context.backports_flag = "-t stretch-backports";
+      context.installer_http01 = false;
       if (context.webserver == "nginx") {
         context.package = "python-certbot-nginx";
       }
@@ -149,6 +152,7 @@ module.exports = function(context) {
     context.package = "certbot";
     context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
+    context.installer_http01 = false;
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
