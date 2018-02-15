@@ -21,14 +21,14 @@
 var Raven = require('raven-js');
 
 (function (Raven) {
-
   'use strict';
-
   Raven.config('https://caa5edd9fc344ff69a3e0bd4c05a5a91@sentry.eff.org/20').install();
-
 })(Raven);
 
 (function() {
+  [].forEach.call(document.querySelectorAll('.no-js-only'), function (el) {
+    el.style.visibility = 'hidden';
+  });
 
   var hamburger = document.getElementById('hamburger');
   var close = document.getElementById('close');
@@ -39,23 +39,4 @@ var Raven = require('raven-js');
   function toggleMenu() {
     document.body.classList.toggle('active');
   }
-
-})();
-
-
-
-(function() {
-
-  var logo = document.getElementById('logo');
-  var wink = document.getElementById('wink');
-
-  logo.addEventListener('mouseover',winkBot,false);
-
-  function winkBot() {
-   wink.classList.toggle('active');
-  	setTimeout(function(){
-        wink.classList.toggle('active');
-      },200);
-  }
-
 })();
