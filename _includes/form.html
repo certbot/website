@@ -1,4 +1,4 @@
-<form action="/lets-encrypt" method="get">
+<div class="js-only">
   <span id="using">I'm using</span>
   <select id="server-select" name="server">
     <optgroup>
@@ -18,7 +18,8 @@
       {% endfor %}
     </optgroup>
   </select>
+</div>
 
-  <input class="no-js-only" type="submit" value="Go">
-</form>
-
+<div class="no-js-only">
+  No javascript? See all setup instructions <a href="all-instructions">here</a>. Read the full documentation <a href="docs">here</a>.
+</div>

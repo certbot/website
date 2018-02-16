@@ -26,6 +26,11 @@ var Raven = require('raven-js');
 })(Raven);
 
 (function() {
+  [].forEach.call(document.querySelectorAll('.js-only'), function (el) {
+    console.log("setting visibility");
+    el.style.visibility = 'visible';
+  });
+
   [].forEach.call(document.querySelectorAll('.no-js-only'), function (el) {
     el.style.visibility = 'hidden';
   });
