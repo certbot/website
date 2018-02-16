@@ -27,7 +27,6 @@ var Raven = require('raven-js');
 
 (function() {
   [].forEach.call(document.querySelectorAll('.js-only'), function (el) {
-    console.log("setting visibility");
     el.style.visibility = 'visible';
   });
 
