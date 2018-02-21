@@ -2,52 +2,16 @@
 title: All Instructions
 layout: page
 ---
+
 <a name="top">
 <ul>
-{% for member in site.data.instructions.all %}
+{% for server in site.data.inputs.webservers %}
+  {% for os in site.data.inputs.operating_systems %}
   <li>
-    {% capture id %}{{ member.os.name }} + " " + {{ member.server.name }}{% endcapture %}
-    <a href="#{{ id | slugify }}">
-       {{ member.server.name }} on {{ member.os.name }}
+    <a href="/lets-encrypt/{{ os.id }}-{{ server.id }}.html">
+       {{ server.name }} on {{ os.name }}
     </a>
   </li>
+  {% endfor %}
 {% endfor %}
 </ul>
-
-{% for member in site.data.instructions.all %}
-  {% capture id %}{{ member.os.name }} + " " + {{ member.server.name }}{% endcapture %}
-  <div class="instruction-set">
-    <a name="{{ id | slugify }}"></a>
-    <h2>
-      <a href="#{{ id | slugify}}">
-        {{ member.server.name }} on {{ member.os.name }}
-      </a>
-    </h2>
-    <h3>
-      Automated Install
-    </h3>
-    <p>
-      {{ member.instructions.automated_install }}
-    </p>
-    <h3>
-      Automated Get Started
-    </h3>
-    <p>
-      {{ member.instructions.automated_get_started }}
-    </p>
-    <h3>
-      Advanced Install
-    </h3>
-    <p>
-      {{ member.instructions.advanced_install }}
-    </p>
-    <h3>
-      Advanced Get Started
-    </h3>
-    <p>
-      {{ member.instructions.advanced_get_started }}
-    </p>
-    <a href="#top">Back to top</a>
-  </div>
-{% endfor %}
-
