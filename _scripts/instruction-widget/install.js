@@ -65,6 +65,7 @@ module.exports = function(context) {
 
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
+    partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
 
     // Load and render the selected template.
