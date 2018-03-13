@@ -47,10 +47,12 @@ certificate for with the DNS provider matching the plugin. To see more
 information about using these plugins, click
 <a href="/docs/using.html#dns-plugins">here</a>. If you want to use one of
 these plugins with Let's Encrypt's new ACMEv2 server that will issue wildcard
-certificates, you'll also need to include
-<tt>--server https://acme-v02.api.letsencrypt.org/directory</tt> on the
-command line.
+certificates, you'll also need to include the following flag on the command
+line:
 </p>
+<pre>
+--server https://acme-v02.api.letsencrypt.org/directory
+</pre>
 {{/dns_plugins}}
 
 {{> renewal}}
