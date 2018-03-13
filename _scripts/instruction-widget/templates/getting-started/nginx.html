@@ -78,7 +78,7 @@ server, you'll also need to use one of
 make sure the plugin for your DNS provider is installed using the instructions
 above and run a command like the following:
 </p>
-<pre>$ sudo {{base_command}} -a dns-plugin -i nginx -d *.example.com -d example.com --server https://acme-v02.api.letsencrypt.org/directory</pre>
+<pre>$ sudo {{base_command}} -a dns-plugin -i nginx -d \*.example.com -d example.com --server https://acme-v02.api.letsencrypt.org/directory</pre>
 <p>
 You'll need to replace <tt>dns-plugin</tt> with the name of the DNS plugin
 you want to use. You may also need to provide additional flags such as the path
