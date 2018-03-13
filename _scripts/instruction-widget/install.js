@@ -95,6 +95,7 @@ module.exports = function(context) {
       } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
       }
+      context.dns_plugins = true;
     }
   }
 
@@ -187,6 +188,7 @@ module.exports = function(context) {
     } else if (context.webserver == "nginx") {
       context.package = "certbot-nginx";
     }
+    context.dns_plugins = true;
   }
   // @todo: convert to template style
   bsd_install = function() {
