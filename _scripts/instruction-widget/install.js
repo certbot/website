@@ -23,6 +23,7 @@ module.exports = function(context) {
 
     context.cron_included = false;
     context.installer_http01 = true;
+    context.dns_plugins = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
@@ -64,6 +65,7 @@ module.exports = function(context) {
 
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
+    partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
 
     // Load and render the selected template.
@@ -93,6 +95,7 @@ module.exports = function(context) {
       } else if (context.webserver == "nginx") {
         context.package = "certbot-nginx";
       }
+      context.dns_plugins = true;
     }
   }
 
@@ -172,6 +175,7 @@ module.exports = function(context) {
 
     context.base_command = "certbot";
     context.base_package = "certbot";
+    context.dns_plugins = true;
   }
 
   fedora_install = function() {
@@ -184,6 +188,7 @@ module.exports = function(context) {
     } else if (context.webserver == "nginx") {
       context.package = "certbot-nginx";
     }
+    context.dns_plugins = true;
   }
   // @todo: convert to template style
   bsd_install = function() {
