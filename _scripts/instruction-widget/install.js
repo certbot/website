@@ -23,6 +23,7 @@ module.exports = function(context) {
 
     context.cron_included = false;
     context.installer_http01 = true;
+    context.dns_plugins = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
@@ -172,6 +173,7 @@ module.exports = function(context) {
 
     context.base_command = "certbot";
     context.base_package = "certbot";
+    context.dns_plugins = true;
   }
 
   fedora_install = function() {
