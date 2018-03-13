@@ -72,6 +72,22 @@ many platforms, and automates certificate installation.
     Certbot, Apache will automatically begin using any renewed certificates.
     </p>
 {{/installer_http01}}
+{{#dns_plugins}}
+<p>
+If you want to obtain a wildcard certificate using Let's Encrypt's new ACMEv2
+server, you'll also need to use one of
+<a href="/docs/using.html#dns-plugins">Certbot's DNS plugins</a>. To do this,
+make sure the plugin for your DNS provider is installed using the instructions
+above and run a command like the following:
+</p>
+<pre>$ sudo {{base_command}} -a <dns-plugin> -i apache -d *.example.com -d example.com --server https://acme-v02.api.letsencrypt.org/directory</pre>
+<p>
+You'll need to replace <tt><dns-plugin></tt> with the name of the DNS plugin you
+want to use. You may also need to provide additional flags such as the path to
+your API credentials as described in the documentation for the DNS plugin
+linked above.
+</p>
+{{/dns_plugins}}
 
 To learn more about how to use Certbot <a href="/docs/">read our documentation</a>.
 </p>
