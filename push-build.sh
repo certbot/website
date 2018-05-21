@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 BRANCH=$TRAVIS_BRANCH
 BUILD=$(git rev-parse --short HEAD)
@@ -17,9 +17,7 @@ git config user.name "Travis CI"
 git config user.email "builds@travis-ci.com"
 git remote add upstream "git@github.com:certbot/website-builds.git"
 
-git fetch upstream $BRANCH
-branch_exists=$?
-if [ $branch_exists == 0 ]
+if git fetch upstream "$BRANCH"
 then
   # Manually set which branch HEAD points to to avoid changes to the
   # working tree caused by "git checkout".
