@@ -91,9 +91,9 @@ module.exports = function(context) {
       context.packaged = true
 
       if (context.webserver == "apache") {
-        context.package = "certbot-apache";
+        context.package = "python2-certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package = "certbot-nginx";
+        context.package = "python2-certbot-nginx";
       }
       context.dns_plugins = true;
     }
