@@ -39,5 +39,20 @@ temporarily stop your existing webserver, if any) for <tt>example.com</tt> and
 <pre>
 $ sudo {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
+{{#dns_plugins}}
+<p>
+<strong>You can also use one of Certbot's DNS plugins to obtain a certificate if it's
+installed and you have configured DNS for the domain you want to obtain a
+certificate for with the DNS provider matching the plugin.</strong> To see more
+information about using these plugins, click
+<a href="/docs/using.html#dns-plugins">here</a>. If you want to use one of
+these plugins with Let's Encrypt's new ACMEv2 server that will issue wildcard
+certificates, you'll also need to include the following flag on the command
+line:
+</p>
+<pre>
+--server https://acme-v02.api.letsencrypt.org/directory
+</pre>
+{{/dns_plugins}}
 
 {{> renewal}}

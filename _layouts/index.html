@@ -2,10 +2,10 @@
 
  ██████╗███████╗██████╗ ████████╗██████╗  ██████╗ ████████╗
 ██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔══██╗██╔═══██╗╚══██╔══╝
-██║     █████╗  ██████╔╝   ██║   ██████╔╝██║   ██║   ██║   
-██║     ██╔══╝  ██╔══██╗   ██║   ██╔══██╗██║   ██║   ██║   
-╚██████╗███████╗██║  ██║   ██║   ██████╔╝╚██████╔╝   ██║   
- ╚═════╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝   
+██║     █████╗  ██████╔╝   ██║   ██████╔╝██║   ██║   ██║
+██║     ██╔══╝  ██╔══██╗   ██║   ██╔══██╗██║   ██║   ██║
+╚██████╗███████╗██║  ██║   ██║   ██████╔╝╚██████╔╝   ██║
+ ╚═════╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝
 
 Like looking at code? Help us! https://github.com/certbot/certbot
                                https://github.com/certbot/website
@@ -20,18 +20,20 @@ Like looking at code? Help us! https://github.com/certbot/certbot
 
     {% include topnav.html %}
     {% include shelf.html %}
-    {% include sni-warning.html %}
+    {% include warning.html %}
     {% include hero.html %}
 
     <div class="page-content">
       <div class="wrapper">
-        {{ content }}
+        <div class="instructions content">
+          {{ content }}
+        </div>
       </div>
     </div>
 
     {% include social.html %}
     {% include footer.html %}
-    
+
 
   </body>
 
