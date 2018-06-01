@@ -59,18 +59,6 @@
             "version": "0"
         },
         {
-            "name": "Ubuntu 17.04 (zesty)",
-            "id": "ubuntutzesty",
-            "distro": "ubuntu",
-            "version": "17.04"
-        },
-        {
-            "name": "Ubuntu 16.10 (yakkety)",
-            "id": "ubuntutyakkety",
-            "distro": "ubuntu",
-            "version": "16.10"
-        },
-        {
             "name": "Ubuntu 16.04 (xenial)",
             "id": "ubuntuxenial",
             "distro": "ubuntu",
