@@ -14,7 +14,9 @@
     <optgroup>
       <option value="" disabled selected>System</option>
       {% for os in site.data.inputs.operating_systems %}
-        <option value="{{ os.id }}" data-distro="{{ os.distro }}" data-version="{{ os.version }}">{{ os.name }}</option>
+        {% if os.id != "fedora24" %}
+          <option value="{{ os.id }}" data-distro="{{ os.distro }}" data-version="{{ os.version }}">{{ os.name }}</option>
+        {% endif %}
       {% endfor %}
     </optgroup>
   </select>
