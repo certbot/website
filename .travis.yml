@@ -32,3 +32,6 @@ env:
     - NODE_ENV=production
 
 sudo: required
+
+notifications:
+  email: false
