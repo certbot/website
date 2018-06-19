@@ -96,12 +96,6 @@
         },
         {
             "name": "Fedora 26+",
-            "id": "fedora24",
-            "distro": "fedora",
-            "version": "26"
-        },
-        {
-            "name": "Fedora 26+",
             "id": "fedora",
             "distro": "fedora",
             "version": "26"
