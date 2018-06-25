@@ -7,6 +7,6 @@ Let's Encrypt has [begun issuing](https://community.letsencrypt.org/t/acme-v2-an
 
 Note that [depending how you install Certbot](https://community.letsencrypt.org/t/getting-wildcard-certificates-with-certbot/56285), appropriate plugins to automate the process may not yet be available on your system.
 
-A wildcard should normally be obtained explicitly for both the base domain and subdomains (e.g., `-d example.org -d "*.example.org") because the wildcard does not cover the base domain, only subdomains.
+A wildcard should normally be obtained explicitly for both the base domain and subdomains (e.g., `-d example.org -d "*.example.org"`) because the wildcard does not cover the base domain, only subdomains.
 
 Please see Certbot documentation for more information about your situation.
