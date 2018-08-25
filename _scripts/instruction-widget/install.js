@@ -59,6 +59,8 @@ module.exports = function(context) {
       macos_install();
     } else if (context.distro == "devuan") {
       debian_install();
+    } else if (context.distro == "opensuse") {
+      opensuse_install();
     } else {
       auto_install();
     }
@@ -220,6 +222,19 @@ module.exports = function(context) {
   macos_install = function() {
     template = "macos";
     context.base_command = "certbot";
+  }
+
+  opensuse_install = function() {
+    template = "opensuse";
+    context.package = "certbot";
+    context.base_command = "certbot";
+
+    if (context.webserver == "apache") {
+      context.package = "python-certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.package = "python-certbot-nginx";
+    }
+    context.dns_plugins = true;
   }
 
   auto_install = function() {

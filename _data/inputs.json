@@ -161,6 +161,18 @@
             "version": "0"
         },
         {
+          "name": "openSUSE Tumbleweed",
+          "id": "tumbleweed",
+          "distro": "opensuse",
+          "version": "0"
+        },
+        {
+          "name": "openSUSE Leap 15.0",
+          "id": "leap",
+          "distro": "opensuse",
+          "version": "15.0"
+        },
+        {
             "name": "Other UNIX",
             "id": "pip",
             "distro": "python",
