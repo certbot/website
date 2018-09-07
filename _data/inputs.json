@@ -59,16 +59,10 @@
             "version": "0"
         },
         {
-            "name": "Ubuntu 17.04 (zesty)",
-            "id": "ubuntutzesty",
+            "name": "Ubuntu 17.10 (artful)",
+            "id": "ubuntuartful",
             "distro": "ubuntu",
-            "version": "17.04"
-        },
-        {
-            "name": "Ubuntu 16.10 (yakkety)",
-            "id": "ubuntutyakkety",
-            "distro": "ubuntu",
-            "version": "16.10"
+            "version": "17.10"
         },
         {
             "name": "Ubuntu 16.04 (xenial)",
@@ -102,7 +96,7 @@
         },
         {
             "name": "Fedora 26+",
-            "id": "fedora24",
+            "id": "fedora",
             "distro": "fedora",
             "version": "26"
         },
@@ -165,6 +159,18 @@
             "id": "devuanother",
             "distro": "devuan",
             "version": "0"
+        },
+        {
+          "name": "openSUSE Tumbleweed",
+          "id": "tumbleweed",
+          "distro": "opensuse",
+          "version": "0"
+        },
+        {
+          "name": "openSUSE Leap 15.0",
+          "id": "leap",
+          "distro": "opensuse",
+          "version": "15.0"
         },
         {
             "name": "Other UNIX",
