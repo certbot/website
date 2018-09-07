@@ -5,6 +5,8 @@ node_js:
 addons:
   apt:
     packages:
+      - imagemagick
+      - latexmk
       - texlive
       - texlive-latex-extra
 
