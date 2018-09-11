@@ -59,6 +59,12 @@
             "version": "17.10"
         },
         {
+            "name": "Ubuntu 18.04 LTS (bionic)",
+            "id": "ubuntubionic",
+            "distro": "ubuntu",
+            "version": "18.04"
+        },
+        {
             "name": "Ubuntu 16.04 (xenial)",
             "id": "ubuntuxenial",
             "distro": "ubuntu",
