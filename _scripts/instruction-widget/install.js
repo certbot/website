@@ -107,6 +107,9 @@ module.exports = function(context) {
     context.jessie = context.version == 8
     context.stretch = context.version == 9
 
+    // Now default for Debian, undone only in Jessie case below
+    context.dns_plugins = true;
+
     // Debian Jessie
     context.base_command = "certbot";
     context.cron_included = true;
@@ -118,6 +121,7 @@ module.exports = function(context) {
 
     // Jessie backports.
     if ((context.devuan && context.version == 1) || context.jessie) {
+      context.dns_plugins = false;
       context.backports_flag = "-t jessie-backports";
       context.installer_http01 = false;
       if (context.webserver == "nginx") {
@@ -149,6 +153,7 @@ module.exports = function(context) {
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
     context.cron_included = true;
+    context.dns_plugins = true;
   }
 
   gentoo_install = function() {
@@ -198,6 +203,7 @@ module.exports = function(context) {
 
     context.base_command = "certbot";
     if (context.distro == "freebsd"){
+      context.dns_plugins = true;
       context.portcommand = "py-certbot";
       context.package = "pkg install py27-certbot";
     }
