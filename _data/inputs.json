@@ -29,12 +29,6 @@
             "version": "0"
         },
         {
-            "name": "Debian 7 (wheezy)",
-            "id": "debianwheezy",
-            "distro": "debian",
-            "version": "7"
-        },
-        {
             "name": "Debian 8 (jessie)",
             "id": "debianjessie",
             "distro": "debian",
@@ -63,6 +57,12 @@
             "id": "ubuntuartful",
             "distro": "ubuntu",
             "version": "17.10"
+        },
+        {
+            "name": "Ubuntu 18.04 LTS (bionic)",
+            "id": "ubuntubionic",
+            "distro": "ubuntu",
+            "version": "18.04"
         },
         {
             "name": "Ubuntu 16.04 (xenial)",
