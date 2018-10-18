@@ -130,7 +130,6 @@ module.exports = function(context) {
     }
     if (context.stretch) {
       context.backports_flag = "-t stretch-backports";
-      context.installer_http01 = false;
       if (context.webserver == "nginx") {
         context.package = "python-certbot-nginx";
       }
