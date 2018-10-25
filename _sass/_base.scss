@@ -30,7 +30,7 @@ body {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
+ul, ol, dl, figure, aside.note,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
@@ -128,9 +128,9 @@ blockquote {
 pre,
 code {
     font-size: 14px;
-    // border: 1px solid $grey-color-light;
-    // border-radius: 3px;
-    // background-color: #eef;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
     margin: 2em 0;
     font-family: 'VeraMono';
     font-weight: 400;
@@ -150,16 +150,14 @@ code {
     padding: 1px 5px;
 }
 
-// pre {
-//     padding: 8px 12px;
-//     overflow-x: scroll;
+pre {
+    padding: 16px;
 
-//     > code {
-//         border: 0;
-//         padding-right: 0;
-//         padding-left: 0;
-//     }
-// }
+    > code {
+        border: 0;
+        padding: 1px 15px;
+    }
+}
 
 
 
