@@ -104,8 +104,6 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
     context.devuan = context.distro == "devuan"
-    context.jessie = context.version == 8
-    context.stretch = context.version == 9
 
     context.dns_plugins = true;
 
@@ -119,7 +117,8 @@ module.exports = function(context) {
       context.package = "python-certbot-nginx";
     }
 
-    if (context.stretch) {
+    if (context.version == 9) {
+      // Debian Stretch
       context.backports_flag = "-t stretch-backports";
     } else if (context.devuan && context.version == 2) {
       // Devuan ASCII
