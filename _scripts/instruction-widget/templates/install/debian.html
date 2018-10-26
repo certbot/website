@@ -6,12 +6,13 @@
 {{#backports_flag}}
 <p>
 {{#devuan}}
-First you'll have to enable the Jessie backports repo in your APT sources as
+First you'll have to enable the ASCII backports repo in your APT sources as
 shown <a
 href='https://devuan.org/os/etc/apt/sources.list#add-backports-default-no'>here</a>.
 {{/devuan}}
 {{^devuan}}
-First you'll have to follow the instructions <a href='http://backports.debian.org/Instructions/'>here</a> to enable the {{#jessie}}Jessie{{/jessie}}{{#stretch}}Stretch{{/stretch}}
+First you'll have to follow the instructions <a
+href='http://backports.debian.org/Instructions/'>here</a> to enable the Stretch
 backports repo, if you have not already done so.
 {{/devuan}}
 Then run:

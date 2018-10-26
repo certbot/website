@@ -149,16 +149,22 @@
             "version": "10"
         },
         {
+            "name": "Devuan ASCII 2.0",
+            "id": "devuanascii",
+            "distro": "devuan",
+            "version": "2"
+        },
+        {
             "name": "Devuan Jessie 1.0",
             "id": "devuanjessie",
             "distro": "devuan",
             "version": "1"
         },
         {
-            "name": "Devuan (other)",
+            "name": "Devuan testing/unstable",
             "id": "devuanother",
             "distro": "devuan",
-            "version": "0"
+            "version": "3"
         },
         {
           "name": "openSUSE Tumbleweed",
