@@ -57,7 +57,7 @@ module.exports = function(context) {
     }
     else if (context.distro == "macos") {
       macos_install();
-    } else if (context.distro == "devuan") {
+    } else if (context.distro == "devuan" && context.version > 1) {
       debian_install();
     } else if (context.distro == "opensuse") {
       opensuse_install();
@@ -116,9 +116,12 @@ module.exports = function(context) {
       context.package = "python-certbot-nginx";
     }
 
-    // Debian Stretch
     if (context.version == 9) {
+      // Debian Stretch
       context.backports_flag = "-t stretch-backports";
+    } else if (context.distro == "devuan" && context.version == 2) {
+      // Devuan ASCII
+      context.backports_flag = "-t ascii-backports";
     }
   }
 
