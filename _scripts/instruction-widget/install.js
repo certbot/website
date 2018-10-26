@@ -121,7 +121,7 @@ module.exports = function(context) {
 
     if (context.stretch) {
       context.backports_flag = "-t stretch-backports";
-    } else if (context.distro == "devuan" && context.version == 2) {
+    } else if (context.devuan && context.version == 2) {
       // Devuan ASCII
       context.backports_flag = "-t ascii-backports";
     }
