@@ -5,7 +5,7 @@ case "$1" in
     cd _docs
     export CERTBOT_WEBSITE='True'
     ./letsencrypt-auto-source/letsencrypt-auto --os-packages-only
-    ./tools/venv.sh
+    python tools/venv.py
     ;;
   "install" )
     cd _docs
