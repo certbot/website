@@ -27,7 +27,7 @@ Let’s Encrypt also operates [Community Forums](https://community.letsencrypt.o
 
 Let’s Encrypt may change these policies or providers from time to time. If you have questions about Let’s Encrypt’s privacy practices, please contact them directly at [security@letsencrypt.org](mailto:security@letsencrypt.org).
 
-The Certbot community can be contacted through the Freenode Project’s IRC service, chat.freenode.net, on the #letsencrypt channel. This IRC service is operated by Freenode, which does not publish a privacy policy. In addition, the community may be reached on the Open and Free Technology Community’s IRC service, irc.OFTC.net, on the #certbot and #certbot-dev channels. The IRC is operated by OFTC, which also does not publish a privacy policy.
+The Certbot community can be contacted through the Freenode Project’s IRC service, chat.freenode.net, on the #letsencrypt-dev channel. This IRC service is operated by Freenode, which does not publish a privacy policy.
 
 In addition, you may elect to provide information to EFF through Certbot, such as your contact information or bug reports. That information will be protected by the [EFF Technology Project Privacy Policy](https://www.eff.org/code/privacy/policy).
 
@@ -35,11 +35,15 @@ In addition, you may elect to provide information to EFF through Certbot, such a
 
 EFF's Certbot Privacy Policy may change from time to time. However, any revised privacy policy will be consistent with EFF's mission. 
 
+*Updated on October 25th, 2018 to reflect changes to IRC services used.*
+
 *Updated on June 23rd, 2017 to add additional IRC services.*
 
 *Updated on June 7th, 2017 to clarify which values are collected in the User Agent string.*
 
 #### Previous Privacy Policies
+
+[June 23, 2017 - October 25, 2018](https://github.com/certbot/website/blob/446a47c51fb74db05b8240ddb24174a36e71cc82/privacy/index.md)
 
 [June 7, 2017 - June 23, 2017](https://github.com/certbot/website/blob/21901280e8c6b1e64bbb595a97e8129e2c28b31b/privacy/index.md)
 

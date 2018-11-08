@@ -22,7 +22,6 @@ module.exports = function(context) {
   html = function() {
 
     context.cron_included = false;
-    context.installer_http01 = true;
     context.dns_plugins = false;
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -30,7 +29,7 @@ module.exports = function(context) {
         context.distro == "sharedhost") {
         return '';
     }
-    else if (context.distro == "debian" && context.version > 7) {
+    else if (context.distro == "debian" && context.version > 8) {
       debian_install();
     }
     else if (context.distro == "ubuntu" && context.version >= 14.04){
@@ -57,7 +56,7 @@ module.exports = function(context) {
     }
     else if (context.distro == "macos") {
       macos_install();
-    } else if (context.distro == "devuan") {
+    } else if (context.distro == "devuan" && context.version > 1) {
       debian_install();
     } else if (context.distro == "opensuse") {
       opensuse_install();
@@ -104,40 +103,26 @@ module.exports = function(context) {
   debian_install = function() {
     template = "debian";
     context.devuan = context.distro == "devuan"
-    context.jessie = context.version == 8
-    context.stretch = context.version == 9
 
-    // Now default for Debian, undone only in Jessie case below
     context.dns_plugins = true;
 
-    // Debian Jessie
     context.base_command = "certbot";
     context.cron_included = true;
     context.package = "certbot";
 
     if (context.webserver == "apache") {
       context.package = "python-certbot-apache";
-    }
-
-    // Jessie backports.
-    if ((context.devuan && context.version == 1) || context.jessie) {
-      context.dns_plugins = false;
-      context.backports_flag = "-t jessie-backports";
-      context.installer_http01 = false;
-      if (context.webserver == "nginx") {
-        context.certonly = true;
-      }
-    }
-    if (context.stretch) {
-      context.backports_flag = "-t stretch-backports";
-      if (context.webserver == "nginx") {
-        context.package = "python-certbot-nginx";
-      }
-    }
-    if (context.version == 10 && context.webserver == "nginx") {
+    } else if (context.webserver == "nginx") {
       context.package = "python-certbot-nginx";
     }
 
+    if (context.version == 9) {
+      // Debian Stretch
+      context.backports_flag = "-t stretch-backports";
+    } else if (context.devuan && context.version == 2) {
+      // Devuan ASCII
+      context.backports_flag = "-t ascii-backports";
+    }
   }
 
   ubuntu_install = function() {
@@ -161,7 +146,6 @@ module.exports = function(context) {
     context.package = "certbot";
     context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
-    context.installer_http01 = false;
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
