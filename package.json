@@ -15,7 +15,7 @@
     "gulp-environments": "^0.1.1",
     "gulp-git": "^2.4.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
     "gulp-webpack": "^1.5.0",

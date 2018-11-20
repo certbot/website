@@ -1,4 +1,4 @@
-FROM node:4
+FROM node:8
 
 RUN mkdir /opt/certbot
 WORKDIR /opt/certbot
