@@ -1,5 +1,16 @@
+{{#jessie}}
 <p>
-Since it doesn't seem like your operating system has a packaged version of Certbot, you should use our certbot-auto script to get a copy:
+IMPORTANT: We previously suggest using the operating system-provided packaged version of Certbot on Debian 8 (jessie). Because of important updates in the Certbot code, we are now recommending that Debian 8 users switch to the <tt>certbot-auto</tt> method, described below.</p>
+<p>
+If you've previously installed Certbot via <tt>apt-get</tt> on your Debian 8 system, we recommend uninstalling the packaged version before continuing with the other steps below, in order to avoid potential conflicts between the two versions. You can do this with
+</p>
+<pre>apt-get remove certbot</pre>
+<p>
+If you don't remember whether or not you installed the packaged version of Certbot, there is no harm in running this command. If the packaged Certbot is not installed on your system, it will have no effect. Uninstalling the packaged version of Certbot does not delete your existing certificates, if any.
+</p>
+{{/jessie}}
+<p>
+Since it doesn't seem like your operating system has a{{#jessie}}n up-to-date{{/jessie}} packaged version of Certbot, you should{{#jessie}} remove any previously installed packaged version, if applicable, and then{{/jessie} use our certbot-auto script to get a{{#jessie}n up-to-date{{/jessie}} copy:
 </p>
 <pre>wget https://dl.eff.org/certbot-auto
 chmod a+x certbot-auto</pre>
