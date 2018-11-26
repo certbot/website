@@ -23,6 +23,7 @@ module.exports = function(context) {
 
     context.cron_included = false;
     context.dns_plugins = false;
+    context.jessie = false;  // Special jessie instructions for certbot-auto
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
@@ -61,6 +62,9 @@ module.exports = function(context) {
     } else if (context.distro == "opensuse") {
       opensuse_install();
     } else {
+      if (context.distro == "debian" && context.version == 8) {
+          context.jessie = true;
+      }
       auto_install();
     }
 
