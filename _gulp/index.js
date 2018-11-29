@@ -10,4 +10,7 @@ gulp.task('watch',
   gulp.parallel('instructions', 'css', 'js', 'jekyll:watch', 'serve'));
 
 gulp.task('build',
-  gulp.parallel('instructions', 'css', 'js', 'docs:install', 'jekyll:build'));
+  gulp.series('instructions',
+    gulp.parallel('css', 'js', 'docs:install', 'jekyll:build')
+  )
+);
