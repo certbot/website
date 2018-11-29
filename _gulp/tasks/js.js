@@ -28,13 +28,14 @@ config.webpack = {
   bail: env.production()
 }
 
-gulp.task('js', ['js:clean'], (done) => {
+var js_clean = function(done) {
+  return del([config.js.dest], done);
+}
+
+var js = function() {
   return gulp.src(config.js.src)
     .pipe(webpack(config.webpack))
     .pipe(gulp.dest(config.js.dest));
-});
+}
 
-gulp.task('js:clean', function(done) {
-  return del([config.js.dest],
-    done);
-});
+gulp.task('js', gulp.series(js_clean, js));
