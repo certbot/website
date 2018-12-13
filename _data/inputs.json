@@ -29,12 +29,6 @@
             "version": "0"
         },
         {
-            "name": "Debian 7 (wheezy)",
-            "id": "debianwheezy",
-            "distro": "debian",
-            "version": "7"
-        },
-        {
             "name": "Debian 8 (jessie)",
             "id": "debianjessie",
             "distro": "debian",
@@ -59,16 +53,16 @@
             "version": "0"
         },
         {
-            "name": "Ubuntu 17.04 (zesty)",
-            "id": "ubuntutzesty",
+            "name": "Ubuntu 17.10 (artful)",
+            "id": "ubuntuartful",
             "distro": "ubuntu",
-            "version": "17.04"
+            "version": "17.10"
         },
         {
-            "name": "Ubuntu 16.10 (yakkety)",
-            "id": "ubuntutyakkety",
+            "name": "Ubuntu 18.04 LTS (bionic)",
+            "id": "ubuntubionic",
             "distro": "ubuntu",
-            "version": "16.10"
+            "version": "18.04"
         },
         {
             "name": "Ubuntu 16.04 (xenial)",
@@ -101,10 +95,10 @@
             "version": "0"
         },
         {
-            "name": "Fedora 24+",
-            "id": "fedora24",
+            "name": "Fedora 26+",
+            "id": "fedora",
             "distro": "fedora",
-            "version": "24"
+            "version": "26"
         },
         {
             "name": "CentOS 6",
@@ -155,16 +149,34 @@
             "version": "10"
         },
         {
+            "name": "Devuan ASCII 2.0",
+            "id": "devuanascii",
+            "distro": "devuan",
+            "version": "2"
+        },
+        {
             "name": "Devuan Jessie 1.0",
             "id": "devuanjessie",
             "distro": "devuan",
             "version": "1"
         },
         {
-            "name": "Devuan (other)",
+            "name": "Devuan testing/unstable",
             "id": "devuanother",
             "distro": "devuan",
-            "version": "0"
+            "version": "3"
+        },
+        {
+          "name": "openSUSE Tumbleweed",
+          "id": "tumbleweed",
+          "distro": "opensuse",
+          "version": "0"
+        },
+        {
+          "name": "openSUSE Leap 15.0",
+          "id": "leap",
+          "distro": "opensuse",
+          "version": "15.0"
         },
         {
             "name": "Other UNIX",

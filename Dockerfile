@@ -1,4 +1,4 @@
-FROM node:4
+FROM node:8
 
 RUN mkdir /opt/certbot
 WORKDIR /opt/certbot
@@ -20,6 +20,8 @@ ENV LC_ALL C.UTF-8
 
 # need rsync for deploy script and texlive for building docs
 RUN apt-get install -y --no-install-recommends \
+    imagemagick \
+    latexmk \
     rsync \
     texlive \
     texlive-latex-extra
@@ -40,7 +42,6 @@ RUN npm install
 COPY _docs/ ./_docs
 COPY _docs.sh ./
 RUN ./_docs.sh depend
-RUN ./_docs.sh install
 
 COPY _data ./_data
 COPY _faq_entries ./_faq_entries
@@ -50,7 +51,6 @@ COPY _layouts ./_layouts
 COPY _sass ./_sass
 COPY _scripts ./_scripts
 COPY about ./about
-COPY all-instructions ./all-instructions
 COPY faq ./faq
 COPY fonts ./fonts
 COPY images ./images
@@ -64,4 +64,6 @@ COPY certbot-deploy ./certbot-deploy
 COPY .git ./.git
 COPY .gitmodules ./.gitmodules
 
-CMD ["bash"]
+RUN gulp build
+
+CMD ["gulp", "jekyll:watch"]

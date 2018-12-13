@@ -22,14 +22,15 @@ module.exports = function(context) {
   html = function() {
 
     context.cron_included = false;
-    context.installer_http01 = true;
+    context.dns_plugins = false;
+    context.jessie = false;  // Special jessie instructions for certbot-auto
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
         context.distro == "sharedhost") {
         return '';
     }
-    else if (context.distro == "debian" && context.version > 7) {
+    else if (context.distro == "debian" && context.version > 8) {
       debian_install();
     }
     else if (context.distro == "ubuntu" && context.version >= 14.04){
@@ -56,14 +57,20 @@ module.exports = function(context) {
     }
     else if (context.distro == "macos") {
       macos_install();
-    } else if (context.distro == "devuan") {
+    } else if (context.distro == "devuan" && context.version > 1) {
       debian_install();
+    } else if (context.distro == "opensuse") {
+      opensuse_install();
     } else {
+      if (context.distro == "debian" && context.version == 8) {
+          context.jessie = true;
+      }
       auto_install();
     }
 
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
+    partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
 
     // Load and render the selected template.
@@ -89,47 +96,37 @@ module.exports = function(context) {
       context.packaged = true
 
       if (context.webserver == "apache") {
-        context.package = "certbot-apache";
+        context.package = "python2-certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package = "certbot-nginx";
+        context.package = "python2-certbot-nginx";
       }
+      context.dns_plugins = true;
     }
   }
 
   debian_install = function() {
     template = "debian";
     context.devuan = context.distro == "devuan"
-    context.jessie = context.version == 8
-    context.stretch = context.version == 9
 
-    // Debian Jessie
+    context.dns_plugins = true;
+
     context.base_command = "certbot";
     context.cron_included = true;
     context.package = "certbot";
 
     if (context.webserver == "apache") {
       context.package = "python-certbot-apache";
-    }
-
-    // Jessie backports.
-    if ((context.devuan && context.version == 1) || context.jessie) {
-      context.backports_flag = "-t jessie-backports";
-      context.installer_http01 = false;
-      if (context.webserver == "nginx") {
-        context.certonly = true;
-      }
-    }
-    if (context.stretch) {
-      context.backports_flag = "-t stretch-backports";
-      context.installer_http01 = false;
-      if (context.webserver == "nginx") {
-        context.package = "python-certbot-nginx";
-      }
-    }
-    if (context.version == 10 && context.webserver == "nginx") {
+    } else if (context.webserver == "nginx") {
       context.package = "python-certbot-nginx";
     }
 
+    if (context.version == 9) {
+      // Debian Stretch
+      context.backports_flag = "-t stretch-backports";
+    } else if (context.devuan && context.version == 2) {
+      // Devuan ASCII
+      context.backports_flag = "-t ascii-backports";
+    }
   }
 
   ubuntu_install = function() {
@@ -144,6 +141,7 @@ module.exports = function(context) {
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
     context.cron_included = true;
+    context.dns_plugins = true;
   }
 
   gentoo_install = function() {
@@ -152,7 +150,6 @@ module.exports = function(context) {
     context.package = "certbot";
     context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
-    context.installer_http01 = false;
     if (context.webserver == "apache") {
       context.package = "certbot-apache";
     } else if (context.webserver == "nginx") {
@@ -172,6 +169,7 @@ module.exports = function(context) {
 
     context.base_command = "certbot";
     context.base_package = "certbot";
+    context.dns_plugins = true;
   }
 
   fedora_install = function() {
@@ -184,6 +182,7 @@ module.exports = function(context) {
     } else if (context.webserver == "nginx") {
       context.package = "certbot-nginx";
     }
+    context.dns_plugins = true;
   }
   // @todo: convert to template style
   bsd_install = function() {
@@ -191,6 +190,7 @@ module.exports = function(context) {
 
     context.base_command = "certbot";
     if (context.distro == "freebsd"){
+      context.dns_plugins = true;
       context.portcommand = "py-certbot";
       context.package = "pkg install py27-certbot";
     }
@@ -215,6 +215,19 @@ module.exports = function(context) {
   macos_install = function() {
     template = "macos";
     context.base_command = "certbot";
+  }
+
+  opensuse_install = function() {
+    template = "opensuse";
+    context.package = "certbot";
+    context.base_command = "certbot";
+
+    if (context.webserver == "apache") {
+      context.package = "python-certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.package = "python-certbot-nginx";
+    }
+    context.dns_plugins = true;
   }
 
   auto_install = function() {
