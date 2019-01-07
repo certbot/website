@@ -23,6 +23,7 @@ module.exports = function(context) {
 
     context.cron_included = false;
     context.dns_plugins = false;
+    context.dns_package_prefix = "";
     context.jessie = false;  // Special jessie instructions for certbot-auto
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -101,6 +102,7 @@ module.exports = function(context) {
         context.package = "python2-certbot-nginx";
       }
       context.dns_plugins = true;
+      context.dns_package_prefix = "python2-certbot-dns"
     }
   }
 
@@ -109,6 +111,7 @@ module.exports = function(context) {
     context.devuan = context.distro == "devuan"
 
     context.dns_plugins = true;
+    context.dns_package_prefix = "python3-certbot-dns"
 
     context.base_command = "certbot";
     context.cron_included = true;
@@ -142,6 +145,7 @@ module.exports = function(context) {
     context.base_command = "certbot";
     context.cron_included = true;
     context.dns_plugins = true;
+    context.dns_package_prefix = "python3-certbot-dns"
   }
 
   gentoo_install = function() {
@@ -170,6 +174,7 @@ module.exports = function(context) {
     context.base_command = "certbot";
     context.base_package = "certbot";
     context.dns_plugins = true;
+    context.dns_package_prefix = "certbot-dns";
   }
 
   fedora_install = function() {
@@ -183,6 +188,7 @@ module.exports = function(context) {
       context.package = "certbot-nginx";
     }
     context.dns_plugins = true;
+    context.dns_package_prefix = "certbot-dns";
   }
   // @todo: convert to template style
   bsd_install = function() {
@@ -191,6 +197,7 @@ module.exports = function(context) {
     context.base_command = "certbot";
     if (context.distro == "freebsd"){
       context.dns_plugins = true;
+      context.dns_package_prefix = "py27-certbot-dns";
       context.portcommand = "py-certbot";
       context.package = "pkg install py27-certbot";
     }
@@ -228,6 +235,7 @@ module.exports = function(context) {
       context.package = "python-certbot-nginx";
     }
     context.dns_plugins = true;
+    context.dns_package_prefix = "python-certbot-dns";
   }
 
   auto_install = function() {
