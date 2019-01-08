@@ -188,7 +188,7 @@ module.exports = function(context) {
       context.package = "certbot-nginx";
     }
     context.dns_plugins = true;
-    context.dns_package_prefix = "certbot-dns";
+    context.dns_package_prefix = "python3-certbot-dns";
   }
   // @todo: convert to template style
   bsd_install = function() {
