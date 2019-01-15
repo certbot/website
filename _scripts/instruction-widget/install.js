@@ -88,7 +88,7 @@ module.exports = function(context) {
     template = "centos";
 
     if (context.version < 7) {
-      context.base_command = "./path/to/certbot-auto"
+      context.base_command = "/path/to/certbot-auto"
       context.epel_auto = (context.distro == "centos")
       context.packaged = false
     } else {
@@ -240,7 +240,7 @@ module.exports = function(context) {
 
   auto_install = function() {
     template = "auto";
-    context.base_command = "./path/to/certbot-auto";
+    context.base_command = "/path/to/certbot-auto";
   }
 
   return {
