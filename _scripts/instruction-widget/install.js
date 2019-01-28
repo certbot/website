@@ -118,9 +118,9 @@ module.exports = function(context) {
     context.package = "certbot";
 
     if (context.webserver == "apache") {
-      context.package = "python-certbot-apache";
+      context.package += " " + "python-certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package = "python-certbot-nginx";
+      context.package += " " + "python-certbot-nginx";
     }
 
     if (context.version == 9) {
