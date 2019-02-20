@@ -53,12 +53,6 @@
             "version": "0"
         },
         {
-            "name": "Ubuntu 17.10 (artful)",
-            "id": "ubuntuartful",
-            "distro": "ubuntu",
-            "version": "17.10"
-        },
-        {
             "name": "Ubuntu 18.04 LTS (bionic)",
             "id": "ubuntubionic",
             "distro": "ubuntu",
