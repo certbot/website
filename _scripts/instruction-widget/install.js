@@ -97,9 +97,9 @@ module.exports = function(context) {
       context.packaged = true
 
       if (context.webserver == "apache") {
-        context.package = "python2-certbot-apache";
+        context.package += " python2-certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package = "python2-certbot-nginx";
+        context.package += " python2-certbot-nginx";
       }
       context.dns_plugins = true;
       context.dns_package_prefix = "python2-certbot-dns"
@@ -151,13 +151,13 @@ module.exports = function(context) {
   gentoo_install = function() {
     template = "gentoo";
 
-    context.package = "certbot";
+    context.package = "app-crypt/certbot";
     context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
     if (context.webserver == "apache") {
-      context.package = "certbot-apache";
+      context.package += " app-crypt/certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package = "certbot-nginx";
+      context.package += " app-crypt/certbot-nginx";
     }
   }
 
@@ -166,9 +166,9 @@ module.exports = function(context) {
     context.package = "certbot"
 
     if (context.webserver == "apache") {
-        context.package = "certbot-apache";
+        context.package += " certbot-apache";
     } else if (context.webserver == "nginx") {
-        context.package = "certbot-nginx";
+        context.package += " certbot-nginx";
     }
 
     context.base_command = "certbot";
@@ -183,9 +183,9 @@ module.exports = function(context) {
     context.base_command = "certbot";
 
     if (context.webserver == "apache") {
-      context.package = "certbot-apache";
+      context.package += " certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package = "certbot-nginx";
+      context.package += " certbot-nginx";
     }
     context.dns_plugins = true;
     context.dns_package_prefix = "python3-certbot-dns";
@@ -230,9 +230,9 @@ module.exports = function(context) {
     context.base_command = "certbot";
 
     if (context.webserver == "apache") {
-      context.package = "python-certbot-apache";
+      context.package += " python-certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package = "python-certbot-nginx";
+      context.package += " python-certbot-nginx";
     }
     context.dns_plugins = true;
     context.dns_package_prefix = "python-certbot-dns";
