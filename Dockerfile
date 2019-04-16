@@ -1,4 +1,4 @@
-FROM node:4
+FROM node:8
 
 RUN mkdir /opt/certbot
 WORKDIR /opt/certbot
@@ -20,6 +20,8 @@ ENV LC_ALL C.UTF-8
 
 # need rsync for deploy script and texlive for building docs
 RUN apt-get install -y --no-install-recommends \
+    imagemagick \
+    latexmk \
     rsync \
     texlive \
     texlive-latex-extra

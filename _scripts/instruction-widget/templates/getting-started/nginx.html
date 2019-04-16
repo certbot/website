@@ -1,89 +1,50 @@
 <p>
 Certbot has an Nginx plugin, which is supported on
-many platforms, and certificate installation.
+many platforms, and automates certificate installation.
 </p>
-{{#installer_http01}}
-    <pre>$ sudo {{base_command}} --nginx</pre>
-    <p>
-    Running this command will get a certificate for you and have Certbot edit your Nginx configuration
-    automatically to serve it. If you're feeling more conservative and would like to make the changes to your
-    Nginx configuration by hand, you can use the <tt>certonly</tt>
-    subcommand:
-    <pre>$ sudo {{base_command}} --nginx certonly</pre>
+<pre>$ sudo {{base_command}} --nginx</pre>
+<p>
+Running this command will get a certificate for you and have Certbot edit your Nginx configuration
+automatically to serve it. If you're feeling more conservative and would like to make the changes to your
+Nginx configuration by hand, you can use the <tt>certonly</tt>
+subcommand:
+<pre>$ sudo {{base_command}} --nginx certonly</pre>
 
-    {{#advanced}}
-        <aside class="note">
-            <h4>Note:</h4>
-            <p>the Nginx plugin with <tt>certonly</tt> does the following:<br>
-            <ol>
-              <li>make temporary config changes<br>
-              (adding a new server block to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>)</li>
-              <li>performs a graceful reload</li>
-              <li>reverts all changes</li>
-              <li>performs another graceful reload</li>
-            </ol>
-            This appears to be a reliable process, but if you don't want Certbot
-            to touch your Nginx process or files in any way, you can use the
-            <a
-            href="https://certbot.eff.org/docs/using.html#webroot">webroot
-            plugin</a> instead.
+{{#advanced}}
+    <aside class="note">
+        <h4>Note:</h4>
+        <p>the Nginx plugin with <tt>certonly</tt> does the following:<br>
+        <ol>
+          <li>make temporary config changes<br>
+          (adding a new server block to pass an <a href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME Challenge</a>)</li>
+          <li>performs a graceful reload</li>
+          <li>reverts all changes</li>
+          <li>performs another graceful reload</li>
+        </ol>
+        This appears to be a reliable process, but if you don't want Certbot
+        to touch your Nginx process or files in any way, you can use the
+        <a
+        href="https://certbot.eff.org/docs/using.html#webroot">webroot
+        plugin</a> instead.
 
-            </p></aside>
-    {{/advanced}}
-{{/installer_http01}}
-{{^installer_http01}}
-    <p>
-    Due to a security issue, Let's Encrypt has stopped offering the mechanism that
-    the Nginx plugin previously used to prove you control a domain. You can read
-    more about this <a
-    href="https://community.letsencrypt.org/t/2018-01-11-update-regarding-acme-tls-sni-and-shared-hosting-infrastructure/50188">here</a>.
-    </p>
-    <p>
-    We released a new version of Certbot to work around this, but it hasn't
-    been packaged by your OS yet. If you have to obtain a certificate and
-    cannot wait, you have a couple of options. If you're serving files for that
-    domain out of a directory on that server, you can run the following
-    command:
-    </p>
-    <pre>$ sudo {{base_command}} --authenticator webroot --installer nginx</pre>
-    <p>
-    This command will get a certificate for you and have Certbot edit your
-    Nginx configuration to automatically serve it. If you're
-    feeling more conservative and would like to make the changes to your Nginx
-    configuration by hand, you can use the <tt>certonly</tt> subcommand. To see
-    instructions on how to use this subcommand, select "None of the above" in the
-    first drop-down menu above.
-
-    If you're not serving files out of a directory on the server, you can
-    temporarily stop your server while you obtain the certificate; however,
-    you'll have to configure Nginx to use the certificate yourself.
-    The command to do this would look something like:
-    </p>
-    <pre>$ sudo {{base_command}} certonly --authenticator standalone --pre-hook "nginx -s stop" --post-hook "nginx"</pre>
-    <p>
-    If you usually use a command like <tt>systemctl</tt> or
-    <tt>service</tt> to start and stop Nginx, you should use those commands
-    instead in the hooks above. By using a command with hooks like this, if
-    you automate renewal as described below, Certbot will automatically stop
-    and start Nginx when you need to renew your certificates. If you configure
-    Nginx to use the symlinks in the "live" directory as instructed by
-    Certbot, Nginx will automatically begin using any renewed certificates.
-    </p>
-{{/installer_http01}}
+        </p></aside>
+{{/advanced}}
 {{#dns_plugins}}
 <p>
-If you want to obtain a wildcard certificate using Let's Encrypt's new ACMEv2
+<strong>If you want to obtain a wildcard certificate using Let's Encrypt's new ACMEv2
 server, you'll also need to use one of
-<a href="/docs/using.html#dns-plugins">Certbot's DNS plugins</a>. To do this,
+<a href="/docs/using.html#dns-plugins">Certbot's DNS plugins</a>.</strong> To do this,
 make sure the plugin for your DNS provider is installed using the instructions
 above and run a command like the following:
 </p>
 <pre>$ sudo {{base_command}} -a dns-plugin -i nginx -d "*.example.com" -d example.com --server https://acme-v02.api.letsencrypt.org/directory</pre>
 <p>
-You'll need to replace <tt>dns-plugin</tt> with the name of the DNS plugin
-you want to use. You may also need to provide additional flags such as the path
-your API credentials as described in the documentation for the DNS plugin
-linked above.
+You'll need to replace <tt>dns-plugin</tt> with the name of the DNS plugin you
+want to use. For instance, to use the Cloudflare plugin, you would use
+<tt>dns-cloudflare</tt>. You may also need to provide additional flags such as
+the path to your API credentials. To learn more about how to use these plugins,
+see the documentation for the DNS plugin you are trying to use found in the
+link above.
 </p>
 {{/dns_plugins}}
 
