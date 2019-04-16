@@ -2,7 +2,9 @@
 Since it doesn't seem like your operating system has a packaged version of Certbot, you should use our certbot-auto script to get a copy:
 </p>
 <pre>wget https://dl.eff.org/certbot-auto
-chmod a+x certbot-auto</pre>
+sudo mv certbot-auto /usr/local/bin/certbot-auto
+sudo chown root:root /usr/local/bin/certbot-auto
+sudo chmod a+x /usr/local/bin/certbot-auto</pre>
 <p>
 <tt>certbot-auto</tt> accepts the same flags as <tt>certbot</tt>; it
 {{#advanced}}is a wrapper that{{/advanced}} installs all of its own
