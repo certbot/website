@@ -16,8 +16,8 @@ Since it doesn't seem like your operating system has a{{#jessie}}n up-to-date{{/
 </p>
 <pre>wget https://dl.eff.org/certbot-auto
 sudo mv certbot-auto /usr/local/bin/certbot-auto
-sudo chown root:root /usr/local/bin/certbot-auto
-sudo chmod a+x /usr/local/bin/certbot-auto</pre>
+sudo chown root /usr/local/bin/certbot-auto
+sudo chmod 0755 /usr/local/bin/certbot-auto</pre>
 <p>
 <tt>certbot-auto</tt> accepts the same flags as <tt>certbot</tt>; it
 {{#advanced}}is a wrapper that{{/advanced}} installs all of its own
