@@ -1,21 +1,24 @@
+<h4>Installing DNS plugins</h4>
 {{#dns_plugins}}
 <p>
-<strong>Certbot's DNS plugins are also available for your system which can be used to
-automate obtaining a wildcard certificate from Let's Encrypt's ACMEv2 server.</strong>
-To use one of these plugins, you must have configured DNS for the domain you
-want to obtain a certificate for with a DNS provider that Certbot has a plugin
-for. A list of these plugins and more information about using them can be found
-<a href="/docs/using.html#dns-plugins">here</a>. To install one of these
-plugins, run the installation command above but replace {{package}} with the
-name of the DNS plugin you want to install.
+Certbot's DNS plugins <strong>are available</strong> for your system. These
+plugins can be used to automate obtaining a wildcard certificate from Let's
+Encrypt's ACMEv2 server.  To use one of these plugins, you must have configured
+DNS for the domain you want to obtain a certificate for with a DNS provider
+that Certbot has a plugin for. A list of these plugins and more information
+about using them can be found <a href="/docs/using.html#dns-plugins">here</a>.
+To install one of these plugins, run the installation command above but replace
+<tt>{{package}}</tt> with <tt>{{dns_package_prefix}}-PLUGIN</tt>, where <tt>PLUGIN</tt>
+is the name of the plugin you want to install. For instance, for the RFC2136
+plugin this would be <tt>{{dns_package_prefix}}-rfc2136</tt>.
 </p>
 {{/dns_plugins}}
 {{^dns_plugins}}
 <p>
-<strong>Certbot's DNS plugins which can be used to automate obtaining a wildcard
-certificate from Let's Encrypt's ACMEv2 server are not available for your OS
-yet.</strong> This should change soon but if you don't want to wait, you can use these
-plugins now by
+Certbot's DNS plugins <strong>are not available</strong> for your OS yet. These
+plugins can be used to automate obtaining a wildcard certificate from Let's
+Encrypt's ACMEv2 server. This should change soon but if you don't want to wait,
+you can use these plugins now by
 <a href="/docs/install.html#running-with-docker">running Certbot in Docker</a>
 instead of using the instructions on this page.
 </p>
