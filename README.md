@@ -21,7 +21,7 @@ Docker-compose serves the site with nginx to more closely mirror production.
 #### Install
 1. Install `ruby 2.0+`, `node 8.0+`, and `npm 2.0+`.
 2. `gem install jekyll` (requires v3.0 or higher)
-3. `sudo npm install gulp -g`
+3. `sudo npm install gulp-cli -g`
 4. `npm install`
 
 If you want to build a copy of the documentation for your local mirror of the

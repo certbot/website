@@ -33,15 +33,15 @@ RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc &&\
     cd / && rm -rf /src/ruby-build && ruby-build $RUBY_VERSION /usr/local
 RUN gem install jekyll html-proofer
 
-# Install js dependencies
-COPY package.json ./
-RUN npm install gulp -g
-RUN npm install
-
 # Install docs dependencies
 COPY _docs/ ./_docs
 COPY _docs.sh ./
 RUN ./_docs.sh depend
+
+# Install js dependencies
+COPY package.json ./
+RUN npm install gulp-cli -g
+RUN npm install
 
 COPY _data ./_data
 COPY _faq_entries ./_faq_entries

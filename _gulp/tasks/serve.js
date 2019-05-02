@@ -4,7 +4,12 @@ var gulp = require('gulp'),
 var config = require('../config');
 var server = browserSync.create('Server');
 
-gulp.task('serve', () => {
+var reload = function(done) {
+  server.reload();
+  done();
+}
+
+gulp.task('serve', (done) => {
   server.init({
     port: 4000,
     server: {
@@ -22,10 +27,11 @@ gulp.task('serve', () => {
     open: false
   });
 
-  gulp.watch(config.css.src, ['css']);
-  gulp.watch(config.js.src, ['js']);
+  gulp.watch(config.css.src, gulp.series('css'));
+  gulp.watch(config.js.src, gulp.series('js'));
   gulp.watch([config.site_root + '/**/*.html',
               config.site_root + '/**/*.js',
               '!' + config.site_root + '/docs/**/*'],
-    server.reload);
+    reload);
+  done();
 });

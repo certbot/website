@@ -10,7 +10,12 @@ var gulp = require('gulp'),
 
 var config = require('../config');
 
-gulp.task('css', ['css:clean'], (done) => {
+gulp.task('css:clean', function(done) {
+  return del([config.css.dest],
+    done);
+});
+
+var css = function() {
   try {
     var server = browserSync.get('Server');
   } catch(err) {
@@ -31,9 +36,6 @@ gulp.task('css', ['css:clean'], (done) => {
     .pipe(env.development(sourcemaps.write('.')))
     .pipe(gulp.dest(config.css.dest))
     .pipe(server ? server.stream({match: '**/*.css'}) : gutil.noop());
-});
+}
 
-gulp.task('css:clean', function(done) {
-  return del([config.css.dest],
-    done);
-});
+gulp.task('css', gulp.series('css:clean', css));

@@ -6,6 +6,11 @@ tasks.forEach(function(task) {
   require('./tasks/' + task);
 });
 
-gulp.task('watch', ['jekyll:watch', 'serve']);
+gulp.task('watch',
+  gulp.parallel('instructions', 'css', 'js', 'jekyll:watch', 'serve'));
 
-gulp.task('build', ['docs:install', 'jekyll:build']);
+gulp.task('build',
+  gulp.series('instructions',
+    gulp.parallel('css', 'js', 'docs:install', 'jekyll:build')
+  )
+);

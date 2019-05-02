@@ -5,7 +5,7 @@ class: faq
 ---
 
 <ul class="faq-toc">
-  {% assign sorted_faq = (site.faq_entries | sort: 'weight') %}
+  {% assign sorted_faq = site.faq_entries | sort: 'weight' %}
   {% for faq_entry in sorted_faq %}
     <li>
       <h2>
