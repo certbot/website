@@ -69,7 +69,19 @@ select {
     height: 30px;
     font-size: 14px;
   }
-
+  span {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .js-only {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    select {
+      margin-top: 1rem;
+    }
+  }
 }
 
 tt {
