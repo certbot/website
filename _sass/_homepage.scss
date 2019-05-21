@@ -134,3 +134,12 @@ div.home-https {
 .italic {
   font-style: italic;
 }
+
+.home-further-links {
+  overflow: auto;
+  padding-bottom: 2rem;
+  img {
+    width: 100px;
+    height: 200px;
+  }
+}
