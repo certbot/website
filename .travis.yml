@@ -21,8 +21,7 @@ install:
   - ./_docs.sh depend
 
 script:
-  - gulp build
-  - npm test
+  - unknown_command
 
 after_success:
   - 'if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "certbot/website" ]]; then bash ./push-build.sh; fi'
