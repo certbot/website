@@ -11,6 +11,8 @@ collections:
   instructions:
     output: true
     permalink: "/lets-encrypt/:path"
+  terms:
+    output: false
 defaults:
 - scope:
     type: "instructions"

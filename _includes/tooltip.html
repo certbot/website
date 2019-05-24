@@ -1,0 +1,14 @@
+{% assign terms = site.terms | where:"title",include.term-name %}
+{% for term in terms limit:1 %}
+  <!-- TODO: label as no script only -->
+  <div class="glossary-term">
+    <a class="glossary-link">{{ term.title }}</a>
+    <div class="tooltip">
+      <a class="tooltip-title">{{ term.title }}</a>
+      {{ term.content | markdownify }}
+      <div class="bottom-text">
+        From our <a>Certbot Glossary</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
