@@ -1,9 +1,9 @@
 .glossary-term {
-  //position: relative;
   display: inline-block;
   text-indent: 0;
   a.glossary-link {
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    text-decoration: underline;
+    color: $text-color;
   }
 }
 
@@ -11,16 +11,24 @@
 .glossary-term .tooltip {
   visibility: hidden;
   background-color: $background-color;
-  color: $text-color;
-  text-align: left;
-  padding: 20px;
   border: 2px solid $link-color;
+  padding: 20px;
+  text-align: left;
+  cursor: default;
+
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    color: $link-color;
+  }
+
   p {
+    color: $text-color;
     font-size: 18px;
     font-weight: 400;
   }
 
-  /* Position the tooltip text - see examples below! */
   width: 700px;
   bottom: 100%;
   left: 50%;
@@ -29,11 +37,8 @@
   z-index: 1;
 
   .tooltip-title {
-    color: $link-color;
     font-family: $header-font-family;
     font-size: 40px;
-    text-decoration: underline;
-    font-weight: bold;
   }
 
   .bottom-text {
@@ -41,14 +46,14 @@
     font-size: 24px;
     font-style: italic;
     font-weight: bold;
-    a {
-      font-weight: bold;
-      text-decoration: underline;
-    }
   }
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
+.glossary-term:hover {
+  cursor: pointer;
+}
+
 .glossary-term:hover .tooltip, .tooltip:hover {
   visibility: visible;
 }
