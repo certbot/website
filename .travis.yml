@@ -45,4 +45,3 @@ notifications:
       # `travis encrypt "chat.freenode.net#certbot-devel"`.
       - secure: "m8jEd5hCZxGRK1xUnU7JIx8o/I/gZPlHNpFPZh9fJlHDe4yWnatLR9xqkpf3qerTXD1pSl0om4M+BYfOZCJVxUeb5PH1qyW6a3RyMi+siuUwJv6PbvveNmuDGD8gMCARzyuhB0jZx5QvDpTDaSiY5BDfr9nI5JcZJwq4ecSVoSUleGJK5Dx0ngmp5ERSXpZhBGJpVqz0VZ32j/dNGQdZlTlAJM18i6lQiYUK4lZTkwQ5YcBjSjWrZEfTCyGja7YH1tz5b6XyPONB2u4iqYEs9N+jKVZwX8kg5yLCxEt2C7phJwDufiLtLly3en6iVt1IB25AfIdiLIJWSj0LFCwRT/f96/z9ayzeBWtTK/Q1guKaYHzNodjzWxhLMESyg5BQ+LZQm0pWqRIyrV+UFvdbv6UnbGckfPw4MLfIf4+GUuTa3CxL9vuzQQw/8euZcWDCxw6f8bZpHyMRhiBCh64CI1D1CKoHX5/jTbQ5hnxjmr5vijOtZMJZNPuLjK0BdDoJUPE9JH0ngJ7hIHanaxbRYs4XzXUSY0ZipynW5M+XkfpJqbB1i29+96s6pThXDS09FHy5pwHqkGlNJs2YdBGWm3h1CSHa+tUUy5WtO9tns6HDGgGthAKcs5YA62kwGzNYldpt4c3JyLbUQ31ct04tJZ/H6/k5VUeUr82OYfRSumE="
     on_success: never
-    use_notice: true
