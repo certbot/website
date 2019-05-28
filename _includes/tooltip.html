@@ -1,14 +1,25 @@
 {% assign terms = site.terms | where:"title",include.term-name %}
 {% for term in terms limit:1 %}
-  <!-- TODO: label as no script only -->
-  <div class="glossary-term">
-    <a class="glossary-link">{{ term.title }}</a>
-    <div class="tooltip">
-      <a class="tooltip-title">{{ term.title }}</a>
-      {{ term.content | markdownify }}
-      <div class="bottom-text">
-        From our <a>Certbot Glossary</a>
-      </div>
+<div class="glossary-term js-only disabled">
+  <a class="glossary-link js">{{ term.title }}</a>
+  <div class="tooltip js">
+    <div class="tooltip-title">
+      <a>{{ term.title }}</a>
+      <span class="close-tooltip">X</span>
+    </div>
+    {{ term.content | markdownify }}
+    <div class="bottom-text">
+      From our <a>Certbot Glossary</a>
     </div>
   </div>
+</div><div class="glossary-term no-js">
+  <a class="glossary-link no-js">{{ term.title }}</a>
+  <div class="tooltip no-js">
+    <a class="tooltip-title">{{ term.title }}</a>
+    {{ term.content | markdownify }}
+    <div class="bottom-text">
+      From our <a>Certbot Glossary</a>
+    </div>
+  </div>
+</div>
 {% endfor %}

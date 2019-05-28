@@ -19,6 +19,7 @@
  */
 
 var Raven = require('raven-js');
+var $ = require('jquery');
 
 (function (Raven) {
   'use strict';
@@ -44,3 +45,25 @@ var Raven = require('raven-js');
     document.body.classList.toggle('active');
   }
 })();
+
+$(document).ready(function() {
+  $('.glossary-term.no-js').remove();
+  $('.glossary-term.js-only').removeClass('disabled');
+  // Tooltips
+  $('.glossary-link').click(function() {
+    var glossDiv = $(this).parents('.glossary-term');
+    $(glossDiv).children('.tooltip').addClass('open');
+  });
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.glossary-term').length)
+      $('.tooltip').removeClass('open');
+  });
+  $(document).on('keydown', function(e) {
+    if (e.which == 27) {
+      $('.tooltip').removeClass('open');
+    }
+  });
+  $('.close-tooltip').on('click', function(e) {
+    $('.tooltip').removeClass('open');
+  });
+});

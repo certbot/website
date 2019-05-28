@@ -38,6 +38,8 @@ exclude:
 - LICENSE.txt
 - nginx.conf
 - docker-compose.yml
+include:
+- /node_modules/jquery/*
 keep_files:
 - css
 - js
