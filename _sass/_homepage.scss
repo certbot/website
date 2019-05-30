@@ -62,8 +62,12 @@
 }
 
 div.home-https {
-  text-align: center;
   display: block;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+  }
 
   img {
     width: 100px;

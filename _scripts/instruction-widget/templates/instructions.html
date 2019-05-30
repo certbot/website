@@ -1,29 +1,22 @@
 <h2 id="instructions-header"><a href="/lets-encrypt/{{os}}-{{webserver}}.html">{{server_longname}} on {{distro_longname}}</a></h2>
-<div class="tab automated active">Automated</div>
-<div class="tab advanced">Advanced</div>
+<div class="tab automated active">default</div>
+<div class="tab advanced">wildcard certificate</div>
 
 
 <div class="instruction-pane-wrapper">
   <div class="instruction-pane automated">
-    <div class="install">
-{{> automated_install }}
-    </div>
-    <div class="get-started">
-      <h3>Get Started</h3>
-{{> automated_get_started }}
+    <ol>
+      {{> automated_install }}
+      {{> automated_get_started }}
+    </ol>
     </div>
   </div>
 
   <div class="instruction-pane advanced">
-    <div class="install">
-{{> advanced_install }}
-    </div>
-    <div class="get-started">
-      <h3>Get Started</h3>
-{{> advanced_get_started }}
-    </div>
-
-
+    <ol>
+      {{> advanced_install }}
+      {{> advanced_get_started }}
+    </ol>
   </div>
 
   <div class="three">

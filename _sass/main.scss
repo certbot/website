@@ -31,7 +31,7 @@ $grey-cool: #f4f5f7;
 $white: #fff;
 $header-grey: #d6d6d6;
 $header-grey: $grey-title;
-$content-stroke: rgba(203,209,218,0.4);
+$content-stroke: #7c7c7c;
 $footer-color: #363636;
 $body-bg-color: $grey-cool;
 $content-bg-color: $white;
@@ -118,7 +118,6 @@ html,body,div,h1,h2,h3,h4,h5,h6 {
 
 body {
   margin-top: $nav-height;
-  background-color: $body-bg-color;
 }
 
 body.index {
@@ -139,7 +138,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-size: 2em;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
   margin-top: 0.25em;
   margin-bottom: 0.35em;
 }

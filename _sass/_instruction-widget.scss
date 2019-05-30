@@ -1,3 +1,14 @@
+.instructions {
+  h1 {
+    padding: 2rem 3rem;
+    font-size: 3em;
+  }
+
+  .instruction-widget span {
+    font-size: 30px;
+  }
+}
+
 input,
 select {
   background: transparent;
@@ -35,10 +46,10 @@ input[type=submit] {
 
 select {
   width: 200px;
-  text-align:left;
+  text-align: center;
 
   option {
-    text-align: left;
+    text-align: center;
   }
 
   background: url(../images/chevron-down.png) 94% / 15% no-repeat transparent;
@@ -74,13 +85,9 @@ select {
     font-weight: bold;
   }
   .js-only {
-    padding-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    select {
-      margin-top: 1rem;
-    }
   }
 }
 
@@ -101,15 +108,19 @@ h1.instruct {
 
 
 .instruction-pane {
-  h1,h3,h2 {
+  ol {
     font-family: 'Roboto Slab';
     font-weight: 400;
     margin-top: 1em;
-    font-size: 1.4em;
-    
-  }
-  h3 {
-
+    font-size: 30px;
+    p {
+      font-size: 18px;
+      margin-bottom: 2em;
+    }
+    ol {
+      list-style-type: lower-alpha;
+      margin: 0;
+    }
   }
 }
 .instructions.content {
@@ -186,7 +197,7 @@ h1.instruct {
   #instructions-header {
     clear: both;
     a {
-      color: $header-grey;
+      color: #000;
       font-family: 'Roboto Slab';
       font-size: 1.4em;
 

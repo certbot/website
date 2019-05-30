@@ -1,30 +1,32 @@
 {{#cron_included}}
 <li>
-    <h2>Test automatic renewal</h2>
-    The Certbot packages on your system come with a cron job that will renew your certificates
-    automatically before they expire. You will not need to run Certbot again, unless you change your
-    configuration. You can test automatic renewal for your certificates by running this command:
-    <pre>
-        $ sudo {{base_command}} renew --dry-run
-    </pre>
+  Test automatic renewal
+  <p>
+  The Certbot packages on your system come with a cron job that will renew your certificates
+  automatically before they expire. You will not need to run Certbot again, unless you change your
+  configuration. You can test automatic renewal for your certificates by running this command:
+  <pre>$ sudo {{base_command}} renew --dry-run</pre>
+  </p>
 </li>
 {{/cron_included}}
 {{^cron_included}}
+
 <li>
-    <h2>Set up automatic renewal</h2>
-    We recommend running the following line, which will add a cron job to the default crontab.
-    <pre>
-        echo “0 0,12 * * * python -c ‘import random; import time; time.sleep(random.random()
-        * 3600)’ && certbot renew” | sudo tee -a /etc/crontab > /dev/null
-        <!-- there shouldn't be a line break, not sure if it will put one in or not. -->
-    </pre>
+  Set up automatic renewal
+  <p>
+  We recommend running the following line, which will add a cron job to the default crontab.
+  <pre>echo “0 0,12 * * * python -c ‘import random; import time; time.sleep(random.random() * 3600)’ && certbot renew” | sudo tee -a /etc/crontab > /dev/null</pre>
+  </p>
+</li>
 {{/cron_included}}
 
 <li>
-    <h2>Confirm that Certbot worked</h2>
-    To confirm that your site is set up properly, visit https://yourwebsite.com/ in your browser and
-    look for the lock icon in the URL bar.
-    If you want to check that you have the top-of-the-line installation, you can head to
-    <a href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>.
-    <!-- button with "check your site’s [icon] https:// at SSL Labs" -->
+  Confirm that Certbot worked
+  <p>
+  To confirm that your site is set up properly, visit https://yourwebsite.com/ in your browser and
+  look for the lock icon in the URL bar.
+  If you want to check that you have the top-of-the-line installation, you can head to
+  <a href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>.
+  <!-- button with "check your site’s [icon] https:// at SSL Labs" -->
+  </p>
 </li>

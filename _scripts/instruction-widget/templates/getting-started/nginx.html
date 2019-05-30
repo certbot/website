@@ -1,28 +1,35 @@
 <li>
-  <h2>either a. Run Certbot: Get & Install your certificates</h2>
-  {{#dns_plugins}}
-  Run one of the commands in the "Examples" section of the instructions for your DNS provider,
-  along with the flag <tt>-i nginx</tt>tt>.
-  {{/dns_plugins}}
-  {{^dns_plugins}}
-  Run this command to get a certificate for you and have Certbot edit your Nginx configuration
-  automatically to serve it, turning on HTTPS access in a single step.
-  <pre>
-    $ sudo {{base_command}} --nginx
-  </pre>
-  {{/dns_plugins}}
-
-  <h2>or b. Run Certbot: Just get a certificate</h2>
-  {{#dns_plugins}}
-  Run one of the commands in the “Examples” section of the instructions for your DNS provider.
-  {{/dns_plugins}}
-  {{^dns_plugins}}
-  If you’re feeling more conservative and would like to make the changes to your Nginx
-  configuration by hand, run this command.
-  <pre>
-    $ sudo {{base_command}} certonly --nginx
-  </pre>
-  {{/dns_plugins}}
+  either 
+  <ol>
+  <li>
+    Run Certbot: Get & Install your certificates
+    <p>
+    {{#dns_plugins}}
+    Run one of the commands in the "Examples" section of the instructions for your DNS provider,
+    along with the flag <tt>-i nginx</tt>.
+    {{/dns_plugins}}
+    {{^dns_plugins}}
+    Run this command to get a certificate for you and have Certbot edit your Nginx configuration
+    automatically to serve it, turning on HTTPS access in a single step.
+    <pre>$ sudo {{base_command}} --nginx</pre>
+    {{/dns_plugins}}
+    </p>
+  </li>
+  or
+  <li>
+    Run Certbot: Just get a certificate
+    <p>
+    {{#dns_plugins}}
+    Run one of the commands in the “Examples” section of the instructions for your DNS provider.
+    {{/dns_plugins}}
+    {{^dns_plugins}}
+    If you’re feeling more conservative and would like to make the changes to your Nginx
+    configuration by hand, run this command.
+    <pre>$ sudo {{base_command}} certonly --nginx</pre>
+    {{/dns_plugins}}
+    </p>
+  </li>
+  </ol>
 </li>
 
 {{> renewal}}
