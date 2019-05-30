@@ -49,25 +49,36 @@ InstructionWidget = (function() {
   }
 
   jump = function(os, ws) {
+    console.log();
     if(os && ws) {
       var url = instruction_url(os, ws);
       var state = {
         os: os,
         ws: ws
       }
-      history.pushState(state, "", url);
 
-      // Smooth scroll to instructions.
-      var SCROLL_SPEED = 400;
-      var target = $('.page-content');
-      if (target.length) {
-        $('html, body').animate({
-          // Scroll a little further to account for sticky nav.
-          scrollTop: target.offset().top - 60
-        }, SCROLL_SPEED);
+      if ($('.instruction-widget').parent().hasClass('hero')) {
+        // We're on the homepage, redirect to instructions page
+        window.location.href = url;
+        $('#os-select').val(os);
+        $('#server-select').val(ws);
+        Instructions().render(content_container, get_input());
       }
+      else {
+        history.pushState(state, "", url);
 
-      document.activeElement.blur();
+        // Smooth scroll to instructions.
+        var SCROLL_SPEED = 400;
+        var target = $('.page-content');
+        if (target.length) {
+          $('html, body').animate({
+            // Scroll a little further to account for sticky nav.
+            scrollTop: target.offset().top - 60
+          }, SCROLL_SPEED);
+        }
+
+        document.activeElement.blur();
+      }
     }
   };
 

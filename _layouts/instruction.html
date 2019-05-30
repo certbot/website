@@ -7,10 +7,16 @@
 
     {% include topnav.html %}
     {% include shelf.html %}
+
+    <div class="instruction-widget">
+      {% include form.html %}
+    </div>
     
     <div class="page-content">
       <div class="wrapper">
-        {{ content }}
+        <div class="instructions content">
+          {{ content }}
+        </div>
       </div>
     </div>
     

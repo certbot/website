@@ -17,7 +17,7 @@ defaults:
 - scope:
     type: "instructions"
   values:
-    layout: "index"
+    layout: "instruction"
     js:
     - instructions
 exclude:
