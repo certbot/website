@@ -39,6 +39,9 @@ notifications:
   email: false
   irc:
     channels:
-      - secure: "ESfeoBq6WQXZohAG+ZpK7A+ZebiF/w9M/mPNENtPtxKkz/6K/s9yya5u7id0TuwAcmiRgIibOmPMzQe8n+ryIGmT73yn0eyHsxNeksEBl6CKSf0N16qKWfWKXPng3iY8TUnKW/6PtMmxtC/tvEca2Tpp3qPK6BbNxUV4W5sE3oBN4c+cXvINjhTNGiGU42Av7KRY9KhbNO2MvELgeedx50Vo/hr9srVVW7NyPqwe6YXlDshbO1Suo7TxUOEMIs/jlp/HTMmnkv5aStrttcob4bvZtGsiek6Z68VckNyB4K4YJ5FbkPuPiUBhzUXfsQJGfhcy14/qepnILQ1Ip8YjtbYiAv8FC0Tbhp04wUzbVjkvCpUFdY6pDZXdpAHho/XFj26vPaDOStIbX5ulWswr6UQ8rrwDmM2twr5h9peMG7Jd7fp3thoMMGLnqOu5RHdbtN+7pKG4OVKHeCleOwCH0Vk483XACfCobMkt+7F9Y4SeanlQ3MMInmrCYXY7f+/8iOWeJRh96gz9IvklD19bNcy3cccBkSGOicp6cBSTLvwf8LGQiPwOMZlpS6WKADuaay+PFpf4ipRMutvIvA2ZqCc0JKy83G8BVpSoKPvBokvg4M9MusftIsXYipWWnrdaoZE6LtdoAItvUF5uBwV9n/NmVeGFgOclzWpvsp6V0IA="
+      # This is set to a secure variable to prevent forks from sending
+      # notifications. This value was created by installing
+      # https://github.com/travis-ci/travis.rb and running
+      # `travis encrypt "chat.freenode.net#certbot-devel"`.
+      - secure: "m8jEd5hCZxGRK1xUnU7JIx8o/I/gZPlHNpFPZh9fJlHDe4yWnatLR9xqkpf3qerTXD1pSl0om4M+BYfOZCJVxUeb5PH1qyW6a3RyMi+siuUwJv6PbvveNmuDGD8gMCARzyuhB0jZx5QvDpTDaSiY5BDfr9nI5JcZJwq4ecSVoSUleGJK5Dx0ngmp5ERSXpZhBGJpVqz0VZ32j/dNGQdZlTlAJM18i6lQiYUK4lZTkwQ5YcBjSjWrZEfTCyGja7YH1tz5b6XyPONB2u4iqYEs9N+jKVZwX8kg5yLCxEt2C7phJwDufiLtLly3en6iVt1IB25AfIdiLIJWSj0LFCwRT/f96/z9ayzeBWtTK/Q1guKaYHzNodjzWxhLMESyg5BQ+LZQm0pWqRIyrV+UFvdbv6UnbGckfPw4MLfIf4+GUuTa3CxL9vuzQQw/8euZcWDCxw6f8bZpHyMRhiBCh64CI1D1CKoHX5/jTbQ5hnxjmr5vijOtZMJZNPuLjK0BdDoJUPE9JH0ngJ7hIHanaxbRYs4XzXUSY0ZipynW5M+XkfpJqbB1i29+96s6pThXDS09FHy5pwHqkGlNJs2YdBGWm3h1CSHa+tUUy5WtO9tns6HDGgGthAKcs5YA62kwGzNYldpt4c3JyLbUQ31ct04tJZ/H6/k5VUeUr82OYfRSumE="
     on_success: never
-    use_notice: true
