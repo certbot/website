@@ -1,15 +1,21 @@
 {{> header}}
-<p>
-  Run these steps to install the Certbot client.
-</p>
+
+<li>
+    <h2>Install Certbot package</h2>
+    Run this command on the command line on the machine to install the Certbot package.
+    <pre>
+    {{package}}
+    </pre>
+
+</li>
 {{#portcommand}}
-<p>Port:</p>
-<pre>
-$ cd /usr/ports/security/{{portcommand}} && make install clean
-</pre>
+<li>
+    <h2>Or, if you prefer, install Certbot from ports</h2>
+    Run this command on the command line on the machine to install Certbot from ports.
+    <pre>
+    $ cd /usr/ports/security/{{portcommand}} && make install clean
+    </pre>
+</li>
 {{/portcommand}}
-<p>Package:</p>
-<pre>
-{{package}}
-</pre>
-{{>dnsplugins}}
+
+{{> dnspluginssetup}}
