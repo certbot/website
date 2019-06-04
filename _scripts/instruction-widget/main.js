@@ -49,7 +49,6 @@ InstructionWidget = (function() {
   }
 
   jump = function(os, ws) {
-    console.log();
     if(os && ws) {
       var url = instruction_url(os, ws);
       var state = {
@@ -57,28 +56,19 @@ InstructionWidget = (function() {
         ws: ws
       }
 
-      if ($('.instruction-widget').parent().hasClass('hero')) {
-        // We're on the homepage, redirect to instructions page
-        window.location.href = url;
-        $('#os-select').val(os);
-        $('#server-select').val(ws);
-        Instructions().render(content_container, get_input());
-      }
-      else {
-        history.pushState(state, "", url);
+      history.pushState(state, "", url);
 
-        // Smooth scroll to instructions.
-        var SCROLL_SPEED = 400;
-        var target = $('.page-content');
-        if (target.length) {
-          $('html, body').animate({
-            // Scroll a little further to account for sticky nav.
-            scrollTop: target.offset().top - 60
-          }, SCROLL_SPEED);
-        }
-
-        document.activeElement.blur();
+      // Smooth scroll to instructions.
+      var SCROLL_SPEED = 400;
+      var target = $('.page-content');
+      if (target.length) {
+        $('html, body').animate({
+          // Scroll a little further to account for sticky nav.
+          scrollTop: target.offset().top - 60
+        }, SCROLL_SPEED);
       }
+
+      document.activeElement.blur();
     }
   };
 
@@ -113,6 +103,12 @@ InstructionWidget = (function() {
 
     select_container.on('change', function() {
       var input = get_input();
+      if ($('.instruction-widget').parent().hasClass('hero')) {
+        if (input.os && input.webserver) {
+          // We're on the homepage, redirect to instructions page
+          window.location.href = instruction_url(input.os,input.webserver);
+        }
+      }
       Instructions().render(content_container, input);
       jump(input.os,input.webserver);
       document.activeElement.blur();
@@ -136,4 +132,13 @@ InstructionWidget = (function() {
 
 $('document').ready(function() {
   InstructionWidget.init();
+  $('.instructions .instruction-widget').ready(function() {
+    var url = window.location.href.split('/');
+    var selected = url[url.length - 1];
+    if (!(selected === "")) {
+      selected = selected.split('-');
+      $('#os-select').val(selected[0]);
+      $('#server-select').val(selected[1]);
+    }
+  });
 });

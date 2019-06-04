@@ -9,6 +9,36 @@
   }
 }
 
+.instructions-footer {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+
+  width: 100%;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .text-wrapper {
+    display: inline-block;
+    margin: 1rem 10%;
+    font-size: 16px;
+  }
+
+  .link-button-wide {
+    @include link-button;
+    padding: 5px 0;
+    width: 90%;
+    margin: 0 5%;
+    display: block;
+  }
+}
+
 input,
 select {
   background: transparent;
@@ -117,9 +147,16 @@ h1.instruct {
       font-size: 18px;
       margin-bottom: 2em;
     }
-    ol {
-      list-style-type: lower-alpha;
-      margin: 0;
+    ul {
+      list-style-type: none;
+      margin-top: 0;
+      margin-left: 1em;
+    }
+    h3 { 
+      font-size: 22px;
+      font-weight: bold;
+      font-style: italic;
+      font-family: $base-font-family;
     }
   }
 }

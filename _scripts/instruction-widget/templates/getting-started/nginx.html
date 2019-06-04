@@ -1,8 +1,7 @@
-<li>
-  either 
-  <ol>
+<li> Choose how to run Certbot
+  <ul>
   <li>
-    Run Certbot: Get & Install your certificates
+    Either.. Get & Install your certificates
     <p>
     {{#dns_plugins}}
     Run one of the commands in the "Examples" section of the instructions for your DNS provider,
@@ -15,9 +14,8 @@
     {{/dns_plugins}}
     </p>
   </li>
-  or
   <li>
-    Run Certbot: Just get a certificate
+    Or just get a certificate
     <p>
     {{#dns_plugins}}
     Run one of the commands in the “Examples” section of the instructions for your DNS provider.
@@ -29,7 +27,7 @@
     {{/dns_plugins}}
     </p>
   </li>
-  </ol>
+  </ul>
 </li>
 
 {{> renewal}}

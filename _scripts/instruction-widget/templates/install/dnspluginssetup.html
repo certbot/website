@@ -1,26 +1,25 @@
-<!-- May need to edit js to put this in -->
-
 {{#advanced}}
 {{#dns_plugins}}
 <li>
-    <h2>Install correct DNS plugin</h2>
+    Install correct DNS plugin
+    <p>
     Run the following command, replacing &lt;PLUGIN&gt; with the name of your DNS provider.
-    <pre>
-        $ sudo apt-get install {{dns_package_prefix}}-&lt;PLUGIN&gt;
-        <!-- idk about the html here -->
-    </pre>
+    <pre> $ sudo apt-get install {{dns_package_prefix}}-&lt;PLUGIN&gt;</pre>
+    </p>
+    <p>
     For example, if your DNS provider is RFC2136, you'd run the following command:
-    <pre>
-        $ sudo apt-get install {{dns_package_prefix}}-rfc2136
-    </pre>
+    <pre>$ sudo apt-get install {{dns_package_prefix}}-rfc2136</pre>
+    </p>
 </li>
 <li>
-    <h2>Set up credentials</h2>
+    Set up credentials
+    <p>
     You’ll need to set up DNS credentials.<br>
     Follow the steps in the “Credentials” section for your DNS provider to access or create the
     appropriate credential configuration file. Find credentials instructions for your DNS provider
     by clicking the <a href='https://certbot.eff.org/docs/using.html#dns-plugins'>DNS plugin’s
-    name on the Documentation list</a>.
+      name on the Documentation list</a>.
+    </p>
     <!-- button with "find your DNS provider’s Credential steps" -->
 </li>
 {{/dns_plugins}}

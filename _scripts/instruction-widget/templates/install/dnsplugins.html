@@ -1,23 +1,27 @@
 {{#advanced}}
-<!-- Repurposed the #advanced tag to mean "show wildcard info" -->
 {{#dns_plugins}}
 <li>
-    <h2>Check if your DNS provider is supported</h2>
+    Check if your DNS provider is supported
+    <p>
     See if your DNS provider is supported by Certbot by checking
     <a href='https://certbot.eff.org/docs/using.html#dns-plugins'>this list in our
-    documentation</a>.
+      documentation</a>.
     <!-- button with text "check if your DNS provider supports Certbot" -->
+    </p>
     <h3>Not supported?</h3>
-    <!-- Note that this differs from the pdf, which was incorrect. -->
+    <p>
     If your DNS provider is not supported, pause here: run Certbot with the manual plugin by using
-    <a href='https://certbot.eff.org/docs/using.html#manual'>these steps from our documentation.
+    <a href='https://certbot.eff.org/docs/using.html#manual'>these steps from our documentation.</a>
+    </p>
     <h3>Supported?</h3>
+    <p>
     If your DNS provider is supported, continue with the remaining instructions below.
+    </p>
 </li>
 {{/dns_plugins}}
 {{^dns_plugins}}
 <li>
-    <h2>Not supported</h2>
+    Not supported
     If your DNS provider is not supported, pause here: run Certbot in Docker by using
     <a href='https://certbot.eff.org/docs/install.html#running-with-docker'>these
     steps from our documentation</a>.
