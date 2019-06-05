@@ -206,14 +206,16 @@ module.exports = function(context) {
       context.dns_plugins = true;
       context.dns_package_prefix = "py36-certbot-dns";
       context.portcommand = "py-certbot";
-      context.package = "pkg install py36-certbot";
+      context.package = "py36-certbot";
+      context.install_command = "pkg install"
     }
     if (context.distro == "opbsd"){
+      context.install_command = "pkg_add"
       if (context.version >= 6) {
-          context.package = "pkg_add certbot";
+          context.package = "certbot";
           context.base_command = "certbot";
       } else {
-          context.package = "pkg_add letsencrypt";
+          context.package = "letsencrypt";
           context.base_command = "letsencrypt";
       }
     }
