@@ -1,20 +1,20 @@
 {{> header}}
 
 <li>
-    <h2>Install Certbot package</h2>
+    Install Certbot package
+    <p>
     Run this command on the command line on the machine to install the Certbot package.
-    <pre>
-    $ {{install_command}} {{package}}
-    </pre>
-
+    <pre>$ {{install_command}} {{package}}</pre>
+    </p>
 </li>
 {{#portcommand}}
+<!-- TODO: should this be a ul if this is true? some duplication but meh -->
 <li>
-    <h2>Or, if you prefer, install Certbot from ports</h2>
+    Or, if you prefer, install Certbot from ports
+    <p>
     Run this command on the command line on the machine to install Certbot from ports.
-    <pre>
-    $ cd /usr/ports/security/{{portcommand}} && make install clean
-    </pre>
+    <pre>$ cd /usr/ports/security/{{portcommand}} && make install clean</pre>
+    </p>
 </li>
 {{/portcommand}}
 

@@ -161,8 +161,6 @@ h1.instruct {
   }
 }
 .instructions.content {
-
-
   background-color: #fff;
 
   
@@ -171,6 +169,18 @@ h1.instruct {
 
   .instruction-pane {
     text-align: left;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  pre {
+    white-space: pre-line;
+  }
+
+  pre.one-line {
+    white-space: nowrap;
   }
 
   .tab {
@@ -253,52 +263,6 @@ h1.instruct {
 
 .advanced.instruction-pane {
   display: none;
-}
-
-.three {
-
-  margin-top: 3em;
-  margin-bottom: 2.5em;
-  position: relative;
-  display: inline-block;
-
-  width: 100%;
-  text-align: center;
-  figure {
-
-    text-align: center;
-    @include span(3 of 3);
-    @include susy-breakpoint($md) {
-      @include span(1 of 3 inside no-gutters);
-    }
-    img {
-      margin: 0 auto;
-      width: 120px;
-      opacity: 0.6;
-    }
-
-    a {
-      color: $grey-color;
-      text-decoration: none;
-      &:hover {
-        color: rgba(0,0,0,0.8);
-        > img {
-          opacity: 0.8;
-        }
-      }
-    }
-
-    figcaption {
-      margin-top: 1em;
-      p {
-        font-size: 1.5em;
-        text-transform: lowercase;
-        letter-spacing: 0.03em;
-        font-family: 'Roboto Slab';
-        font-weight: 400;
-      }
-    }
-  }
 }
 
 aside {

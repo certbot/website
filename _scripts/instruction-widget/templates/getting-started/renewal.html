@@ -15,7 +15,7 @@
   Set up automatic renewal
   <p>
   We recommend running the following line, which will add a cron job to the default crontab.
-  <pre>echo “0 0,12 * * * python -c ‘import random; import time; time.sleep(random.random() * 3600)’ && certbot renew” | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo “0 0,12 * * * python -c ‘import random; import time; time.sleep(random.random() * 3600)’ && certbot renew” | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
 </li>
 {{/cron_included}}
@@ -27,6 +27,8 @@
   look for the lock icon in the URL bar.
   If you want to check that you have the top-of-the-line installation, you can head to
   <a href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>.
-  <!-- button with "check your site’s [icon] https:// at SSL Labs" -->
+  </p>
+  <p class="centered">
+  <a class="link-button" href='https://www.ssllabs.com/ssltest/'>check your site's ICON https:// at SSL Labs</a>.
   </p>
 </li>

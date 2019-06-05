@@ -138,7 +138,7 @@ $('document').ready(function() {
     if (!(selected === "")) {
       selected = selected.split('-');
       $('#os-select').val(selected[0]);
-      $('#server-select').val(selected[1]);
+      $('#server-select').val(selected[1].replace(".html", ""));
     }
   });
 });

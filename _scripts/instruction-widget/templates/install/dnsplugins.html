@@ -6,7 +6,9 @@
     See if your DNS provider is supported by Certbot by checking
     <a href='https://certbot.eff.org/docs/using.html#dns-plugins'>this list in our
       documentation</a>.
-    <!-- button with text "check if your DNS provider supports Certbot" -->
+    </p>
+    <p class="centered">
+    <a class="link-button" href='https://certbot.eff.org/docs/using.html#dns-plugins'>check if your DNS provider supports Certbot</a>
     </p>
     <h3>Not supported?</h3>
     <p>
@@ -22,9 +24,11 @@
 {{^dns_plugins}}
 <li>
     Not supported
+    <p>
     If your DNS provider is not supported, pause here: run Certbot in Docker by using
     <a href='https://certbot.eff.org/docs/install.html#running-with-docker'>these
-    steps from our documentation</a>.
+      steps from our documentation</a>.
+    </p>
 </li>
 {{/dns_plugins}}
 {{/advanced}}

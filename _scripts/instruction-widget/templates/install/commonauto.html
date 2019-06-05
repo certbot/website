@@ -1,7 +1,7 @@
-{{> header}}
 {{#jessie}}
 <li>
-    <h2>Remove packaged Certbot installation</h2>
+    Remove packaged Certbot installation
+    <p>
     We previously recommended that Debian 8 (jessie) users install Certbot from
     the packaged version. Because of important updates in the Certbot code,
     we are now recommending that Debian 8 users switch to the
@@ -9,19 +9,20 @@
     Run this command on the command line on the machine to remove previous
     installations of Certbot. If Certbot has never been installed, the command
     will not do anything.
-    <pre>
-    $ sudo apt-get remove certbot
-    </pre>
+    <pre>$ sudo apt-get remove certbot</pre>
+    </p>
 </li>
 {{/jessie}}
 
 <li>
-    <h2>Install Certbot</h2>
+    Install Certbot
+    <p>
     Run these commands on the command line on the machine to install Certbot.
     <pre>
-        wget https://dl.eff.org/certbot-auto
-        sudo mv certbot-auto /usr/local/bin/certbot-auto
-        sudo chown root /usr/local/bin/certbot-auto
-        sudo chmod 0755 /usr/local/bin/certbot-auto
+      wget https://dl.eff.org/certbot-auto
+      sudo mv certbot-auto /usr/local/bin/certbot-auto
+      sudo chown root /usr/local/bin/certbot-auto
+      sudo chmod 0755 /usr/local/bin/certbot-auto
     </pre>
+    </p>
 </li>

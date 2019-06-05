@@ -4,23 +4,30 @@
 
 {{#packaged}}
 <li>
-    <h2>Enable EPEL repo</h2>
+    Enable EPEL repo
+    <p>
     You'll need to enable the EPEL (Extra Packages for Enterprise Linux)
     repository.<br>
     Follow these instructions at
     <a href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
-    the Fedora wiki to enable EPEL.</a>
-    <!-- button goes here, to the same link with "enable EPEL" -->
+      the Fedora wiki to enable EPEL.</a>
+    </p>
+    <p class="centered">
+    <a class="link-button" href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
+      Enable EPEL</a>
+    </p>
 </li>
 <li>
-    <h2>Enable the optional channel</h2>
+    Enable the optional channel
+    <p>
     If you're using RHEL or Oracle Linux, you'll also need to enable the optional channel.
     On EC2, RHEL users can enable the optional channel by running the following command,
     substituting your EC2 region for REGION in the command:
     <pre>
-    $ yum -y install yum-utils
-    $ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
+      $ yum -y install yum-utils
+      $ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
     </pre>
+    </p>
 </li>
 
 {{>installcertbot}}
@@ -30,13 +37,18 @@
 {{^packaged}}
 {{^epel_auto}}
 <li>
-    <h2>Enable EPEL repo</h2>
+    Enable EPEL repo
+    <p>
     You'll need to enable the EPEL (Extra Packages for Enterprise Linux)
     repository to download Certbot's dependecies.<br>
     Follow these instructions at
     <a href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
-    the Fedora wiki to enable EPEL.</a>
-    <!-- button goes here, to the same link with "enable EPEL" -->
+      the Fedora wiki to enable EPEL.</a>
+    </p>
+    <p class="centered">
+    <a class="link-button" href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
+      Enable EPEL</a>
+    </p>
 </li>
 {{/epel_auto}}
 {{>auto}}
