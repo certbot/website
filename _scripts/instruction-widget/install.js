@@ -140,6 +140,7 @@ module.exports = function(context) {
     template = "ubuntu";
 
     context.package = "certbot"
+    context.install_command = "sudo apt-get install"
     if (context.webserver == "apache") {
       context.package += " " + "python-certbot-apache";
     } else if (context.webserver == "nginx") {
