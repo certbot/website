@@ -22,13 +22,9 @@
     $ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
     </pre>
 </li>
-<li>
-    <h2>Install Certbot</h2>
-    Run this command on the command line on the machine to install Certbot.
-    <pre>
-    $ sudo yum install {{package}}
-    </pre>
-</li>
+
+{{>installcertbot}}
+
 {{#advanced}}
 {{#dns_plugins}}
 <li>

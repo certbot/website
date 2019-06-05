@@ -71,6 +71,7 @@ module.exports = function(context) {
 
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
+    partials.installcertbot = require(TEMPLATE_PATH + "installcertbot.html");
     partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.dnspluginssetup = require(TEMPLATE_PATH + "dnspluginssetup.html");
     partials.warning = require(TEMPLATE_PATH + "warning.html");
@@ -94,6 +95,7 @@ module.exports = function(context) {
       context.packaged = false
     } else {
       context.base_command = "certbot"
+      context.install_command = "sudo yum install";
       context.package = "certbot"
       context.packaged = true
 
@@ -117,6 +119,7 @@ module.exports = function(context) {
     context.base_command = "certbot";
     context.cron_included = true;
     context.package = "certbot";
+    context.install_command = "sudo apt-get install";
 
     if (context.webserver == "apache") {
       context.package += " " + "python-certbot-apache";
@@ -155,6 +158,7 @@ module.exports = function(context) {
     context.package = "app-crypt/certbot";
     context.base_command = "certbot";
     context.base_package = "app-crypt/certbot";
+    context.install_command = "sudo emerge -av";
     if (context.webserver == "apache") {
       context.package += " app-crypt/certbot-apache";
     } else if (context.webserver == "nginx") {
@@ -174,6 +178,7 @@ module.exports = function(context) {
 
     context.base_command = "certbot";
     context.base_package = "certbot";
+    context.install_command = "sudo pacman -S";
     context.dns_plugins = true;
     context.dns_package_prefix = "certbot-dns";
   }
@@ -182,6 +187,7 @@ module.exports = function(context) {
     template = "fedora";
     context.package = "certbot";
     context.base_command = "certbot";
+    context.install_command = "sudo dnf install";
 
     if (context.webserver == "apache") {
       context.package += " certbot-apache";
@@ -223,6 +229,7 @@ module.exports = function(context) {
   macos_install = function() {
     template = "macos";
     context.base_command = "certbot";
+    context.install_command = "brew install";
   }
 
   opensuse_install = function() {

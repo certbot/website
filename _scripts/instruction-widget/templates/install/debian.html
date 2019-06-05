@@ -23,13 +23,8 @@
 </li>
 {{/devuan}}
 {{/backports_flag}}
-<li>
-    <h2>Install Certbot</h2>
-    Run this command on the command line on the machine to install Certbot.
-    <pre>
-    $ sudo apt-get install {{package}} {{backports_flag}}
-    </pre>
-</li>
+
+{{>installcertbot}}
 
 {{#advanced}}
 {{#dns_plugins}}
