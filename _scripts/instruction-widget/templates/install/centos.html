@@ -1,38 +1,46 @@
 {{> header}}
+
+
+
 {{#packaged}}
-<p>
-Certbot is packaged in EPEL (Extra Packages for Enterprise Linux). To use
-Certbot, you must first <a
-href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">
-enable the EPEL repository</a>. On RHEL or Oracle Linux, you must also
-enable the optional channel.
-</p>
-<aside class="note">
-<h4>Note:</h4>
-<p>
-If you are using RHEL on EC2, you can enable the optional channel by running:
-</p>
-<pre>
-$ yum -y install yum-utils
-$ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
-</pre>
-</aside>
-<p>
-After doing this, you can install Certbot by running:
-</p>
-<pre>
-$ sudo yum install {{package}}
-</pre>
+<li>
+    <h2>Enable EPEL repo</h2>
+    You'll need to enable the EPEL (Extra Packages for Enterprise Linux)
+    repository.<br>
+    Follow these instructions at
+    <a href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
+    the Fedora wiki to enable EPEL.</a>
+    <!-- button goes here, to the same link with "enable EPEL" -->
+</li>
+<li>
+    <h2>Enable the optional channel</h2>
+    If you're using RHEL or Oracle Linux, you'll also need to enable the optional channel.
+    On EC2, RHEL users can enable the optional channel by running the following command,
+    substituting your EC2 region for REGION in the command:
+    <pre>
+    $ yum -y install yum-utils
+    $ yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
+    </pre>
+</li>
+
+{{>installcertbot}}
+
 {{/packaged}}
+
 {{^packaged}}
 {{^epel_auto}}
-<p>
-Not all of Certbot's dependencies are available in the standard repositories.
-To use Certbot, you must first <a
-href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">
-enable the EPEL (Extra Packages for Enterprise Linux) repository</a>.
-</p>
+<li>
+    <h2>Enable EPEL repo</h2>
+    You'll need to enable the EPEL (Extra Packages for Enterprise Linux)
+    repository to download Certbot's dependecies.<br>
+    Follow these instructions at
+    <a href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
+    the Fedora wiki to enable EPEL.</a>
+    <!-- button goes here, to the same link with "enable EPEL" -->
+</li>
 {{/epel_auto}}
 {{>auto}}
 {{/packaged}}
-{{>dnsplugins}}
+
+
+{{> dnspluginssetup}}

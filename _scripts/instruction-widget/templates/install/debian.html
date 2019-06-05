@@ -25,12 +25,6 @@
 </li>
 {{/devuan}}
 {{/backports_flag}}
-<li>
-  Install Certbot and its server plugin
-  <p>
-  Run this command in the command line on the machine to install Certbot and its server plugin.
-  <pre>$ sudo apt-get install {{package}} {{backports_flag}}</pre>
-  </p>
-</li>
+{{>installcertbot}}
 
 {{> dnspluginssetup}}
