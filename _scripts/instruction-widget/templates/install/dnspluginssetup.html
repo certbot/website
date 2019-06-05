@@ -1,19 +1,6 @@
 <!-- May need to edit js to put this in -->
-
 {{#advanced}}
 {{#dns_plugins}}
-<li>
-    <h2>Install correct DNS plugin</h2>
-    Run the following command, replacing &lt;PLUGIN&gt; with the name of your DNS provider.
-    <pre>
-        $ sudo apt-get install {{dns_package_prefix}}-&lt;PLUGIN&gt;
-        <!-- idk about the html here -->
-    </pre>
-    For example, if your DNS provider is RFC2136, you'd run the following command:
-    <pre>
-        $ sudo apt-get install {{dns_package_prefix}}-rfc2136
-    </pre>
-</li>
 <li>
     <h2>Set up credentials</h2>
     You’ll need to set up DNS credentials.<br>
