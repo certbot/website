@@ -238,6 +238,7 @@ module.exports = function(context) {
     template = "opensuse";
     context.package = "certbot";
     context.base_command = "certbot";
+    context.install_command = "sudo zypper install";
 
     if (context.webserver == "apache") {
       context.package += " python-certbot-apache";
