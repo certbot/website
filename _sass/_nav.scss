@@ -78,11 +78,13 @@ nav.main-nav {
       letter-spacing: 0.07em;
       font-size: 0.9em;
     }
+    a {
+      float: left;
+    }
     img {
       width: 200px;
       top: 70px;
       padding-top: 10px;
-      float: left;
     }
   }
 

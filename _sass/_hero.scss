@@ -1,5 +1,6 @@
-
 div.hero {
+  display: flex;
+  flex-direction: column;
   padding-top: 2em;
   padding-left: 20px;
   @include susy-breakpoint($md) {
@@ -8,48 +9,17 @@ div.hero {
   // padding-bottom: 1em;
   box-sizing: border-box;
   position: relative;
-  display: block;
   width: 100%;
-  min-height: 320px;
-  @include susy-breakpoint($md) {
-    height: 420px;
-    min-height: 0;
-  }
+  min-height: 200px;
   overflow: hidden;
-  display: block;
   text-align: center;
   color: #000;
   background-color: #fff;
   clear: both;
 
-  img.logo {
-    width: 80%;
-    max-width: 480px;
-    padding-top: 20px;
-    margin-bottom: 0.5em;
-    // margin-left: -3em;
-
-    @include susy-breakpoint($md) {
-      margin-top: -5em;
-      width: 520px;
-      max-width: 700px;
-      margin-left: -5em;
-    }
-
-    @include susy-breakpoint($lg) {
-      width: 700px;
-      max-width: 700px;
-      margin-top:  -5em;
-      margin-left: -6em;
-
-    }
-
-    &:hover {
-      #wink {
-        margin-top: 10px;
-      }
-    }
-
+  @include susy-breakpoint($md) {
+    height: 250px;
+    min-height: 0;
   }
 
   h1 {
@@ -57,101 +27,12 @@ div.hero {
     padding: 0 50px;
   }
 
-  h2 {
-    display: none;
-    font-size: 0.9em;
-    @include susy-breakpoint($md) {
-      display: block;
-
-    }
-    @include susy-breakpoint($lg) {
-      font-size: 1em;
-    }
-    font-family: 'Roboto Slab';
-    font-weight: 200;
-
-    margin: 0;
-    padding: 0;
-    margin-top: -2.5em;
-    margin-bottom: 2.5em;
-  }
   p {
-    text-align: left;
+    text-align: center;
     padding: 0 50px;
   }
-
-}
-
-header.hero.subhero {
-
-  img {
-    margin-top: 2em;
-    width: 80%;
-    max-width: 300px;
-    @include susy-breakpoint($md) {
-      max-width: 480px;
-    }
-  }
-
-  a {
-    display: block;
-  }
-
-  @include susy-breakpoint($md) {
-    img {
-      padding-left: 30px;
-      margin-top: 4em;
-      margin-left: -380px;
-      width: 400px;
-      max-width: 400px !important;
-    }
-  }
-
-  margin-top: 0;
-  h1 {
-    font-family: 'Roboto';
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0.02em;
-
-  }
-  min-height: 160px;
-  height: 160px;
-  @include susy-breakpoint($ph) {
-    height: 210px;
-  }
-
-
-}
-
-body:not(.index) {
-  header.hero.subhero {
-      padding-top: 0;
-  }
-}
-
-#wink {
-  display: none;
-  @include susy-breakpoint($md) {
-    display: none; // bye bye wink!
-  }
-  width: 15px;
-  height: 10px;
-  z-index: 500;
-  background-color: #fff;
-  position: relative;
-  margin: 0 auto;
-  // margin-left: -450px;
-  transition: all ease 60ms;
-  border-radius: 15px;
-
-  left: 60px;
-  top: -66px;
-
-
-  &.active {
-    top: -59px;
-    transition: all ease 60ms;
+  .instruction-widget {
+    margin-bottom: auto;
+    width: 100%;
   }
 }
