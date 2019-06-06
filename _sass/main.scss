@@ -98,7 +98,8 @@ $on-laptop:        800px;
         "privacy",
         "warning",
         "homepage",
-        "tooltips"
+        "tooltips",
+        "page"
 ;
 
 .page-content  {
@@ -167,11 +168,6 @@ h1 {
 }
 
 
-body:not(.index) {
-  .page-content {
-    background-color: transparent;
-  }
-}
 .page-content {
 
   @include container(100%);
@@ -189,24 +185,4 @@ body:not(.index) {
   //   }
   // }
 
-}
-
-body:not(.index) {
-
-  .post-title {
-    margin-bottom: -10px;
-  }
-  @include susy-breakpoint($md) {
-    .page-content {
-      @include container (95%);
-    }
-    .wrapper {
-        margin-top: 1.5em;
-    }
-
-    .subhero {
-      padding-bottom: 3em;
-    }
-
-  }
 }
