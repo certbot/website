@@ -64,7 +64,6 @@ $on-laptop:        800px;
   border: 1px solid $certbot-red;
   border-radius: 20px;
   font-size: 18px;
-
   &:hover {
     color: $certbot-red;
     cursor: pointer;
@@ -126,7 +125,7 @@ a {
   }
 }
 
-.link-button {
+a.link-button {
   @include link-button;
   padding: 5px 15px;
 }

@@ -114,7 +114,6 @@ div.home-https {
 }
 
 .col-50 {
-  display: inline-block;
   float: left;
   height: auto;
   width: 50%;
@@ -129,6 +128,8 @@ div.home-https {
 
 .centered {
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .italic {
@@ -138,8 +139,20 @@ div.home-https {
 .home-further-links {
   overflow: auto;
   padding-bottom: 2rem;
+  .col-50 {
+    display: flex;
+    flex-direction: column;
+  }
   img {
     width: 100px;
-    height: 200px;
+    height: 150px;
+  }
+  span.label {
+    font-family: $header-font-family;
+    font-size: 24px;
+  }
+  a.link-button {
+    margin-top: 0.5em;
+    padding: 5px 35px;
   }
 }
