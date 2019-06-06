@@ -1,0 +1,95 @@
+$lg-padding: 400px;
+$lg-bullet-size: 70px;
+
+body.page .page-content {
+  padding: 0;
+  margin: 0;
+}
+
+.page .header-wrapper {
+  padding: 0 $lg-padding;
+  padding-top: 40px;
+  h1 {
+    color: #000;
+    font-size: 40px;
+    margin: 0;
+    text-transform: lowercase;
+  }
+}
+.page .content-wrapper {
+  background-color: #F3F5F7;
+  padding: 30px $lg-padding;
+  font-size: 18px;
+  h2 {
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 0.4em;
+  }
+  p {
+    font-size: 18px;
+  }
+  ul {
+    list-style: none;
+    li {
+      p {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '+ ';
+      }
+    }
+  }
+  .pull-right {
+    float: right;
+    width: 30%;
+    padding: 1.5em;
+    img {
+      float: right;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+@mixin bullet-image {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 2em;
+  background-size: $lg-bullet-size;
+  background-repeat: no-repeat;
+  background-position: left top;
+  min-height: $lg-bullet-size;
+  padding-left: $lg-bullet-size + 15px;
+  &:before {
+    content: '';
+  }
+}
+
+ul.image-bullets {
+  list-style: none;
+  margin-top: 2em;
+  margin-left: 75px;
+  li.plus-bullet {
+    @include bullet-image;
+    background-image: url('../images/support-icon.svg');
+  }
+  li.mm-bullet {
+    @include bullet-image;
+    background-image: url('../images/support-icon.svg');
+  }
+  li.gh-bullet {
+    @include bullet-image;
+    background-image: url('../images/support-icon.svg');
+  }
+  li.heart-bullet {
+    @include bullet-image;
+    background-image: url('../images/support-icon.svg');
+  }
+  li.book-bullet {
+    @include bullet-image;
+    background-image: url('../images/support-icon.svg');
+  }
+  li.bulb-bullet {
+    @include bullet-image;
+    background-image: url('../images/support-icon.svg');
+  }
+}

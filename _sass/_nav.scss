@@ -1,9 +1,10 @@
-$nav-height: 60px;
+$nav-height: 150px;
 $nav-color:  rgba(255,255,255,0.95);
 $nav-font-color: rgba(255,255,255,0.75);
 $nav-font: 'Roboto Slab';
 $nav-font-size: $base-font-size / 1.5;
 $nav-text-transform: lowercase;
+$nav-lg-width: 80em;
 
 body {
   margin-top: $nav-height;
@@ -52,13 +53,37 @@ nav.main-nav body.source {
   }
 }
 nav.main-nav {
+  z-index: 10;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 
-  img {
-    position: absolute;
-    display: block;
-    width: 55px;
-    top: 10px;
-    left: 0;
+  height: $nav-height;
+  background-color: $nav-color;
+
+  .logo {
+    padding: 0;
+    @include container(40em);
+
+    @include susy-breakpoint($md) {
+      @include container(60em);
+    }
+
+    @include susy-breakpoint($lg) {
+      @include container($nav-lg-width);
+      letter-spacing: 0.07em;
+      font-size: 0.9em;
+    }
+    img {
+      width: 200px;
+      top: 70px;
+      padding-top: 10px;
+      float: left;
+    }
   }
 
   a {
@@ -73,28 +98,16 @@ nav.main-nav {
     }
   }
 
-  z-index: 10;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-
-  height: $nav-height;
-  background-color: $nav-color;
-
   ul {
     padding: 0;
     @include container(40em);
 
     @include susy-breakpoint($md) {
-      @include container(60em);
+      @include container(80em);
     }
 
     @include susy-breakpoint($lg) {
-      @include container($lg);
+      @include container($nav-lg-width);
       letter-spacing: 0.07em;
       font-size: 0.9em;
     }
@@ -104,7 +117,7 @@ nav.main-nav {
     justify-content: space-around;
     margin-bottom: 0 !important;
     list-style-type: none;
-    line-height: $nav-height;
+    line-height: 70px;
     font-size: 0.75em;
     letter-spacing: 0em;
 
@@ -129,12 +142,14 @@ nav.main-nav {
       text-transform: $nav-text-transform;
       font-family: $nav-font;
       font-size: $nav-font-size;
-      color: rgba(0,0,0,0.5);
+      color: #000;
       @include susy-breakpoint($md) {
-        font-size: $base-font-size / 1.15;
+        font-size: $base-font-size;
       }
       
-      font-weight: 400;
+      a {
+        font-weight: bold;
+      }
 
       &.donate {
         color: $certbot-red;
@@ -151,7 +166,7 @@ nav.main-nav {
           width: auto;
           font-size: inherit;
           @include susy-breakpoint($md) {
-            font-size: $base-font-size / 1.15;
+            font-size: $base-font-size;
           }
         }
         &:hover {
@@ -169,7 +184,7 @@ nav.main-nav {
 
       &:hover {
         &:not(.donate) {
-          color: rgba(0,0,0,0.95);
+          color: $certbot-red;
         }
       }
 
