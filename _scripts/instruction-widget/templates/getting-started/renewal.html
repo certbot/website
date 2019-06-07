@@ -2,11 +2,38 @@
 <li>
   Test automatic renewal
   <p>
-  The Certbot packages on your system come with a cron job that will renew your certificates
+  The Certbot packages on your system come with a cron job or systemd timer that will renew your certificates
   automatically before they expire. You will not need to run Certbot again, unless you change your
   configuration. You can test automatic renewal for your certificates by running this command:
   <pre>sudo {{base_command}} renew --dry-run</pre>
   </p>
+
+  <p>
+  The command to renew certbot is installed in one of the following locations:
+  <ul>
+    <li><tt>/etc/crontab/</tt></li>
+    <li><tt>/etc/cron.*/*</tt></li>
+    <li><tt>systemctl list-timers</tt></li>
+  </ul>
+  </p>
+
+  {{#certonly}}
+  <p>
+  If you needed to stop your webserver to run Certbot, you'll want to edit the built-in command
+  to add the <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags to stop and start your
+  webserver automatically. For example, if your webserver is HAProxy, add the following to the
+  <tt>certbot renew</tt> command:
+
+  <pre>
+    --pre-hook "service haproxy stop" --post-hook "service haproxy start"
+  </pre>
+
+  More information is available in the
+  <a href='https://certbot.eff.org/docs/using.html?highlight=hooks#renewing-certificates'>
+  Certbot documentation on renewing certificates</a>.
+  </p>
+  {{/certonly}}
+
 </li>
 {{/cron_included}}
 {{^cron_included}}
@@ -15,8 +42,24 @@
   Set up automatic renewal
   <p>
   We recommend running the following line, which will add a cron job to the default crontab.
-  <pre class="one-line">echo “0 0,12 * * * python -c ‘import random; import time; time.sleep(random.random() * 3600)’ && certbot renew” | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
+
+  {{#certonly}}
+  <p>
+  If you needed to stop your webserver to run Certbot, you'll want to
+  add <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags after <tt>certbot renew</tt>to stop
+  and start your webserver automatically. For example, if your webserver is HAProxy, modify the
+  command as follows:
+
+  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew --pre-hook 'service haproxy stop' --post-hook 'service haproxy start'" | sudo tee -a /etc/crontab > /dev/null</pre>
+  </p>
+
+  More information is available in the
+  <a href='https://certbot.eff.org/docs/using.html?highlight=hooks#renewing-certificates'>
+  Certbot documentation on renewing certificates</a>.
+  </p>
+  {{/certonly}}
 </li>
 {{/cron_included}}
 
