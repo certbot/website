@@ -237,11 +237,19 @@ div.home-https {
 }
 
 .home-further-links {
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 2rem;
-  .col-50 {
-    display: flex;
+  @include susy-breakpoint($md) {
+    flex-direction: row;
+  }
+  .col {
+    display: inline-flex;
     flex-direction: column;
+    align-items: center;
+    @include susy-breakpoint($md) {
+      width: 50%;
+    }
   }
   img {
     width: 100px;
@@ -249,10 +257,16 @@ div.home-https {
   }
   span.label {
     font-family: $header-font-family;
-    font-size: 24px;
+    font-size: 18px;
+    @include susy-breakpoint($md) {
+      font-size: 24px;
+    }
   }
   a.link-button {
     margin-top: 0.5em;
-    padding: 5px 35px;
+    padding: 5px 25px;
+    @include susy-breakpoint($md) {
+      padding: 5px 35px;
+    }
   }
 }
