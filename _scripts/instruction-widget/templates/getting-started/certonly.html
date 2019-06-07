@@ -6,7 +6,7 @@ Since your server architecture doesn't yet {{officially}} support automatic
 installation {{imperative}} use the <tt>certonly</tt> command to obtain your
 certificate.
 </p>
-<pre>$ sudo {{base_command}} certonly</pre>
+<pre>sudo {{base_command}} certonly</pre>
 <p>
 This will allow you interactively select the plugin and options used to obtain
 your certificate. If you already have a webserver running, we recommend
@@ -20,7 +20,7 @@ To obtain a cert using the <a href="/docs/using.html#webroot">"webroot" plugin</
 which can work with the webroot directory of any webserver software:
 </p>
 <pre>
-$ sudo {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
+sudo {{base_command}} certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
 </pre>
 <p>
 This command will obtain a single cert for <tt>example.com</tt>,
@@ -38,7 +38,7 @@ temporarily stop your existing webserver, if any) for <tt>example.com</tt> and
 <tt>www.example.com</tt>:
 </p>
 <pre>
-$ sudo {{base_command}} certonly --standalone -d example.com -d www.example.com
+sudo {{base_command}} certonly --standalone -d example.com -d www.example.com
 </pre>
 {{#dns_plugins}}
 <p>
