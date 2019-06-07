@@ -11,7 +11,7 @@
       {{^dns_plugins}}
       Run this command to get a certificate for you and have Certbot edit your Apache configuration
       automatically to serve it, turning on HTTPS access in a single step.
-      <pre>$ sudo {{base_command}} --apache</pre>
+      <pre>sudo {{base_command}} --apache</pre>
       {{/dns_plugins}}
       </p>
     </li>
@@ -25,7 +25,7 @@
       {{^dns_plugins}}
       If you’re feeling more conservative and would like to make the changes to your Apache
       configuration by hand, run this command.
-      <pre>$ sudo {{base_command}} certonly --apache</pre>
+      <pre>sudo {{base_command}} certonly --apache</pre>
       {{/dns_plugins}}
       </p>
     </li>
