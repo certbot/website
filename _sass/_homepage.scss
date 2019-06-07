@@ -33,6 +33,14 @@
       margin: 1rem 20%;
     }
   }
+
+  a {
+    color: $text-color;
+    text-decoration: underline;
+    &:hover {
+      color: $link-color;
+    }
+  }
 }
 
 .instructions .use-certbot {
