@@ -88,33 +88,66 @@ div.home-https {
 }
 
 .use-certbot {
-  outline: 3px solid #CACACA;
-  margin: 1em;
-  padding: 20px;
-  padding-left: 50px;
+  outline: 1px solid #000000;
   text-align: left;
+  padding: 1em;
+  @include susy-breakpoint($md) {
+    outline: 3px solid #CACACA;
+    margin: 1em;
+    padding: 20px;
+    padding-left: 50px;
+  }
 
   h1 {
     text-align: left;
+    margin-bottom: 1em;
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+    @include susy-breakpoint($md) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   div.reqs {
-    display: block;
-    float: left;
-    width: 70%;
-    margin: 1rem 15%;
+    height: 350px;
+    width: 100%;
+
+    @include susy-breakpoint($md) {
+      width: 80%;
+      margin: 0 10%;
+      height: 300px;
+    }
+
+    .col {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2em;
+      @include susy-breakpoint($md) {
+        width: 33%;
+        flex-direction: column;
+      }
+    }
 
     .text-wrapper {
       display: inline-block;
       text-align: left;
-      padding-left: 22px;
-      text-indent: -22px;
-      margin: 1rem 20%;
+      margin-left: 2em;
+      padding-left: 2em;
+      text-indent: -2em;
+      font-size: 14px;
+      font-weight: bold;
+      @include susy-breakpoint($md) {
+        font-size: 16px;
+        padding-left: 22px;
+        text-indent: -22px;
+        margin: 1rem 20%;
+      }
     }
   }
 
@@ -136,14 +169,6 @@ div.home-https {
     width: 90%;
     margin: 5%;
   }
-}
-
-.col-thirds {
-  text-align: center;
-  display: inline-block;
-  float: left;
-  height: auto;
-  width: 33%;
 }
 
 .col-60 {
@@ -190,6 +215,7 @@ div.home-https {
 
 .italic {
   font-style: italic;
+  font-weight: 300;
 }
 
 .mobile-hidden {
