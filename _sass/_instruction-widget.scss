@@ -45,14 +45,12 @@ select {
   border: 2px solid $certbot-red;
   height: 34px;
   appearance: none;
+  border-radius: 20px;
   padding-left: 1em;
   padding-right: 1em;
-  border-radius: 20px;
-  margin-top: 1.5em;
-  display: block;
+  margin: 0.5em 0;
 
   @include susy-breakpoint($md) {
-    display: inline-block;
     margin: 0 1em;
   }
 
@@ -64,26 +62,6 @@ select {
   &:hover {
     cursor: pointer;
   }
-}
-
-input[type=submit] {
-  background-color: $certbot-red;
-  color: white;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-select {
-  width: 200px;
-  text-align: center;
-
-  option {
-    text-align: center;
-  }
-
-  background: url(../images/chevron-down.png) 94% / 15% no-repeat transparent;
-  background-size: 12px;
 }
 
 #using,#on {
@@ -99,25 +77,72 @@ select {
 }
 
 .instruction-widget  {
-  @include susy-breakpoint($md) {
-    font-size: 1.2em;
-    width: auto;
-  }
   text-align: center;
-  width: 200px;
-  margin: 0 auto;
-  select {
-    height: 30px;
-    font-size: 14px;
+  min-height: 150px;
+  @include susy-breakpoint($md) {
+    min-height: 0;
+    flex: 0 0 100%;
+    font-size: 1.2em;
   }
   span {
     font-size: 40px;
     font-weight: bold;
   }
+
+  input[type=submit] {
+    background-color: $certbot-red;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  select {
+    text-align: center;
+    height: 2em;
+    font-size: 18px;
+    width: 95%;
+
+    @include susy-breakpoint($md) {
+      font-size: 14px;
+      width: 200px;
+    }
+
+    option {
+      text-align: center;
+    }
+
+    background: url(../images/chevron-down.png) 94% / 15% no-repeat transparent;
+    background-size: 12px;
+  }
   .js-only {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
     align-items: center;
+    @include susy-breakpoint($md) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 auto;
+    }
+  }
+  .not-sure {
+    text-align: right;
+    width: 100%;
+    padding-top: 0.5em;
+    @include susy-breakpoint($md) {
+      flex: 0 0 100%;
+    }
+    a {
+      font-weight: bold;
+      color: $text-color;
+      text-decoration: underline;
+      &:hover {
+        color: $link-color;
+      }
+    }
   }
 }
 
