@@ -4,7 +4,7 @@ title: About Certbot
 class: about
 ---
 
-<div class="pull-right">
+<div class="logos mobile-hidden">
 {{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
 {{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
 {{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
@@ -14,6 +14,12 @@ class: about
 Certbot is a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS. 
 
 Certbot is made by the Electronic Frontier Foundation (EFF), a 501(c)3 nonprofit based in San Francisco, CA, that defends digital privacy, free speech, and innovation.
+
+<div class="logos mobile-only">
+{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
+{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
+{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
+</div>
 
 ## Is Certbot right for me?
 If you’re looking to add the security and privacy benefits of an HTTPS certificate to your website, you may not need Certbot. Many hosting providers have internal tools to enable HTTPS. Before using Certbot, check if your hosting provider is one of them.

@@ -193,24 +193,6 @@
 /**
  * Posts
  */
-.post-header {
-    margin-bottom: $spacing-unit;
-    text-align: left;
-}
-
-.post-title {
-    text-align: left;
-    font-size: 28px;
-    font-family: 'Roboto Slab';
-    font-weight: 400;
-    color: $grey;
-    line-height: 1;
-
-    @include susy-breakpoint($md) {
-        font-size: 36px;
-    }
-}
-
 .post-content {
     margin-bottom: $spacing-unit;
 

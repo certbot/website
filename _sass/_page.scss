@@ -1,5 +1,6 @@
 $lg-padding: 400px;
 $lg-bullet-size: 70px;
+$sm-bullet-size: 45px;
 
 body.page .page-content {
   padding: 0;
@@ -7,26 +8,42 @@ body.page .page-content {
 }
 
 .page .header-wrapper {
-  padding: 0 $lg-padding;
-  padding-top: 40px;
+  margin: 0 1em;
+  padding-top: 2em;
+  @include susy-breakpoint($lg) {
+    padding: 0 $lg-padding;
+    padding-top: 40px;
+  }
   h1 {
     color: #000;
-    font-size: 40px;
-    margin: 0;
     text-transform: lowercase;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+    @include susy-breakpoint($md) {
+      font-size: 40px;
+    }
   }
 }
 .page .content-wrapper {
   background-color: #F3F5F7;
-  padding: 30px $lg-padding;
-  font-size: 18px;
+  padding: 1em;
+  @include susy-breakpoint($lg) {
+    padding: 30px $lg-padding;
+  }
   h2 {
-    font-weight: 400;
-    font-size: 32px;
-    margin-bottom: 0.4em;
+    font-size: 22px;
+    @include susy-breakpoint($md) {
+      font-weight: 400;
+      font-size: 32px;
+      margin-bottom: 0.4em;
+    }
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
+    @include susy-breakpoint($md) {
+      font-size: 18px;
+    }
   }
   ul {
     list-style: none;
@@ -39,26 +56,38 @@ body.page .page-content {
       }
     }
   }
-  .pull-right {
-    float: right;
-    width: 30%;
-    padding: 1.5em;
+  .logos {
+    text-align: center;
+    width: 200px;
     img {
+      max-width: 200px;
+      margin: 0.5em 0;
+    }
+    @include susy-breakpoint($md) {
       float: right;
-      margin-bottom: 1em;
+      width: 30%;
+      padding: 1.5em;
+      img {
+        max-width: 300px;
+        float: right;
+        margin-bottom: 1em;
+      }
     }
   }
 }
 
 @mixin bullet-image {
-  font-size: 22px;
-  font-weight: bold;
   margin-bottom: 2em;
-  background-size: $lg-bullet-size;
   background-repeat: no-repeat;
   background-position: left top;
-  min-height: $lg-bullet-size;
-  padding-left: $lg-bullet-size + 15px;
+  background-size: $sm-bullet-size;
+  min-height: $sm-bullet-size;
+  padding-left: $sm-bullet-size + 10px;
+  @include susy-breakpoint($md) {
+    background-size: $lg-bullet-size;
+    min-height: $lg-bullet-size;
+    padding-left: $lg-bullet-size + 15px;
+  }
   &:before {
     content: '';
   }
@@ -66,8 +95,15 @@ body.page .page-content {
 
 ul.image-bullets {
   list-style: none;
-  margin-top: 2em;
-  margin-left: 75px;
+  margin: 2em 0;
+  font-weight: bold;
+  font-size: 16px;
+  @include susy-breakpoint($md) {
+    font-size: 22px;
+    font-style: normal;
+    margin-left: 75px;
+  }
+
   li.plus-bullet {
     @include bullet-image;
     background-image: url('../images/support-icon.svg');
