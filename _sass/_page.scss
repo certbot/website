@@ -13,6 +13,7 @@ body.page .page-content {
   @include susy-breakpoint($lg) {
     padding: 0 $lg-padding;
     padding-top: 40px;
+    margin: 0;
   }
   h1 {
     color: #000;
@@ -21,6 +22,7 @@ body.page .page-content {
     font-weight: 300;
     margin: 0;
     @include susy-breakpoint($md) {
+      font-weight: 400;
       font-size: 40px;
     }
   }

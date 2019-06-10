@@ -3,23 +3,25 @@
 
   {% include head.html %}
 
-  <body class="instructions">
+  <body class="instructions page">
 
     {% include topnav.html %}
     {% include shelf.html %}
 
-    <h1>certbot instructions</h1>
+    <div class="header-wrapper">
+      <h1>certbot instructions</h1>
+    </div>
 
     <div class="hero">
       <div class="instruction-widget">
         {% include form.html %}
       </div>
     </div>
-    
+
     <div class="page-content">
       <div class="wrapper">
+        {% include use_certbot.html %}
         <div class="instructions content">
-          {% include use_certbot.html %}
           {{ content }}
         </div>
       </div>

@@ -1,11 +1,31 @@
 .instructions {
-  h1 {
-    padding: 2rem 3rem;
-    font-size: 3em;
-  }
-
   .instruction-widget span {
     font-size: 30px;
+  }
+  .wrapper {
+    padding: 0;
+    @include susy-breakpoint($md) {
+      padding-right: $spacing-unit;
+      padding-left: $spacing-unit;
+    }
+  }
+  .use-certbot {
+    margin-bottom: 2em;
+    @include susy-breakpoint($md) {
+      margin: 0;
+      padding: 1em 2.5em;
+    }
+    h1 {
+      @include susy-breakpoint($md) {
+        padding: 0;
+        margin: 0.5em 0;
+        font-size: 2em;
+      }
+    }
+    .reqs {
+      width: 90%;
+      margin: 5%;
+    }
   }
 }
 
@@ -13,11 +33,24 @@
   margin-top: 3em;
   margin-bottom: 1em;
   position: relative;
-  display: inline-block;
 
   text-align: center;
 
   width: 100%;
+
+  .col {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2em;
+    @include susy-breakpoint($md) {
+      min-height: 250px;
+      width: 33%;
+    }
+  }
 
   img {
     width: 100px;
@@ -25,9 +58,11 @@
   }
 
   .text-wrapper {
-    display: inline-block;
-    margin: 1rem 10%;
+    margin: 1em 10%;
     font-size: 16px;
+    @include susy-breakpoint($md) {
+      margin-bottom: auto;
+    }
   }
 
   .link-button-wide {
@@ -35,7 +70,6 @@
     padding: 5px 0;
     width: 90%;
     margin: 0 5%;
-    display: block;
   }
 }
 
@@ -158,7 +192,10 @@ h1.instruct {
 
 .instruction-pane-wrapper {
   border: 1px solid $content-stroke;
-  padding: 2em;
+  padding: 1em 5px;
+  @include susy-breakpoint($md) {
+    padding: 2em;
+  }
 }
 
 
@@ -166,29 +203,55 @@ h1.instruct {
   ol {
     font-family: 'Roboto Slab';
     font-weight: 400;
-    margin-top: 1em;
-    font-size: 30px;
+    font-size: 20px;
+    margin: 1em 1.1em;
+    @include susy-breakpoint($md) {
+      margin-left: 30px;
+      font-size: 30px;
+    }
     p {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 2em;
+      margin-left: -1em;
+      @include susy-breakpoint($md) {
+        margin-left: 0;
+        font-size: 18px;
+      }
     }
     ul {
       list-style-type: none;
       margin-top: 0;
       margin-left: 1em;
+      p {
+        margin-left: 0;
+      }
     }
     h3 { 
       font-size: 22px;
       font-weight: bold;
       font-style: italic;
       font-family: $base-font-family;
+      margin-left: -0.9em;
+      @include susy-breakpoint($md) {
+        margin-left: 0;
+      }
+    }
+    .link-button {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 20px;
+      @include susy-breakpoint($md) {
+        padding: 5px 15px;
+        font-weight: 400;
+        font-size: 18px;
+      }
     }
   }
 }
 .instructions.content {
   background-color: #fff;
 
-  
+
   position: relative;
   text-align: center;
 
@@ -201,7 +264,9 @@ h1.instruct {
   }
 
   pre {
-    white-space: pre-line;
+    @include susy-breakpoint($md) {
+      white-space: pre-line;
+    }
   }
 
   pre.one-line {
@@ -209,21 +274,21 @@ h1.instruct {
   }
 
   .tab {
-
     width: 120px;
+    display: inline-block;
+    padding: 0.8em 0;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    color: rgba(0,0,0,0.4);
+    text-transform: lowercase;
+
     @include susy-breakpoint($ph) {
       width: 180px;
     }
     @include susy-breakpoint($md) {
+      font-weight: 400;
       width: 250px;
     }
-    display: inline-block;
-    padding: 0.8em 0;
-    font-family: 'Roboto Slab';
-    font-weight: 400;
-    color: rgba(0,0,0,0.4);
-    text-transform: lowercase;
-
     &:not(.active) {
       border-left: 1px solid $stroke;
       border-top: 1px solid $stroke;
@@ -271,10 +336,11 @@ h1.instruct {
     a {
       color: #000;
       font-family: 'Roboto Slab';
-      font-size: 1.4em;
 
       outline: none; // this is bad for accessibility but blur() isn't working in the js, need to fix
-      
+      @include susy-breakpoint($md) {
+        font-size: 1.4em;
+      }
     }
     margin-bottom: 1.2em;
     overflow: hidden;
