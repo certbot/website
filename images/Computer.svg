@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129.738" height="118.095" viewBox="0 0 129.738 118.095">
+  <g id="Group_2622" data-name="Group 2622" transform="translate(16978.504 -8079.711)">
+    <path id="Path_442" data-name="Path 442" d="M232.663,388.867l-27.747,45.8-2.606-1.656,29.33-47.083Z" transform="translate(-17081.428 7763.137)" fill="#d9d9d9"/>
+    <path id="Path_948" data-name="Path 948" d="M127.836,385.974,28.31,385.94a.964.964,0,0,0-.771.375L.155,432.278c-.122.2.024.375.327.375l99.525.034a.964.964,0,0,0,.771-.375l27.384-45.963C128.285,386.14,128.138,385.974,127.836,385.974Z" transform="translate(-16978.561 7763.132)" fill="#e6e6e6"/>
+    <g id="Group_2109" data-name="Group 2109" transform="translate(-16978.504 8149.067)">
+      <path id="Path_442-2" data-name="Path 442" d="M232.663,388.867l-27.747,45.8-2.606-1.656,29.33-47.083Z" transform="translate(-103.491 -385.93)" fill="#b7b7b7"/>
+      <rect id="Rectangle_483" data-name="Rectangle 483" width="101.141" height="2.401" transform="translate(0 46.338)" fill="#b7b7b7"/>
+    </g>
+    <rect id="Rectangle_512" data-name="Rectangle 512" width="95.16" height="59.931" transform="translate(-16949.176 8083.627)"/>
+    <path id="Path_823" data-name="Path 823" d="M156.943,243.53H57.059a.6.6,0,0,0-.6.6V311.98a.6.6,0,0,0,.6.6h99.884a.6.6,0,0,0,.6-.6V244.129A.6.6,0,0,0,156.943,243.53ZM152.7,306.778a.6.6,0,0,1-.6.6H61.92a.6.6,0,0,1-.6-.6V248.045a.6.6,0,0,1,.6-.6H152.1a.6.6,0,0,1,.6.6Z" transform="translate(-17007.18 7836.181)" fill="#e6e6e6"/>
+    <path id="Path_849" data-name="Path 849" d="M136.78,397.909l-90.762-.029L33.17,419.5l90.762.034Z" transform="translate(-16995.234 7757.007)" fill="#3a3b3a"/>
+    <path id="Path_867" data-name="Path 867" d="M103.98,462.458l-33.64-.015,8.3-13.973,33.64.015ZM70.647,462.3l33.207.01,8.129-13.676-33.207-.01Z" transform="translate(-17014.301 7731.057)" fill="#284445"/>
+    <text id="user_" data-name="user$" transform="translate(-16942.035 8105.367)" fill="#fff" font-size="16" font-family="Barlow-Regular, Barlow"><tspan x="0" y="0">user$</tspan></text>
+    <line id="Line_242" data-name="Line 242" x2="99.503" transform="translate(-16978.5 8195.371)" fill="none"/>
+  </g>
+</svg>
