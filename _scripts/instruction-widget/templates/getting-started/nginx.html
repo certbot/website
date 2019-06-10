@@ -1,30 +1,30 @@
-<li> Choose how to run Certbot
+<li> Choose how you'd like to run Certbot
   <ul>
   <li>
-    Either... Get & Install your certificates
+    Either get and install your certificates...
     <p>
-    {{#dns_plugins}}
+    {{#advanced}}
     Run one of the commands in the "Examples" section of the instructions for your DNS provider,
     along with the flag <tt>-i nginx</tt>.
-    {{/dns_plugins}}
-    {{^dns_plugins}}
-    Run this command to get a certificate for you and have Certbot edit your Nginx configuration
+    {{/advanced}}
+    {{^advanced}}
+    Run this command to get a certificate and have Certbot edit your Nginx configuration
     automatically to serve it, turning on HTTPS access in a single step.
     <pre>sudo {{base_command}} --nginx</pre>
-    {{/dns_plugins}}
+    {{/advanced}}
     </p>
   </li>
   <li>
-    Or just get a certificate
+    Or, just get a certificate
     <p>
-    {{#dns_plugins}}
-    Run one of the commands in the “Examples” section of the instructions for your DNS provider.
-    {{/dns_plugins}}
-    {{^dns_plugins}}
-    If you’re feeling more conservative and would like to make the changes to your Nginx
+    {{#advanced}}
+    Run one of the commands in the "Examples" section of the instructions for your DNS provider.
+    {{/advanced}}
+    {{^advanced}}
+    If you're feeling more conservative and would like to make the changes to your Nginx
     configuration by hand, run this command.
     <pre>sudo {{base_command}} certonly --nginx</pre>
-    {{/dns_plugins}}
+    {{/advanced}}
     </p>
   </li>
   </ul>
