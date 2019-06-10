@@ -1,36 +1,160 @@
-
 /*
  * Home Page divs
  */
 
-.use-certbot {
-  outline: 3px solid #CACACA;
-  margin: 20px;
-  padding: 20px;
-  padding-left: 50px;
-  text-align: left;
+div.home-https {
+  display: block;
+  text-align: center;
+  
+  min-height: 225px;
+  @include susy-breakpoint($md) {
+    min-height: 350px;
+  }
 
   h1 {
-    text-align: left;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    @include susy-breakpoint($md) {
+      font-size: 32px;
+    }
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
+    @include susy-breakpoint($md) {
+      width: 100px;
+      height: 200px;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $base-font-family;
+    padding-top: 1em;
+    @include susy-breakpoint($md) {
+      padding: 0;
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: 300;
+      font-family: $header-font-family;
+    }
+
+    a {
+      // Mobile only
+      font-weight: bold;
+      color: $text-color;
+      text-decoration: underline;
+      &:after {
+        content: ' >';
+      }
+    }
+  }
+
+  .lightest-gray-bg {
+    padding: 10px 0;
+    background-color: #EAEAEA;
+    @include susy-breakpoint($md) {
+      background-color: #F4F4F4;
+    }
+  }
+
+  .light-gray-bg {
+    background-color: #EAEAEA;
+  }
+
+  .med-gray-bg {
+    background-color: #EAEAEA;
+    @include susy-breakpoint($md) {
+      background-color: #D9D9D9;
+    }
+  }
+
+  .gif {
+    display: none;
+    @include susy-breakpoint($md) {
+      background-color: #FFFFFF;
+      display: block;
+      margin: 2rem 10%;
+    }
+  }
+
+  .content-wrapper {
+    text-align: left;
+    margin: 0 10%;
+  }
+}
+
+.use-certbot {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  text-align: left;
+  padding: 1em;
+  @include susy-breakpoint($md) {
+    border: 3px solid #CACACA;
+    margin: 1em;
+    padding: 20px;
+    padding-left: 50px;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 20px;
+    font-weight: 300;
+    @include susy-breakpoint($md) {
+      font-weight: 400;
+      font-size: 32px;
+    }
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+    @include susy-breakpoint($md) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   div.reqs {
-    display: block;
-    float: left;
-    width: 70%;
-    margin: 1rem 15%;
+    height: 350px;
+    width: 100%;
+
+    @include susy-breakpoint($md) {
+      width: 80%;
+      margin: 0 10%;
+      height: 300px;
+    }
+
+    .col {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2em;
+      @include susy-breakpoint($md) {
+        width: 33%;
+        flex-direction: column;
+      }
+    }
 
     .text-wrapper {
       display: inline-block;
       text-align: left;
-      padding-left: 22px;
-      text-indent: -22px;
-      margin: 1rem 20%;
+      margin-left: 2em;
+      padding-left: 2em;
+      text-indent: -2em;
+      font-size: 14px;
+      font-weight: bold;
+      @include susy-breakpoint($md) {
+        font-size: 16px;
+        padding-left: 22px;
+        text-indent: -22px;
+        margin: 1rem 20%;
+      }
     }
   }
 
@@ -43,95 +167,40 @@
   }
 }
 
-.instructions .use-certbot {
-  h1 {
-    padding: 0;
-    font-size: 2em;
-  }
-  .reqs {
-    width: 90%;
-    margin: 5%;
-  }
-}
-
-.lightest-gray-bg {
-  h1 {
-    margin: 0;
-  }
-  background-color: #F4F4F4;
-  padding: 10px 0;
-}
-
-.light-gray-bg {
-  background-color: #EAEAEA;
-}
-
-.med-gray-bg {
-  background-color: #D9D9D9;
-}
-
-.white-bg {
-  background-color: #FFFFFF;
-}
-
-.grid {
-  float: left;
-  display: block;
-  width: 100%;
-}
-
-div.home-https {
-  display: block;
-  text-align: center;
-
-  h1 {
-    text-align: center;
-  }
-
-  img {
-    width: 100px;
-    height: 200px;
-  }
-
-  .padded {
-    margin: 2rem 10%;
-  }
-
-  .content-wrapper {
-    h2 {
-      margin-bottom: 30px;
-    }
-    text-align: left;
-    margin: 0 10%;
-  }
-}
-
-.col-thirds {
-  text-align: center;
-  display: inline-block;
-  float: left;
-  height: auto;
-  width: 33%;
-}
-
 .col-60 {
   display: inline-block;
-  float: left;
   height: auto;
-  width: 60%;
+  @include susy-breakpoint($md) {
+    width: 60%;
+    float: left;
+  }
 }
 
 .col-50 {
   float: left;
-  height: auto;
-  width: 50%;
+  width: 47%;
+  min-height: 170px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  padding-top: 1em;
+  @include susy-breakpoint($md) {
+    width: 50%;
+    padding: 0;
+    height: auto;
+  }
 }
 
 .col-40 {
   display: inline-block;
-  float: left;
   height: auto;
-  width: 40%;
+  @include susy-breakpoint($md) {
+    float: left;
+    width: 40%;
+
+    &.right {
+      float: right;
+    }
+  }
 }
 
 .centered {
@@ -142,14 +211,41 @@ div.home-https {
 
 .italic {
   font-style: italic;
+  font-weight: 300;
+}
+
+.mobile-hidden {
+  visibility: hidden;
+  display: none;
+  @include susy-breakpoint($md) {
+    visibility: visible;
+    display: initial;
+  }
+}
+
+.mobile-only {
+  visibility: visible;
+  display: initial;
+  @include susy-breakpoint($md) {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .home-further-links {
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 2rem;
-  .col-50 {
-    display: flex;
+  @include susy-breakpoint($md) {
+    flex-direction: row;
+  }
+  .col {
+    display: inline-flex;
     flex-direction: column;
+    align-items: center;
+    @include susy-breakpoint($md) {
+      width: 50%;
+    }
   }
   img {
     width: 100px;
@@ -157,10 +253,16 @@ div.home-https {
   }
   span.label {
     font-family: $header-font-family;
-    font-size: 24px;
+    font-size: 18px;
+    @include susy-breakpoint($md) {
+      font-size: 24px;
+    }
   }
   a.link-button {
     margin-top: 0.5em;
-    padding: 5px 35px;
+    padding: 5px 25px;
+    @include susy-breakpoint($md) {
+      padding: 5px 35px;
+    }
   }
 }
