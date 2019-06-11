@@ -50,13 +50,7 @@ div.home-https {
     }
 
     a {
-      // Mobile only
-      font-weight: bold;
-      color: $text-color;
-      text-decoration: underline;
-      &:after {
-        content: ' >';
-      }
+      @include button-clear;
     }
   }
 
@@ -152,7 +146,7 @@ div.home-https {
       }
     }
 
-    img {
+    img.icon {
       width: 75px;
       height: 70px;
       margin-bottom: 5px;
@@ -253,9 +247,14 @@ div.home-https {
     }
   }
   a.link-button {
-    margin-top: 0.5em;
-    padding: 5px 25px;
+    @include button-clear;
+    margin: 0.5em 1em;
+    font-family: $header-font-family;
+    font-weight: 300;
+    font-size: 18px;
+
     @include susy-breakpoint($md) {
+      @include link-button;
       padding: 5px 35px;
     }
   }

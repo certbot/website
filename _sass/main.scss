@@ -65,16 +65,27 @@ $on-laptop:        800px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: bold;
+  background-image: none;
+  font-family: $base-font-family;
+  text-decoration: none;
   &:hover {
     color: $certbot-red;
     cursor: pointer;
-    text-decoration: none;
   }
 
   @include susy-breakpoint($xl) {
     font-weight: 400;
     font-size: 18px;
   }
+}
+
+@mixin button-clear {
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  background-color: transparent;
+  font-weight: bold;
+  color: $text-color;
 }
 
 // @mixin susy-breakpoint($breakpoint) {
@@ -159,3 +170,10 @@ h1 {
   @include container(100%);
   background-color: #fff;
 }
+
+img.link-arrow {
+  padding-left: 1em;
+  height: 20px;
+  width: 10px;
+}
+
