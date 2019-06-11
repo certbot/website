@@ -1,4 +1,4 @@
-$lg-padding: 400px;
+$lg-padding: 20%;
 $lg-bullet-size: 70px;
 $sm-bullet-size: 45px;
 
@@ -59,19 +59,36 @@ body.page .page-content {
     }
   }
   .logos {
-    text-align: center;
-    width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    margin: 1em 25%;
+
+    &.mobile-hidden {
+      display: none;
+      @include susy-breakpoint($md) {
+        display: inline-flex;
+      }
+    }
+
+    &.mobile-only {
+      display: inline-flex;
+      @include susy-breakpoint($md) {
+        display: none;
+      }
+    }
+
     img {
-      max-width: 200px;
-      margin: 0.5em 0;
+      flex: 0 0 100%;
+      float: none;
+      margin: 0.5em auto;
     }
     @include susy-breakpoint($md) {
       float: right;
       width: 30%;
-      padding: 1.5em;
+      margin: 1.5em;
       img {
-        max-width: 300px;
-        float: right;
+        width: 300px;
         margin-bottom: 1em;
       }
     }

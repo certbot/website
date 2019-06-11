@@ -5,9 +5,9 @@ class: about
 ---
 
 <div class="logos mobile-hidden">
-{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
-{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
-{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
+<img src="/images/certbot-logo-1A.svg" alt="Certbot logo"> 
+<img src="/images/LetsEncrypt-logo.svg" alt="Let's Encrypt logo"> 
+<img src="/images/EFF-logo.svg" alt="Electronic Frontier Foundation logo"> 
 </div>
 
 ## What’s Certbot?
@@ -16,9 +16,9 @@ Certbot is a free, open source software tool for automatically using Let’s Enc
 Certbot is made by the Electronic Frontier Foundation (EFF), a 501(c)3 nonprofit based in San Francisco, CA, that defends digital privacy, free speech, and innovation.
 
 <div class="logos mobile-only">
-{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
-{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
-{{ '![Certbot logo](/images/certbot-logo-1A.svg)' | markdownify }} 
+<img src="/images/certbot-logo-1A.svg" alt="Certbot logo"> 
+<img src="/images/LetsEncrypt-logo.svg" alt="Let's Encrypt logo"> 
+<img src="/images/EFF-logo.svg" alt="Electronic Frontier Foundation logo"> 
 </div>
 
 ## Is Certbot right for me?
