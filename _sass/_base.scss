@@ -219,3 +219,32 @@ pre {
 .js-only {
   visibility: hidden;
 }
+
+.mobile-hidden {
+  visibility: hidden;
+  display: none;
+  @include susy-breakpoint($md) {
+    visibility: visible;
+    display: initial;
+  }
+}
+
+.mobile-only {
+  visibility: visible;
+  display: initial;
+  @include susy-breakpoint($md) {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.centered {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

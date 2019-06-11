@@ -63,6 +63,11 @@ body.page .page-content {
     justify-content: center;
     width: 50%;
     margin: 1em 25%;
+    @include susy-breakpoint($md) {
+      float: right;
+      width: 30%;
+      margin: 1.5em;
+    }
 
     &.mobile-hidden {
       display: none;
@@ -82,12 +87,7 @@ body.page .page-content {
       flex: 0 0 100%;
       float: none;
       margin: 0.5em auto;
-    }
-    @include susy-breakpoint($md) {
-      float: right;
-      width: 30%;
-      margin: 1.5em;
-      img {
+      @include susy-breakpoint($md) {
         width: 300px;
         margin-bottom: 1em;
       }

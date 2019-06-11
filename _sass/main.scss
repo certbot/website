@@ -104,23 +104,18 @@ $on-laptop:        800px;
         "warning",
         "homepage",
         "tooltips",
-        "page"
+        "page",
+        "grids"
 ;
 
 .page-content  {
-    @include container(100%);
-    @include susy-breakpoint($md) {
-        @include container($ph);
-    }
-    @include susy-breakpoint($lg) {
-        @include container($md);
-    }
-
-
-    .wrapper {
-
-    }
-
+  @include container(100%);
+  @include susy-breakpoint($md) {
+    @include container($ph);
+  }
+  @include susy-breakpoint($lg) {
+    @include container($md);
+  }
 }
 
 a {
@@ -152,38 +147,15 @@ body,p,div {
 
 }
 
-
 h1,h2,h3,h4,h5,h6 {
   font-family: $header-font-family;
 }
+
 h1 {
-  font-size: 2em;
   font-weight: 400;
-  text-align: left;
-  margin-top: 0.25em;
-  margin-bottom: 0.35em;
 }
-
-.three .wrapper {
-  // background-color: $grey-bg;
-}
-
 
 .page-content {
-
   @include container(100%);
-
-  // @include susy-breakpoint($md) {
-  //   margin-top: 3%;
-  //   @include container (95%);
-  // }
-
   background-color: #fff;
-
-  // .wrapper {
-  //   @include susy-breakpoint($md) {
-  //     margin-top: 2em;
-  //   }
-  // }
-
 }
