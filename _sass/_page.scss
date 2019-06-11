@@ -125,26 +125,26 @@ ul.image-bullets {
 
   li.plus-bullet {
     @include bullet-image;
-    background-image: url('../images/support-icon.svg');
+    background-image: url('../images/BlackCircle-Plus.svg');
   }
   li.mm-bullet {
     @include bullet-image;
-    background-image: url('../images/support-icon.svg');
+    background-image: url('../images/BlackCircle-Chat.svg');
   }
   li.gh-bullet {
     @include bullet-image;
-    background-image: url('../images/support-icon.svg');
+    background-image: url('../images/BlackCircle-Code.svg');
   }
   li.heart-bullet {
     @include bullet-image;
-    background-image: url('../images/support-icon.svg');
+    background-image: url('../images/BlackCircle-Donate.svg');
   }
   li.book-bullet {
     @include bullet-image;
-    background-image: url('../images/support-icon.svg');
+    background-image: url('../images/BlackCircle-Documentation.svg');
   }
   li.bulb-bullet {
     @include bullet-image;
-    background-image: url('../images/support-icon.svg');
+    background-image: url('../images/BlackCircle-Lightbulb.svg');
   }
 }
