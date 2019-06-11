@@ -45,7 +45,7 @@ div.home-https {
     @include susy-breakpoint($lg) {
       font-size: 22px;
     }
-    @include susy-breakpoint($xl) {
+    @include susy-breakpoint(min-width 1350px) {
       font-size: 24px;
     }
 
@@ -75,18 +75,18 @@ div.home-https {
 
   .col-50 {
     float: left;
-    width: 47%;
-    min-height: 170px;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    width: 48%;
+    min-height: 190px;
+    padding-left: 1%;
+    padding-right: 1%;
     padding-top: 1em;
     @include susy-breakpoint($md) {
-      height: 250px;
+      height: 220px;
       width: 50%;
       padding: 0;
     }
     @include susy-breakpoint($lg) {
-      height: 300px;
+      height: 310px;
     }
     @include susy-breakpoint($xl) {
       height: 350px;
@@ -121,7 +121,6 @@ div.home-https {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 175px;
     @include susy-breakpoint($md) {
       padding-top: 2em;
       flex-direction: row;
@@ -169,7 +168,7 @@ div.home-https {
         height: 150px;
         padding-left: 1em;
       }
-      @include susy-breakpoint($xl) {
+      @include susy-breakpoint(min-width 1350px) {
         width: 300px;
         height: 200px;
         padding-left: 5%;
