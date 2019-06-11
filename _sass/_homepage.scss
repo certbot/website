@@ -21,33 +21,12 @@ div.home-https {
     img {
       width: 25px;
       height: 25px;
-      padding-left: 0;
       padding-bottom: 5px;
 
       @include susy-breakpoint($md) {
         width: 50px;
         height: 50px;
       }
-    }
-  }
-
-  img {
-    width: 85px;
-    height: 85px;
-    @include susy-breakpoint($md) {
-      width: 150px;
-      height: 100px;
-      padding-left: 1em;
-    }
-    @include susy-breakpoint($lg) {
-      width: 250px;
-      height: 150px;
-      padding-left: 1em;
-    }
-    @include susy-breakpoint($xl) {
-      width: 300px;
-      height: 200px;
-      padding-left: 5%;
     }
   }
 
@@ -140,13 +119,13 @@ div.home-https {
   }
 
   .col {
-    padding-top: 2em;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    min-height: 175px;
     @include susy-breakpoint($md) {
-      min-height: 175px;
+      padding-top: 2em;
       flex-direction: row;
     }
     @include susy-breakpoint($lg) {
@@ -156,11 +135,52 @@ div.home-https {
     @include susy-breakpoint($xl) {
       height: 265px;
     }
+
+    .circle {
+      background: #FFFFFF;
+      border: 2px solid $certbot-red;
+      padding: 10px;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      @include susy-breakpoint($md) {
+        display: none;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    img {
+      width: 75px;
+      height: 70px;
+      margin-bottom: 5px;
+      @include susy-breakpoint($md) {
+        width: 150px;
+        height: 100px;
+        margin: 0;
+        padding-left: 1em;
+      }
+      @include susy-breakpoint($lg) {
+        width: 250px;
+        height: 150px;
+        padding-left: 1em;
+      }
+      @include susy-breakpoint($xl) {
+        width: 300px;
+        height: 200px;
+        padding-left: 5%;
+      }
+    }
   }
 
-  .right {
+  img.right {
+    margin-top: 5px;
+    margin-bottom: 0;
     @include susy-breakpoint($md) {
       order: 99;
+      margin: 0;
       padding-left: 0;
       padding-right: 1em;
     }
