@@ -63,11 +63,17 @@ $on-laptop:        800px;
   color: $text-color;
   border: 1px solid $certbot-red;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: bold;
   &:hover {
     color: $certbot-red;
     cursor: pointer;
     text-decoration: none;
+  }
+
+  @include susy-breakpoint($xl) {
+    font-weight: 400;
+    font-size: 18px;
   }
 }
 

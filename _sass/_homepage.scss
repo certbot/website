@@ -5,8 +5,8 @@
 div.home-https {
   display: block;
   text-align: center;
-  
   min-height: 225px;
+
   @include susy-breakpoint($md) {
     min-height: 350px;
   }
@@ -18,14 +18,36 @@ div.home-https {
     @include susy-breakpoint($md) {
       font-size: 32px;
     }
+    img {
+      width: 25px;
+      height: 25px;
+      padding-left: 0;
+      padding-bottom: 5px;
+
+      @include susy-breakpoint($md) {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 
   img {
     width: 85px;
     height: 85px;
     @include susy-breakpoint($md) {
-      width: 100px;
+      width: 150px;
+      height: 100px;
+      padding-left: 1em;
+    }
+    @include susy-breakpoint($lg) {
+      width: 250px;
+      height: 150px;
+      padding-left: 1em;
+    }
+    @include susy-breakpoint($xl) {
+      width: 300px;
       height: 200px;
+      padding-left: 5%;
     }
   }
 
@@ -36,10 +58,16 @@ div.home-https {
     padding-top: 1em;
     @include susy-breakpoint($md) {
       padding: 0;
-      margin-bottom: 30px;
-      font-size: 24px;
+      margin-bottom: 1.2em;
       font-weight: 300;
       font-family: $header-font-family;
+      font-size: 20px;
+    }
+    @include susy-breakpoint($lg) {
+      font-size: 22px;
+    }
+    @include susy-breakpoint($xl) {
+      font-size: 24px;
     }
 
     a {
@@ -72,18 +100,74 @@ div.home-https {
     }
   }
 
+  .col-50 {
+    float: left;
+    width: 47%;
+    min-height: 170px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 1em;
+    @include susy-breakpoint($md) {
+      height: 250px;
+      width: 50%;
+      padding: 0;
+    }
+    @include susy-breakpoint($lg) {
+      height: 300px;
+    }
+    @include susy-breakpoint($xl) {
+      height: 350px;
+    }
+  }
   .gif {
     display: none;
-    @include susy-breakpoint($md) {
+    @include susy-breakpoint($lg) {
       background-color: #FFFFFF;
       display: block;
-      margin: 2rem 10%;
+      margin: 0 10%;
+      margin-top: 2em;
     }
   }
 
   .content-wrapper {
     text-align: left;
-    margin: 0 10%;
+    @include susy-breakpoint($md) {
+      margin: 0 2em;
+    }
+    @include susy-breakpoint($lg) {
+      margin: 0 10%;
+    }
+  }
+
+  .col {
+    padding-top: 2em;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include susy-breakpoint($md) {
+      min-height: 175px;
+      flex-direction: row;
+    }
+    @include susy-breakpoint($lg) {
+      height: 225px;
+      align-items: stretch;
+    }
+    @include susy-breakpoint($xl) {
+      height: 265px;
+    }
+  }
+
+  .right {
+    @include susy-breakpoint($md) {
+      order: 99;
+      padding-left: 0;
+      padding-right: 1em;
+    }
+    @include susy-breakpoint($xl) {
+      padding-left: 0;
+      padding-right: 5%;
+    }
   }
 }
 
@@ -96,7 +180,6 @@ div.home-https {
     border: 3px solid #CACACA;
     margin: 1em;
     padding: 20px;
-    padding-left: 50px;
   }
 
   h1 {
@@ -120,10 +203,14 @@ div.home-https {
   }
 
   div.reqs {
-    height: 350px;
+    min-height: 350px;
     width: 100%;
 
     @include susy-breakpoint($md) {
+      width: 95%;
+      padding: 0 2.5%;
+    }
+    @include susy-breakpoint($xl) {
       width: 80%;
       margin: 0 10%;
       height: 300px;
@@ -136,8 +223,8 @@ div.home-https {
       text-align: center;
       margin-bottom: 2em;
       @include susy-breakpoint($md) {
-        width: 33%;
         flex-direction: column;
+        width: 30%;
       }
     }
 
@@ -175,21 +262,6 @@ div.home-https {
     float: left;
   }
 }
-
-.col-50 {
-  float: left;
-  width: 47%;
-  min-height: 170px;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  padding-top: 1em;
-  @include susy-breakpoint($md) {
-    width: 50%;
-    padding: 0;
-    height: auto;
-  }
-}
-
 .col-40 {
   display: inline-block;
   height: auto;
@@ -249,6 +321,10 @@ div.home-https {
   }
   img {
     width: 100px;
+    height: 150px;
+  }
+  img.wide {
+    width: 200px;
     height: 150px;
   }
   span.label {
