@@ -14,48 +14,6 @@ body {
   }
 }
 
-body.use-certbot {
-  nav.main-nav ul li:nth-of-type(2) { 
-    a {
-      color: #000;
-    }
-  }
-}
-body.about {
-  nav.main-nav ul li:nth-of-type(3) { 
-    a {
-      color: #000;
-    }
-  }
-}
-body.faq {
-  nav.main-nav ul li:nth-of-type(4) { 
-    a {
-      color: #000;
-    }
-  }
-}
-body.docs {
-  nav.main-nav ul li:nth-of-type(5) { 
-    a {
-      color: #000;
-    }
-  }
-}
-body.support {
-  nav.main-nav ul li:nth-of-type(6) { 
-    a {
-      color: #000;
-    }
-  }
-}
-nav.main-nav body.source {
-  ul li:nth-of-type(2) { 
-    a {
-      color: #000;
-    }
-  }
-}
 nav.main-nav {
   z-index: 10;
   position: relative;
@@ -75,16 +33,13 @@ nav.main-nav {
 
   .logo {
     padding: 0;
-    @include container(40em);
+    width: 95%;
+    margin: 0 auto;
+    display: inline-block;
 
-    @include susy-breakpoint($md) {
-      @include container(60em);
-    }
-
-    @include susy-breakpoint($lg) {
-      @include container($nav-lg-width);
-      letter-spacing: 0.07em;
-      font-size: 0.9em;
+    @include susy-breakpoint($xl) {
+      font-size: $base-font-size;
+      width: 80em;
     }
     a {
       float: left;
@@ -113,21 +68,22 @@ nav.main-nav {
 
   ul {
     padding: 0;
-    @include container(40em);
 
     @include susy-breakpoint($md) {
-      @include container(80em);
+      margin: 0;
+      padding: 0 1em;
+      width: 100%;
     }
 
-    @include susy-breakpoint($lg) {
-      @include container($nav-lg-width);
-      letter-spacing: 0.07em;
-      font-size: 0.9em;
+    @include susy-breakpoint($xl) {
+      width: 80em;
+      font-size: $base-font-size;
+      margin: 0 auto;
     }
 
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 0 !important;
     list-style-type: none;
     line-height: 70px;
@@ -147,14 +103,14 @@ nav.main-nav {
       text-align: center;
       text-transform: $nav-text-transform;
       font-family: $nav-font;
-      font-size: $nav-font-size;
       color: #000;
-      @include susy-breakpoint($md) {
-        font-size: $base-font-size;
-      }
       
       a {
         font-weight: bold;
+        font-size: 14px;
+        @include susy-breakpoint($xl) {
+          font-size: $base-font-size;
+        }
       }
 
       &.donate {
@@ -166,6 +122,12 @@ nav.main-nav {
         text-align: center;
         width: 100%;
         font-size: 1.5em;
+        &.mobile-only {
+          display: inline-block;
+          @include susy-breakpoint($md) {
+            display: none;
+          }
+        }
         @include susy-breakpoint($md) {
           color: $certbot-red;
           position: relative;

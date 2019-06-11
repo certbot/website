@@ -68,9 +68,14 @@ $on-laptop:        800px;
   background-image: none;
   font-family: $base-font-family;
   text-decoration: none;
+  padding: 5px 10px;
   &:hover {
     color: $certbot-red;
     cursor: pointer;
+  }
+
+  @include susy-breakpoint($lg) {
+    padding: 5px 15px;
   }
 
   @include susy-breakpoint($xl) {
@@ -139,7 +144,6 @@ a {
 
 a.link-button {
   @include link-button;
-  padding: 5px 15px;
 }
 
 html,div,h1,h2,h3,h4,h5,h6 {
