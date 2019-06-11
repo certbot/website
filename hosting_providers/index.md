@@ -7,9 +7,44 @@ class: hosting
 ## How did you set up your website?
 
 If you have a website, you maybe went through a process that included:
-1. Buying a domain      from a company (yourwebsite.com)
-2. Choosing a server     to host that website. This often involves picking a hosting provider     .
-3. Often, people will pick a shared hosting product      from the hosting provider, which may include an HTTPS certificate as part of their package. This page is for these users.
+<ol>
+  <li>
+    Buying a domain from a company (yourwebsite.com)
+  </li>
+  <li>
+    Choosing a server to host that website. This often involves picking a hosting provider.
+    <div class="three-col">
+      <div class="col">
+        <img src="/images/HTTPsite.svg">
+        <div class="text-wrapper">
+          <span>
+            your website domain (http://example.com)<br/>
+            might be purchased from a domain registrar company
+          </span>
+        </div>
+      </div>
+      <div class="col">
+        <img src="/images/Server.svg">
+        <div class="text-wrapper">
+          <span>
+            a server hosts your website
+          </span>
+        </div>
+      </div>
+      <div class="col">
+        <img src="/images/HostingProvidersServers.svg">
+        <div class="text-wrapper">
+          <span>
+            and this server might be provided by a hosting provider
+          </span>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    Often, people will pick a shared hosting product from the hosting provider, which may include an HTTPS certificate as part of their package. This page is for these users.
+  </li>
+</ol>
 
 ## Do you use shared hosting?
 

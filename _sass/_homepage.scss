@@ -213,6 +213,35 @@ div.home-https {
     }
   }
 
+  a {
+    color: $text-color;
+    text-decoration: underline;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.three-col {
+  min-height: 350px;
+  width: 100%;
+  @include susy-breakpoint($md) {
+    min-height: 200px;
+    margin: 1em 0;
+  }
+
+  &.reqs {
+    @include susy-breakpoint($md) {
+      width: 95%;
+      padding: 0 2.5%;
+    }
+
+    @include susy-breakpoint($xl) {
+      width: 80%;
+      margin: 0 10%;
+    }
+  }
+
   img {
     width: 70px;
     height: 70px;
@@ -222,54 +251,38 @@ div.home-https {
     }
   }
 
-  div.reqs {
-    min-height: 350px;
+  .col {
     width: 100%;
-
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2em;
     @include susy-breakpoint($md) {
-      width: 95%;
-      padding: 0 2.5%;
-    }
-    @include susy-breakpoint($xl) {
-      width: 80%;
-      margin: 0 10%;
-      height: 300px;
-    }
-
-    .col {
-      width: 100%;
-      display: inline-flex;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 2em;
-      @include susy-breakpoint($md) {
-        flex-direction: column;
-        width: 30%;
-      }
-    }
-
-    .text-wrapper {
-      display: inline-block;
-      text-align: left;
-      margin-left: 2em;
-      padding-left: 2em;
-      text-indent: -2em;
-      font-size: 14px;
-      font-weight: bold;
-      @include susy-breakpoint($md) {
-        font-size: 16px;
-        padding-left: 22px;
-        text-indent: -22px;
-        margin: 1rem 20%;
-      }
+      flex-direction: column;
+      width: 30%;
     }
   }
 
-  a {
-    color: $text-color;
-    text-decoration: underline;
-    &:hover {
-      color: $link-color;
+  .text-wrapper {
+    display: inline-block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 1em;
+    @include susy-breakpoint($md) {
+      font-size: 16px;
+      margin: 1em 0;
+    }
+  }
+
+  .hanging-indent {
+    margin-left: 2em;
+    padding-left: 2em;
+    text-indent: -2em;
+    @include susy-breakpoint($md) {
+      padding-left: 22px;
+      text-indent: -22px;
+      margin: 1rem 20%;
     }
   }
 }
