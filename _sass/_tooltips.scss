@@ -62,9 +62,15 @@
       padding: 2rem;
     }
 
-    .close-tooltip {
+    .close-button {
       float: right;
-      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 

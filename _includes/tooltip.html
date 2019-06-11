@@ -3,9 +3,9 @@
 <div class="glossary-term js-only disabled">
   <a class="glossary-link js">{{ term.title }}</a>
   <div class="tooltip js">
+    <div class="close-button"><img class="close-tooltip" src="/images/close.svg"></div>
     <div class="tooltip-title">
       <a>{{ term.title }}</a>
-      <span class="close-tooltip">X</span>
     </div>
     {{ term.content | markdownify }}
     <div class="bottom-text">
