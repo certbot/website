@@ -28,8 +28,9 @@
     --pre-hook "service haproxy stop" --post-hook "service haproxy start"
   </pre>
 
+  <p>
   More information is available in the
-  <a href='https://certbot.eff.org/docs/using.html?highlight=hooks#renewing-certificates'>
+  <a href='/docs/using.html?highlight=hooks#renewing-certificates'>
   Certbot documentation on renewing certificates</a>.
   </p>
   {{/certonly}}
@@ -42,21 +43,22 @@
   Set up automatic renewal
   <p>
   We recommend running the following line, which will add a cron job to the default crontab.
-  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew" | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
 
   {{#certonly}}
   <p>
   If you needed to stop your webserver to run Certbot, you'll want to
-  add <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags after <tt>certbot renew</tt>to stop
+  add <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags after <tt>certbot renew</tt> to stop
   and start your webserver automatically. For example, if your webserver is HAProxy, modify the
   command as follows:
 
-  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew --pre-hook 'service haproxy stop' --post-hook 'service haproxy start'" | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew --pre-hook 'service haproxy stop' --post-hook 'service haproxy start'" | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
 
+  <p>
   More information is available in the
-  <a href='https://certbot.eff.org/docs/using.html?highlight=hooks#renewing-certificates'>
+  <a href='/docs/using.html?highlight=hooks#renewing-certificates'>
   Certbot documentation on renewing certificates</a>.
   </p>
   {{/certonly}}
@@ -66,7 +68,7 @@
 <li>
   Confirm that Certbot worked
   <p>
-  To confirm that your site is set up properly, visit https://yourwebsite.com/ in your browser and
+  To confirm that your site is set up properly, visit <tt>https://yourwebsite.com/</tt> in your browser and
   look for the lock icon in the URL bar.
   If you want to check that you have the top-of-the-line installation, you can head to
   <a href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>.
