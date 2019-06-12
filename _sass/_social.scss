@@ -11,7 +11,7 @@ footer.social {
   position: fixed;
   width: 100%;
   bottom: 0;
-  height: $nav-height / 1.5;
+  height: 50px;
   background-color: $nav-color;
   text-align: center;
 
@@ -27,7 +27,6 @@ footer.social {
     
     padding: 0;
     margin: 0;
-    margin-top: 10px;
     list-style-type: none;
     display: block;
     width: 100%;
@@ -46,10 +45,9 @@ footer.social {
       transition: all 75ms linear;
 
       &:hover {
-        background-color: $certbot-red;
-        transition: all 75ms linear;
-        i {
-          color: #fff;
+        @include susy-breakpoint($md) {
+          background-color: $certbot-red;
+          transition: all 75ms linear;
         }
       }
 
@@ -61,16 +59,6 @@ footer.social {
         margin-right: 110px;
       }
 
-      i {
-        color: $certbot-red;
-        font-size: 25px;
-        line-height: 0;
-        @include susy-breakpoint($md) {
-          font-size: 40px;
-          line-height: 60px;
-          color: rgba(0,0,0,9.5);
-        }
-      }
       a {
         padding: 0;
         margin: 0;
@@ -82,14 +70,13 @@ footer.social {
 .social-icon {
   display: inline-block;
   text-align: center;
-  margin-top: 10px;
   width: 40px;
   height: 40px;
-  background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 5px;
   @include susy-breakpoint($md) {
-    background-size: 30px;
+    margin-top: 10px;
   }
   &.facebook {
     background-size: 10px;
@@ -101,13 +88,17 @@ footer.social {
   }
   &.twitter {
     background-image: url('../images/Twitter-Mobile.svg');
+    background-size: 20px;
     @include susy-breakpoint($md) {
+      background-size: 30px;
       background-image: url('../images/Twitter.svg');
     }
   }
   &.donate {
     background-image: url('../images/Heart-Mobile.svg');
+    background-size: 18px;
     @include susy-breakpoint($md) {
+      background-size: 30px;
       background-image: url('../images/Heart.svg');
     }
   }
