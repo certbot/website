@@ -120,13 +120,13 @@
         },
         {
             "name": "OpenBSD 5.9",
-            "id": "opbsd",
+            "id": "opbsd5",
             "distro": "opbsd",
             "version": "5.9"
         },
         {
             "name": "OpenBSD 6.0+",
-            "id": "opbsd",
+            "id": "opbsd6",
             "distro": "opbsd",
             "version": "6"
         },
