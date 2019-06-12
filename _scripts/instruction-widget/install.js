@@ -89,14 +89,14 @@ module.exports = function(context) {
     template = "centos";
 
     if (context.version < 7) {
-      context.base_command = "/usr/local/bin/certbot-auto"
-      context.epel_auto = (context.distro == "centos")
-      context.packaged = false
+      context.base_command = "/usr/local/bin/certbot-auto";
+      context.epel_auto = (context.distro == "centos");
+      context.packaged = false;
     } else {
-      context.base_command = "certbot"
+      context.base_command = "certbot";
       context.install_command = "sudo yum install";
-      context.package = "certbot"
-      context.packaged = true
+      context.package = "certbot";
+      context.packaged = true;
 
       if (context.webserver == "apache") {
         context.package += " python2-certbot-apache";
@@ -104,16 +104,16 @@ module.exports = function(context) {
         context.package += " python2-certbot-nginx";
       }
       context.dns_plugins = true;
-      context.dns_package_prefix = "python2-certbot-dns"
+      context.dns_package_prefix = "python2-certbot-dns";
     }
   }
 
   debian_install = function() {
     template = "debian";
-    context.devuan = context.distro == "devuan"
+    context.devuan = context.distro == "devuan";
 
     context.dns_plugins = true;
-    context.dns_package_prefix = "python3-certbot-dns"
+    context.dns_package_prefix = "python3-certbot-dns";
 
     context.base_command = "certbot";
     context.cron_included = true;
@@ -138,8 +138,8 @@ module.exports = function(context) {
   ubuntu_install = function() {
     template = "ubuntu";
 
-    context.package = "certbot"
-    context.install_command = "sudo apt-get install"
+    context.package = "certbot";
+    context.install_command = "sudo apt-get install";
     if (context.webserver == "apache") {
       context.package += " " + "python-certbot-apache";
     } else if (context.webserver == "nginx") {
@@ -149,7 +149,7 @@ module.exports = function(context) {
     context.base_command = "certbot";
     context.cron_included = true;
     context.dns_plugins = true;
-    context.dns_package_prefix = "python3-certbot-dns"
+    context.dns_package_prefix = "python3-certbot-dns";
   }
 
   gentoo_install = function() {
@@ -168,7 +168,7 @@ module.exports = function(context) {
 
   arch_install = function() {
     template = "arch";
-    context.package = "certbot"
+    context.package = "certbot";
 
     if (context.webserver == "apache") {
         context.package += " certbot-apache";
@@ -199,7 +199,7 @@ module.exports = function(context) {
   }
   // @todo: convert to template style
   bsd_install = function() {
-    template = "bsd"
+    template = "bsd";
 
     context.base_command = "certbot";
     if (context.distro == "freebsd"){
@@ -207,10 +207,10 @@ module.exports = function(context) {
       context.dns_package_prefix = "py36-certbot-dns";
       context.portcommand = "py-certbot";
       context.package = "py36-certbot";
-      context.install_command = "pkg install"
+      context.install_command = "pkg install";
     }
     if (context.distro == "opbsd"){
-      context.install_command = "pkg_add"
+      context.install_command = "pkg_add";
       if (context.version >= 6) {
           context.package = "certbot";
           context.base_command = "certbot";
