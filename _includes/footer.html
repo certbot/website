@@ -1,18 +1,50 @@
 <footer class="footer">
 
-  <a target="_blank" href="https://www.eff.org"><img class="project-of" src="/images/EFF-bw-logo-white.svg" alt="Electronic Frontier Foundation"></a>
+  <div class="logos">
+    <div class="certbot-logo">
+      <img class="certbot-logo" src="/images/Certbot-solid.svg" alt="Certbot logo">
+      <span>
+        certbot
+      </span>
+    </div>
+    <a target="_blank" href="https://www.eff.org"><img class="eff-logo" src="/images/EFF-bw-logo-white.svg" alt="Electronic Frontier Foundation"></a>
+  </div>
 
-  <ul>
-    <li><a href="/privacy">Privacy</a></li>
-    <li><a href="/support">Contact</a></li>
-    <li><a target="_blank" rel="noreferrer" href="https://letsencrypt.org/" class="letsencrypt">Let's Encrypt&trade;</a></li>
-    {% if page.class == "faq" %}
+  <div class="links">
+    <ul>
+      <li><a href="/">home</a></li>
+      <li><a href="/about">about certbot</a></li>
+      <li><a href="/instructions">certbot instructions</a></li>
+      <li><a href="/hosting_providers">hosting providers with HTTPS</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="/help">get help</a></li>
+      <li><a href="/faq">frequently asked questions</a></li>
+      <li><a href="/glossary">certbot glossary</a></li>
+      <li><a href="/docs">certbot documentation</a></li>
+      <li><a href="">community forum</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="">contact us</a></li>
+      <li><a href="/contribute">contribute to certbot</a></li>
+    </ul>
+
+    <ul>
+      <li><a target="_blank" href="https://supporters.eff.org/donate/support-work-on-certbot">donate to EFF</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="/privacy">privacy</a></li>
+      <li><a href="/support">contact</a></li>
+      {% if page.class == "faq" %}
       <li><a target="_blank" rel="noreferrer" href="https://creativecommons.org/licenses/by-nc/2.0/"><img src="/images/cc-by-nc-logo.png" alt="Creative Commons Attribution Non-Commercial License"></a></li>
-    {% else %}
+      {% else %}
       <li><a target="_blank" href="https://www.eff.org/copyright"><img src="/images/cc-by-logo.png" alt="Creative Commons Attribution License"></a></li>
-    {% endif %}
-
-  </ul>
+      {% endif %}
+    </ul>
+  </div>
 
 <noscript><img src="https://anon-stats.eff.org/js/?idsite=24&amp;rec=1&amp;action_name=" style="border:0" height="0" width="0" alt="" /></noscript>
 <div style="height: 0; width: 0; position: absolute" id="anon-stats"></div>
