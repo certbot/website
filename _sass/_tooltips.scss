@@ -94,10 +94,11 @@
 
   p {
     color: $text-color;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: $base-font-family !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
     @include susy-breakpoint($md) {
-      font-size: 18px;
+      font-size: 18px !important;
     }
   }
   .tooltip-title {

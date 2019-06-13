@@ -20,6 +20,7 @@
 
 var Raven = require('raven-js');
 var $ = require('jquery');
+var dt = require('datatables.net');
 
 (function (Raven) {
   'use strict';
@@ -66,4 +67,26 @@ $(document).ready(function() {
   $('.close-tooltip').on('click', function(e) {
     $('.tooltip').removeClass('open');
   });
+  var hosting_table = $('#hosting-providers').DataTable({
+    "paging": false,
+    "info": false
+  });
+  hosting_table.column('.category').visible(false);
+  $('#full-https').on('click', function() {
+    hosting_table.columns().search('').column('.category').search('full').draw();
+    $('.tab-header').removeClass('visible');
+    $('#full-header').addClass('visible');
+
+  });
+  $('#partial-https').on('click', function() {
+    hosting_table.columns().search('').column('.category').search('partial').draw();
+    $('.tab-header').removeClass('visible');
+    $('#partial-header').addClass('visible');
+  });
+  $('#no-https').on('click', function() {
+    hosting_table.columns().search('').column('.category').search('no').draw();
+    $('.tab-header').removeClass('visible');
+    $('#no-header').addClass('visible');
+  });
+  $('#full-https').click();
 });

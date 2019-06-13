@@ -1,0 +1,133 @@
+.hosting-table-wrapper {
+  width: 58%;
+  margin: 3em 20%;
+  border: 2px solid #D9D9D9;
+
+  .tab-header {
+    height: 180px;
+    display: none;
+    padding: 0 21%;
+    &.visible {
+      display: block;
+    }
+    img {
+      float: left;
+      height: 100px;
+    }
+    h2 {
+      padding-top: 45px;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 0.9em;
+    }
+    p {
+      font-size: 22px;
+      font-family: $header-font-family;
+    }
+    span {
+      display: block;
+      text-align: center;
+      margin: 0 -40%;
+      font-family: $header-font-family;
+      font-weight: bold;
+      a {
+        font-family: $header-font-family;
+        font-weight: bold;
+      }
+    }
+    &#full-header {
+      height: 110px;
+      margin: 2em 0;
+    }
+    &#no-header {
+      margin-top: 2em;
+      h2 {
+        padding-top: 12px;
+      }
+    }
+    &#partial-header {
+      padding: 0;
+      h2 {
+        padding-top: 60px;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        padding-left: 1em;
+        padding-right: 2em;
+      }
+    }
+  }
+}
+
+.hosting-table-tabs {
+  width: 98%;
+  margin: 0.5em auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  .hosting-tab {
+    font-weight: bold;
+    font-family: $header-font-family;
+    img {
+      float: right;
+      padding-left: 0.5em;
+    }
+  }
+}
+
+.dataTables_filter {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+.dataTables_wrapper {
+  width: 100%;
+}
+.dataTable {
+  width: 100% !important;
+  border: none;
+  border-spacing: unset;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  white-space: nowrap;
+  table-layout: fixed;
+  thead { 
+    background-color: #D9D9D9;
+    font-size: 18px;
+    text-align: left;
+    vertical-align: bottom;
+  }
+  th { 
+    padding: 0 0.5em;
+    padding-bottom: 5px;
+    height: 3em;
+  } 
+  th:last-of-type {
+    text-align: center;
+    white-space: normal;
+  }
+  td {
+    vertical-align: center;
+    min-width: 20px;
+    padding: 0 0.5em;
+  }
+  td:first-child {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  td:last-child {
+    font-size: 14px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  a {
+    text-decoration: underline;
+  }
+  img {
+    width: 20px;
+  }
+  .fixed-width {
+    width: 25px !important;
+  }
+}

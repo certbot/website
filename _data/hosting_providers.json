@@ -1,0 +1,2132 @@
+[
+  {
+    "name": "Antagonist",
+    "link": "https://www.antagonist.nl/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.antagonist.nl/press-release-free-ssl-and-http2",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "bplaced",
+    "link": "https://www.bplaced.net/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://forum.bplaced.net/t/neuerungen-fuer-https-ssl-automatische-weiterleitungen-und-hsts/35819",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": "This applies to paid plans only."
+  },
+  {
+    "name": "Domainnameshop",
+    "link": "https://www.domainnameshop.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://twitter.com/domeneshop/status/930834230518665216",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "EasyStore",
+    "link": "https://www.easystore.co/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.easystore.co/ssl",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Futureweb OG",
+    "link": "https://www.futureweb.at/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.futureweb.at/de/tiroler-homepage/angebote-preise/",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": "The website is in German."
+  },
+  {
+    "name": "Inspedium Corp.",
+    "link": "https://www.inspedium.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.inspedium.com/web-hosting/free-ssl/",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "manitu",
+    "link": "https://www.manitu.de/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://twitter.com/manitu_de/status/854284891948806146",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Mythic Beasts",
+    "link": "https://www.mythic-beasts.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://blog.mythic-beasts.com/2016/01/29/free-ssl-certificates-for-hosting-accounts/",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Neocities",
+    "link": "https://neocities.org/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://blog.neocities.org/default-ssl.html",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Pride Tech Design",
+    "link": "https://pridetechdesign.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Render",
+    "link": "https://render.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://render.com/docs/static-sites",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "QTH.com Hosting",
+    "link": "https://hosting.qth.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://hosting.qth.com/index.php/knowledgebase/118/Free-SSL-Certificates.html",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Squarespace",
+    "link": "https://www.squarespace.com/",
+    "category": "full",
+    "tutorial": "https://support.squarespace.com/hc/en-us/articles/205815898",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Uberspace",
+    "link": "https://uberspace.de/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://manual.uberspace.de/en/web-security.html",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Webdock",
+    "link": "https://webdock.io/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://webdock.io/en/docs/performance/cloudflare-cache-and-ssl",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "WordPress",
+    "link": "https://wordpress.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://en.blog.wordpress.com/2016/04/08/https-everywhere-encryption-for-all-wordpress-com-sites/",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "34SP.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://www.34sp.com/hosting-news/blog/lets-encrypt-free-ssl-certificates/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "a2hosting.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://www.a2hosting.com/kb/security/ssl/securing-your-site-with-a-lets-encrypt-ssl-certificate",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
+  {
+    "name": "Active24.co.uk",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.active24.co.uk/webhosting/auto-ssl-and-ssl-certificates",
+    "reviewed": "2019.5.31",
+    "note": "This only applies to Linux systems."
+  },
+  {
+    "name": "Active24.cz",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://blog.active24.cz/2016/06/duveryhodne-certifikaty-lets-encrypt-zdarma-ke-kazdemu-linux-hostingu-od-active-24/",
+    "reviewed": "2019.5.31",
+    "note": "The website is in Czech."
+  },
+  {
+    "name": "all-inkl.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://all-inkl.com/webhosting/lets-encrypt-ssl-zertifikate/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": "The website is in German."
+  },
+  {
+    "name": "Alephion",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "AllDomains",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://alldomains.hosting/en/free-ssl-certificate.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.6.3",
+    "note": ""
+  },
+  {
+    "name": "bhosted",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.bhosted.nl/webhosting/hostingpakket",
+    "reviewed": "2019.6.3",
+    "note": "The website is in Dutch."
+  },
+  {
+    "name": "Blogger",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://support.google.com/blogger/answer/6284029?hl=en",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.6.3",
+    "note": ""
+  },
+  {
+    "name": "Blueboard",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://hosting.blueboard.cz/en/help/ssl-certifikat",
+    "announcement": "[No need to find this]",
+    "plan": "https://hosting.blueboard.cz/en/",
+    "reviewed": "2019.6.3",
+    "note": "The website is in Czech."
+  },
+  {
+    "name": "Brontobytes",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "https://www.brontobytes.com/announcements/39/Free-SSL-Certificate-for-everyone.html",
+    "plan": "https://www.brontobytes.com/web-hosting.php",
+    "reviewed": "2019.6.3",
+    "note": ""
+  },
+  {
+    "name": "Brownrice Internet",
+    "link": "",
+    "category": "partial",
+    "tutorial": "http://blog.brownrice.com/2016/server-stuff/letsencrypt-automated-fee-ssl/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.3",
+    "note": ""
+  },
+  {
+    "name": "Buyshared.net",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "bytecamp",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Canadian Domain Name Services Inc",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Campusspeicher",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Certified Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Cheap Web Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "checkdomain",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Cityhost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Cloudcity",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Cloudhulk",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Cloudways",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Combell",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Configbox",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Cyon.ch",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Deep.ch",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "DM Solutions",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Do.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Domain & Webspace Tremmel",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Domainhizmetleri",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Domaintechnik",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Domena.pl",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Dreamhost.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Dwe Gruppe",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "EDIS.AT, Austria",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ElbiaHosting.sk",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Espace2001.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "EvenNode.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "FastComet",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Fastnom",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "FlockHosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "FlokiNET",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Flywheel",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Freethought",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Fortrabbit",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Funio.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Gandi",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "GeekGhost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "GearHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "GitHub Pages",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Gitlab",
+    "link": "https://about.gitlab.com/",
+    "category": "partial",
+    "tutorial": "https://about.gitlab.com/2016/04/11/tutorial-securing-your-gitlab-pages-with-tls-and-letsencrypt/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Google App Engine",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Greengeeks",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HawkHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Heroku",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "hetzner",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hoop.la",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Host4Geeks",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostgator",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostin.mu",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostineer",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostinger",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hosting24",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hosting90 Systems",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HostM.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HostMantis",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HostmyWebsite",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "hostNET.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostnet (NL)",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HostOne.com.br",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostpapa.ca",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "hostenko.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ICDSoft",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ifastnet",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ifc hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ihead.ru",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Inertia Networks",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Infomaniak",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Infrenion Networks",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "IPage",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Jump.bg",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "KingHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Kinsta",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "KLE-Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Kontent.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Krystal Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Level27",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Lima-city.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Limenex Web Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "MadRooster.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "MilesWeb",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Mittwald",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "MivoCloud",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "MonsterMedia",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "MonsterMegs",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Mydevil.net",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "NearlyFreeSpeech.NET",
+    "link": "https://www.nearlyfreespeech.net/",
+    "category": "partial",
+    "tutorial": "https://members.nearlyfreespeech.net/faq?q=SSLCertificates#SSLCertificates",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.1",
+    "note": "You need to log in to access the tutorial."
+  },
+  {
+    "name": "Netsite",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Neify Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Neostrada.nl",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Netcup.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Netlify",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "NewHostServers.net",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Nexcess.net",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Ngage Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Nitrado",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Novatrend",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Nucleus.be",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "one.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Online.net",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "OVH.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "pair Networks",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Pantheon",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Pagely",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "PeoplesHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Platform.sh",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Planethoster.net",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Professional Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Pressidium",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Pressjitsu.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Presslabs.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Profihost AG",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Progreso.pl",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "PulseHeberg.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Quality Location",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "RAIDBOXES.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ReadySpace",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ReformHosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Register.it",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ResellersPanel",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "RSHosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Schokokeks.org",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Sensson",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "ServerPilot",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Serversaurus",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Shopify",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "SiteGround.com",
+    "link": "https://www.siteground.com/",
+    "category": "partial",
+    "tutorial": "https://www.siteground.com/tutorials/cpanel/lets-encrypt/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Slotex.pl",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "snowflake Ops",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "SpaceHost.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Squidix",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Stablehost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "stinpriza",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Strony-Domeny.pl",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Swisscom",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "TerraNetwork Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Thisistap",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Tiger Technologies",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Top Host",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Torpix Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "TransIP",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Tsohost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Tumblr",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "UnoEuro",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://en.unoeuro.com/support/faq/general/557/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "UpTime Web Hosting",
+    "link": "",
+    "category": "full",
+    "tutorial": "https://uptimewebhosting.com.au/knowledgebase/5/Securing-your-website-with-cPanel-web-hosting-plans.html",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "VapourHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://vapourhost.com/docs/install-lets-encrypt-ssl-shared-hosting-plans/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "VeeroTech",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://www.veerotech.net/kb/install-ssl-certificate-using-lets-encrypt-inside-cpanel/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Vildmarksdata Sweden",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://kundzon.vildmarksdata.se/knowledgebase/21/Kan-ni-erbjuda-SSL-certifikat-till-min-webbplats.html",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "VIPserv.org",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://vipserv.org/wiki/https.htm",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "webgo",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "WebHosting 1st",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "WebhostOne",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "WebHostUK Limited",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Websavers",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://websavers.ca/set-free-ssl-certificate-letsencrypt-plesk-extension",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Webspace-Verkauf.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://faq.webspace-verkauf.de/article/wie-kann-ich-die-kostenfreien-let-s-encrypt-ssl-zertifikate-nutzen.html",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Weebly",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://www.weebly.com/app/help/us/en/topics/enabling-ssl-for-your-site",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Wetopi",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://wetopi.com/install-free-https-certificate/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Wix",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://support.wix.com/en/article/enabling-https-for-your-wix-site",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "World4You Internet Services GmbH",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "WPX Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://wpxhosting.com/knowledgebase/article/70/does-wpx-hosting-offer-free-ssl-certificates-/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Wurpe",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "WP Engine",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://wpengine.com/support/add-ssl-site/",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "wp-webhosting.de",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Zuver",
+    "link": "",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Antilope Hosting",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "Eidolonhost.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "KnownHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "PlotHost",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "VentraIP Australia",
+    "link": "",
+    "category": "full",
+    "tutorial": "https://ventraip.com.au/faq/article/what-is-auto-ssl/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Websupport.sk",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.websupport.sk/en/ssl-certificates",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "XS4ALL",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "XSByte",
+    "link": "",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "*Pending re-verification"
+  },
+  {
+    "name": "1and1.com",
+    "link": "forwards to ionos.com",
+    "category": "no",
+    "tutorial": "https://www.ionos.com/help/ssl-certificates/setting-up-user-managed-ssl-certificates/setting-up-a-user-managed-ssl-certificate-ssl-starter-ssl-starter-wildcard/",
+    "announcement": "",
+    "plan": "https://www.ionos.com/security/ssl-certificate",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "247-host.com",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Amazili-communication",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "CrazyDomains",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "df.eu",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "GoDaddy",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HostEurope.de",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "HostMonster.com",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Hostripples.com",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Inmotionhosting.com",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Namecheap.com",
+    "link": "https://www.namecheap.com/security/ssl-certificates/",
+    "category": "partial",
+    "tutorial": "https://www.namecheap.com/blog/install-free-ssls/",
+    "announcement": "",
+    "plan": "https://www.namecheap.com/security/ssl-certificates/",
+    "reviewed": "2019.6.6",
+    "note": ""
+  },
+  {
+    "name": "Netsons.com",
+    "link": "",
+    "category": "partial",
+    "tutorial": "https://blog.netsons.com/ssl-lets-encrypt-attivazione/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.6.6",
+    "note": "Italian Language"
+  },
+  {
+    "name": "Site5.com",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "Strato.de",
+    "link": "",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  }
+]

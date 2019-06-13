@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: hosting_providers
 title: Does My Hosting Provider Offer HTTPS?
 class: hosting
 ---
