@@ -270,8 +270,37 @@ h1.instruct {
   }
 
   pre {
+    &:before {
+      content: '$ ';
+    }
     @include susy-breakpoint($md) {
       white-space: pre-line;
+    }
+  }
+
+  pre.no-before {
+    white-space: nowrap;
+    overflow: scroll;
+    @include susy-breakpoint($md) {
+      overflow: auto;
+    }
+    &:before {
+      content: '';
+    }
+    ol {
+      margin: 0;
+    }
+    li {
+      list-style-type: none;
+      white-space: nowrap;
+      font-family: 'VeraMono';
+      font-size: 14px;
+      &:before {
+        content: '$ ';
+      }
+      @include susy-breakpoint($md) {
+        white-space: normal;
+      }
     }
   }
 
