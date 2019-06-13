@@ -69,7 +69,9 @@ $(document).ready(function() {
   });
   var hosting_table = $('#hosting-providers').DataTable({
     "paging": false,
-    "info": false
+    "info": false,
+    "scrollX": true,
+    "responsive": true
   });
   hosting_table.column('.category').visible(false);
   $('#full-https').on('click', function() {
