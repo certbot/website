@@ -9,17 +9,17 @@ class: hosting
 If you have a website, you maybe went through a process that included:
 <ol>
   <li>
-    Buying a domain from a company (yourwebsite.com)
+    Buying a {% include tooltip.html term-name="domain-name" text="domain" %} from a company (yourwebsite.com)
   </li>
   <li>
-    Choosing a server to host that website. This often involves picking a hosting provider.
+    Choosing a {% include tooltip.html term-name="server" text="server" %} to host that website. This often involves picking a {% include tooltip.html term-name="hosting-provider" text="hosting provider" %}.
     <div class="three-col">
       <div class="col">
         <img src="/images/HTTPsite.svg">
         <div class="text-wrapper">
           <span>
-            your website domain (http://example.com)<br/>
-            might be purchased from a domain registrar company
+            your {% include tooltip.html term-name="domain-name" text="website domain" %} (http://example.com)<br/>
+            might be purchased from a {% include tooltip.html term-name="domain-registrar" text="domain registrar" %} company
           </span>
         </div>
       </div>
@@ -27,7 +27,7 @@ If you have a website, you maybe went through a process that included:
         <img src="/images/Server.svg">
         <div class="text-wrapper">
           <span>
-            a server hosts your website
+            a {% include tooltip.html term-name="server" text="server" %} hosts your website
           </span>
         </div>
       </div>
@@ -35,20 +35,20 @@ If you have a website, you maybe went through a process that included:
         <img src="/images/HostingProvidersServers.svg">
         <div class="text-wrapper">
           <span>
-            and this server might be provided by a hosting provider
+            and this server might be provided by a {% include tooltip.html term-name="hosting-provider" text="hosting provider" %}
           </span>
         </div>
       </div>
     </div>
   </li>
   <li>
-    Often, people will pick a shared hosting product from the hosting provider, which may include an HTTPS certificate as part of their package. This page is for these users.
+    Often, people will pick a {% include tooltip.html term-name="shared-hosting" text="shared hosting product" %} from the hosting provider, which may include an HTTPS certificate as part of their package. This page is for these users.
   </li>
 </ol>
 
 ## Do you use shared hosting?
 
-If you’re not using the shared hosting product, or if your provider doesn’t appear here, check out our instructions for using Certbot or get help.
+If you’re not using the shared hosting product, or if your provider doesn’t appear here, check out our [instructions](/instructions) for using Certbot or [get help](/help).
 
 **_The list is categorized into:_**
 
