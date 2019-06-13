@@ -148,3 +148,9 @@ ul.image-bullets {
     background-image: url('../images/BlackCircle-Lightbulb.svg');
   }
 }
+a.anchor {
+  text-decoration: underline;
+}
+.anchor:target {
+  padding-top: 180px;
+}
