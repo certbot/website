@@ -75,6 +75,15 @@ $(document).ready(function() {
     "responsive": true
   });
   hosting_table.column('.category').visible(false);
+  $('#full-bounce').on('click', function() {
+    $('#full-https').click();
+  });
+  $('#partial-bounce').on('click', function() {
+    $('#partial-https').click();
+  });
+  $('#no-bounce').on('click', function() {
+    $('#no-https').click();
+  });
   $('#full-https').on('click', function() {
     hosting_table.columns().search('').column('.category').search('full').draw();
     $('.tab-header').removeClass('visible');
