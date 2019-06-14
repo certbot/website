@@ -12,9 +12,15 @@ For many of them, you’ll want to come chat with us on [the Certbot channel](ht
 You can get involved with several of EFF's software projects such as Certbot at the [EFF Open Source Contributor Chat Platform](https://opensource.eff.org/signup_user_complete/?id=6iqur37ucfrctfswrs14iscobw).
 
 <!-- TODO: italicize and indent the following two paragraphs -->
-Note: By signing up for the EFF Open Source Contributor Chat Platform, you consent to share your personal information with the Electronic Frontier Foundation, which is the operator and data controller for this platform. The channels will be available both to EFF, and to other users of EFFOSCCP, who may use or disclose information in these channels outside of EFFOSCCP. EFF will use your information, according to the [Privacy Policy](https://www.eff.org/policy), to further the mission of EFF, including hosting and moderating the discussions on this platform.
+<div class="indent italic">
+<p>
+Note: By signing up for the EFF Open Source Contributor Chat Platform, you consent to share your personal information with the Electronic Frontier Foundation, which is the operator and data controller for this platform. The channels will be available both to EFF, and to other users of EFFOSCCP, who may use or disclose information in these channels outside of EFFOSCCP. EFF will use your information, according to the <a href="https://www.eff.org/policy">Privacy Policy</a>, to further the mission of EFF, including hosting and moderating the discussions on this platform.
+</p>
 
-Use of EFFOSCCP is subject to the [EFF Code of Conduct](https://www.eff.org/pages/eppcode). When investigating an alleged Code of Conduct violation, EFF may review discussion channels or direct messages.
+<p>
+Use of EFFOSCCP is subject to the <a href="https://www.eff.org/pages/eppcode">EFF Code of Conduct</a>. When investigating an alleged Code of Conduct violation, EFF may review discussion channels or direct messages.
+</p>
+</div>
 
 Below are the main ways ways we’d appreciate help.
 
