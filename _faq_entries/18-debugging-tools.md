@@ -4,10 +4,10 @@ weight: 15
 ---
 
 There are four scanning tools that are commonly suggested on the Let’s Encrypt community forum:
- - https://letsdebug.net/ (by Alex Zorin)
- - https://check-your-website.server-daten.de/ (by Jürgen Auer)
- - https://whynopadlock.com/ (by LexiConn)
- - https://www.ssllabs.com/ssltest/ (by Qualys)
+ - [https://letsdebug.net/](https://letsdebug.net/) (by Alex Zorin)
+ - [https://check-your-website.server-daten.de/](https://check-your-website.server-daten.de/) (by Jürgen Auer)
+ - [https://whynopadlock.com/](https://whynopadlock.com/) (by LexiConn)
+ - [https://www.ssllabs.com/ssltest/](https://www.ssllabs.com/ssltest/) (by Qualys)
 
 They all have their strengths. Let's Debug would be used only by people who don't have HTTPS working yet, while SSL Labs would be used only by people who (at least sort of) do.
 
