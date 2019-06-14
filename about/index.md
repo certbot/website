@@ -25,9 +25,17 @@ Certbot is made by the [Electronic Frontier Foundation (EFF)](https://www.eff.or
 If you’re looking to add the security and privacy benefits of an HTTPS certificate to your website, you may not need Certbot. Many hosting providers have internal tools to enable HTTPS. Before using Certbot, [check if your hosting provider is one of them](/hosting_providers).
 
 Certbot might be right for you if you:
-+ have comfort with the {% include tooltip.html term-name="command-line" text="command line" %},
-+ have {% include tooltip.html term-name="website-thats-already-online" text="an HTTP website that’s already online" %}, with {% include tooltip.html term-name="port-80" text="port 80 open" %},
-+ and administer your website via a {% include tooltip.html term-name="dedicated-server" text="dedicated server" %}, {% include tooltip.html term-name="virtual-private-server" text="virtual private server" %}, or {% include tooltip.html term-name="cloud-hosting" text="cloud-hosted server" %}, which you can access via {% include tooltip.html term-name="SSH" %}, and have the ability to {% include tooltip.html term-name="sudo" %}.
+<ul>
+  <li>
+    have comfort with the {% include tooltip.html term-name="command-line" text="command line" %},
+  </li>
+  <li>
+    have {% include tooltip.html term-name="website-thats-already-online" text="an HTTP website that’s already online" %}, with {% include tooltip.html term-name="port-80" text="port 80 open" %},
+  </li>
+  <li>
+    and administer your website via a {% include tooltip.html term-name="dedicated-server" text="dedicated server" %}, {% include tooltip.html term-name="virtual-private-server" text="virtual private server" %}, or {% include tooltip.html term-name="cloud-hosting" text="cloud-hosted server" %}, which you can access via {% include tooltip.html term-name="SSH" %}, and have the ability to {% include tooltip.html term-name="sudo" %}.
+  </li>
+</ul>
 
 If you’re ready to use Certbot, we provide customized instructions for your setup at the [Certbot Instructions](/instructions) page.
 
