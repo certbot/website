@@ -7,7 +7,12 @@
     <div class="tooltip-title">
       <a href="/glossary#{{ term.lookup }}">{{ term.title }}</a>
     </div>
-    {{ term.content | markdownify }}
+    <div class="mobile-hidden">
+    {{ term.content }}
+    </div>
+    <div class="mobile-only">
+    {{ term.content | truncatewords: 100, "..." }}
+    </div>
     <div class="bottom-text">
       From our <a href="/glossary">Certbot Glossary</a>
     </div>
