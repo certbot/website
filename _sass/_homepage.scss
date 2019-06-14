@@ -43,9 +43,9 @@ div.home-https {
       font-size: 18px;
     }
     @include susy-breakpoint($lg) {
-      font-size: 22px;
+      font-size: 20px;
     }
-    @include susy-breakpoint(min-width 1350px) {
+    @include susy-breakpoint($xl) {
       font-size: 24px;
     }
 
@@ -109,10 +109,17 @@ div.home-https {
   .content-wrapper {
     text-align: left;
     @include susy-breakpoint($md) {
-      margin: 0 2em;
+      margin: 0 1.5em;
     }
     @include susy-breakpoint($lg) {
       margin: 0 10%;
+    }
+    a {
+      position: absolute;
+      top: 90%;
+      @include susy-breakpoint($lg) {
+        top: 65%;
+      }
     }
   }
 
@@ -153,13 +160,14 @@ div.home-https {
       width: 75px;
       height: 70px;
       margin-bottom: 5px;
+      opacity: 0.5;
       &.right {
         margin-top: 5px;
         margin-bottom: 0;
       }
       @include susy-breakpoint($md) {
-        width: 150px;
-        height: 100px;
+        width: 120px;
+        height: 80px;
         margin: 0;
         padding-left: 1em;
       }
