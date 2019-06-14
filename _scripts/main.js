@@ -52,6 +52,7 @@ $(document).ready(function() {
   $('.glossary-term.js-only').removeClass('disabled');
   // Tooltips
   $('.glossary-link').click(function() {
+    $('.tooltip').removeClass('open');
     var glossDiv = $(this).parents('.glossary-term');
     $(glossDiv).children('.tooltip').addClass('open');
   });
