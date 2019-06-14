@@ -6,12 +6,11 @@
     padding: 0;
     @include susy-breakpoint($md) {
       width: 70%;
-      margin: 0 15%;
     }
   }
   h1 {
     @include susy-breakpoint($md) {
-      padding: 1em 2em;
+      padding: 1em 0;
       font-size: 45px;
     }
   }
