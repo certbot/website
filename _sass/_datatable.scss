@@ -77,9 +77,15 @@
       @include susy-breakpoint($md) {
         padding: 0;
       }
+      @include susy-breakpoint(min-width 1740px) {
+        padding-bottom: 1em;
+      }
       h2 {
         @include susy-breakpoint($md) {
           padding-top: 70px;
+        }
+        @include susy-breakpoint(min-width 1740px) {
+          padding-top: 110px;
         }
       }
       img {
