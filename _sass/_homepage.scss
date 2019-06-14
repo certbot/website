@@ -160,12 +160,12 @@ div.home-https {
       width: 75px;
       height: 70px;
       margin-bottom: 5px;
-      opacity: 0.5;
       &.right {
         margin-top: 5px;
         margin-bottom: 0;
       }
       @include susy-breakpoint($md) {
+        opacity: 0.5;
         width: 120px;
         height: 80px;
         margin: 0;

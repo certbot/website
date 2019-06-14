@@ -36,6 +36,7 @@ nav.main-nav {
     width: 95%;
     margin: 0 auto;
     display: inline-block;
+    z-index: 11;
 
     @include susy-breakpoint($xl) {
       font-size: $base-font-size;
@@ -124,6 +125,7 @@ nav.main-nav {
         font-size: 1.5em;
         &.mobile-only {
           display: inline-block;
+          z-index: 11;
           @include susy-breakpoint($md) {
             display: none;
           }

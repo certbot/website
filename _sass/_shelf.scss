@@ -57,8 +57,10 @@ body.active {
   position: absolute;
   right: 9px;
   top: 0px;
+  padding: 0 9px;
   font-size: 32px;
   display: inline-block;
+  z-index: 11;
   @include susy-breakpoint($md) {
     display: none;
   }
