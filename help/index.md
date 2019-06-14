@@ -12,5 +12,5 @@ If they don’t answer your questions, there’s a large community of people fam
 ## Learn about Certbot and HTTPS
 {% include help/learn_more.html %}
 
-## Not finding what you need?
+<h2><a class="anchor" id="not-finding" href="#not-finding">Not finding what you need?</a></h2>
 {% include help/not_finding.html %}

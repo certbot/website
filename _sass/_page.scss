@@ -34,6 +34,9 @@ body.page .page-content {
     padding: 30px $lg-padding;
   }
   h2 {
+    a {
+      color: $text-color;
+    }
     font-size: 22px;
     @include susy-breakpoint($md) {
       font-weight: 400;
@@ -109,6 +112,9 @@ body.page .page-content {
   }
   &:before {
     content: '';
+  }
+  a {
+    color: $text-color;
   }
 }
 
