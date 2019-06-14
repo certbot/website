@@ -65,7 +65,7 @@ $(document).ready(function() {
       $('.tooltip').removeClass('open');
     }
   });
-  $('.close-tooltip').on('click', function(e) {
+  $('.close-button').on('click', function(e) {
     $('.tooltip').removeClass('open');
   });
   var hosting_table = $('#hosting-providers').DataTable({
