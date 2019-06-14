@@ -113,9 +113,6 @@ body.page .page-content {
   &:before {
     content: '';
   }
-  a {
-    color: $text-color;
-  }
 }
 
 ul.image-bullets {
@@ -159,4 +156,10 @@ a.anchor {
 }
 .anchor:target {
   padding-top: 180px;
+}
+.page div.p {
+  // This is a workaround to allow glossary terms in paragraphs without creating
+  // odd linebreaks
+
+  @extend p;
 }
