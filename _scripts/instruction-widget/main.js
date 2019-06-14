@@ -141,4 +141,10 @@ $('document').ready(function() {
       $('#server-select').val(selected[1].replace(".html", ""));
     }
   });
+  $('.instructions').ready(function() {
+    var docker = $('aside.docker-note');
+    if (docker.length > 0) {
+      $('.advanced li').addClass('hidden');
+    }
+  });
 });

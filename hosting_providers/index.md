@@ -52,8 +52,8 @@ If you’re not using the shared hosting product, or if your provider doesn’t 
 
 **_The list is categorized into:_**
 
-Full HTTPS Support: Hosting providers that offer free Let’s Encrypt HTTPS certificates automatically for their shared hosting product. (Nno need to do anything on your end if you use their service.)
+Full HTTPS Support: Hosting providers that offer free Let’s Encrypt HTTPS certificates automatically for their shared hosting product. No need to do anything on your end if you use their service.
 
-Partial HTTPS Support: Hosting providers that offer free Let’s Encrypt HTTPS certificates for their shared hosting product, but require configuration. (Yyou’ll need to follow a tutorial.)
+Partial HTTPS Support: Hosting providers that offer free Let’s Encrypt HTTPS certificates for their shared hosting product, but require configuration. You’ll need to follow a tutorial.
 
 No HTTPS Support: Hosting providers that do not offer free HTTPS certificates for their shared hosting product. It may or may not be possible to use Certbot with other products that the provider offers, such as their VPS product.
