@@ -166,3 +166,21 @@ a.anchor {
 div.indent {
   padding-left: 2em;
 }
+
+.hosting-footer {
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    @include susy-breakpoint($md) {
+      font-size: 26px;
+    }
+  }
+  p {
+    font-size: 20px;
+    font-family: $header-font-family;
+  }
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
