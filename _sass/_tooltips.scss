@@ -4,6 +4,12 @@
   a.glossary-link {
     text-decoration: underline;
     color: $text-color;
+    padding-right: 1.2em;
+    background-image: url('../images/GlossaryQuestion.svg');
+    background-size: 14px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    display: inline-block;
     &:hover {
       cursor: pointer;
     }
