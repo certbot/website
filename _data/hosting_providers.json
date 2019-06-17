@@ -135,7 +135,7 @@
     "category": "full",
     "tutorial": "",
     "announcement": "",
-    "plan": "https://manual.uberspace.de/en/web-security.html",
+    "plan": "",
     "reviewed": "2019.5.31",
     "note": ""
   },
@@ -1991,7 +1991,7 @@
   },
   {
     "name": "1and1.com",
-    "link": "forwards to ionos.com",
+    "link": "https://www.ionos.com",
     "category": "no",
     "tutorial": "https://www.ionos.com/help/ssl-certificates/setting-up-user-managed-ssl-certificates/setting-up-a-user-managed-ssl-certificate-ssl-starter-ssl-starter-wildcard/",
     "announcement": "",
