@@ -8,10 +8,12 @@
       <a href="/glossary#{{ term.lookup }}">{{ term.title }}</a>
     </div>
     <div class="mobile-hidden">
-    {{ term.content }}
+    {{ term.content | markdownify }}
     </div>
     <div class="mobile-only">
-    {{ term.content | truncatewords: 100, "..." }}
+      <p>
+      {{ term.content | markdownify | strip_html | truncatewords: 100, "..." }}
+      </p>
     </div>
     <div class="bottom-text">
       From our <a href="/glossary">Certbot Glossary</a>

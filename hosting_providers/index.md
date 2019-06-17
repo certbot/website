@@ -13,33 +13,7 @@ If you have a website, you maybe went through a process that included:
   </li>
   <li>
     Choosing a {% include tooltip.html term-name="server" text="server" %} to host that website. This often involves picking a {% include tooltip.html term-name="hosting-provider" text="hosting provider" %}.
-    <div class="three-col">
-      <div class="col">
-        <img src="/images/HTTPsite.svg">
-        <div class="text-wrapper">
-          <span>
-            your {% include tooltip.html term-name="domain-name" text="website domain" %} (http://example.com)<br/>
-            might be purchased from a {% include tooltip.html term-name="domain-registrar" text="domain registrar" %} company
-          </span>
-        </div>
-      </div>
-      <div class="col">
-        <img src="/images/Server.svg">
-        <div class="text-wrapper">
-          <span>
-            a {% include tooltip.html term-name="server" text="server" %} hosts your website
-          </span>
-        </div>
-      </div>
-      <div class="col">
-        <img src="/images/HostingProvidersServers.svg">
-        <div class="text-wrapper">
-          <span>
-            and this server might be provided by a {% include tooltip.html term-name="hosting-provider" text="hosting provider" %}
-          </span>
-        </div>
-      </div>
-    </div>
+    {% include hosting_provider_graphic.html %}
   </li>
   <li>
     Often, people will pick a {% include tooltip.html term-name="shared-hosting" text="shared hosting product" %} from the hosting provider, which may include an HTTPS certificate as part of their package. This page is for these users.
