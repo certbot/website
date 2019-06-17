@@ -14,9 +14,6 @@ body.faq {
       color: $link-color;
       font-weight: 400;
     }
-    .post-link:target {
-      padding-top: 180px;
-    }
 
   a {
       outline: none; // todo: blur for retention of accessibil
@@ -51,12 +48,22 @@ body.faq {
   }
 }
 
-.faq-content {
-  list-style-type: none;
-  .post-link {
-    margin-top: 20px;
+.page .content-wrapper .faq-content {
+  list-style: none;
+  li {
+    margin-top: 30px;
+    &:before {
+      content: '';
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .anchor {
     line-height: 1.8rem;
     font-size: 1.3rem;
+    font-weight: 400;
+    text-decoration: none;
 
     color: #000;
     &:visited {
