@@ -16,20 +16,32 @@
       no HTTPS support
     </div>
   </div>
-  <div id="full-header" class="tab-header">
-    <img src="/images/FullHTTPSSupport.svg">
-    <h2>Full HTTPS Support</h2>
-    <p>Good news! You already have HTTPS!</p>
+  <div id="full-header" class="tab-header-wrapper">
+    <div class="tab-header">
+      <img src="/images/FullHTTPSSupport.svg">
+      <div class="header-text">
+        <h2>Full HTTPS Support</h2>
+        <p>Good news! You already have HTTPS!</p>
+      </div>
+    </div>
   </div>
-  <div id="partial-header" class="tab-header">
-    <img src="/images/Slider-PartialSupport.svg">
-    <h2>Partial HTTPS Support</h2>
-    <p>Good news! You have HTTPS, but you need to follow a tutorial to turn it on.</p>
+  <div id="partial-header" class="tab-header-wrapper">
+    <div class="tab-header">
+      <img src="/images/Slider-PartialSupport.svg">
+      <div class="header-text">
+        <h2>Partial HTTPS Support</h2>
+        <p>Good news! You have HTTPS, but you need to follow a tutorial to turn it on.</p>
+      </div>
+    </div>
   </div>
-  <div id="no-header" class="tab-header">
-    <img src="/images/NoHTTPS.svg">
-    <h2>No HTTPS Support</h2>
-    <p>HTTPS isn't included in the shared hosting packages of these providers</p>
+  <div id="no-header" class="tab-header-wrapper">
+    <div class="tab-header">
+      <img src="/images/NoHTTPS.svg">
+      <div class="header-text">
+        <h2>No HTTPS Support</h2>
+        <p>HTTPS isn't included in the shared hosting packages of these providers</p>
+      </div>
+    </div>
     <span>Consider switching hosting providers or to a more manual hosting product like 
       {% include tooltip.html term-name="virtual-private-server" text="VPS" %} or
       {% include tooltip.html term-name="dedicated-server" text="dedicated servers" %}</span>

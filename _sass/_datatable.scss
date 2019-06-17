@@ -6,100 +6,65 @@
     margin: 3em 20%;
     border: 2px solid #D9D9D9;
   }
-
-  .tab-header {
+  .tab-header-wrapper {
     display: none;
-    padding: 0 1em;
-    height: 120px;
-    @include susy-breakpoint($md) {
-      height: 180px;
-      padding: 0 21%;
-    }
     &.visible {
       display: block;
-    }
-    img {
-      float: left;
-      height: 80px;
-      @include susy-breakpoint($md) {
-        height: 100px;
-      }
-    }
-    h2 {
-      line-height: 0.9em;
-      padding-top: 15px;
-      font-size: 20px;
-      font-weight: 400;
-      @include susy-breakpoint($md) {
-        font-weight: bold;
-        padding-top: 45px;
-        font-size: 32px;
-      }
-    }
-    p {
-      font-family: $header-font-family;
-      font-size: 16px;
-      @include susy-breakpoint($md) {
-        font-size: 22px;
-      }
     }
     span {
       display: block;
       font-family: $header-font-family;
       font-weight: bold;
+      margin: 0 1em;
       @include susy-breakpoint($md) {
         text-align: center;
-        margin: 0 -40%;
       }
       a {
         font-family: $header-font-family;
         font-weight: bold;
       }
     }
-    &#full-header {
-      height: 80px;
-      margin-top: 90px;
-      margin-bottom: 2em;
-      @include susy-breakpoint($md) {
-        height: 110px;
-      }
-    }
-    &#no-header {
-      margin-top: 90px;
-      height: 200px;
-      @include susy-breakpoint($md) {
-        height: 180px;
-      }
-      h2 {
-        padding-top: 12px;
-      }
-    }
     &#partial-header {
-      @include susy-breakpoint($md) {
-        padding: 0;
-      }
-      @include susy-breakpoint(min-width 1740px) {
-        padding-bottom: 1em;
-      }
-      h2 {
-        @include susy-breakpoint($md) {
-          padding-top: 70px;
-        }
-        @include susy-breakpoint(min-width 1740px) {
-          padding-top: 110px;
-        }
-      }
       img {
-        width: 70px;
-        height: 70px;
-        padding-top: 2em;
-        padding-bottom: 2em;
-        padding-left: 1em;
-        padding-right: 2em;
-        @include susy-breakpoint($md) {
-          width: 200px;
-          height: 200px;
-        }
+        margin-right: 1em;
+      }
+    }
+  }
+
+  .tab-header {
+    display: flex;
+    justify-content: center;
+    margin: 1em 10%;
+    img {
+      height: 80px;
+      @include susy-breakpoint($md) {
+        height: 100px;
+      }
+    }
+    .header-text {
+      margin-top: auto;
+    }
+    h2 {
+      line-height: 0.9em;
+      font-size: 20px;
+      font-weight: 400;
+      @include susy-breakpoint($md) {
+        font-weight: bold;
+        font-size: 28px;
+      }
+      @include susy-breakpoint($lg) {
+        font-size: 32px;
+      }
+    }
+    p {
+      font-family: $header-font-family;
+      margin-bottom: 0;
+      font-size: 16px;
+      @include susy-breakpoint($md) {
+        font-size: 20px;
+      }
+      @include susy-breakpoint($lg) {
+        font-size: 22px;
       }
     }
   }
@@ -119,6 +84,7 @@
     font-weight: bold;
     font-family: $header-font-family;
     text-align: center;
+    text-decoration: underline;
     &:hover {
       cursor: pointer;
     }
