@@ -1,6 +1,10 @@
 .instructions {
   .instruction-widget span {
-    font-size: 30px;
+    // instructions page
+    font-size: 22px;
+    @include susy-breakpoint($lg) {
+      font-size: 30px;
+    }
   }
   .wrapper {
     padding: 0;
@@ -9,9 +13,14 @@
     }
   }
   h1 {
+    margin-left: 0.5em;
     @include susy-breakpoint($md) {
       padding: 1em 0;
+      font-size: 35px;
+    }
+    @include susy-breakpoint($lg) {
       font-size: 45px;
+      margin-left: 80px;
     }
   }
   .hero {
@@ -92,7 +101,7 @@
   }
 
   .text-wrapper {
-    margin: 1em 10%;
+    margin: 1em 5%;
     font-size: 16px;
     @include susy-breakpoint($md) {
       margin-bottom: auto;
@@ -159,6 +168,7 @@ select {
     font-size: 1.2em;
   }
   span {
+    // homepage only
     font-size: 40px;
     font-weight: bold;
   }

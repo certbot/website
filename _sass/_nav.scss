@@ -40,7 +40,8 @@ nav.main-nav {
 
     @include susy-breakpoint($xl) {
       font-size: $base-font-size;
-      width: 80em;
+      width: 1280px;
+      padding: 0 10px;
     }
     a {
       float: left;
@@ -72,12 +73,12 @@ nav.main-nav {
 
     @include susy-breakpoint($md) {
       margin: 0;
-      padding: 0 1em;
+      padding: 0 10px;
       width: 100%;
     }
 
     @include susy-breakpoint($xl) {
-      width: 80em;
+      width: 1280px;
       font-size: $base-font-size;
       margin: 0 auto;
     }
@@ -125,6 +126,7 @@ nav.main-nav {
         font-size: 1.5em;
         &.mobile-only {
           display: inline-block;
+          padding-left: 2em;
           z-index: 11;
           @include susy-breakpoint($md) {
             display: none;

@@ -52,7 +52,7 @@ footer.social {
       }
 
       @include susy-breakpoint($md) {
-        border : 1px solid $certbot-red;
+        border : 2px solid $certbot-red;
         width: 60px;
         height: 60px;
         border-radius: 60px;

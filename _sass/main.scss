@@ -61,7 +61,7 @@ $on-laptop:        800px;
 @mixin link-button {
   background-color: #FFFFFF;
   color: $text-color;
-  border: 1px solid $certbot-red;
+  border: 2px solid $certbot-red;
   border-radius: 20px;
   font-size: 14px;
   font-weight: bold;
