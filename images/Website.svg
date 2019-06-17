@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="115.26" height="91.418" viewBox="0 0 115.26 91.418">
+  <g id="Group_2497" data-name="Group 2497" transform="translate(16292.718 1299.21)">
+    <rect id="Rectangle_642" data-name="Rectangle 642" width="114.26" height="8.113" transform="translate(-16292.218 -1298.676)" fill="#e6e6e5"/>
+    <ellipse id="Ellipse_227" data-name="Ellipse 227" cx="1.833" cy="1.876" rx="1.833" ry="1.876" transform="translate(-16284.035 -1296.138)" fill="#d8bf51"/>
+    <ellipse id="Ellipse_228" data-name="Ellipse 228" cx="1.833" cy="1.876" rx="1.833" ry="1.876" transform="translate(-16277.936 -1296.138)" fill="#72a94e"/>
+    <rect id="Rectangle_643" data-name="Rectangle 643" width="114.26" height="8.113" transform="translate(-16292.218 -1290.631)" fill="#c7c6c5"/>
+    <path id="Path_3573" data-name="Path 3573" d="M0,0H92.4V4.526H0Z" transform="translate(-16273.607 -1289.057)" fill="#fff"/>
+    <line id="Line_239" data-name="Line 239" y2="4.995" transform="translate(-16247.959 -1289.5)" fill="#c7c6c5" stroke="#c7c6c5" stroke-width="1"/>
+    <text id="http:_" data-name="http://" transform="translate(-16278 -1236)" font-size="30" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="0" y="0">http://</tspan></text>
+    <ellipse id="Ellipse_236" data-name="Ellipse 236" cx="1.833" cy="1.876" rx="1.833" ry="1.876" transform="translate(-16290.145 -1296.138)" fill="#a34c4b"/>
+    <rect id="Rectangle_641" data-name="Rectangle 641" width="114.26" height="90.418" transform="translate(-16292.218 -1298.71)" fill="none" stroke="#707070" stroke-width="1"/>
+  </g>
+</svg>

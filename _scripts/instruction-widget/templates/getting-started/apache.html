@@ -1,55 +1,35 @@
-<p>
-Certbot has an Apache plugin, which is supported on
-many platforms, and automates certificate installation.
-</p>
-<pre>$ sudo {{base_command}} --apache</pre>
-<p>
-Running this command will get a certificate for you and have Certbot edit your Apache configuration
-automatically to serve it. If you're feeling more conservative and would like to make the changes to your
-Apache configuration by hand, you can use the <tt>certonly</tt>
-subcommand:
-<pre>$ sudo {{base_command}} --apache certonly</pre>
+<li>
+  Choose how you'd like to run Certbot
+  <ul>
+    <li>
+      Either get and install your certificates...
+      <p>
+      {{#advanced}}
+      Run one of the commands in the "Examples" section of the <a href='/docs/using.html#dns-plugins'>instructions for your DNS provider</a>,
+      along with the flag <tt>-i apache</tt>.
+      {{/advanced}}
+      {{^advanced}}
+      Run this command to get a certificate and have Certbot edit your Apache configuration
+      automatically to serve it, turning on HTTPS access in a single step.
+      <pre>sudo {{base_command}} --apache</pre>
+      {{/advanced}}
+      </p>
+    </li>
 
-{{#advanced}}
-    <aside class="note">
-        <h4>Note:</h4>
-        <p>the apache plugin with <tt>certonly</tt> does the following:<br>
-        <ol>
-          <li>make temporary config changes<br> (adding a new virtual host
-          to pass an <a
-          href="https://tools.ietf.org/html/draft-ietf-acme-acme-02#section-7.3">ACME
-          Challenge</a>, and enabling <tt>mod_ssl</tt> if necessary)</li>
-          <li>performs a graceful reload</li>
-          <li>reverts all changes</li>
-          <li>performs another graceful reload</li>
-        </ol>
-        This appears to be a reliable process, but if you don't want Certbot
-        to touch your Apache process or files in any way, you can use the
-        <a
-        href="https://certbot.eff.org/docs/using.html#webroot">webroot
-        plugin</a> instead.
+    <li>
+      Or, just get a certificate
+      <p>
+      {{#advanced}}
+      Run one of the commands in the "Examples" section of the <a href='/docs/using.html#dns-plugins'>instructions for your DNS provider</a>.
+      {{/advanced}}
+      {{^advanced}}
+      If you're feeling more conservative and would like to make the changes to your Apache
+      configuration by hand, run this command.
+      <pre>sudo {{base_command}} certonly --apache</pre>
+      {{/advanced}}
+      </p>
+    </li>
+  </ul>
+</li>
 
-        </p></aside>
-{{/advanced}}
-{{#dns_plugins}}
-<p>
-<strong>If you want to obtain a wildcard certificate using Let's Encrypt's new ACMEv2
-server, you'll also need to use one of
-<a href="/docs/using.html#dns-plugins">Certbot's DNS plugins</a>.</strong> To do this,
-make sure the plugin for your DNS provider is installed using the instructions
-above and run a command like the following:
-</p>
-<pre>$ sudo {{base_command}} -a dns-plugin -i apache -d "*.example.com" -d example.com --server https://acme-v02.api.letsencrypt.org/directory</pre>
-<p>
-You'll need to replace <tt>dns-plugin</tt> with the name of the DNS plugin you
-want to use. For instance, to use the Cloudflare plugin, you would use
-<tt>dns-cloudflare</tt>. You may also need to provide additional flags such as
-the path to your API credentials. To learn more about how to use these plugins,
-see the documentation for the DNS plugin you are trying to use found in the
-link above.
-</p>
-{{/dns_plugins}}
-
-To learn more about how to use Certbot <a href="/docs/">read our documentation</a>.
-</p>
 {{> renewal}}

@@ -50,6 +50,9 @@ module.exports = function() {
   };
 
   render = function(container, input) {
+    console.log(input);
+    $('#os-select').val(input.os);
+    $('#server-select').val(input.webserver);
     var content = html(input);
     if (content != null) {
       container.html(content);

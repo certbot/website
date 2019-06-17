@@ -55,6 +55,7 @@ InstructionWidget = (function() {
         os: os,
         ws: ws
       }
+
       history.pushState(state, "", url);
 
       // Smooth scroll to instructions.
@@ -102,6 +103,12 @@ InstructionWidget = (function() {
 
     select_container.on('change', function() {
       var input = get_input();
+      if ($('.instruction-widget').parent().hasClass('hero')) {
+        if (input.os && input.webserver) {
+          // We're on the homepage, redirect to instructions page
+          window.location.href = instruction_url(input.os,input.webserver);
+        }
+      }
       Instructions().render(content_container, input);
       jump(input.os,input.webserver);
       document.activeElement.blur();
@@ -125,4 +132,19 @@ InstructionWidget = (function() {
 
 $('document').ready(function() {
   InstructionWidget.init();
+  $('.instructions .instruction-widget').ready(function() {
+    var url = window.location.href.split('/');
+    var selected = url[url.length - 1];
+    if (!(selected === "")) {
+      selected = selected.split('-');
+      $('#os-select').val(selected[0]);
+      $('#server-select').val(selected[1].replace(".html", ""));
+    }
+  });
+  $('.instructions').ready(function() {
+    var docker = $('aside.docker-note');
+    if (docker.length > 0) {
+      $('.advanced li').addClass('hidden');
+    }
+  });
 });

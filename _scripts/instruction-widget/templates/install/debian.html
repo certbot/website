@@ -1,25 +1,34 @@
 {{> header}}
-<p>
-  Since Certbot is packaged for your system, all you'll need to do is apt-get the following packages.
-</p>
 
 {{#backports_flag}}
-<p>
 {{#devuan}}
-First you'll have to enable the ASCII backports repo in your APT sources as
-shown <a
-href='https://devuan.org/os/etc/apt/sources.list#add-backports-default-no'>here</a>.
+<li>
+  Enable ASCII backports repo
+  <p>
+  You'll need to enable the ASCII backports repo in your APT sources. <br>
+  Follow these instructions at
+  <a href='https://devuan.org/os/etc/apt/sources.list#add-backports-default-no'>Devuan's site
+    to enable the ASCII backports repo</a>.
+  </p>
+  <p class="centered">
+    <a class="link-button" href='https://devuan.org/os/etc/apt/sources.list#add-backports-default-no'>enable the ASCII backports repo</a>
+  </p>
+</li>
 {{/devuan}}
 {{^devuan}}
-First you'll have to follow the instructions <a
-href='http://backports.debian.org/Instructions/'>here</a> to enable the Stretch
-backports repo, if you have not already done so.
+<li>
+  Enable Stretch backports repo
+  <p>
+  You'll need to enable Debian Strech's backports repo. <br>
+  Follow these instructions at <a href='http://backports.debian.org/Instructions/'>Debian's site
+    to enable the Stretch backports repo</a>.
+  </p>
+  <p class="centered">
+    <a class="link-button" href='http://backports.debian.org/Instructions/'>enable the Stretch backports repo</a>
+  </p>
+</li>
 {{/devuan}}
-Then run:
-</p>
 {{/backports_flag}}
+{{>installcertbot}}
 
-<pre>
-$ sudo apt-get install {{package}} {{backports_flag}}
-</pre>
-{{>dnsplugins}}
+{{> dnspluginssetup}}

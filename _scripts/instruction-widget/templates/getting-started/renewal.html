@@ -1,45 +1,79 @@
-<h3>Automating renewal</h3>
-
-<p>
 {{#cron_included}}
-The Certbot packages on your system come with a cron job that will
+<li>
+  Test automatic renewal
+  <p>
+  The Certbot packages on your system come with a cron job or systemd timer that will renew your certificates
+  automatically before they expire. You will not need to run Certbot again, unless you change your
+  configuration. You can test automatic renewal for your certificates by running this command:
+  <pre>sudo {{base_command}} renew --dry-run</pre>
+  </p>
+
+  <p>
+  The command to renew certbot is installed in one of the following locations:
+  <ul>
+    <li><tt>/etc/crontab/</tt></li>
+    <li><tt>/etc/cron.*/*</tt></li>
+    <li><tt>systemctl list-timers</tt></li>
+  </ul>
+  </p>
+
+  {{#certonly}}
+  <p>
+  If you needed to stop your webserver to run Certbot, you'll want to edit the built-in command
+  to add the <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags to stop and start your
+  webserver automatically. For example, if your webserver is HAProxy, add the following to the
+  <tt>certbot renew</tt> command:
+
+  <pre>
+    --pre-hook "service haproxy stop" --post-hook "service haproxy start"
+  </pre>
+
+  <p>
+  More information is available in the
+  <a href='/docs/using.html?highlight=hooks#renewing-certificates'>
+  Certbot documentation on renewing certificates</a>.
+  </p>
+  {{/certonly}}
+
+</li>
 {{/cron_included}}
 {{^cron_included}}
-Certbot can be configured to
-{{/cron_included}}
-renew your certificates automatically before they expire. Since Let's Encrypt
-certificates last for 90 days, it's highly advisable to take advantage of this
-feature. You can test automatic renewal for your certificates by running this
-command:
-</p>
 
-<pre>
-$ sudo {{base_command}} renew --dry-run
-</pre>
+<li>
+  Set up automatic renewal
+  <p>
+  We recommend running the following line, which will add a cron job to the default crontab.
+  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew" | sudo tee -a /etc/crontab > /dev/null</pre>
+  </p>
 
-{{^cron_included}}
-If that appears to be working correctly, you can arrange for automatic renewal
-by adding a <tt><a href="http://www.unixgeeks.org/security/newbie/unix/cron-1.html">cron job</a></tt> or <tt><a href="https://wiki.archlinux.org/index.php/Systemd/Timers">systemd timer</a></tt> which runs the
-following:<br>
+  {{#certonly}}
+  <p>
+  If you needed to stop your webserver to run Certbot, you'll want to
+  add <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags after <tt>certbot renew</tt> to stop
+  and start your webserver automatically. For example, if your webserver is HAProxy, modify the
+  command as follows:
 
-<pre>{{base_command}} renew</pre>
+  <pre class="one-line">echo "0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; certbot renew --pre-hook 'service haproxy stop' --post-hook 'service haproxy start'" | sudo tee -a /etc/crontab > /dev/null</pre>
+  </p>
 
-<aside class="note">
-    <h4>Note:</h4>
-    <p>if you're setting up a <tt>cron</tt> or <tt>systemd</tt> job, we
-recommend running it twice per day (it won't do anything until your
-certificates are due for renewal or revoked, but running it regularly would
-give your site a chance of staying online in case a Let's Encrypt-initiated
-revocation happened for some reason). Please select a random minute within the
-hour for your renewal tasks.</p>
-</aside>
-
-<p>An example cron job might look like this, which will run at noon and midnight every day:</p>
-
-<pre>0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && {{base_command}} renew {{#cbauto}}--no-self-upgrade{{/cbauto}}</pre>
+  <p>
+  More information is available in the
+  <a href='/docs/using.html?highlight=hooks#renewing-certificates'>
+  Certbot documentation on renewing certificates</a>.
+  </p>
+  {{/certonly}}
+</li>
 {{/cron_included}}
 
-<p>More detailed information and options about renewal can be found in <a
-href="https://certbot.eff.org/docs/using.html#renewal">the full
-documentation</a>.</p>
-
+<li>
+  Confirm that Certbot worked
+  <p>
+  To confirm that your site is set up properly, visit <tt>https://yourwebsite.com/</tt> in your browser and
+  look for the lock icon in the URL bar.
+  If you want to check that you have the top-of-the-line installation, you can head to
+  <a href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>.
+  </p>
+  <p class="centered">
+  <a class="link-button" href='https://www.ssllabs.com/ssltest/'>check your site's <img src="/images/Lock.svg"> https:// at SSL Labs</a>.
+  </p>
+</li>

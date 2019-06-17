@@ -1,82 +1,124 @@
-
 footer.footer {
   position: relative;
   background-color: $footer-color;
-  height: 510px;
-  @include susy-breakpoint($md) {
-    height: 200px;
-    max-height: 320px;
-  }
+  height: 620px;
   clear: both;
-  
   width: 100%;
   text-align: center;
+  padding: 0;
 
-  padding-bottom: 10px;
   @include susy-breakpoint($md) {
+    padding-top: 5vh;
     padding-bottom: 0;
+    height: 300px;
+    max-height: 320px;
   }
-
-  img.project-of {
-    text-align: center;
-    max-width: 200px;
-    margin-bottom :2.5vh;
-    opacity: 0.2;
-    display: inline-block;
-  }
-
-
-  padding-top: 10vh;
-
-
 }
 
-footer.footer ul {
-  opacity: 0.65;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-
-
-  li {
+.footer .logos {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 96%;
+  padding-left: 4%;
+  flex-direction: column;
+  opacity: 0.5;
+  margin: 1em 0;
+  @include susy-breakpoint($md) {
+    height: 120px;
+    width: 98%;
+    padding-left: 2%;
+    flex-direction: row;
+    height: auto;
     margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-align: center;
-    line-height: 90px;
-
-    @include span(12 of 12);
-    @include susy-breakpoint($md) {
-      @include span(3 of 12);
-    }
-    &:last-of-type {
-      padding-bottom: 60px;
-      @include omega();
+  }
+  .certbot-logo {
+    display: inline-flex;
+    align-items: baseline;
+    span {
+      font-family: $header-font-family;
+      font-weight: bold;
+      color: #fff;
+      font-size: 32px;
+      letter-spacing: 0.02em;
+      margin-left: -0.8em;
       @include susy-breakpoint($md) {
-        padding-bottom: 0;
+        font-size: 40px;
+      }
+    }
+    img {
+      float: left;
+      filter: invert(1);
+      width: 80px;
+      @include susy-breakpoint($md) {
+        width: 100px;
       }
     }
   }
+  a {
+    text-align: left;
+    @include susy-breakpoint($md) {
+      margin-right: auto;
+      margin-left: 50px;
+    }
+  }
+  .eff-logo {
+    width: 200px;
+    @include susy-breakpoint($md) {
+      width: 370px;
+      height: 100px;
+    }
+  }
+}
+.footer .links {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 96%;
+  padding-left: 4%;
+  min-height: 400px;
+  @include susy-breakpoint($md) {
+    flex-direction: row;
+    padding: 0 2%;
+    width: 96%;
+    min-height: 0;
+  }
+}
+footer.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
 
+  display: inline-flex;
+  flex-direction: column;
+
+  li {
+    margin: 0;
+    margin-bottom: -0.2em;
+    padding: 0;
+    display: inline-block;
+    @include susy-breakpoint($md) {
+      min-height: 1.5em;
+    }
+  }
 
   a {
-    font-family: 'Roboto';
-    font-weight: 200;
-    font-size: 0.75em;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    display: inline-block;
+    font-family: $base-font-family;
+    font-weight: bold;
     text-decoration: none;
-    color: #eee !important;
-    opacity: 0.8;
+    color: #fff;
+    opacity: 0.9;
     &:hover {
       color: #aaa;
       text-decoration: none;
     }
+    @include susy-breakpoint($md) {
+      font-size: 14px;
+    }
   }
   img {
     display: inline-block;
+    margin-top: 5px;
     max-width: 120px;
   }
 } 

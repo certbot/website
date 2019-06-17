@@ -1,41 +1,26 @@
 {{#jessie}}
-<h4>Note for existing Debian 8 Certbot users</h4>
-<p>
-<em>NOTE</em>: We previously suggested using the operating system-provided packaged version of Certbot on Debian 8 (jessie). Because of important updates in the Certbot code, we are now recommending that Debian 8 users switch to the <tt>certbot-auto</tt> method, described below.</p>
-<p>
-If this is your first time installing Certbot on your Debian 8 system, you do not need to do anything else before installing <tt>certbot-auto</tt>. But if you've previously installed Certbot via <tt>apt-get</tt> on your Debian 8 system, we recommend uninstalling the packaged version before continuing with the other steps below, in order to avoid potential conflicts between the two versions. You can do this with
-</p>
-<pre>sudo apt-get remove certbot</pre>
-<p>
-If you don't remember whether or not you've installed the packaged version of Certbot, there is no harm in running this command; if the packaged version of Certbot isn't installed on your system, the command has no effect. Uninstalling the packaged version of Certbot does not delete your existing certificates, if any.
-</p>
-<h4>Installing certbot-auto on your system</h4>
+<li>
+    Remove packaged Certbot installation
+    <p>
+    We previously recommended that Debian 8 (jessie) users install Certbot from
+    the packaged version. Because of important updates in the Certbot code,
+    we are now recommending that Debian 8 users switch to the
+    <tt>certbot-auto</tt> method, described below.<br>
+    Run this command on the command line on the machine to remove previous
+    installations of Certbot. If Certbot has never been installed, the command
+    will not do anything.
+    <pre>sudo apt-get remove certbot</pre>
+    </p>
+</li>
 {{/jessie}}
-<p>
-Since it doesn't seem like your operating system has a{{#jessie}}n up-to-date{{/jessie}} packaged version of Certbot, you should{{#jessie}} remove any previously installed packaged version, if applicable, and then{{/jessie}} use our certbot-auto script to get a{{#jessie}}n up-to-date{{/jessie}} copy:
-</p>
-<pre>wget https://dl.eff.org/certbot-auto
-sudo mv certbot-auto /usr/local/bin/certbot-auto
-sudo chown root /usr/local/bin/certbot-auto
-sudo chmod 0755 /usr/local/bin/certbot-auto</pre>
-<p>
-<tt>certbot-auto</tt> accepts the same flags as <tt>certbot</tt>; it
-{{#advanced}}is a wrapper that{{/advanced}} installs all of its own
-dependencies and updates the client code automatically.
-</p>
-{{#advanced}}
-<p>
-<aside class="note">
-    <h4>Note:</h4>
-  <p><tt>certbot-auto</tt> will always try to fetch the newest version of
-  itself from its most recent release. If you want it to be locked to a
-  specific version and not receive automatic updates, run it with the
-  <tt>--no-self-upgrade</tt> flag. Also, if you're nervous about downloading and
-  running scripts from the network, some <a
-  href="https://certbot.eff.org/docs/install.html#certbot-auto">extra verification
-  steps</a> are available.
-  </p>
-</aside>
 
-</p>
-{{/advanced}}
+<li>
+    Install Certbot
+    <p>
+    Run these commands on the command line on the machine to install Certbot.
+    <pre class="no-before"><ol><li>wget https://dl.eff.org/certbot-auto</li>
+        <li>sudo mv certbot-auto /usr/local/bin/certbot-auto</li>
+        <li>sudo chown root /usr/local/bin/certbot-auto</li>
+        <li>sudo chmod 0755 /usr/local/bin/certbot-auto</li></ol></pre>
+    </p>
+</li>

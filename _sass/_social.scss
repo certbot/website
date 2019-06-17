@@ -11,11 +11,11 @@ footer.social {
   position: fixed;
   width: 100%;
   bottom: 0;
-  height: $nav-height / 1.5;
+  height: 50px;
   background-color: $nav-color;
   text-align: center;
 
-  z-index: 1000;
+  z-index: 10;
   @include susy-breakpoint($md) {
     position: relative;
     height: 120px;
@@ -27,13 +27,9 @@ footer.social {
     
     padding: 0;
     margin: 0;
-    margin-top: 10px;
     list-style-type: none;
     display: block;
     width: 100%;
-  
-
-
 
     li {
       font-family: "Social";
@@ -49,37 +45,20 @@ footer.social {
       transition: all 75ms linear;
 
       &:hover {
-        background-color: $certbot-red;
-        transition: all 75ms linear;
-        i {
-          color: #fff;
+        @include susy-breakpoint($md) {
+          background-color: $certbot-red;
+          transition: all 75ms linear;
         }
       }
 
-
-
-
-
-
-
       @include susy-breakpoint($md) {
-        border : 1px solid $certbot-red;
+        border : 2px solid $certbot-red;
         width: 60px;
         height: 60px;
         border-radius: 60px;
         margin-right: 110px;
       }
 
-      i {
-        color: $certbot-red;
-        font-size: 25px;
-        line-height: 0;
-        @include susy-breakpoint($md) {
-          font-size: 40px;
-          line-height: 60px;
-          color: rgba(0,0,0,9.5);
-        }
-      }
       a {
         padding: 0;
         margin: 0;
@@ -88,110 +67,39 @@ footer.social {
   }
 }
 
-// nav.social {
-//   font-family: "Social";
-//   display: none;
-//   @include susy-breakpoint($md) {
-//     display: block;
-//   }
-//   position: absolute;
-//   top: 50px;
-//   left: 5%;
-//   @include susy-breakpoint($lg) {
-//     left: 10%;
-//   }
-
-//   ul {
-//     padding: 0;
-//     margin: 0;
-//     list-style-type: none;
-//     li {
-//       background-color: #fff;
-//       border: 1px solid $certbot-red;
-//       border-radius: 30px;
-//       height: 42px;
-//       width: 42px;
-//       margin-bottom: 10px;
-//       transition: all 0.09s linear;
-//       &:hover {
-//         background-color: $certbot-red;
-//         color: #fff;
-//         transition: all 0.09s linear;
-//         cursor: pointer;
-//       }
-
-//       a {
-//         color: inherit;
-//         text-decoration: none;
-//         &:visited {
-//           color: inherit;
-//         }
-//       }
-//       i {
-
-//         font-size: 30px;
-//         line-height: 42px;
-//       }
-//     }
-//   }
-// }
-
-
-// body:not(.index) {
-//   nav.social {
-//     top: 130px;
-  
-//     left: 65%;
-//     li {
-//       display: inline-block;
-//       margin-right: 10px;
-//     }
-//   }
-// }
-
-@font-face {
-  font-family: "Social";
-  src: url("../fonts/Social.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "Social";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-
+.social-icon {
   display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 5px;
+  @include susy-breakpoint($md) {
+    margin-top: 10px;
+  }
+  &.facebook {
+    background-size: 10px;
+    background-image: url('../images/Facebook-Mobile.svg');
+    @include susy-breakpoint($md) {
+      background-size: 20px;
+      background-image: url('../images/Facebook.svg');
+    }
+  }
+  &.twitter {
+    background-image: url('../images/Twitter-Mobile.svg');
+    background-size: 20px;
+    @include susy-breakpoint($md) {
+      background-size: 30px;
+      background-image: url('../images/Twitter.svg');
+    }
+  }
+  &.donate {
+    background-image: url('../images/Heart-Mobile.svg');
+    background-size: 18px;
+    @include susy-breakpoint($md) {
+      background-size: 30px;
+      background-image: url('../images/Heart.svg');
+    }
+  }
 }
-
-.icon-facebook:before { content: '\e800'; } /* '' */
-.icon-twitter:before { content: '\e801'; } /* '' */
-.icon-google:before { content: '\e802'; } /* '' */

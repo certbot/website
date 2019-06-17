@@ -1,17 +1,139 @@
+.instructions {
+  .instruction-widget span {
+    // instructions page
+    font-size: 22px;
+    @include susy-breakpoint($lg) {
+      font-size: 30px;
+    }
+  }
+  .wrapper {
+    padding: 0;
+    @include susy-breakpoint($md) {
+      width: 70%;
+    }
+  }
+  h1 {
+    margin-left: 0.5em;
+    @include susy-breakpoint($md) {
+      padding: 1em 0;
+      font-size: 35px;
+    }
+    @include susy-breakpoint($lg) {
+      font-size: 45px;
+      margin-left: 80px;
+    }
+  }
+  .hero {
+    @include susy-breakpoint($md) {
+      height: 130px;
+      margin-top: 1em;
+    }
+  }
+  .use-certbot {
+    margin-bottom: 2em;
+    @include susy-breakpoint($md) {
+      margin: 0;
+      margin-bottom: 2em;
+      padding: 1em 2.5em;
+    }
+    h1 {
+      @include susy-breakpoint($md) {
+        padding: 0;
+        margin: 0.5em 0;
+        font-size: 24px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+    .three-col.reqs {
+      @include susy-breakpoint($md) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .col {
+        @include susy-breakpoint($md) {
+          margin-bottom: 0;
+          width: 33%;
+        }
+        .text-wrapper {
+          font-size: 14px;
+          @include susy-breakpoint($md) {
+            margin: 1em 5%;
+          }
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.instructions-footer {
+  margin-top: 3em;
+  position: relative;
+
+  text-align: center;
+
+  width: 100%;
+
+  .col {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2em;
+    @include susy-breakpoint($md) {
+      min-height: 250px;
+      width: 31%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .text-wrapper {
+    margin: 1em 5%;
+    font-size: 16px;
+    @include susy-breakpoint($md) {
+      margin-bottom: auto;
+    }
+  }
+
+  .link-button-wide {
+    @include button-clear;
+    margin: 0.5em 1em;
+    font-family: $header-font-family;
+    font-weight: 300;
+    @include susy-breakpoint($md) {
+      @include link-button;
+      padding: 5px 0;
+      width: 90%;
+      margin: 0 5%;
+    }
+  }
+}
+
 input,
 select {
   background: transparent;
   border: 2px solid $certbot-red;
   height: 34px;
   appearance: none;
+  border-radius: 20px;
   padding-left: 1em;
   padding-right: 1em;
-  border-radius: 20px;
-  margin-top: 1.5em;
-  display: block;
+  margin: 0.5em 0;
 
   @include susy-breakpoint($md) {
-    display: inline-block;
     margin: 0 1em;
   }
 
@@ -23,26 +145,6 @@ select {
   &:hover {
     cursor: pointer;
   }
-}
-
-input[type=submit] {
-  background-color: $certbot-red;
-  color: white;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-select {
-  width: 200px;
-  text-align:left;
-
-  option {
-    text-align: left;
-  }
-
-  background: url(../images/chevron-down.png) 94% / 15% no-repeat transparent;
-  background-size: 12px;
 }
 
 #using,#on {
@@ -58,18 +160,74 @@ select {
 }
 
 .instruction-widget  {
-  @include susy-breakpoint($md) {
-    font-size: 1.2em;
-    width: auto;
-  }
   text-align: center;
-  width: 200px;
-  margin: 0 auto;
-  select {
-    height: 30px;
-    font-size: 14px;
+  min-height: 150px;
+  @include susy-breakpoint($md) {
+    min-height: 0;
+    flex: 0 0 100%;
+    font-size: 1.2em;
+  }
+  span {
+    // homepage only
+    font-size: 40px;
+    font-weight: bold;
   }
 
+  input[type=submit] {
+    background-color: $certbot-red;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  select {
+    text-align: center;
+    height: 2em;
+    font-size: 18px;
+    width: 95%;
+
+    @include susy-breakpoint($md) {
+      font-size: 14px;
+      width: 200px;
+    }
+
+    option {
+      text-align: center;
+    }
+
+    background: url(../images/chevron-down.png) 94% / 15% no-repeat transparent;
+    background-size: 12px;
+  }
+  .js-only {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    @include susy-breakpoint($md) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 auto;
+    }
+  }
+  .not-sure {
+    text-align: right;
+    width: 100%;
+    padding-top: 0.5em;
+    @include susy-breakpoint($md) {
+      flex: 0 0 100%;
+    }
+    a {
+      font-weight: bold;
+      color: $text-color;
+      text-decoration: underline;
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
 }
 
 tt {
@@ -84,28 +242,72 @@ h1.instruct {
 
 .instruction-pane-wrapper {
   border: 1px solid $content-stroke;
-  padding: 2em;
+  padding: 1em 5px;
+  @include susy-breakpoint($md) {
+    padding: 2em;
+  }
 }
 
 
 .instruction-pane {
-  h1,h3,h2 {
+  ol {
     font-family: 'Roboto Slab';
     font-weight: 400;
-    margin-top: 1em;
-    font-size: 1.4em;
-    
-  }
-  h3 {
-
+    font-size: 20px;
+    margin: 1em 1.1em;
+    @include susy-breakpoint($md) {
+      margin-left: 30px;
+      font-size: 30px;
+    }
+    .hidden {
+      display: none;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 2em;
+      margin-left: -1em;
+      @include susy-breakpoint($md) {
+        margin-left: 0;
+        font-size: 18px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin-top: 0;
+      margin-left: 1em;
+      p {
+        margin-left: 0;
+      }
+    }
+    h3 { 
+      font-size: 22px;
+      font-weight: bold;
+      font-style: italic;
+      font-family: $base-font-family;
+      margin-left: -0.9em;
+      @include susy-breakpoint($md) {
+        margin-left: 0;
+      }
+    }
+    tt {
+      font-size: 14px;
+    }
+    .link-button {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px 20px;
+      @include susy-breakpoint($md) {
+        padding: 5px 15px;
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
   }
 }
 .instructions.content {
-
-
   background-color: #fff;
 
-  
+
   position: relative;
   text-align: center;
 
@@ -113,22 +315,72 @@ h1.instruct {
     text-align: left;
   }
 
-  .tab {
+  .centered {
+    text-align: center;
+  }
+  a {
+    img {
+      height: 20px;
+      width: 20px;
+      margin-bottom: 0.3em;
+    }
+  }
 
+  pre {
+    &:before {
+      content: '$ ';
+    }
+    @include susy-breakpoint($md) {
+      white-space: pre-line;
+    }
+  }
+
+  pre.no-before {
+    white-space: nowrap;
+    overflow: scroll;
+    @include susy-breakpoint($md) {
+      overflow: auto;
+    }
+    &:before {
+      content: '';
+    }
+    ol {
+      margin: 0;
+    }
+    li {
+      list-style-type: none;
+      white-space: nowrap;
+      font-family: 'VeraMono';
+      font-size: 14px;
+      &:before {
+        content: '$ ';
+      }
+      @include susy-breakpoint($md) {
+        white-space: normal;
+      }
+    }
+  }
+
+  pre.one-line {
+    white-space: nowrap;
+  }
+
+  .tab {
     width: 120px;
+    display: inline-block;
+    padding: 0.8em 0;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    color: rgba(0,0,0,0.4);
+    text-transform: lowercase;
+
     @include susy-breakpoint($ph) {
       width: 180px;
     }
     @include susy-breakpoint($md) {
+      font-weight: 400;
       width: 250px;
     }
-    display: inline-block;
-    padding: 0.8em 0;
-    font-family: 'Roboto Slab';
-    font-weight: 400;
-    color: rgba(0,0,0,0.4);
-    text-transform: lowercase;
-
     &:not(.active) {
       border-left: 1px solid $stroke;
       border-top: 1px solid $stroke;
@@ -174,12 +426,13 @@ h1.instruct {
   #instructions-header {
     clear: both;
     a {
-      color: $header-grey;
+      color: #000;
       font-family: 'Roboto Slab';
-      font-size: 1.4em;
 
       outline: none; // this is bad for accessibility but blur() isn't working in the js, need to fix
-      
+      @include susy-breakpoint($md) {
+        font-size: 1.4em;
+      }
     }
     margin-bottom: 1.2em;
     overflow: hidden;
@@ -195,77 +448,36 @@ h1.instruct {
   display: none;
 }
 
-.three {
-
-  margin-top: 3em;
-  margin-bottom: 2.5em;
-  position: relative;
-  display: inline-block;
-
-  width: 100%;
-  text-align: center;
-  figure {
-
-    text-align: center;
-    @include span(3 of 3);
-    @include susy-breakpoint($md) {
-      @include span(1 of 3 inside no-gutters);
-    }
-    img {
-      margin: 0 auto;
-      width: 120px;
-      opacity: 0.6;
-    }
-
-    a {
-      color: $grey-color;
-      text-decoration: none;
-      &:hover {
-        color: rgba(0,0,0,0.8);
-        > img {
-          opacity: 0.8;
-        }
-      }
-    }
-
-    figcaption {
-      margin-top: 1em;
-      p {
-        font-size: 1.5em;
-        text-transform: lowercase;
-        letter-spacing: 0.03em;
-        font-family: 'Roboto Slab';
-        font-weight: 400;
-      }
-    }
-  }
-}
-
-aside {
+aside.note {
   box-sizing: border-box;
-  padding: 0.5em 1.4em 0.5em 1.8em;
+  padding: 1.5em;
   width: 100%;
   min-height: 100px;
   text-align: left;
-  h1 {
-    text-align: left;
-    color: #fff;
-    font-size: 1.4em;
-    font-weight: bold;
-    font-family: 'Roboto Slab'
+  border: 2px solid #000;
+  @include susy-breakpoint($md) {
+    padding: 1em;
   }
-  h4 {
-    margin-top: 8px;
+  .note-header {
+    background-image: url('../images/ImportantNote.svg');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: left center;
+    margin-left: -1em;
+    padding-left: 50px;
+    @include susy-breakpoint($md) {
+      background-size: 30px;
+      margin-left: 0;
+      padding-left: 40px;
+    }
+    h3 {
+      font-family: $header-font-family;
+      font-style: normal;
+    }
   }
   p {
-    font-family: 'Roboto';
-    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
-}
-aside.note {
-  background-color: rgba(185, 200, 212, 0.9);
-}
-
-aside.warning {
-  background-color: rgba(255,170,98,0.9);
 }

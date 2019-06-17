@@ -7,11 +7,7 @@ class: faq
 <ul class="faq-toc">
   {% assign sorted_faq = site.faq_entries | sort: 'weight' %}
   {% for faq_entry in sorted_faq %}
-    <li>
-      <h2>
-        <a class="post-link" href="#{{ faq_entry.title | slugify }}">{{ faq_entry.title }}</a>
-      </h2>
-    </li>
+    <li><a class="post-link" href="#{{ faq_entry.title | slugify }}">{{ faq_entry.title }}</a></li>
   {% endfor %}
 </ul>
 
@@ -20,11 +16,11 @@ class: faq
 <ul class="faq-content">
   {% for faq_entry in sorted_faq %}
     <li>
-      <h2>
-        <a class="post-link" href="#{{ faq_entry.title | slugify }}" name="{{ faq_entry.title | slugify }}">
+      <span>
+        <a class="anchor" id="{{ faq_entry.title | slugify }}">
           {{ faq_entry.title }}
         </a>
-      </h2>
+      </span>
       <div class="answer">
         {{ faq_entry.content }}
       </div>

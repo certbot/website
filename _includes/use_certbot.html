@@ -1,0 +1,49 @@
+<div class="use-certbot">
+  <h1>To use Certbot, you'll need...</h1>
+  <div class="three-col reqs">
+    <div class="col">
+      <img alt="A laptop" src="/images/Computer.svg">
+      <div class="text-wrapper hanging-indent">
+        <span>comfort with the {% include tooltip.html term-name="command-line" text="command line" %}</span>
+      </div>
+    </div>
+    <div class="col">
+      <img alt="Web browser showing an HTTP site" src="/images/HTTPsite.svg">
+      <div class="text-wrapper hanging-indent">
+        <span>
+          ...and an
+          {% include tooltip.html term-name="http" text="HTTP website" %}
+          <br/>
+          that is {% include tooltip.html term-name="website-thats-already-online" text="already online" %}
+          <br/>
+          with an open {% include tooltip.html term-name="port-80" text="port 80" %}
+        </span>
+      </div>
+    </div>
+    <div class="col">
+      <img alt="A sever" src="/images/Server.svg">
+      <div class="text-wrapper hanging-indent">
+        <span>
+          ...which is hosted on a {% include tooltip.html term-name="server" text="server" %}
+          <br/>
+          which you can access via {% include tooltip.html term-name="ssh" %}
+          <br/>
+          with the ability to {% include tooltip.html term-name="sudo" %}
+          <br/>
+        </span>
+        <span class="italic">
+          optional if you want a {% include tooltip.html term-name="wildcard-certificate" text="wildcard cert" %}:
+          {% include tooltip.html term-name="dns-credentials" text="DNS credentials" %}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-hidden">
+    <h1>Don't have these requirements?</h1>
+    <p>
+    Not to worry! Some hosting providers automate the HTTPS process.
+    <a href="/hosting_providers">See the full list of hosting providers</a>, or <a href="/help#webserver">find out more about how to set up your system</a>.
+    </p>
+  </div>
+</div>

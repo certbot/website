@@ -1,25 +1,37 @@
-<h4>Installing DNS plugins</h4>
+{{#advanced}}
 {{#dns_plugins}}
-<p>
-Certbot's DNS plugins <strong>are available</strong> for your system. These
-plugins can be used to automate obtaining a wildcard certificate from Let's
-Encrypt's ACMEv2 server.  To use one of these plugins, you must have configured
-DNS for the domain you want to obtain a certificate for with a DNS provider
-that Certbot has a plugin for. A list of these plugins and more information
-about using them can be found <a href="/docs/using.html#dns-plugins">here</a>.
-To install one of these plugins, run the installation command above but replace
-<tt>{{package}}</tt> with <tt>{{dns_package_prefix}}-PLUGIN</tt>, where <tt>PLUGIN</tt>
-is the name of the plugin you want to install. For instance, for the RFC2136
-plugin this would be <tt>{{dns_package_prefix}}-rfc2136</tt>.
-</p>
+<li>
+    Check if your DNS provider is supported
+    <p>
+    See if your DNS provider is supported by Certbot by checking
+    <a href='/docs/using.html#dns-plugins'>this list in our
+      documentation</a>.
+    </p>
+    <p class="centered">
+    <a class="link-button" href='/docs/using.html#dns-plugins'>check if your DNS provider supports Certbot</a>
+    </p>
+    <h3>Not supported?</h3>
+    <p>
+    If your DNS provider is not supported, pause here: run Certbot with the manual plugin by using
+    <a href='/docs/using.html#manual'>these steps from our documentation</a>.
+    </p>
+    <h3>Supported?</h3>
+    <p>
+    If your DNS provider is supported, continue with the remaining instructions below.
+    </p>
+</li>
 {{/dns_plugins}}
 {{^dns_plugins}}
-<p>
-Certbot's DNS plugins <strong>are not available</strong> for your OS yet. These
-plugins can be used to automate obtaining a wildcard certificate from Let's
-Encrypt's ACMEv2 server. This should change soon but if you don't want to wait,
-you can use these plugins now by
-<a href="/docs/install.html#running-with-docker">running Certbot in Docker</a>
-instead of using the instructions on this page.
-</p>
+<aside class="note docker-note">
+  <div class="note-header">
+    <h3>Follow Docker instructions</h3>
+  </div>
+    <p>
+    To get a wildcard certificate on this system, you'll need to run Certbot in Docker. You
+    can do so by following
+    <a href='/docs/install.html#running-with-docker'>these
+      steps from our documentation</a>.
+    </p>
+</aside>
 {{/dns_plugins}}
+{{/advanced}}

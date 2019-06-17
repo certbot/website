@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body class="instructions page">
+
+    {% include topnav.html %}
+    {% include shelf.html %}
+
+    <h1>certbot instructions</h1>
+
+    <div class="hero">
+      <div class="instruction-widget">
+        {% include form.html %}
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="wrapper">
+        {% include use_certbot.html %}
+        <div class="instructions content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    
+    {% include social.html %}
+    {% include footer.html %}
+    
+    
+  </body>
+
+</html>

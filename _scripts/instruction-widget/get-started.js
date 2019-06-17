@@ -49,6 +49,7 @@ module.exports = function(context) {
 
     certonly_getting_started = function() {
         template = "certonly";
+        context.certonly = true;
     }
 
     nonunix_getting_started = function() {

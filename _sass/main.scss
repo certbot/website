@@ -31,7 +31,7 @@ $grey-cool: #f4f5f7;
 $white: #fff;
 $header-grey: #d6d6d6;
 $header-grey: $grey-title;
-$content-stroke: rgba(203,209,218,0.4);
+$content-stroke: #7c7c7c;
 $footer-color: #363636;
 $body-bg-color: $grey-cool;
 $content-bg-color: $white;
@@ -58,6 +58,41 @@ $on-laptop:        800px;
     }
 }
 
+@mixin link-button {
+  background-color: #FFFFFF;
+  color: $text-color;
+  border: 2px solid $certbot-red;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background-image: none;
+  font-family: $base-font-family;
+  text-decoration: none;
+  padding: 5px 10px;
+  &:hover {
+    color: $certbot-red;
+    cursor: pointer;
+  }
+
+  @include susy-breakpoint($lg) {
+    padding: 5px 15px;
+  }
+
+  @include susy-breakpoint($xl) {
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+@mixin button-clear {
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  background-color: transparent;
+  font-weight: bold;
+  color: $text-color;
+}
+
 // @mixin susy-breakpoint($breakpoint) {
 //     @media all and (min-width: $breakpoint) {
 //         @content;
@@ -82,23 +117,22 @@ $on-laptop:        800px;
         "faq",
         "social",
         "privacy",
-        "warning"
+        "warning",
+        "homepage",
+        "tooltips",
+        "page",
+        "grids",
+        "datatable"
 ;
 
 .page-content  {
-    @include container(100%);
-    @include susy-breakpoint($md) {
-        @include container($ph);
-    }
-    @include susy-breakpoint($lg) {
-        @include container($md);
-    }
-
-
-    .wrapper {
-
-    }
-
+  @include container(100%);
+  @include susy-breakpoint($md) {
+    @include container($ph);
+  }
+  @include susy-breakpoint($lg) {
+    @include container($md);
+  }
 }
 
 a {
@@ -109,14 +143,13 @@ a {
   }
 }
 
-html,body,div,h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-  padding: 0;
+a.link-button {
+  @include link-button;
 }
 
-body {
-  margin-top: $nav-height;
-  background-color: $body-bg-color;
+html,div,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
 }
 
 body.index {
@@ -130,63 +163,22 @@ body,p,div {
 
 }
 
-
 h1,h2,h3,h4,h5,h6 {
   font-family: $header-font-family;
 }
+
 h1 {
-  font-size: 2em;
   font-weight: 400;
-  text-align: center;
-  margin-top: 0.25em;
-  margin-bottom: 0.35em;
 }
 
-.three .wrapper {
-  // background-color: $grey-bg;
-}
-
-
-body:not(.index) {
-  .page-content {
-    background-color: transparent;
-  }
-}
 .page-content {
-
   @include container(100%);
-
-  // @include susy-breakpoint($md) {
-  //   margin-top: 3%;
-  //   @include container (95%);
-  // }
-
   background-color: #fff;
-
-  // .wrapper {
-  //   @include susy-breakpoint($md) {
-  //     margin-top: 2em;
-  //   }
-  // }
-
 }
 
-body:not(.index) {
-
-  .post-title {
-    margin-bottom: -10px;
-  }
-  @include susy-breakpoint($md) {
-    .page-content {
-      @include container (95%);
-    }
-    .wrapper {
-        margin-top: 1.5em;
-    }
-
-    .subhero {
-      padding-bottom: 3em;
-    }
-
-  }
+img.link-arrow {
+  padding-left: 0.5em;
+  height: 18px;
+  width: 8px;
 }
+

@@ -1,0 +1,32 @@
+{% assign terms = site.terms | where:"lookup",include.term-name %}
+{% for term in terms limit:1 %}
+<div class="glossary-term js-only disabled">
+  <a class="glossary-link js">{{ include.text | default: term.title }}</a>
+  <div class="tooltip js">
+    <div class="close-button"><img alt="Close button" class="close-tooltip" src="/images/close.svg"></div>
+    <div class="tooltip-title">
+      <a href="/glossary#{{ term.lookup }}">{{ term.title }}</a>
+    </div>
+    <div class="mobile-hidden">
+    {{ term.content | markdownify }}
+    </div>
+    <div class="mobile-only">
+      <p>
+      {{ term.content | markdownify | strip_html | truncatewords: 100, "..." }}
+      </p>
+    </div>
+    <div class="bottom-text">
+      From our <a href="/glossary">Certbot Glossary</a>
+    </div>
+  </div>
+</div><div class="glossary-term no-js">
+  <a class="glossary-link no-js">{{ include.text | default: term.title }}</a>
+  <div class="tooltip no-js">
+    <a class="tooltip-title" href="/glossary#{{ term.lookup }}">{{ term.title }}</a>
+    {{ term.content | markdownify }}
+    <div class="bottom-text">
+      From our <a href="/glossary">Certbot Glossary</a>
+    </div>
+  </div>
+</div>
+{% endfor %}

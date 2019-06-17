@@ -18,13 +18,27 @@ config.webpack = {
     loaders: [
       {test: /\.json$/, loader: 'json'},
       {test: /\.html$/, loader: 'mustache?noShortcut'}
+    ],
+    rules: [
+      {  test: require.resolve('jquery'), loader: 'expose-loader?$!expose-loader?jQuery' },
     ]
   },
   plugins: env.production() ? [
     new webpack.webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }
-    })
-  ] : [],
+    }),
+    new webpack.webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+  ] : [
+    new webpack.webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+  ],
   bail: env.production()
 }
 

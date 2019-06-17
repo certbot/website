@@ -1,5 +1,6 @@
 <div class="js-only">
-  <span id="using">I'm using</span>
+  <h1 class="mobile-only">What's your HTTP website running on?</h1>
+  <span id="using">My HTTP website is running</span>
   <select id="server-select" name="server">
     <optgroup>
       <option value="" disabled selected>Software</option>
@@ -18,6 +19,9 @@
       {% endfor %}
     </optgroup>
   </select>
+  <div class="not-sure">
+    <a href="/help">Help, I'm not sure!</a>
+  </div>
 </div>
 
 <div class="no-js-only">

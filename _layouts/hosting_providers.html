@@ -1,0 +1,44 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="page">
+
+    {% include topnav.html %}
+    {% include shelf.html %}
+    
+    <div class="page-content">
+      <div class="header-wrapper">
+        <header class="post-header">
+          <h1 class="post-title">{{ page.title }}</h1>
+        </header>
+      </div>
+
+      <div class="content-wrapper">
+        <article class="post-content">
+          {{ content }}
+        </article>
+      </div>
+    </div>
+
+    {% include hosting_providers_table.html %}
+
+    <div class="wrapper hosting-footer">
+      <h2>Don’t see your provider here?</h2> 
+      <p>
+      <a href="/help">Get help!</a>
+      </p>
+      <p>
+      If you have a hosting provider who doesn’t offer HTTPS certificates in their shared hosting packages, contact them to let them know you want HTTPS.
+      </p>
+
+      <p>
+      If you notice information that’s out of date or incorrect, submit <a href="">a pull request to our website’s Github repo</a>.
+      </p>
+    </div>
+
+    {% include social.html %}
+    {% include footer.html %}
+  </body>
+</html>

@@ -11,11 +11,13 @@ collections:
   instructions:
     output: true
     permalink: "/lets-encrypt/:path"
+  terms:
+    output: false
 defaults:
 - scope:
     type: "instructions"
   values:
-    layout: "index"
+    layout: "instruction"
     js:
     - instructions
 exclude:
@@ -36,6 +38,8 @@ exclude:
 - LICENSE.txt
 - nginx.conf
 - docker-compose.yml
+include:
+- /node_modules/jquery/*
 keep_files:
 - css
 - js
