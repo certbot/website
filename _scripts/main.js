@@ -72,7 +72,10 @@ $(document).ready(function() {
     "paging": false,
     "info": false,
     "scrollX": true,
-    "responsive": true
+    "responsive": true,
+    "language": {
+      "search": "Search for your hosting provider"
+    }
   });
   hosting_table.column('.category').visible(false);
   $('#full-bounce').on('click', function() {
