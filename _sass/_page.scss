@@ -150,6 +150,10 @@ ul.image-bullets {
     @include bullet-image;
     background-image: url('../images/BlackCircle-Lightbulb.svg');
   }
+  li.key-bullet {
+    @include bullet-image;
+    background-image: url('../images/BlackCircle-Key.svg');
+  }
 }
 a.anchor {
   text-decoration: underline;
