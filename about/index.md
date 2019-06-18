@@ -33,7 +33,7 @@ Certbot might be right for you if you:
     have {% include tooltip.html term-name="website-thats-already-online" text="an HTTP website that’s already online" %}, with {% include tooltip.html term-name="port-80" text="port 80 open" %},
   </li>
   <li>
-    and administer your website via a {% include tooltip.html term-name="dedicated-server" text="dedicated server" %}, {% include tooltip.html term-name="virtual-private-server" text="virtual private server" %}, or {% include tooltip.html term-name="cloud-hosting" text="cloud-hosted server" %}, which you can access via {% include tooltip.html term-name="SSH" %}, and have the ability to {% include tooltip.html term-name="sudo" %}.
+    and administer your website via a {% include tooltip.html term-name="dedicated-server" text="dedicated server" %}, {% include tooltip.html term-name="virtual-private-server" text="virtual private server" %}, or {% include tooltip.html term-name="cloud-hosting" text="cloud-hosted server" %}, which you can access via {% include tooltip.html term-name="ssh" %}, and have the ability to {% include tooltip.html term-name="sudo" %}.
   </li>
 </ul>
 
