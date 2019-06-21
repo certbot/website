@@ -150,7 +150,7 @@
     "note": ""
   },
   {
-    "name": "WordPress",
+    "name": "WordPress.com",
     "link": "https://wordpress.com/",
     "category": "full",
     "tutorial": "",
@@ -490,7 +490,7 @@
     "note": ""
   },
   {
-    "name": "Dreamhost.com",
+    "name": "DreamHost",
     "link": "",
     "category": "partial",
     "tutorial": "",
@@ -670,7 +670,7 @@
     "note": ""
   },
   {
-    "name": "Gitlab",
+    "name": "GitLab",
     "link": "https://about.gitlab.com/",
     "category": "partial",
     "tutorial": "https://about.gitlab.com/2016/04/11/tutorial-securing-your-gitlab-pages-with-tls-and-letsencrypt/",
@@ -750,7 +750,7 @@
     "note": ""
   },
   {
-    "name": "Hostgator",
+    "name": "HostGator",
     "link": "",
     "category": "partial",
     "tutorial": "",
