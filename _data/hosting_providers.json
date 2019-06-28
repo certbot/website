@@ -1,5 +1,15 @@
 [
   {
+    "name": "Pantheon",
+    "link": "https://pantheon.io/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://pantheon.io/blog/pantheon-launches-global-cdn-automated-https-all-sites",
+    "plan": "",
+    "reviewed": "2019.6.28",
+    "note": ""
+  },
+  {
     "name": "Antagonist",
     "link": "https://www.antagonist.nl/",
     "category": "full",
