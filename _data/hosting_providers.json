@@ -1511,10 +1511,10 @@
   },
   {
     "name": "ServerPilot",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
-    "announcement": "[No need to find this]",
+    "link": "https://serverpilot.io/",
+    "category": "full",
+    "tutorial": "https://serverpilot.io/docs/how-to-use-autossl",
+    "announcement": "https://serverpilot.io/blog/2016/03/09/free-ssl-certificates-from-lets-encrypt",
     "plan": "",
     "reviewed": "",
     "note": ""
