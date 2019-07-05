@@ -1,5 +1,15 @@
 [
   {
+    "name": "Jimdo",
+    "link": "https://www.jimdo.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.jimdo.com/blog/secure-website-with-https/",
+    "plan": "",
+    "reviewed": "2019.7.05",
+    "note": ""
+  },
+  {
     "name": "Pantheon",
     "link": "https://pantheon.io/",
     "category": "full",
