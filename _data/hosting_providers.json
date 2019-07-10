@@ -940,6 +940,16 @@
     "note": ""
   },
   {
+    "name": "ikoula",
+    "link": "https://www.ikoula.com/en/web-hosting",
+    "category": "partial",
+    "tutorial": "https://en-wiki.ikoula.com/en/Establishment_and_renewal_of_a_certificate_let%27s_encrypt",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "2019.7.10",
+    "note": ""
+  },
+  {
     "name": "Inertia Networks",
     "link": "",
     "category": "partial",
