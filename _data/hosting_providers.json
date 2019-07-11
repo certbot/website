@@ -150,6 +150,16 @@
     "note": ""
   },
   {
+    "name": "Spry Servers",
+    "link": "https://www.spryservers.net/",
+    "category": "full",
+    "tutorial": "https://www.spryservers.net/clients/knowledgebase/5/Securing-Your-Site-With-Free-Letandsharp039s-Encrypt-SSL-Certificate.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.07.11",
+    "note": "Applies to all shared and reseller hosting plans, including WordPress."
+  },
+  {
     "name": "Squarespace",
     "link": "https://www.squarespace.com/",
     "category": "full",
