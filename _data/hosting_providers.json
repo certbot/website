@@ -110,6 +110,16 @@
     "note": ""
   },
   {
+    "name": "Netlify",
+    "link": "https://www.netlify.com/",
+    "category": "full",
+    "tutorial": "https://www.netlify.com/docs/ssl/",
+    "announcement": "https://www.netlify.com/blog/2016/01/15/free-ssl-on-custom-domains/",
+    "plan": "",
+    "reviewed": "2019.6.28",
+    "note": ""
+  },
+  {
     "name": "Pride Tech Design",
     "link": "https://pridetechdesign.com/",
     "category": "full",
