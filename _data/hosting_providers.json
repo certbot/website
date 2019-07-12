@@ -991,13 +991,13 @@
   },
   {
     "name": "Infomaniak",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.infomaniak.com/gotoroutewithautolang/hosting.ssl",
+    "category": "full",
     "tutorial": "",
-    "announcement": "[No need to find this]",
+    "announcement": "https://news.infomaniak.com/en/free-lets-encrypt-ssl-certificates-with-infomaniak/",
     "plan": "",
-    "reviewed": "",
-    "note": ""
+    "reviewed": "2015.12.30",
+    "note": "Green hosting"
   },
   {
     "name": "Infrenion Networks",
