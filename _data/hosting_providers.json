@@ -2189,4 +2189,14 @@
     "reviewed": "2019.7.10",
     "note": ""
   }
+     {
+    "name": "Thexyz",
+    "link": "https://www.thexyz.com",
+    "category": "partial",
+    "tutorial": "https://www.thexyz.com/account/knowledgebase/117/How-do-I-install-a-Lets-Encrypt-SSL-certificate-on-my-site.html",
+    "announcement": "[No need to find this]",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  }
 ]
