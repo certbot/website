@@ -33,7 +33,7 @@
 {{/packaged}}
 
 {{^packaged}}
-{{^epel_auto}}
+{{#need_epel}}
 <li>
     Enable EPEL repo
     <p>
@@ -48,7 +48,7 @@
       enable EPEL</a>
     </p>
 </li>
-{{/epel_auto}}
+{{/need_epel}}
 {{>auto}}
 {{/packaged}}
 

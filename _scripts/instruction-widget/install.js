@@ -88,11 +88,20 @@ module.exports = function(context) {
   centos_install = function() {
     template = "centos";
 
-    if (context.version < 7) {
+    // Certbot only has packages available for RHEL 7 based systems.
+    if (context.version != 7) {
       context.base_command = "/usr/local/bin/certbot-auto";
-      context.epel_auto = (context.distro == "centos");
+      // certbot-auto on CentOS 6 walks you through installing EPEL, but on
+      // RHEL 6 you need to do it beforehand. On RHEL 8 based systems, EPEL
+      // isn't needed at all.
+      if (context.version == 6 && context.distro == "rhel") {
+        context.need_epel = true;
+      } else {
+        context.need_epel = false;
+      }
       context.packaged = false;
     } else {
+      context.need_epel = true;
       context.base_command = "certbot";
       context.install_command = "sudo yum install";
       context.package = "certbot";

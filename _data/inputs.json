@@ -107,6 +107,12 @@
             "version": "7"
         },
         {
+            "name": "RHEL 8",
+            "id": "centosrhel8",
+            "distro": "rhel",
+            "version": "8"
+        },
+        {
             "name": "FreeBSD",
             "id": "freebsd",
             "distro": "freebsd",
