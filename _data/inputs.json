@@ -41,10 +41,16 @@
             "version": "9"
         },
         {
+            "name": "Debian 10 (buster)",
+            "id": "debianbuster",
+            "distro": "debian",
+            "version": "10"
+        },
+        {
             "name": "Debian testing/unstable",
             "id": "debiantesting",
             "distro": "debian",
-            "version": "10"
+            "version": "11"
         },
         {
             "name": "Debian (other)",
