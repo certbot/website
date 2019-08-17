@@ -1120,7 +1120,7 @@
     "note": ""
   },
   {
-    "name": "Mijn",
+    "name": "mijn.host",
     "link": "https://mijn.host/",
     "category": "partial",
     "tutorial": "https://mijn.host/kb/lets-encrypt-ssl-certificaat-aanvragen/",
