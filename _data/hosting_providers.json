@@ -1123,7 +1123,7 @@
     "name": "Mijn",
     "link": "https://mijn.host/",
     "category": "partial",
-    "tutorial": "",
+    "tutorial": "https://mijn.host/kb/lets-encrypt-ssl-certificaat-aanvragen/",
     "announcement": "https://mijn.host/kb/lets-encrypt-ssl-certificaat-aanvragen/",
     "plan": "",
     "reviewed": "2019.8.7",
