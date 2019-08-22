@@ -1,25 +1,5 @@
 [
   {
-    "name": "Jimdo",
-    "link": "https://www.jimdo.com/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "https://www.jimdo.com/blog/secure-website-with-https/",
-    "plan": "",
-    "reviewed": "2019.7.05",
-    "note": ""
-  },
-  {
-    "name": "Pantheon",
-    "link": "https://pantheon.io/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "https://pantheon.io/blog/pantheon-launches-global-cdn-automated-https-all-sites",
-    "plan": "",
-    "reviewed": "2019.6.28",
-    "note": ""
-  },
-  {
     "name": "Antagonist",
     "link": "https://www.antagonist.nl/",
     "category": "full",
@@ -80,6 +60,16 @@
     "note": ""
   },
   {
+    "name": "Jimdo",
+    "link": "https://www.jimdo.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.jimdo.com/blog/secure-website-with-https/",
+    "plan": "",
+    "reviewed": "2019.7.05",
+    "note": ""
+  },
+  {
     "name": "manitu",
     "link": "https://www.manitu.de/",
     "category": "full",
@@ -115,6 +105,16 @@
     "category": "full",
     "tutorial": "https://www.netlify.com/docs/ssl/",
     "announcement": "https://www.netlify.com/blog/2016/01/15/free-ssl-on-custom-domains/",
+    "plan": "",
+    "reviewed": "2019.6.28",
+    "note": ""
+  },
+  {
+    "name": "Pantheon",
+    "link": "https://pantheon.io/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://pantheon.io/blog/pantheon-launches-global-cdn-automated-https-all-sites",
     "plan": "",
     "reviewed": "2019.6.28",
     "note": ""
@@ -1117,6 +1117,16 @@
     "announcement": "",
     "plan": "",
     "reviewed": "",
+    "note": ""
+  },
+  {
+    "name": "mijn.host",
+    "link": "https://mijn.host/",
+    "category": "partial",
+    "tutorial": "https://mijn.host/kb/lets-encrypt-ssl-certificaat-aanvragen/",
+    "announcement": "https://mijn.host/kb/lets-encrypt-ssl-certificaat-aanvragen/",
+    "plan": "",
+    "reviewed": "2019.8.7",
     "note": ""
   },
   {
