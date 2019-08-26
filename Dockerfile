@@ -4,7 +4,7 @@ RUN mkdir /opt/certbot
 WORKDIR /opt/certbot
 
 ENV NODE_ENV production
-ENV RUBY_VERSION 2.3.1
+ENV RUBY_VERSION 2.6.3
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
 
 # Set UTF-8 character encoding
