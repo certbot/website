@@ -41,10 +41,16 @@
             "version": "9"
         },
         {
+            "name": "Debian 10 (buster)",
+            "id": "debianbuster",
+            "distro": "debian",
+            "version": "10"
+        },
+        {
             "name": "Debian testing/unstable",
             "id": "debiantesting",
             "distro": "debian",
-            "version": "10"
+            "version": "11"
         },
         {
             "name": "Debian (other)",
@@ -105,6 +111,12 @@
             "id": "centosrhel7",
             "distro": "centos",
             "version": "7"
+        },
+        {
+            "name": "RHEL 8",
+            "id": "centosrhel8",
+            "distro": "rhel",
+            "version": "8"
         },
         {
             "name": "FreeBSD",
