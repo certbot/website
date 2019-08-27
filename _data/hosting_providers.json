@@ -2198,5 +2198,15 @@
     "plan": "https://www.easyname.com/en/hosting/free-lets-encrypt-ssl-certificate",
     "reviewed": "2019.7.10",
     "note": ""
+  },
+     {
+    "name": "Thexyz",
+    "link": "https://www.thexyz.com",
+    "category": "partial",
+    "tutorial": "https://www.thexyz.com/account/knowledgebase/117/How-do-I-install-a-Lets-Encrypt-SSL-certificate-on-my-site.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.7.22",
+    "note": ""
   }
 ]
