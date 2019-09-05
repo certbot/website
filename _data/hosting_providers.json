@@ -10,6 +10,16 @@
     "note": ""
   },
   {
+    "name": "Aquatis",
+    "link": "https://aquatis.host/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.8.31",
+    "note": ""
+  },
+  {
     "name": "bplaced",
     "link": "https://www.bplaced.net/",
     "category": "full",
@@ -2208,15 +2218,5 @@
     "plan": "",
     "reviewed": "2019.7.22",
     "note": ""
-  },
-  {
-    "name": "Aquatis",
-    "link": "https://aquatis.host/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "2019.8.31",
-    "note": ""
-  },
+  }
 ]
