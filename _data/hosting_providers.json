@@ -10,6 +10,16 @@
     "note": ""
   },
   {
+    "name": "Aquatis",
+    "link": "https://aquatis.host/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.8.31",
+    "note": ""
+  },
+  {
     "name": "bplaced",
     "link": "https://www.bplaced.net/",
     "category": "full",
@@ -2199,7 +2209,7 @@
     "reviewed": "2019.7.10",
     "note": ""
   },
-     {
+  {
     "name": "Thexyz",
     "link": "https://www.thexyz.com",
     "category": "partial",
