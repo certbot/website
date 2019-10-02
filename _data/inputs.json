@@ -113,9 +113,9 @@
             "version": "7"
         },
         {
-            "name": "RHEL 8",
+            "name": "CentOS/RHEL 8",
             "id": "centosrhel8",
-            "distro": "rhel",
+            "distro": "centos",
             "version": "8"
         },
         {
