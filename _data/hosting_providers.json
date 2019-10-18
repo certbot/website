@@ -120,6 +120,16 @@
     "note": ""
   },
   {
+    "name": "Online.net",
+    "link": "https://www.online.net/",
+    "category": "full",
+    "tutorial": "https://documentation.online.net/en/web/web-hosting/web-management/certificat-ssl",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.10.18",
+    "note": "Available on Web & Cloud hostings"
+  },
+  {
     "name": "Pantheon",
     "link": "https://pantheon.io/",
     "category": "full",
@@ -1321,16 +1331,6 @@
   },
   {
     "name": "one.com",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "",
-    "note": ""
-  },
-  {
-    "name": "Online.net",
     "link": "",
     "category": "partial",
     "tutorial": "",
