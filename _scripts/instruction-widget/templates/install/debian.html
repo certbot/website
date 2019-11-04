@@ -1,34 +1,5 @@
 {{> header}}
 
-{{#backports_flag}}
-{{#devuan}}
-<li>
-  Enable ASCII backports repo
-  <p>
-  You'll need to enable the ASCII backports repo in your APT sources. <br>
-  Follow these instructions at
-  <a href='https://devuan.org/os/etc/apt/sources.list#add-backports-default-no'>Devuan's site
-    to enable the ASCII backports repo</a>.
-  </p>
-  <p class="centered">
-    <a class="link-button" href='https://devuan.org/os/etc/apt/sources.list#add-backports-default-no'>enable the ASCII backports repo</a>
-  </p>
-</li>
-{{/devuan}}
-{{^devuan}}
-<li>
-  Enable Stretch backports repo
-  <p>
-  You'll need to enable Debian Strech's backports repo. <br>
-  Follow these instructions at <a href='http://backports.debian.org/Instructions/'>Debian's site
-    to enable the Stretch backports repo</a>.
-  </p>
-  <p class="centered">
-    <a class="link-button" href='http://backports.debian.org/Instructions/'>enable the Stretch backports repo</a>
-  </p>
-</li>
-{{/devuan}}
-{{/backports_flag}}
 {{>installcertbot}}
 
 {{> dnspluginssetup}}
