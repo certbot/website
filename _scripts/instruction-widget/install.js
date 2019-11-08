@@ -134,14 +134,6 @@ module.exports = function(context) {
     } else if (context.webserver == "nginx") {
       context.package += " " + "python-certbot-nginx";
     }
-
-    if (context.version == 9) {
-      // Debian Stretch
-      context.backports_flag = "-t stretch-backports";
-    } else if (context.devuan && context.version == 2) {
-      // Devuan ASCII
-      context.backports_flag = "-t ascii-backports";
-    }
   }
 
   ubuntu_install = function() {
