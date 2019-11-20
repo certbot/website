@@ -2228,5 +2228,15 @@
     "plan": "",
     "reviewed": "2019.7.22",
     "note": ""
+  },
+  {
+    "name": "Umbler",
+    "link": "https://www.umbler.com",
+    "category": "partial",
+    "tutorial": "https://help.umbler.com/hc/en-us/articles/201677189-Using-SSL-at-Umbler",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.11.18",
+    "note": ""
   }
 ]
