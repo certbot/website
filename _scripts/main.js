@@ -78,6 +78,9 @@ $(document).ready(function() {
     }
   });
   hosting_table.column('.category').visible(false);
+  $('#all-bounce').on('click', function() {
+    $('#all-https').click();
+  });
   $('#full-bounce').on('click', function() {
     $('#full-https').click();
   });
@@ -86,6 +89,11 @@ $(document).ready(function() {
   });
   $('#no-bounce').on('click', function() {
     $('#no-https').click();
+  });
+  $('#all-https').on('click', function() {
+    hosting_table.columns().search('').column('.category').draw();
+    $('.tab-header-wrapper').removeClass('visible');
+    $('#all-header').addClass('visible');
   });
   $('#full-https').on('click', function() {
     hosting_table.columns().search('').column('.category').search('full').draw();
