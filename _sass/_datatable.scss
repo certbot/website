@@ -71,20 +71,29 @@
 }
 
 .hosting-table-tabs {
+  border-bottom: 1px solid #D9D9D9;
   width: 98%;
   margin: 0.5em auto;
-  display: flex;
-  justify-content: space-around;
+  display: inline-block;
+  justify-content: center;
   height: 80px;
   @include susy-breakpoint($md) {
     height: 50px;
     flex-direction: row;
   }
   .hosting-tab {
+    background-color: #efefef;
+    border: 2px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    display: inline-block;
     font-weight: bold;
     font-family: $header-font-family;
+    margin: 0 1%;
+    padding: 0 0.2rem;
     text-align: center;
     text-decoration: underline;
+    width: 20%;
     &:hover {
       cursor: pointer;
     }
@@ -97,6 +106,11 @@
         float: right;
       }
     }
+  }
+  .active {
+    background: white;
+    border-bottom-color: white;
+    padding-bottom: 1px;
   }
 }
 
@@ -126,17 +140,17 @@
   border-spacing: 0 1em;
   white-space: nowrap;
   table-layout: fixed;
-  thead { 
+  thead {
     background-color: #D9D9D9;
     font-size: 18px;
     text-align: left;
     vertical-align: bottom;
   }
-  th { 
+  th {
     padding: 0 0.5em;
     padding-bottom: 5px;
     height: 3em;
-  } 
+  }
   th:last-of-type {
     text-align: center;
     white-space: normal;
