@@ -72,7 +72,7 @@
 
 .hosting-table-tabs {
   border-bottom: 1px solid #D9D9D9;
-  width: 98%;
+  width: 100%;
   margin: 0.5em auto;
   display: inline-block;
   justify-content: center;
@@ -89,9 +89,10 @@
     display: inline-block;
     font-weight: bold;
     font-family: $header-font-family;
+    height: 3.2rem;
     margin: 0 1%;
-    padding: 0 0.2rem;
-    text-align: center;
+    padding: 0 0.2em 0 0.5em;
+    text-align: left;
     text-decoration: underline;
     width: 20%;
     &:hover {
@@ -103,6 +104,7 @@
       margin-bottom: -1em;
       @include susy-breakpoint($md) {
         padding-left: 0.5em;
+        padding-top: 0.5em;
         float: right;
       }
     }
@@ -110,7 +112,6 @@
   .active {
     background: white;
     border-bottom-color: white;
-    padding-bottom: 1px;
   }
 }
 
