@@ -71,30 +71,34 @@
 }
 
 .hosting-table-tabs {
-  border-bottom: 1px solid #D9D9D9;
+  background: gray;
   width: 100%;
   margin: 0.5em auto;
-  display: inline-block;
+  display: flex;
   justify-content: center;
-  height: 80px;
+  //height: 80px;
   @include susy-breakpoint($md) {
-    height: 50px;
+    align-items: stretch;
     flex-direction: row;
   }
   .hosting-tab {
     background-color: #efefef;
-    border: 2px solid #D9D9D9;
-    border-bottom: 1px solid #d9d9d9;
-    border-left: 1px solid #d9d9d9;
+    border-left: 1px solid gray;
     display: inline-block;
+    font-size: 11px;
     font-weight: bold;
     font-family: $header-font-family;
-    height: 3.2rem;
-    margin: 0 1%;
-    padding: 0 0.2em 0 0.5em;
+    height: auto;
+    margin: 0;
+    padding: 0;
     text-align: left;
     text-decoration: underline;
     width: 20%;
+    @include susy-breakpoint($lg  ) {
+      font-size: 13px;
+      height: 46px;
+      padding: 0 1%;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -111,7 +115,7 @@
   }
   .active {
     background: white;
-    border-bottom-color: white;
+    border-top: 1px solid gray;
   }
 }
 
