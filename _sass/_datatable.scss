@@ -72,11 +72,11 @@
 
 .hosting-table-tabs {
   background: gray;
-  width: 100%;
-  margin: 0.5em auto;
   display: flex;
   justify-content: center;
-  //height: 80px;
+  width: 100%;
+  margin: 0 auto 0.5em;
+  padding-top: 1rem;
   @include susy-breakpoint($md) {
     align-items: stretch;
     flex-direction: row;
