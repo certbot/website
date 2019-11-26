@@ -1,5 +1,6 @@
 $nav-height: 150px;
 $sm-nav-height: 60px;
+$logo-banner-height: 40px;
 $nav-color:  rgba(255,255,255,0.95);
 $nav-font-color: rgba(255,255,255,0.75);
 $nav-font: 'Roboto Slab';
@@ -14,10 +15,34 @@ body {
   }
 }
 
+.logo-banner {
+  align-items: baseline;
+  background-color: #2E2E2E;
+  color: #D9D9D9;
+  display: flex;
+  height: $logo-banner-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  .logo {
+    margin-left: 1%;
+    width: 33%;
+    img {
+      max-width: 100px;
+    }
+  }
+  .eff-tagline {
+    font-size: 1rem;
+    padding-top: 3px;
+    width: 66%;
+  }
+}
+
 nav.main-nav {
   z-index: 10;
   position: relative;
-  top: 0;
+  top: $logo-banner-height;
   left: 0;
   width: 100%;
   display: block;
@@ -98,7 +123,7 @@ nav.main-nav {
 
     li {
       display: none;
-      
+
       @include susy-breakpoint($md) {
         display: inline-block;
       }
@@ -106,7 +131,7 @@ nav.main-nav {
       text-transform: $nav-text-transform;
       font-family: $nav-font;
       color: #000;
-      
+
       a {
         font-weight: bold;
         font-size: 14px;
