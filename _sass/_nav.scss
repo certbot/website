@@ -16,26 +16,27 @@ body {
 }
 
 .logo-banner {
-  align-items: baseline;
-  background-color: #2E2E2E;
-  color: #D9D9D9;
+  align-items: center;
+  background-color: $eff-banner;
+  color: $eff-banner-text;
   display: flex;
   height: $logo-banner-height;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 11;
   .logo {
     margin-left: 1%;
-    width: 33%;
+    width: 120px;
     img {
       max-width: 100px;
+      vertical-align: inherit;
     }
   }
   .eff-tagline {
-    font-size: 1rem;
-    padding-top: 3px;
-    width: 66%;
+    font-size: 0.8em;
+    width: 60%;
   }
 }
 
