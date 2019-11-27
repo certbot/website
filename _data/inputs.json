@@ -17,6 +17,10 @@
             "id": "plesk"
         },
         {
+            "name": "Web Hosting Product",
+            "id": "webhosting"
+        },
+        {
             "name": "None of the above",
             "id": "other"
         }
@@ -26,6 +30,12 @@
             "name": "Web Hosting Service",
             "id": "sharedhost",
             "distro": "sharedhost",
+            "version": "0"
+        },
+        {
+            "name": "Web Hosting Product",
+            "id": "product",
+            "distro": "product",
             "version": "0"
         },
         {
