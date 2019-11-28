@@ -18,7 +18,7 @@
         },
         {
             "name": "Web Hosting Product",
-            "id": "webhosting"
+            "id": "webproduct"
         },
         {
             "name": "None of the above",
@@ -30,12 +30,6 @@
             "name": "Web Hosting Service",
             "id": "sharedhost",
             "distro": "sharedhost",
-            "version": "0"
-        },
-        {
-            "name": "Web Hosting Product",
-            "id": "product",
-            "distro": "product",
             "version": "0"
         },
         {
