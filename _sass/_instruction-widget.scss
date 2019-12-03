@@ -264,7 +264,7 @@ h1.instruct {
     }
     p {
       font-size: 16px;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       margin-left: -1em;
       @include susy-breakpoint($md) {
         margin-left: 0;
@@ -279,7 +279,7 @@ h1.instruct {
         margin-left: 0;
       }
     }
-    h3 { 
+    h3 {
       font-size: 22px;
       font-weight: bold;
       font-style: italic;
@@ -302,6 +302,13 @@ h1.instruct {
         font-size: 18px;
       }
     }
+  }
+  .small {
+    font-size: $small-font-size;
+  }
+  .subhead {
+    font-style: italic;
+    font-weight: 600;
   }
 }
 .instructions.content {
