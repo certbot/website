@@ -23,6 +23,10 @@
       margin-left: 80px;
     }
   }
+
+  h4 {
+    line-height: 1.2;
+  }
   .hero {
     @include susy-breakpoint($md) {
       height: 130px;
