@@ -139,9 +139,12 @@ $('document').ready(function() {
       selected = selected.split('-');
       $('#os-select').val(selected[0]);
       $('#server-select').val(selected[1].replace(".html", ""));
-      if (selected[1] == 'sharedhost') {
-        console.log(selected[0]);}
+      console.log(selected[0]);
+      if (selected[0] == 'sharedhost') {
+        console.log(selected[0]);
         $('.use-certbot').hide();
+        $('.instructions-footer').hide();
+      }
     }
   });
   $('.instructions').ready(function() {
