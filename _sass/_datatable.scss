@@ -4,7 +4,7 @@
   @include susy-breakpoint($md) {
     width: 58%;
     margin: 3em 20%;
-    border: 2px solid #D9D9D9;
+    border: 2px solid $table-border;
   }
   .tab-header-wrapper {
     display: none;
@@ -71,20 +71,19 @@
 }
 
 .hosting-table-tabs {
-  background: gray;
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 0 auto 0.5em;
-  padding-top: 1rem;
   @include susy-breakpoint($md) {
     align-items: stretch;
     flex-direction: row;
   }
   .hosting-tab {
-    background-color: #efefef;
-    border-left: 1px solid gray;
+    background-color: $grey-color-light;
+    border-left: 1px solid $table-border;
     display: inline-block;
+    flex-grow: 1;
     font-size: 11px;
     font-weight: bold;
     font-family: $header-font-family;
@@ -94,6 +93,9 @@
     text-align: left;
     text-decoration: underline;
     width: 20%;
+    &:nth-child(1) {
+      border-left: none;
+    }
     @include susy-breakpoint($lg  ) {
       font-size: 13px;
       height: 46px;
@@ -115,7 +117,6 @@
   }
   .active {
     background: white;
-    border-top: 1px solid gray;
   }
 }
 
@@ -146,7 +147,7 @@
   white-space: nowrap;
   table-layout: fixed;
   thead {
-    background-color: #D9D9D9;
+    background-color: $table-border;
     font-size: 18px;
     text-align: left;
     vertical-align: bottom;
