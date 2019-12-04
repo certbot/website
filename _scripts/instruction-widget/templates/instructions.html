@@ -1,4 +1,5 @@
 <h2 id="instructions-header"><a href="/lets-encrypt/{{os}}-{{webserver}}.html">{{server_longname}} on {{distro_longname}}</a></h2>
+{% include use_certbot.html %}
 <div class="tab automated active">default</div>
 <div class="tab advanced">wildcard</div>
 
@@ -42,7 +43,7 @@
       <img alt="Bag decorated with a heart" src="/images/BlackCircle-Donate.svg">
       <div class="text-wrapper">
         <span class="mobile-hidden">
-          Like Certbot? This free, open source project is part of EFF's 
+          Like Certbot? This free, open source project is part of EFF's
           commitment to make encryption accessible for all.
         </span>
         <span class="mobile-only">
