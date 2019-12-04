@@ -75,11 +75,11 @@
       <tr>
         <td><a href="{{ host.link }}">{{ host.name }}</a></td>
         {% if host.category == "full" %}
-        <td><img alt="Green checkmark icon" src="/images/GreenCheck.svg"></td>
+        <td><img alt="full HTTPS support" src="/images/GreenCheck.svg"></td>
         {% elsif host.category == "partial" %}
-        <td><img alt="Yellow dash icon" src="/images/PartialHTTPSSupport.svg"></td>
+        <td><img alt="partial HTTPS support" src="/images/PartialHTTPSSupport.svg"></td>
         {% else %}
-        <td><img alt="Red X icon" src="/images/NoHTTPSSupport.svg"></td>
+        <td><img alt="no HTTPS support" src="/images/NoHTTPSSupport.svg"></td>
         {% endif%}
         <td>{{ host.category }}</td>
         {% if host.tutorial != "" and host.tutorial != "[No need to find this]" %}
