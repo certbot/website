@@ -15,24 +15,25 @@ var docs_clean = function(done) {
 }
 
 var docs_html = function() {
-  return gulp.src(['./_docs/docs/_build/html/**'], {base: './_docs/docs/_build/html/'})
+  return gulp.src(['./_docs/certbot/docs/_build/html/**'],
+    {base: './_docs/certbot/docs/_build/html/'})
     .pipe(gulp.dest('./_site/docs'));
 }
 
 var docs_zip = function() {
-  return gulp.src('./_docs/docs/_build/html/**')
+  return gulp.src('./_docs/certbot/docs/_build/html/**')
     .pipe(zip('certbot.zip'))
     .pipe(gulp.dest('./_site/docs'));
 }
 
 var docs_epub = function() {
-  return gulp.src(['./_docs/docs/_build/epub/Certbot.epub'])
+  return gulp.src(['./_docs/certbot/docs/_build/epub/Certbot.epub'])
     .pipe(rename('certbot.epub'))
     .pipe(gulp.dest('./_site/docs'));
 }
 
 var docs_pdf = function() {
-  return gulp.src(['./_docs/docs/_build/latex/Certbot.pdf'])
+  return gulp.src(['./_docs/certbot/docs/_build/latex/Certbot.pdf'])
     .pipe(rename('certbot.pdf'))
     .pipe(gulp.dest('./_site/docs'));
 }
