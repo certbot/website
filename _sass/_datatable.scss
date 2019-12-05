@@ -96,10 +96,10 @@
     &:nth-child(1) {
       border-left: none;
     }
-    @include susy-breakpoint($lg  ) {
+    @include susy-breakpoint($lg) {
       font-size: 13px;
-      height: 46px;
-      padding: 0 1%;
+      height: 38px;
+      padding: 0.9rem 1% 0;
     }
     &:hover {
       cursor: pointer;
@@ -109,8 +109,8 @@
       margin: 0 auto;
       margin-bottom: -1em;
       @include susy-breakpoint($md) {
+        margin-top: -3px;
         padding-left: 0.5em;
-        padding-top: 0.5em;
         float: right;
       }
     }
