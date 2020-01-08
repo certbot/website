@@ -91,6 +91,12 @@ module.exports = function(context) {
     // Certbot only has packages available for RHEL 7 based systems.
     if (context.version != 7) {
       context.base_command = "/usr/local/bin/certbot-auto";
+      // RHEL/CentOS 6 32 bits distros are not supported by certbot-auto.
+      if (context.version == 6) {
+        context.deprecated_32bits = true
+      } else {
+        context.deprecated_32bits = false
+      }
       // certbot-auto on CentOS 6 walks you through installing EPEL, but on
       // RHEL 6 you need to do it beforehand. On RHEL 8 based systems, EPEL
       // isn't needed at all.
