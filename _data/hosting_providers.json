@@ -2248,5 +2248,15 @@
     "plan": "",
     "reviewed": "2019.12.17",
     "note": ""
+  },
+  {
+    "name": "alwaysdata",
+    "link": "https://www.alwaysdata.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://blog.alwaysdata.com/2016/11/28/https-native-support-for-lets-encrypt/",
+    "plan": "",
+    "reviewed": "2020.01.07",
+    "note": "Available for all plans from free account to dedicated servers"
   }
 ]
