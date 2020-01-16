@@ -39,6 +39,16 @@
     "reviewed": "2019.5.31",
     "note": ""
   },
+    {
+    "name": "DreamHost",
+    "link": "https://www.dreamhost.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.dreamhost.com/hosting/ssl-tls-certificates/",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": ""
+  },
   {
     "name": "EasyStore",
     "link": "https://www.easystore.co/",
