@@ -2240,6 +2240,16 @@
     "note": ""
   },
   {
+    "name": "Vero Servers",
+    "link": "https://www.veroservers.com",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "https://twitter.com/veroservers/status/1008697109749649408",
+    "plan": "",
+    "reviewed": "2020.01.15",
+    "note": "Certificates provided by default for managed servers. Cloud hosting accounts offer partial support."
+  },
+  {
     "name": "1984 Hosting",
     "link": "https://www.1984hosting.com",
     "category": "full",
