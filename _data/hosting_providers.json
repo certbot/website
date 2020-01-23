@@ -40,6 +40,16 @@
     "note": ""
   },
   {
+    "name": "DreamHost",
+    "link": "https://www.dreamhost.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.dreamhost.com/hosting/ssl-tls-certificates/",
+    "plan": "",
+    "reviewed": "2020.1.22",
+    "note": "SSL automatically installed on DreamPress. All other products have SSL available via one click and renews automatically."
+  },
+  {
     "name": "EasyStore",
     "link": "https://www.easystore.co/",
     "category": "full",
