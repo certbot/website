@@ -2278,5 +2278,15 @@
     "plan": "",
     "reviewed": "2020.01.07",
     "note": "Available for all plans from free account to dedicated servers"
+  },
+  {
+    "name": "Wikstrom Telephone Company (Wiktel)",
+    "link": "https://wiktel.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.01.16",
+    "note": "cPanel servers use cPanel's certificate system; all other sites use Let's Encrypt."
   }
 ]
