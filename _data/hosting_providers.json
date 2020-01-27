@@ -2288,5 +2288,15 @@
     "plan": "",
     "reviewed": "2020.01.16",
     "note": "cPanel servers use cPanel's certificate system; all other sites use Let's Encrypt."
+  },
+  {
+    "name": "XMission",
+    "link": "https://xmission.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
   }
 ]
