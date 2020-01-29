@@ -2296,7 +2296,7 @@
     "tutorial": "https://wiki.xmission.com/Lets_Encrypt",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.01.29",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
   }
 ]
