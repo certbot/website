@@ -2291,9 +2291,9 @@
   },
   {
     "name": "XMission",
-    "link": "https://wiki.xmission.com/Lets_Encrypt",
+    "link": "https://www.xmission.com",
     "category": "partial",
-    "tutorial": "",
+    "tutorial": "https://wiki.xmission.com/Lets_Encrypt",
     "announcement": "",
     "plan": "",
     "reviewed": "",
