@@ -25,6 +25,7 @@ module.exports = function(context) {
     context.dns_plugins = false;
     context.dns_package_prefix = "";
     context.jessie = false;  // Special jessie instructions for certbot-auto
+    context.python_name = "python";
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "nonunix" ||
@@ -96,15 +97,9 @@ module.exports = function(context) {
         context.deprecated_32bits = true
       } else {
         context.deprecated_32bits = false
+        context.python_name = "python3";
       }
-      // certbot-auto on CentOS 6 walks you through installing EPEL, but on
-      // RHEL 6 you need to do it beforehand. On RHEL 8 based systems, EPEL
-      // isn't needed at all.
-      if (context.version == 6 && context.distro == "rhel") {
-        context.need_epel = true;
-      } else {
-        context.need_epel = false;
-      }
+      context.need_epel = false;
       context.packaged = false;
     } else {
       context.need_epel = true;
