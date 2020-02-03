@@ -2298,5 +2298,15 @@
     "plan": "",
     "reviewed": "2020.01.29",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
+  },
+  {
+    "name": "ICDSoft",
+    "link": "https://www.icdsoft.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.icdsoft.com/en/news/security",
+    "plan": "",
+    "reviewed": "2020.01.16",
+    "note": "Available on all hosting plans: shared and managed VPS plans. One click installation and automatic renewals. Wildcard hostnames are also supported."
   }
 ]
