@@ -150,6 +150,16 @@
     "note": ""
   },
   {
+    "name": "Platform.sh",
+    "link": "https://platform.sh",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://docs.platform.sh/configuration/routes/https.html",
+    "reviewed": "2020.02.03",
+    "note": "All production and development environments include Let's Encrypt certificates automatically."
+  },
+  {
     "name": "Pride Tech Design",
     "link": "https://pridetechdesign.com/",
     "category": "full",
