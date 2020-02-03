@@ -1360,13 +1360,13 @@
     "note": ""
   },
   {
-    "name": "OVH.com",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
+    "name": "OVHcloud",
+    "link": "https://www.ovh.ie/web-hosting/",
+    "category": "full",
+    "tutorial": "https://docs.ovh.com/gb/en/hosting/activate-https-website-ssl/",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.01.30",
     "note": ""
   },
   {
