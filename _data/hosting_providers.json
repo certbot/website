@@ -2298,5 +2298,15 @@
     "plan": "",
     "reviewed": "2020.01.29",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
+  },
+    {
+    "name": "CA Net, Europe)",
+    "link": "https://www.canet.at",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.02.06",
+    "note": "All vServers and Webspace with Froxlor or I-MSCP use Let's Encrypt for Web and Mail"
   }
 ]
