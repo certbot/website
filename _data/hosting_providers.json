@@ -2302,8 +2302,8 @@
   {
     "name": "signaltransmitter.de",
     "link": "https://signaltransmitter.de",
-    "category": "full",
-    "tutorial": "",
+    "category": "partial",
+    "tutorial": "https://signaltransmitter.de/faq/webhosting/lets-encrypt",
     "announcement": "https://signaltransmitter.de/hosting",
     "plan": "",
     "reviewed": "",
