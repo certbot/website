@@ -2306,7 +2306,7 @@
     "tutorial": "https://signaltransmitter.de/faq/webhosting/lets-encrypt",
     "announcement": "https://signaltransmitter.de/hosting",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.02.07",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt"
   }
 ]
