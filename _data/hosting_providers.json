@@ -2298,5 +2298,15 @@
     "plan": "",
     "reviewed": "2020.01.29",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
+  },
+  {
+    "name": "signaltransmitter.de",
+    "link": "https://signaltransmitter.de",
+    "category": "partial",
+    "tutorial": "https://signaltransmitter.de/faq/webhosting/lets-encrypt",
+    "announcement": "https://signaltransmitter.de/hosting",
+    "plan": "",
+    "reviewed": "2020.02.07",
+    "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt"
   }
 ]
