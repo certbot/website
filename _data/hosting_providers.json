@@ -1230,13 +1230,13 @@
     "note": ""
   },
   {
-    "name": "Mydevil.net",
-    "link": "",
+    "name": "MyDevil.net",
+    "link": "https://www.mydevil.net",
     "category": "partial",
-    "tutorial": "",
-    "announcement": "",
+    "tutorial": "https://wiki.mydevil.net/SSL",
+    "announcement": "https://www.mydevil.net/status,155,certyfikaty-lets-encrypt-http2-i-aktualizacja.html",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.2.7",
     "note": ""
   },
   {
