@@ -960,16 +960,6 @@
     "note": ""
   },
   {
-    "name": "ICDSoft",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "",
-    "note": ""
-  },
-  {
     "name": "ifastnet",
     "link": "",
     "category": "partial",
@@ -2302,11 +2292,11 @@
   {
     "name": "ICDSoft",
     "link": "https://www.icdsoft.com",
-    "category": "full",
+    "category": "partial",
     "tutorial": "",
     "announcement": "https://www.icdsoft.com/en/news/security",
     "plan": "",
-    "reviewed": "2020.01.16",
+    "reviewed": "2020.02.20",
     "note": "Available on all hosting plans: shared and managed VPS plans. One click installation and automatic renewals. Wildcard hostnames are also supported."
   }
 ]
