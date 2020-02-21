@@ -185,9 +185,9 @@
             "version": "0"
         },
         {
-            "name": "Non-UNIX",
-            "id": "nonunix",
-            "distro": "nonunix",
+            "name": "Windows",
+            "id": "windows",
+            "distro": "windows",
             "version": "0"
         }
     ]
