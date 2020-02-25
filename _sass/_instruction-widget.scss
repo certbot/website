@@ -279,7 +279,7 @@ h1.instruct {
         margin-left: 0;
       }
     }
-    h3 { 
+    h3 {
       font-size: 22px;
       font-weight: bold;
       font-style: italic;
@@ -386,11 +386,11 @@ h1.instruct {
       border-top: 1px solid $stroke;
       border-right: 1px solid $stroke;
       background-color: rgba(0,0,0,0.05);
-      color: #aaa;
+      color: #666;
       &:hover {
         cursor: pointer;
         background-color: $darkstroke;
-        color: #666;
+        color: black;
         border-left: 1px solid $darkstroke;
         border-right: 1px solid $darkstroke;
         border-top: 1px solid $darkstroke
