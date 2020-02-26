@@ -381,12 +381,19 @@ h1.instruct {
       font-weight: 400;
       width: 250px;
     }
+    .glossary-term .tooltip a {
+      color: $link-color;
+    }
     &:not(.active) {
       border-left: 1px solid $stroke;
       border-top: 1px solid $stroke;
       border-right: 1px solid $stroke;
       background-color: rgba(0,0,0,0.05);
       color: #aaa;
+      a {
+        color: rgba(0, 0, 0, 0.05);
+        opacity: 0.5;
+      }
       &:hover {
         cursor: pointer;
         background-color: $darkstroke;
@@ -402,6 +409,9 @@ h1.instruct {
       border-left: 1px solid $content-stroke;
       border-right: 1px solid $content-stroke;
       border-top: 1px solid $content-stroke;
+      a {
+        color: white;
+      }
     }
 
   }
