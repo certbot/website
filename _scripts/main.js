@@ -119,5 +119,5 @@ $(document).ready(function() {
     $('.hosting-tab').removeClass('active');
     $(this).addClass('active');
   });
-  $('#full-https').click();
+  $('#all-https').click();
 });
