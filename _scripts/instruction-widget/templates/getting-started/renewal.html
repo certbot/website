@@ -44,7 +44,7 @@
   Set up automatic renewal
   <p>
   We recommend running the following line, which will add a cron job to the default crontab.
-  <pre class="one-line">echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; {{base_command}} renew" | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo "0 0,12 * * * root {{python_name}} -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; {{base_command}} renew" | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
 
   {{#certonly}}
@@ -54,7 +54,7 @@
   and start your webserver automatically. For example, if your webserver is HAProxy, modify the
   command as follows:
 
-  <pre class="one-line">echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; {{base_command}} renew --pre-hook 'service haproxy stop' --post-hook 'service haproxy start'" | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo "0 0,12 * * * root {{python_name}} -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; {{base_command}} renew --pre-hook 'service haproxy stop' --post-hook 'service haproxy start'" | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
 
   <p>
