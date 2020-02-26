@@ -26,6 +26,8 @@ If you’re not using the shared hosting product, or if your provider doesn’t 
 
 **_The list is categorized into:_**
 
+<a id="all-bounce" href="#table-anchor">All Hosting providers</a>: Find your provider here.
+
 <a id="full-bounce" href="#table-anchor">Full HTTPS Support</a>: Hosting providers that offer free Let’s Encrypt HTTPS certificates automatically for their shared hosting product. No need to do anything on your end if you use their service.
 
 <a id="partial-bounce" href="#table-anchor">Partial HTTPS Support</a>: Hosting providers that offer free Let’s Encrypt HTTPS certificates for their shared hosting product, but require configuration. You’ll need to follow a tutorial.
