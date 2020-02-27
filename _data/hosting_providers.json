@@ -2320,6 +2320,16 @@
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
   },
   {
+    "name": "Marketing One",
+    "link": "https://www.marketingone.com.au",
+    "category": "full",
+    "tutorial": "https://secure.carterdouglas.co/index.php/knowledgebase/12/How-to-Install-Lets-Encrypt-SSL-Using-cPanel.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.02.27",
+    "note": "All Shared & Managed Web Hosting offerings include SSL certificates free of charge."
+  },
+  {
     "name": "signaltransmitter.de",
     "link": "https://signaltransmitter.de",
     "category": "partial",
