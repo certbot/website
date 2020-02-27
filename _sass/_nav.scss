@@ -8,12 +8,6 @@ $nav-font-size: $base-font-size / 1.5;
 $nav-text-transform: lowercase;
 $nav-lg-width: 80em;
 
-body {
-  margin-top: $sm-nav-height;
-  @include susy-breakpoint($md) {
-    margin-top: $nav-height;
-  }
-}
 
 .logo-banner {
   align-items: center;
@@ -22,7 +16,7 @@ body {
   display: flex;
   height: $logo-banner-height;
   justify-content: flex-start;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 11;
@@ -42,9 +36,9 @@ body {
 
 nav.main-nav {
   z-index: 10;
-  position: relative;
-  top: $logo-banner-height;
+  position: sticky;
   left: 0;
+  top: 0;
   width: 100%;
   display: block;
   margin: 0 auto;
