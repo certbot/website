@@ -30,9 +30,13 @@ $nav-lg-width: 80em;
     }
   }
   .eff-tagline {
+    display: none;
     font-size: 0.8em;
     margin-top: 9px;
     width: 60%;
+    @include susy-breakpoint($md) {
+      display: inline-block;
+    }
   }
 }
 
