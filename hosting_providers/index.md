@@ -8,7 +8,7 @@ class: hosting
   <h3>This page is for users of {% include tooltip.html term-name="shared-hosting" text="shared hosting" %}.</h3>
   <br>
 
-  If you're not using the shared hosting product, or if your provider doesn't appear here, check out our <a href="/instructions">instructions</a> for using Certbot or <a href="/help">get help</a>. Note that your {% include tooltip.html term-name="shared-hosting" text="shared hosting provider" %} is not the same as your {% include tooltip.html term-name="domain-registrar" text="domain registrar" %}.
+  If you're not using the shared hosting product, or if your provider doesn't appear here, check out our <a href="/instructions">instructions</a> for using Certbot or <a href="/help">get help</a>. Note that your shared hosting is not the same as your {% include tooltip.html term-name="domain-registrar" text="domain registrar" %}.
 
 </div>
 
