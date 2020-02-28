@@ -40,6 +40,16 @@
     "note": ""
   },
   {
+    "name": "DreamHost",
+    "link": "https://www.dreamhost.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.dreamhost.com/hosting/ssl-tls-certificates/",
+    "plan": "",
+    "reviewed": "2020.1.22",
+    "note": "SSL automatically installed on DreamPress. All other products have SSL available via one click and renews automatically."
+  },
+  {
     "name": "EasyStore",
     "link": "https://www.easystore.co/",
     "category": "full",
@@ -140,6 +150,16 @@
     "note": ""
   },
   {
+    "name": "Platform.sh",
+    "link": "https://platform.sh",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://docs.platform.sh/configuration/routes/https.html",
+    "reviewed": "2020.02.03",
+    "note": "All production and development environments include Let's Encrypt certificates automatically."
+  },
+  {
     "name": "Pride Tech Design",
     "link": "https://pridetechdesign.com/",
     "category": "full",
@@ -218,6 +238,16 @@
     "plan": "",
     "reviewed": "2019.5.31",
     "note": ""
+  },
+  {
+    "name": "WRX Online",
+    "link": "https://wrx.hu/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://wrx.hu/szolgaltatasok/webtarhely",
+    "plan": "",
+    "reviewed": "2020.02.13",
+    "note": "The website is in Hungarian."
   },
   {
     "name": "34SP.com",
@@ -1200,13 +1230,13 @@
     "note": ""
   },
   {
-    "name": "Mydevil.net",
-    "link": "",
+    "name": "MyDevil.net",
+    "link": "https://www.mydevil.net",
     "category": "partial",
-    "tutorial": "",
-    "announcement": "",
+    "tutorial": "https://wiki.mydevil.net/SSL",
+    "announcement": "https://www.mydevil.net/status,155,certyfikaty-lets-encrypt-http2-i-aktualizacja.html",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.2.7",
     "note": ""
   },
   {
@@ -1350,13 +1380,13 @@
     "note": ""
   },
   {
-    "name": "OVH.com",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
+    "name": "OVHcloud",
+    "link": "https://www.ovh.ie/web-hosting/",
+    "category": "full",
+    "tutorial": "https://docs.ovh.com/gb/en/hosting/activate-https-website-ssl/",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.01.30",
     "note": ""
   },
   {
@@ -2238,5 +2268,65 @@
     "plan": "",
     "reviewed": "2019.11.18",
     "note": ""
+  },
+  {
+    "name": "Vero Servers",
+    "link": "https://www.veroservers.com",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "https://twitter.com/veroservers/status/1008697109749649408",
+    "plan": "",
+    "reviewed": "2020.01.15",
+    "note": "Certificates provided by default for managed servers. Cloud hosting accounts offer partial support."
+  },
+  {
+    "name": "1984 Hosting",
+    "link": "https://www.1984hosting.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://twitter.com/1984ehf/status/1206597490558017537",
+    "plan": "",
+    "reviewed": "2019.12.17",
+    "note": ""
+  },
+  {
+    "name": "alwaysdata",
+    "link": "https://www.alwaysdata.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://blog.alwaysdata.com/2016/11/28/https-native-support-for-lets-encrypt/",
+    "plan": "",
+    "reviewed": "2020.01.07",
+    "note": "Available for all plans from free account to dedicated servers"
+  },
+  {
+    "name": "Wikstrom Telephone Company (Wiktel)",
+    "link": "https://wiktel.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.01.16",
+    "note": "cPanel servers use cPanel's certificate system; all other sites use Let's Encrypt."
+  },
+  {
+    "name": "XMission",
+    "link": "https://www.xmission.com",
+    "category": "partial",
+    "tutorial": "https://wiki.xmission.com/Lets_Encrypt",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.01.29",
+    "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
+  },
+  {
+    "name": "signaltransmitter.de",
+    "link": "https://signaltransmitter.de",
+    "category": "partial",
+    "tutorial": "https://signaltransmitter.de/faq/webhosting/lets-encrypt",
+    "announcement": "https://signaltransmitter.de/hosting",
+    "plan": "",
+    "reviewed": "2020.02.07",
+    "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt"
   }
 ]
