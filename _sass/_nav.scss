@@ -22,6 +22,7 @@ $nav-lg-width: 80em;
   z-index: 11;
   .logo {
     margin-left: 1%;
+    margin-top: 6px;
     width: 120px;
     img {
       max-width: 100px;
@@ -30,6 +31,7 @@ $nav-lg-width: 80em;
   }
   .eff-tagline {
     font-size: 0.8em;
+    margin-top: 9px;
     width: 60%;
   }
 }
@@ -182,8 +184,4 @@ nav.main-nav {
 
     }
   }
-}
-
-nav.main-nav.fixed {
-  position: fixed;
 }
