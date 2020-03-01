@@ -1170,6 +1170,16 @@
     "note": ""
   },
   {
+    "name": "maxcluster",
+    "link": "https://maxcluster.de/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://maxcluster.de/blog/2018/01/lets-encrypt-ssl-zertifikate-kostenlos-sicher-und-schnell-einrichten",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
+  },
+  {
     "name": "mijn.host",
     "link": "https://mijn.host/",
     "category": "partial",
