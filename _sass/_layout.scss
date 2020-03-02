@@ -220,7 +220,10 @@
         }
     }
     .the-list {
-      margin-left: 6rem;
+      margin-left: 2rem;
+      @include susy-breakpoint($md) {
+        margin-left: 6rem;
+      }
     }
     [id*="-bounce"] img {
       margin-bottom: 5px;
