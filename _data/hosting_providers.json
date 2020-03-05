@@ -1172,9 +1172,9 @@
   {
     "name": "maxcluster",
     "link": "https://maxcluster.de/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "https://maxcluster.de/blog/2018/01/lets-encrypt-ssl-zertifikate-kostenlos-sicher-und-schnell-einrichten",
+    "category": "partial",
+    "tutorial": "https://maxcluster.de/blog/2018/01/lets-encrypt-ssl-zertifikate-kostenlos-sicher-und-schnell-einrichten",
+    "announcement": "",
     "plan": "",
     "reviewed": "2020.3.3",
     "note": "Site and link are in German"
