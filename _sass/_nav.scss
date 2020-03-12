@@ -1,5 +1,6 @@
 $nav-height: 150px;
 $sm-nav-height: 60px;
+$logo-banner-height: 40px;
 $nav-color:  rgba(255,255,255,0.95);
 $nav-font-color: rgba(255,255,255,0.75);
 $nav-font: 'Roboto Slab';
@@ -7,18 +8,43 @@ $nav-font-size: $base-font-size / 1.5;
 $nav-text-transform: lowercase;
 $nav-lg-width: 80em;
 
-body {
-  margin-top: $sm-nav-height;
-  @include susy-breakpoint($md) {
-    margin-top: $nav-height;
+
+.logo-banner {
+  align-items: center;
+  background-color: $eff-banner;
+  color: $eff-banner-text;
+  display: flex;
+  height: $logo-banner-height;
+  justify-content: flex-start;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  .logo {
+    margin-left: 1%;
+    margin-top: 6px;
+    width: 120px;
+    img {
+      max-width: 100px;
+      vertical-align: inherit;
+    }
+  }
+  .eff-tagline {
+    display: none;
+    font-size: 0.8em;
+    margin-top: 9px;
+    width: 60%;
+    @include susy-breakpoint($md) {
+      display: inline-block;
+    }
   }
 }
 
 nav.main-nav {
   z-index: 10;
-  position: relative;
-  top: 0;
+  position: sticky;
   left: 0;
+  top: 0;
   width: 100%;
   display: block;
   margin: 0 auto;
@@ -98,7 +124,7 @@ nav.main-nav {
 
     li {
       display: none;
-      
+
       @include susy-breakpoint($md) {
         display: inline-block;
       }
@@ -106,7 +132,7 @@ nav.main-nav {
       text-transform: $nav-text-transform;
       font-family: $nav-font;
       color: #000;
-      
+
       a {
         font-weight: bold;
         font-size: 14px;
@@ -162,8 +188,4 @@ nav.main-nav {
 
     }
   }
-}
-
-nav.main-nav.fixed {
-  position: fixed;
 }

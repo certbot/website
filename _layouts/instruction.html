@@ -4,7 +4,8 @@
   {% include head.html %}
 
   <body class="instructions page">
-
+    
+    {% include eff-logo.html %}
     {% include topnav.html %}
     {% include shelf.html %}
 
@@ -18,17 +19,16 @@
 
     <div class="page-content">
       <div class="wrapper">
-        {% include use_certbot.html %}
         <div class="instructions content">
           {{ content }}
         </div>
       </div>
     </div>
-    
+
     {% include social.html %}
     {% include footer.html %}
-    
-    
+
+
   </body>
 
 </html>

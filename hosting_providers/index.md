@@ -15,8 +15,12 @@ class: hosting
 
 **_The list is categorized into:_**
 
-<a id="full-bounce" href="#table-anchor">Full HTTPS Support</a>: Hosting providers that offer free Let’s Encrypt HTTPS certificates automatically for their shared hosting product. No need to do anything on your end if you use their service.
+<div class="provider-categories">
+  <p><a id="all-bounce" href="#table-anchor">All Hosting providers</a>: Find your provider here.</p>
 
-<a id="partial-bounce" href="#table-anchor">Partial HTTPS Support</a>: Hosting providers that offer free Let’s Encrypt HTTPS certificates for their shared hosting product, but require configuration. You’ll need to follow a tutorial.
+  <p><a id="full-bounce" href="#table-anchor"><img alt="Full HTTPS support" src="/images/GreenCheck.svg">Full HTTPS Support</a>: Hosting providers that offer free Let’s Encrypt HTTPS certificates automatically for their shared hosting product. No need to do anything on your end if you use their service.</p>
 
-<a id="no-bounce" href="#table-anchor">No HTTPS Support</a>: Hosting providers that do not offer free HTTPS certificates for their shared hosting product. It may or may not be possible to use Certbot with other products that the provider offers, such as their VPS product.
+  <p><a id="partial-bounce" href="#table-anchor"><img alt="Partial HTTPS support" src="/images/PartialHTTPSSupport.svg">Partial HTTPS Support</a>: Hosting providers that offer free Let’s Encrypt HTTPS certificates for their shared hosting product, but require configuration. You’ll need to follow a tutorial.</p>
+
+  <p><a id="no-bounce" href="#table-anchor"><img alt="No HTTPS support" src="/images/NoHTTPSSupport.svg">No HTTPS Support</a>: Hosting providers that do not offer free HTTPS certificates for their shared hosting product. It may or may not be possible to use Certbot with other products that the provider offers, such as their VPS product.</p>
+</div>

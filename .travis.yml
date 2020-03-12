@@ -38,6 +38,7 @@ sudo: required
 notifications:
   email: false
   irc:
+    if: branch = master
     channels:
       # This is set to a secure variable to prevent forks from sending
       # notifications. This value was created by installing

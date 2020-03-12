@@ -23,6 +23,10 @@
       margin-left: 80px;
     }
   }
+
+  h4 {
+    line-height: 1.2;
+  }
   .hero {
     @include susy-breakpoint($md) {
       height: 130px;
@@ -264,7 +268,7 @@ h1.instruct {
     }
     p {
       font-size: 16px;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       margin-left: -1em;
       @include susy-breakpoint($md) {
         margin-left: 0;
@@ -279,7 +283,7 @@ h1.instruct {
         margin-left: 0;
       }
     }
-    h3 { 
+    h3 {
       font-size: 22px;
       font-weight: bold;
       font-style: italic;
@@ -302,6 +306,13 @@ h1.instruct {
         font-size: 18px;
       }
     }
+  }
+  .small {
+    font-size: $small-font-size;
+  }
+  .subhead {
+    font-style: italic;
+    font-weight: 600;
   }
 }
 .instructions.content {
@@ -381,16 +392,23 @@ h1.instruct {
       font-weight: 400;
       width: 250px;
     }
+    .glossary-term .tooltip a {
+      color: $link-color;
+    }
     &:not(.active) {
       border-left: 1px solid $stroke;
       border-top: 1px solid $stroke;
       border-right: 1px solid $stroke;
       background-color: rgba(0,0,0,0.05);
-      color: #aaa;
+      color: #666;
+      a {
+        color: rgba(0, 0, 0, 1);
+        opacity: 0.5;
+      }
       &:hover {
         cursor: pointer;
         background-color: $darkstroke;
-        color: #666;
+        color: black;
         border-left: 1px solid $darkstroke;
         border-right: 1px solid $darkstroke;
         border-top: 1px solid $darkstroke
@@ -402,6 +420,9 @@ h1.instruct {
       border-left: 1px solid $content-stroke;
       border-right: 1px solid $content-stroke;
       border-top: 1px solid $content-stroke;
+      a {
+        color: white;
+      }
     }
 
   }
