@@ -2348,5 +2348,15 @@
     "plan": "",
     "reviewed": "2020.02.07",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt"
+  },
+  {
+    "name": "CA Net, Europe",
+    "link": "https://www.canet.at",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.canet.at/hosting-server/",
+    "plan": "",
+    "reviewed": "2020.03.26",
+    "note": "All plans come with Let's Encrypt for Web and Mail"
   }
 ]
