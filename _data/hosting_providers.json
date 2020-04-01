@@ -2272,8 +2272,8 @@
   {
     "name": "Nuclear.Hosting",
     "link": "https://nuclear.hosting",
-    "category": "full",
-    "tutorial": "",
+    "category": "partial",
+    "tutorial": "https://nuclear.hosting/help/https/#https-secured-encrypted-access-to-website",
     "announcement": "",
     "plan": "",
     "reviewed": "2020.01.19",
