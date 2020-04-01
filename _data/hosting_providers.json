@@ -980,16 +980,6 @@
     "note": ""
   },
   {
-    "name": "ICDSoft",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "",
-    "note": ""
-  },
-  {
     "name": "ifastnet",
     "link": "",
     "category": "partial",
@@ -2338,6 +2328,16 @@
     "plan": "",
     "reviewed": "2020.01.29",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
+  },
+  {
+    "name": "ICDSoft",
+    "link": "https://www.icdsoft.com",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "https://www.icdsoft.com/en/ssl#free-ssl",
+    "plan": "",
+    "reviewed": "2020.02.20",
+    "note": "Available on all hosting plans: shared and managed VPS plans. One click installation and automatic renewals. Wildcard hostnames are also supported."
   },
   {
     "name": "Marketing One",
