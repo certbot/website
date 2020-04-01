@@ -19,6 +19,8 @@ $grey-color:       #838383;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$table-border: #D9D9D9;
+
 $link-color: rgba(64,116,142,1);
 
 // rgba(64,116,142,1);
@@ -36,6 +38,9 @@ $footer-color: #363636;
 $body-bg-color: $grey-cool;
 $content-bg-color: $white;
 $certbot-red: rgba(236,28,35,1);
+
+$eff-banner: #2E2E2E;
+$eff-banner-text: #D9D9D9;
 
 $darkstroke: #e6e6e6;
 $stroke: #f3f3f3;
@@ -181,4 +186,3 @@ img.link-arrow {
   height: 18px;
   width: 8px;
 }
-

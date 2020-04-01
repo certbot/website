@@ -28,7 +28,7 @@ module.exports = function(context) {
     context.python_name = "python";
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
-    if (context.webserver == "plesk" || context.distro == "nonunix" ||
+    if (context.webserver == "plesk" || context.distro == "windows" ||
         context.distro == "sharedhost") {
         return '';
     }

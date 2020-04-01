@@ -190,3 +190,29 @@ div.indent {
     font-weight: bold;
   }
 }
+
+.shared-hosting {
+  font-weight: bold;
+  margin-bottom: 2em;
+  .glossary-term a.glossary-link {
+    color: $link-color;
+  }
+  h3 {
+    font-weight: bold;
+      .glossary-term a.glossary-link {
+        font-size: 26px;
+        font-family: $header-font-family;
+        font-weight: bold;
+      }
+    }
+  }
+  
+.provider-categories {
+  margin: 1em 1em 1em 3em;
+  > div {
+    margin-bottom: 1em;
+  }
+  img {
+    margin-right: 5px;
+  }
+}
