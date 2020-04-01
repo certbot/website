@@ -2368,5 +2368,15 @@
     "plan": "",
     "reviewed": "2020.03.26",
     "note": "All plans come with Let's Encrypt for Web and Mail"
-  }
+  },
+  {
+    "name": "Nuclear.Hosting",
+    "link": "https://nuclear.hosting",
+    "category": "partial",
+    "tutorial": "https://nuclear.hosting/help/https/#https-secured-encrypted-access-to-website",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.04.01",
+    "note": "Available for all membership types, without any limitations."
+  },
 ]
