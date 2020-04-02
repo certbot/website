@@ -32,6 +32,9 @@ module.exports = function(context) {
         context.distro == "sharedhost") {
         return '';
     }
+    else if (context.distro == "snap") {
+      snap_install();
+    }
     else if (context.distro == "debian" && context.version > 8) {
       debian_install();
     }
@@ -249,6 +252,12 @@ module.exports = function(context) {
     }
     context.dns_plugins = true;
     context.dns_package_prefix = "python-certbot-dns";
+  }
+
+  snap_install = function() {
+    template = "snap";
+    context.base_command = "certbot";
+    context.install_command = "sudo snap install certbot --beta --classic"
   }
 
   auto_install = function() {
