@@ -220,13 +220,12 @@ module.exports = function(context) {
           context.package = "letsencrypt";
           context.base_command = "letsencrypt";
       }
-    }
-
-    // The Apache plugin isn't packaged for BSD yet
-    if (context.webserver == "apache") {
-      context.certonly = true;
-    } else if (context.webserver == "nginx") {
-      context.certonly = true;
+      // The Apache plugin isn't packaged for OpenBSD
+      if (context.webserver == "apache") {
+        context.certonly = true;
+      } else if (context.webserver == "nginx") {
+        context.certonly = true;
+      }
     }
   }
 
