@@ -27,7 +27,7 @@ Let’s Encrypt also operates [Community Forums](https://community.letsencrypt.o
 
 Let’s Encrypt may change these policies or providers from time to time. If you have questions about Let’s Encrypt’s privacy practices, please contact them directly at [security@letsencrypt.org](mailto:security@letsencrypt.org).
 
-The Certbot community can be contacted through the Freenode Project’s IRC service, chat.freenode.net, on the #letsencrypt-dev channel. This IRC service is operated by Freenode, which does not publish a privacy policy.
+The Certbot community can be contacted through the Freenode Project’s IRC service, chat.freenode.net, on the #certbot-devel channel. This IRC service is operated by Freenode, which does not publish a privacy policy.
 
 In addition, you may elect to provide information to EFF through Certbot, such as your contact information or bug reports. That information will be protected by the [EFF Technology Project Privacy Policy](https://www.eff.org/code/privacy/policy).
 
