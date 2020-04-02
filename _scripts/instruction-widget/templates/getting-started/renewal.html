@@ -19,14 +19,16 @@
 
   {{#certonly}}
   <p>
-  If you needed to stop your webserver to run Certbot, you'll want to edit the built-in command
-  to add the <tt>--pre-hook</tt> and <tt>--post-hook</tt> flags to stop and start your
-  webserver automatically. For example, if your webserver is HAProxy, add the following to the
-  <tt>{{base_command}} renew</tt> command:
+  If you needed to stop your webserver to run Certbot, you'll want to add hook
+  scripts to stop and start your webserver automatically. For example, if your
+  webserver is HAProxy, run the following commands:
   </p>
 
   <pre>
-    --pre-hook "service haproxy stop" --post-hook "service haproxy start"
+    sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'
+    sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'
+    sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh
+    sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh
   </pre>
 
   <p>
