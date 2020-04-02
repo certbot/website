@@ -37,7 +37,7 @@
             "id": "snap",
             "distro": "snap",
             "version": "0"
-        }
+        },
         {
             "name": "Debian 8 (jessie)",
             "id": "debianjessie",
