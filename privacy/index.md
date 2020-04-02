@@ -35,6 +35,8 @@ In addition, you may elect to provide information to EFF through Certbot, such a
 
 EFF's Certbot Privacy Policy may change from time to time. However, any revised privacy policy will be consistent with EFF's mission. 
 
+*Updated on April 2nd, 2020 to change Freenode IRC channel.*
+
 *Updated on October 25th, 2018 to reflect changes to IRC services used.*
 
 *Updated on June 23rd, 2017 to add additional IRC services.*
@@ -42,6 +44,8 @@ EFF's Certbot Privacy Policy may change from time to time. However, any revised 
 *Updated on June 7th, 2017 to clarify which values are collected in the User Agent string.*
 
 #### Previous Privacy Policies
+
+[October 25, 2018 - April 2, 2020](https://github.com/certbot/website/blob/eedd40a1a55b0ac6b27a96adfb23e707356b834a/privacy/index.md)
 
 [June 23, 2017 - October 25, 2018](https://github.com/certbot/website/blob/446a47c51fb74db05b8240ddb24174a36e71cc82/privacy/index.md)
 
