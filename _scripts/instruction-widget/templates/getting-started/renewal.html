@@ -24,12 +24,10 @@
   webserver is HAProxy, run the following commands:
   </p>
 
-  <pre>
-    sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'
-    sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'
-    sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh
-    sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh
-  </pre>
+  <pre class="no-before"><ol><li>sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'</li>
+    <li>sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'</li>
+    <li>sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh</li>
+    <li>sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh</li></ol></pre>
 
   <p>
   More information is available in the
