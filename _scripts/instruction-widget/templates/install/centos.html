@@ -16,22 +16,12 @@
     You'll need to enable the EPEL (Extra Packages for Enterprise Linux)
     repository.<br>
     Follow these instructions at
-    <a href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
+    <a href='https://fedoraproject.org/wiki/EPEL#Quickstart'>
       the Fedora wiki to enable EPEL</a>.
     </p>
     <p class="centered">
-    <a class="link-button" href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
+    <a class="link-button" href='https://fedoraproject.org/wiki/EPEL#Quickstart'>
       enable EPEL</a>
-    </p>
-</li>
-<li>
-    Enable the optional channel
-    <p>
-    If you're using RHEL or Oracle Linux, you'll also need to enable the optional channel.
-    On EC2, RHEL users can enable the optional channel by running the following command,
-    substituting your EC2 region for REGION in the command:
-    <pre class="no-before"><ol><li>yum -y install yum-utils</li>
-      <li>yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional</li></ol></pre>
     </p>
 </li>
 
@@ -40,22 +30,6 @@
 {{/packaged}}
 
 {{^packaged}}
-{{#need_epel}}
-<li>
-    Enable EPEL repo
-    <p>
-    You'll need to enable the EPEL (Extra Packages for Enterprise Linux)
-    repository to download Certbot's dependecies.<br>
-    Follow these instructions at
-    <a href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
-      the Fedora wiki to enable EPEL</a>.
-    </p>
-    <p class="centered">
-    <a class="link-button" href='https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F'>
-      enable EPEL</a>
-    </p>
-</li>
-{{/need_epel}}
 {{>auto}}
 {{/packaged}}
 
