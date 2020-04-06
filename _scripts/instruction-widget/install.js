@@ -89,8 +89,8 @@ module.exports = function(context) {
   centos_install = function() {
     template = "centos";
 
-    // Certbot only has packages available for RHEL 7 based systems.
-    if (context.version != 7) {
+    // Certbot only has packages available for RHEL 7+ based systems.
+    if (context.version < 7) {
       context.base_command = "/usr/local/bin/certbot-auto";
       // RHEL/CentOS 6 32 bits distros are not supported by certbot-auto.
       if (context.version == 6) {
@@ -104,17 +104,25 @@ module.exports = function(context) {
     } else {
       context.need_epel = true;
       context.base_command = "certbot";
-      context.install_command = "sudo yum install";
       context.package = "certbot";
       context.packaged = true;
 
+      if (context.version == 7) {
+        context.install_command = "sudo yum install";
+        python_prefix = "python2-"
+      } else {
+        context.install_command = "sudo dnf install";
+        python_prefix = "python3-"
+      }
+
+
       if (context.webserver == "apache") {
-        context.package += " python2-certbot-apache";
+        context.package += " " + python_prefix + "certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package += " python2-certbot-nginx";
+        context.package += " " + python_prefix + "certbot-nginx";
       }
       context.dns_plugins = true;
-      context.dns_package_prefix = "python2-certbot-dns";
+      context.dns_package_prefix = python_prefix + "certbot-dns";
     }
   }
 
