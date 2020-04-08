@@ -22,5 +22,15 @@
     <a class="link-button" href='https://snapcraft.io/docs/installing-snapd/'>install snapd</a>
     </p>
 </li>
+<li>
+    Remove any Certbot OS packages
+    <p>
+    If you have any Certbot packages installed using an OS package manager like
+    <tt>apt</tt>, <tt>dnf</tt>, or <tt>yum</tt>, you should remove them before
+    installing the Certbot snap to ensure that when you run the command
+    <tt>certbot</tt> the snap is used rather than the installation from your OS
+    package manager.
+    </p>
+</li>
 {{>installcertbot}}
 {{> dnspluginssetup}}
