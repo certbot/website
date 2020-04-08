@@ -78,6 +78,7 @@ module.exports = function(context) {
     partials.installcertbot = require(TEMPLATE_PATH + "installcertbot.html");
     partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.dnspluginssetup = require(TEMPLATE_PATH + "dnspluginssetup.html");
+    partials.ssh = require(TEMPLATE_PATH + "ssh.html")
 
     // Load and render the selected template.
     template = require(TEMPLATE_PATH + template + '.html');
