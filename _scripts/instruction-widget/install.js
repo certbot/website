@@ -258,8 +258,8 @@ module.exports = function(context) {
     template = "snap";
     context.base_command = "certbot";
     context.cron_included = true;
-    context.install_command = "sudo snap install --beta --classic"
-    context.package = "certbot"
+    context.install_command = "sudo snap install --beta --classic";
+    context.package = "certbot";
   }
 
   auto_install = function() {
