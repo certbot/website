@@ -12,9 +12,9 @@ module.exports = function() {
 
   // Set some defaults.
   var context = {
-    base_command: "letsencrypt",
-    base_package: "letsencrypt",
-    package: "letsencrypt",
+    base_command: "certbot",
+    base_package: "certbot",
+    package: "certbot",
   };
 
   get_partials = function(input) {
