@@ -64,7 +64,7 @@
         },
         {
             "name": "Ubuntu 19.10+",
-            "id": "ubuntueoan",
+            "id": "ubuntuother",
             "distro": "ubuntu",
             "version": "19.10"
         },
