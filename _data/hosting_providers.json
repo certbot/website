@@ -2379,4 +2379,15 @@
     "reviewed": "2020.04.01",
     "note": "Available for all membership types, without any limitations."
   },
+  
+  {
+    "name": "PORKBUN",
+    "link": "https://porkbun.com/",
+    "category": "partial",
+    "tutorial": "https://kb.porkbun.com/article/71-how-your-free-ssl-certificate-works",
+    "announcement": "https://porkbun.com/products/ssl",
+    "plan": "",
+    "reviewed": "2020.04.20",
+    "note": "All supported Porkbun domains using our default name servers come with an SSL certificate issued by Let’s Encrypt."
+  },
 ]
