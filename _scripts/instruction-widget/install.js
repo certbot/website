@@ -216,13 +216,8 @@ module.exports = function(context) {
     }
     if (context.distro == "opbsd"){
       context.install_command = "pkg_add";
-      if (context.version >= 6) {
-          context.package = "certbot";
-          context.base_command = "certbot";
-      } else {
-          context.package = "letsencrypt";
-          context.base_command = "letsencrypt";
-      }
+      context.package = "certbot";
+      context.base_command = "certbot";
     }
 
     // The Apache plugin isn't packaged for BSD yet

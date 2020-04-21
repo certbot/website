@@ -135,22 +135,10 @@
             "version": "0"
         },
         {
-            "name": "OpenBSD 5.9",
-            "id": "opbsd5",
-            "distro": "opbsd",
-            "version": "5.9"
-        },
-        {
             "name": "OpenBSD 6.0+",
             "id": "opbsd6",
             "distro": "opbsd",
             "version": "6"
-        },
-        {
-            "name": "OpenBSD (other)",
-            "id": "opbsd",
-            "distro": "auto",
-            "version": "0"
         },
         {
             "name": "macOS",
