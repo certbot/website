@@ -143,6 +143,7 @@ module.exports = function(context) {
   ubuntu_install = function() {
     template = "ubuntu";
 
+    context.ppa = context.version < 19.10;
     context.package = "certbot";
     context.install_command = "sudo apt-get install";
     if (context.webserver == "apache") {

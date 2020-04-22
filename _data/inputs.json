@@ -69,6 +69,12 @@
             "version": "0"
         },
         {
+            "name": "Ubuntu 19.10+",
+            "id": "ubuntuother",
+            "distro": "ubuntu",
+            "version": "19.10"
+        },
+        {
             "name": "Ubuntu 18.04 LTS (bionic)",
             "id": "ubuntubionic",
             "distro": "ubuntu",
@@ -79,12 +85,6 @@
             "id": "ubuntuxenial",
             "distro": "ubuntu",
             "version": "16.04"
-        },
-        {
-            "name": "Ubuntu (other)",
-            "id": "ubuntuother",
-            "distro": "ububtu",
-            "version": "0"
         },
         {
             "name": "Gentoo",
