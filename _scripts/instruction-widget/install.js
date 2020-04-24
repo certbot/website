@@ -147,9 +147,9 @@ module.exports = function(context) {
     context.package = "certbot";
     context.install_command = "sudo apt-get install";
     if (context.webserver == "apache") {
-      context.package += " " + "python-certbot-apache";
+      context.package += " " + "python3-certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package += " " + "python-certbot-nginx";
+      context.package += " " + "python3-certbot-nginx";
     }
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
