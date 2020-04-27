@@ -1371,12 +1371,12 @@
   },
   {
     "name": "one.com",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.one.com/",
+    "category": "full",
     "tutorial": "",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.4.29",
     "note": ""
   },
   {
