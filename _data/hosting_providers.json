@@ -2211,13 +2211,13 @@
   },
   {
     "name": "Namecheap.com",
-    "link": "https://www.namecheap.com/security/ssl-certificates/",
+    "link": "https://www.namecheap.com/hosting/",
     "category": "partial",
-    "tutorial": "https://www.namecheap.com/blog/install-free-ssls/",
+    "tutorial": "https://www.namecheap.com/support/knowledgebase/article.aspx/9418/33/installing-an-ssl-certificate-on-your-server-using-cpanel/",
     "announcement": "",
-    "plan": "https://www.namecheap.com/security/ssl-certificates/",
-    "reviewed": "2019.6.6",
-    "note": ""
+    "plan": "https://community.letsencrypt.org/t/namecheap-response-to-lets-encrypt/51411",
+    "reviewed": "2020.4.27",
+    "note": "automatic renewal via ACME not offically supported"
   },
   {
     "name": "Netsons.com",
