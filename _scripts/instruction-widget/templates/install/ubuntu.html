@@ -1,7 +1,7 @@
 {{> header}}
 
-<li>
 {{#ppa}}
+<li>
     Add Certbot PPA
     <p>
     You'll need to add the Certbot PPA to your list of repositories. To do so,
@@ -12,8 +12,10 @@
       <li>sudo add-apt-repository ppa:certbot/certbot</li>
       <li>sudo apt-get update</li></ol></pre>
     </p>
+</li>
 {{/ppa}}
 {{^ppa}}
+<li>
     Enable the universe repository
     <p>
     You'll need to make sure Ubuntu universe is in your list of repositories.
@@ -23,8 +25,8 @@
       <li>sudo add-apt-repository universe</li>
       <li>sudo apt-get update</li></ol></pre>
     </p>
-{{/ppa}}
 </li>
+{{/ppa}}
 
 {{> installcertbot}}
 {{> dnspluginssetup}}
