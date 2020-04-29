@@ -14,6 +14,19 @@
     </p>
 </li>
 {{/ppa}}
+{{^ppa}}
+<li>
+    Enable the universe repository
+    <p>
+    You'll need to make sure Ubuntu universe is in your list of repositories.
+    To do so, run the following commands on the command line on the machine:
+    <pre class="no-before"><ol><li>sudo apt-get update</li>
+      <li>sudo apt-get install software-properties-common</li>
+      <li>sudo add-apt-repository universe</li>
+      <li>sudo apt-get update</li></ol></pre>
+    </p>
+</li>
+{{/ppa}}
 
 {{> installcertbot}}
 {{> dnspluginssetup}}
