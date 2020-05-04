@@ -2215,7 +2215,7 @@
     "category": "no",
     "tutorial": "https://www.namecheap.com/support/knowledgebase/article.aspx/9418/33/installing-an-ssl-certificate-on-your-server-using-cpanel/",
     "announcement": "",
-    "plan": "https://community.letsencrypt.org/t/namecheap-response-to-lets-encrypt/51411",
+    "plan": "",
     "reviewed": "2020.4.27",
     "note": ""
   },
