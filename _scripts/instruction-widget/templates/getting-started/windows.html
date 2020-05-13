@@ -1,7 +1,112 @@
+<h1>Windows installation procedure</h1>
+
 <p>
-Certbot is currently only available for UNIX-like operating systems. Although
-EFF's Certbot might not work for your use case, there are many <a
-href="https://community.letsencrypt.org/t/list-of-client-implementations/2103">
+Certbot is now officially available for Windows. If you find that Certbot is not
+the most suitable Let's Encrypt client application for your use case, there are
+many <a href="https://community.letsencrypt.org/t/list-of-client-implementations/2103">
 other clients</a> written by other organizations and developers that you may be
 able to use to obtain a certificate from Let's Encrypt.
 </p>
+
+<h2>Important notes</h2>
+
+<p>
+This procedure follows the current Certbot implementation for Windows, in particular the fact that it installs as a system component, and requires administrative privileges. These instructions will be updated when a future version of Certbot <a href="https://github.com/certbot/certbot/issues/7883">switches to a different installation method</a>.
+No installers for HTTP servers are supported for now (Certbot for Windows can currently obtain your certificate from
+Let's Encrypt, but not install it into your web server application).
+
+<h2>Specific Windows system requirements and user knowledge requirements</h2>
+
+<ul>
+<li>The user needs to be familiar with the command-line interface (CLI), because Certbot is a pure CLI program.</li>
+<li>The user must use an account with administrative privileges to install and run Certbot.</li>
+<li>PowerShell and <code>CMD.EXE</code> are supported; both need to be started with elevated privileges before invoking Certbot.</li>
+<li>Path <code>C:\Certbot</code> must be writable by the current user.</li>
+</ul>
+
+<h2>Specific Windows limitations and configuration</h2>
+
+<ul>
+<li>All usual operations to create and manage an account, manage existing certificates, or select the ACME server, are supported.</li>
+<li>Only standalone, manual and webroot authenticator plugins are supported. DNS plugins will be available soon. This means that Certbot for Windows is currently unable to automatically renew wildcard certificates, since these require a DNS plugin in order to be renewed without user intervention.</li>
+<li>No installer plugins are supported. The apache and nginx plugins will be available soon, and a plugin to install certificates into IIS is under development.</li>
+<li>Automated certificate renewals (using standalone and webroot plugins) are supported.</li>
+</ul>
+
+<h2>Installation instructions (default)</h2>
+
+<ol class="arabic simple">
+<li>Connect to the server.</li>
+<ol>
+<li>Connect locally or remotely (using Remote Desktop) to the server using an account that has administrative privileges for this machine.</li>
+</ol>
+<li>Install Certbot.
+<ol>
+	<li>Download the latest version of the Certbot installer for Windows at <a class="reference external" href="https://dl.eff.org/certbot-beta-installer-win32.exe">https://dl.eff.org/certbot-beta-installer-win32.exe</a>.</li>
+	<li>Run the installer and follow the wizard. The installer will propose a default installation directory, <code>C:\Program Files(x86)</code>, that can be customized.)</li>
+</ol>
+<li>To start a shell for Certbot, select the Start menu, enter <code>cmd</code> (to run <code>CMD.EXE</code>) or <code>powershell</code> (to run PowerShell), and click on “Run as administrator” in the contextual menu that shows up above.</li>
+<li>Run Certbot as a shell command.</li>
+</ol>
+
+<p>To run a command on Certbot, enter the name <code>certbot</code> in the shell, followed by the command and its parameters. For instance, to display the inline help, run:</p>
+
+<p><code>C:\WINDOWS\system32&gt; certbot --help</code></p>
+
+<h2>Choose how you’d like to run Certbot</h2>
+
+    <p>
+        Are you ok with temporarily stopping your website?
+    </p>
+    <h3>Yes, my web server is not currently running on this machine.</h3>
+    <p>
+        Stop your webserver, then run this command to get a certificate.
+        Certbot will temporarily spin up a webserver on your machine.
+        <pre>
+            certbot certonly --standalone
+        </pre>
+    </p>
+    <h3>No, I need to keep my web server running.</h3>
+    <p>
+        If you have a webserver that's already using port 80 and don't want to stop it
+        while Certbot runs, run this command and follow the instructions in the terminal.
+        <pre>
+            certbot certonly --webroot
+        </pre>
+    </p>
+    <aside class="note">
+      <div class="note-header"><h3>Important Note:</h3></div>
+            <p>To use the webroot plugin, your server must be configured to serve files from hidden directories. If <tt>/.well-known</tt> is treated specially by your webserver configuration, you might need to modify the configuration to ensure that files inside <tt>/.well-known/acme-challenge</tt> are served by the webserver.</p>
+    </aside>
+
+<h2>Install your certificate</h2>
+
+<p>You'll need to install your new certificate in the configuration file or interface for your webserver. Certificates are located in <code>C:\Certbot\live\[certificate_name]</code>, where <code>[certificate_name]</code> is the name of your certificate (usually the first domain if the <code>--cert-name</code> flag has not been used on the <code>certonly</code> command). Currently, Certbot for Windows cannot automate the installation step; future versions will be able to automate it for specific webserver applications.</p>
+
+<h2>Test automatic renewal</h2>
+
+<p>The Certbot installation on your system comes with a pre-installed Scheduled Task that will renew your certificates automatically before they expire. You will not need to run Certbot again, unless you change your configuration. You can test automatic renewal for your certificates by running the command</p>
+
+<p><code>C:\WINDOWS\system32&gt; certbot renew --dry-run</code></p>
+
+<p>If you needed to stop your webserver to run Certbot (for example, if you used the standalone authenticator on a machine where port 80 is normally in use), you'll want to edit the built-in command to add the <code>--pre-hook</code> and <code>--post-hook</code> flags to stop and start your webserver automatically. For example, if your webserver is Apache 2.4, add the following to the certbot renew command:</p>
+
+<p><code>--pre-hook &quot;net stop Apache2.4&quot; --post-hook &quot;net start Apache2.4&quot;</code></p>
+
+<p>More information is available in the <em>Certbot documentation on renewing certificates.</em></p>
+
+<h2>Confirm that Certbot worked</h2>
+
+  <p>
+  To confirm that your site is set up properly, visit <tt>https://yourwebsite.com/</tt> in your browser and
+  look for the lock icon in the URL bar.
+  If you want to check that you have the top-of-the-line installation, you can head to
+  <a href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>.
+  </p>
+  <p class="centered">
+  <a class="link-button" href='https://www.ssllabs.com/ssltest/'>check your site's <img src="/images/Lock.svg"> https:// at SSL Labs</a>.
+  </p>
+
+<h2>Note for Windows Apache or nginx users</h2>
+
+<p>As described in section 5 above, Certbot for Windows currently cannot install the certificate in Apache or nginx for you. As of the most recent release, you will have to edit your web server application’s configuration to install the certificate yourself after Certbot has obtained it. If this limitation is acceptable to you, please start from the beginning of this document to learn more about installing and using Certbot on Windows.</p>
