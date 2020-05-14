@@ -98,7 +98,13 @@ All branches and pull requests and built and tested by Travis.
 
 For branches, the built assets are pushed to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds). Built assets from PRs are not saved because Travis doesn't provide a mechanism to securely push to a Github repo after PRs across forks.
 
-To view the build of any branch, checkout that branch from certbot/website-builds and run some server to serve the files. For example,
+To view the build of any branch, checkout that branch from certbot/website-builds and run nginx to serve the files using the nginx configuration file from this certbot/website repository.
+
+A command to do this executed from the root of your local certbot/website-builds repository is
 ```
-python -m SimpleHTTPServer 8000
+CERTBOT_WEBSITE_PATH=/path/to/your/local/certbot/website/repo
+docker run -p 8000:4000 --rm -v "$CERTBOT_WEBSITE_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro" -v $(pwd):/usr/share/nginx/html:ro -it nginx
 ```
+After starting that command running, you can access the website in your browser at http://localhost:8000. To shut the server down, just hit ctrl+c in the terminal you ran the docker command.
+
+If you are on linux and your user is not a member of the docker group, you'll need to run the command with `sudo`.
