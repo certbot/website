@@ -2211,12 +2211,12 @@
   },
   {
     "name": "Namecheap.com",
-    "link": "https://www.namecheap.com/security/ssl-certificates/",
-    "category": "partial",
-    "tutorial": "https://www.namecheap.com/blog/install-free-ssls/",
+    "link": "https://www.namecheap.com/hosting/",
+    "category": "no",
+    "tutorial": "https://www.namecheap.com/support/knowledgebase/article.aspx/9418/33/installing-an-ssl-certificate-on-your-server-using-cpanel/",
     "announcement": "",
-    "plan": "https://www.namecheap.com/security/ssl-certificates/",
-    "reviewed": "2019.6.6",
+    "plan": "",
+    "reviewed": "2020.4.27",
     "note": ""
   },
   {
