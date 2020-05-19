@@ -149,14 +149,7 @@ module.exports = function(context) {
     if (context.webserver == "apache") {
       context.package += " " + "python3-certbot-apache";
     } else if (context.webserver == "nginx") {
-      // The nginx plugin is currently broken in Ubuntu 20.04 (and newer
-      // unreleased versions) due to the bug described at
-      // https://bugs.launchpad.net/ubuntu/+source/python-certbot-nginx/+bug/1875471/.
-      if (context.version > 19.10) {
-        context.certonly = true;
-      } else {
-        context.package += " " + "python3-certbot-nginx";
-      }
+      context.package += " " + "python3-certbot-nginx";
     }
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
