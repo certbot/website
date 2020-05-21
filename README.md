@@ -102,6 +102,9 @@ To view the build of any branch, checkout that branch from certbot/website-build
 
 A command to do this executed from the root of your local certbot/website-builds repository is
 ```
+git clone https://github.com/certbot/website-builds.git
+cd website-builds
+git checkout <RELEVANT BRANCH>
 CERTBOT_WEBSITE_PATH=/path/to/your/local/certbot/website/repo
 docker run -p 8000:4000 --rm -v "$CERTBOT_WEBSITE_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro" -v $(pwd):/usr/share/nginx/html:ro -it nginx
 ```
