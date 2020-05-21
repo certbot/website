@@ -100,7 +100,7 @@ For branches, the built assets are pushed to an analagous branch in [certbot/web
 
 To view the build of any branch, checkout that branch from certbot/website-builds and run nginx to serve the files using the nginx configuration file from this certbot/website repository.
 
-A command to do this executed from the root of your local certbot/website-builds repository is
+For example, commands to do this might looks like:
 ```
 git clone https://github.com/certbot/website-builds.git
 cd website-builds
