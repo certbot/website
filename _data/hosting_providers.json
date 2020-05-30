@@ -2379,4 +2379,14 @@
     "reviewed": "2020.04.01",
     "note": "Available for all membership types, without any limitations."
   },
+    {
+    "name": "HahuCloud",
+    "link": "https://www.hahucloud.com",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.05.30",
+    "note": "Available for all membership types, without any limitations."
+  }
 ]
