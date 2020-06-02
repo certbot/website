@@ -29,7 +29,7 @@ Let's Encrypt, but not install it into your web server application).
 <ul>
 <li>All usual operations to create and manage an account, manage existing certificates, or select the ACME server, are supported.</li>
 <li>Only standalone, manual and webroot authenticator plugins are supported. DNS plugins will be available soon. This means that Certbot for Windows is currently unable to automatically renew wildcard certificates, since these require a DNS plugin in order to be renewed without user intervention.</li>
-<li>No installer plugins are supported. The apache and nginx plugins will be available soon, and a plugin to install certificates into IIS is under development.</li>
+<li>No installer plugins are supported. The Apache and Nginx plugins will be available soon, and a plugin to install certificates into IIS is under development.</li>
 <li>Automated certificate renewals (using standalone and webroot plugins) are supported.</li>
 </ul>
 
@@ -107,6 +107,6 @@ Let's Encrypt, but not install it into your web server application).
   <a class="link-button" href='https://www.ssllabs.com/ssltest/'>check your site's <img src="/images/Lock.svg"> https:// at SSL Labs</a>.
   </p>
 
-<h2>Note for Windows Apache or nginx users</h2>
+<h2>Note for Windows Apache or Nginx users</h2>
 
-<p>As described in section 5 above, Certbot for Windows currently cannot install the certificate in Apache or nginx for you. As of the most recent release, you will have to edit your web server application’s configuration to install the certificate yourself after Certbot has obtained it. If this limitation is acceptable to you, please start from the beginning of this document to learn more about installing and using Certbot on Windows.</p>
+<p>As described in section 5 above, Certbot for Windows currently cannot install the certificate in Apache or Nginx for you. As of the most recent release, you will have to edit your web server application’s configuration to install the certificate yourself after Certbot has obtained it. If this limitation is acceptable to you, please start from the beginning of this document to learn more about installing and using Certbot on Windows.</p>
