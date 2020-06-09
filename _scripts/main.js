@@ -15,7 +15,7 @@
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 var Raven = require('raven-js');
@@ -78,6 +78,9 @@ $(document).ready(function() {
     }
   });
   hosting_table.column('.category').visible(false);
+  $('#all-bounce').on('click', function() {
+    $('#all-https').click();
+  });
   $('#full-bounce').on('click', function() {
     $('#full-https').click();
   });
@@ -87,21 +90,34 @@ $(document).ready(function() {
   $('#no-bounce').on('click', function() {
     $('#no-https').click();
   });
+  $('#all-https').on('click', function() {
+    hosting_table.columns().search('').column('.category').draw();
+    $('.tab-header-wrapper').removeClass('visible');
+    $('#all-header').addClass('visible');
+    $('.hosting-tab').removeClass('active');
+    $(this).addClass('active');
+  });
   $('#full-https').on('click', function() {
     hosting_table.columns().search('').column('.category').search('full').draw();
     $('.tab-header-wrapper').removeClass('visible');
     $('#full-header').addClass('visible');
+    $('.hosting-tab').removeClass('active');
+    $(this).addClass('active');
 
   });
   $('#partial-https').on('click', function() {
     hosting_table.columns().search('').column('.category').search('partial').draw();
     $('.tab-header-wrapper').removeClass('visible');
     $('#partial-header').addClass('visible');
+    $('.hosting-tab').removeClass('active');
+    $(this).addClass('active');
   });
   $('#no-https').on('click', function() {
     hosting_table.columns().search('').column('.category').search('no').draw();
     $('.tab-header-wrapper').removeClass('visible');
     $('#no-header').addClass('visible');
+    $('.hosting-tab').removeClass('active');
+    $(this).addClass('active');
   });
-  $('#full-https').click();
+  $('#all-https').click();
 });

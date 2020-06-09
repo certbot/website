@@ -4,7 +4,7 @@
   @include susy-breakpoint($md) {
     width: 58%;
     margin: 3em 20%;
-    border: 2px solid #D9D9D9;
+    border: 2px solid $table-border;
   }
   .tab-header-wrapper {
     display: none;
@@ -71,20 +71,36 @@
 }
 
 .hosting-table-tabs {
-  width: 98%;
-  margin: 0.5em auto;
   display: flex;
-  justify-content: space-around;
-  height: 80px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 0.5em;
   @include susy-breakpoint($md) {
-    height: 50px;
+    align-items: stretch;
     flex-direction: row;
   }
   .hosting-tab {
+    background-color: $grey-color-light;
+    border-left: 1px solid $table-border;
+    display: inline-block;
+    flex-grow: 1;
+    font-size: 11px;
     font-weight: bold;
     font-family: $header-font-family;
-    text-align: center;
+    height: auto;
+    margin: 0;
+    padding: 0 0 0 3px;
+    text-align: left;
     text-decoration: underline;
+    width: 20%;
+    &:nth-child(1) {
+      border-left: none;
+    }
+    @include susy-breakpoint($lg) {
+      font-size: 13px;
+      height: 38px;
+      padding: 0.9rem 1% 0;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -93,10 +109,14 @@
       margin: 0 auto;
       margin-bottom: -1em;
       @include susy-breakpoint($md) {
+        margin-top: -3px;
         padding-left: 0.5em;
         float: right;
       }
     }
+  }
+  .active {
+    background: white;
   }
 }
 
@@ -126,17 +146,17 @@
   border-spacing: 0 1em;
   white-space: nowrap;
   table-layout: fixed;
-  thead { 
-    background-color: #D9D9D9;
+  thead {
+    background-color: $table-border;
     font-size: 18px;
     text-align: left;
     vertical-align: bottom;
   }
-  th { 
+  th {
     padding: 0 0.5em;
     padding-bottom: 5px;
     height: 3em;
-  } 
+  }
   th:last-of-type {
     text-align: center;
     white-space: normal;

@@ -17,6 +17,10 @@
             "id": "plesk"
         },
         {
+            "name": "Web Hosting Product",
+            "id": "webproduct"
+        },
+        {
             "name": "None of the above",
             "id": "other"
         }
@@ -26,6 +30,12 @@
             "name": "Web Hosting Service",
             "id": "sharedhost",
             "distro": "sharedhost",
+            "version": "0"
+        },
+        {
+            "name": "snapd",
+            "id": "snap",
+            "distro": "snap",
             "version": "0"
         },
         {
@@ -53,10 +63,16 @@
             "version": "11"
         },
         {
-            "name": "Debian (other)",
-            "id": "debianother",
-            "distro": "debian",
-            "version": "0"
+            "name": "Ubuntu 20.04",
+            "id": "ubuntufocal",
+            "distro": "ubuntu",
+            "version": "20.04"
+        },
+        {
+            "name": "Ubuntu 19.10",
+            "id": "ubuntuother",
+            "distro": "ubuntu",
+            "version": "19.10"
         },
         {
             "name": "Ubuntu 18.04 LTS (bionic)",
@@ -69,12 +85,6 @@
             "id": "ubuntuxenial",
             "distro": "ubuntu",
             "version": "16.04"
-        },
-        {
-            "name": "Ubuntu (other)",
-            "id": "ubuntuother",
-            "distro": "ububtu",
-            "version": "0"
         },
         {
             "name": "Gentoo",
@@ -125,22 +135,10 @@
             "version": "0"
         },
         {
-            "name": "OpenBSD 5.9",
-            "id": "opbsd5",
-            "distro": "opbsd",
-            "version": "5.9"
-        },
-        {
             "name": "OpenBSD 6.0+",
             "id": "opbsd6",
             "distro": "opbsd",
             "version": "6"
-        },
-        {
-            "name": "OpenBSD (other)",
-            "id": "opbsd",
-            "distro": "auto",
-            "version": "0"
         },
         {
             "name": "macOS",
@@ -185,9 +183,9 @@
             "version": "0"
         },
         {
-            "name": "Non-UNIX",
-            "id": "nonunix",
-            "distro": "nonunix",
+            "name": "Windows",
+            "id": "windows",
+            "distro": "windows",
             "version": "0"
         }
     ]

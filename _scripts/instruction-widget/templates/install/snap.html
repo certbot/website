@@ -1,0 +1,38 @@
+<!-- The advanced instructions don't use snapd, so this warning isn't needed there -->
+{{^advanced}}
+<aside class="note">
+  <div class="note-header">
+    <h3>Snap Support</h3>
+  </div>
+  <p>
+  Certbot snap support is currently in its beta phase and only supports the
+  x86_64 architecture. You can find instructions for installing Certbot without
+  using snap by selecting your OS in the dropdown above.
+  </p>
+</aside>
+{{/advanced}}
+{{> header}}
+<li>
+    Install snapd
+    <p>
+    You'll need to install snapd and make sure you follow any instructions to enable classic snap support.<br>
+    Follow these instructions on <a href='https://snapcraft.io/docs/installing-snapd/'>snapcraft's site to install snapd</a>.
+    </p>
+    <p class="centered">
+    <a class="link-button" href='https://snapcraft.io/docs/installing-snapd/'>install snapd</a>
+    </p>
+</li>
+<li>
+    Remove any Certbot OS packages
+    <p>
+    If you have any Certbot packages installed using an OS package manager like
+    <tt>apt</tt>, <tt>dnf</tt>, or <tt>yum</tt>, you should remove them before
+    installing the Certbot snap to ensure that when you run the command
+    <tt>certbot</tt> the snap is used rather than the installation from your OS
+    package manager. The exact command to do this depends on your OS, but
+    common examples are <tt>sudo apt-get remove certbot</tt>, <tt>sudo dnf
+    remove certbot</tt>, or <tt>sudo yum remove certbot</tt>.
+    </p>
+</li>
+{{>installcertbot}}
+{{> dnspluginssetup}}
