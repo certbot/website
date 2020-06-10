@@ -10,7 +10,7 @@ case "$1" in
   "install" )
     cd _docs
     source ./venv/bin/activate
-    pip install --upgrade git+https://github.com/EFForg/sphinx_rtd_theme.git
+    pip install --upgrade git+https://github.com/kden/sphinx_rtd_theme.git@font-weight-contrast
     cd certbot
     make -C docs clean html epub latex latexpdf > /dev/null
     ;;
