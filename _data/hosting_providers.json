@@ -501,13 +501,13 @@
   },
   {
     "name": "Cyon.ch",
-    "link": "",
+    "link": "https://www.cyon.ch/ssl/",
     "category": "partial",
-    "tutorial": "",
+    "tutorial": "https://www.cyon.ch/support/a/ssl-zertifikat-verschlusselung-einrichten",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
-    "note": ""
+    "reviewed": "2020.6.11",
+    "note": "Site and link are in German"
   },
   {
     "name": "Deep.ch",
