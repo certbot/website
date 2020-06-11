@@ -501,13 +501,13 @@
   },
   {
     "name": "Cyon.ch",
-    "link": "",
+    "link": "https://www.cyon.ch/ssl/",
     "category": "partial",
-    "tutorial": "",
+    "tutorial": "https://www.cyon.ch/support/a/ssl-zertifikat-verschlusselung-einrichten",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
-    "note": ""
+    "reviewed": "2020.6.11",
+    "note": "Site and link are in German"
   },
   {
     "name": "Deep.ch",
@@ -980,16 +980,6 @@
     "note": ""
   },
   {
-    "name": "ICDSoft",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "",
-    "note": ""
-  },
-  {
     "name": "ifastnet",
     "link": "",
     "category": "partial",
@@ -1250,6 +1240,16 @@
     "note": ""
   },
   {
+    "name": "MyDreams innovations s.r.o.",
+    "link": "https://www.mydreams.cz/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.mydreams.cz/en/let-s-encrypt-ssl-certificates.html",
+    "plan": "",
+    "reviewed": "2020.02.15",
+    "note": "All web hosting products have SSL active automatically."
+  },
+  {
     "name": "NearlyFreeSpeech.NET",
     "link": "https://www.nearlyfreespeech.net/",
     "category": "partial",
@@ -1371,12 +1371,12 @@
   },
   {
     "name": "one.com",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.one.com/",
+    "category": "full",
     "tutorial": "",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.4.29",
     "note": ""
   },
   {
@@ -2211,12 +2211,12 @@
   },
   {
     "name": "Namecheap.com",
-    "link": "https://www.namecheap.com/security/ssl-certificates/",
-    "category": "partial",
-    "tutorial": "https://www.namecheap.com/blog/install-free-ssls/",
+    "link": "https://www.namecheap.com/hosting/",
+    "category": "no",
+    "tutorial": "https://www.namecheap.com/support/knowledgebase/article.aspx/9418/33/installing-an-ssl-certificate-on-your-server-using-cpanel/",
     "announcement": "",
-    "plan": "https://www.namecheap.com/security/ssl-certificates/",
-    "reviewed": "2019.6.6",
+    "plan": "",
+    "reviewed": "2020.4.27",
     "note": ""
   },
   {
@@ -2330,6 +2330,16 @@
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt; Managed Cloud Hosting enabled via Certbot on request."
   },
   {
+    "name": "ICDSoft",
+    "link": "https://www.icdsoft.com",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "https://www.icdsoft.com/en/ssl#free-ssl",
+    "plan": "",
+    "reviewed": "2020.02.20",
+    "note": "Available on all hosting plans: shared and managed VPS plans. One click installation and automatic renewals. Wildcard hostnames are also supported."
+  },
+  {
     "name": "Marketing One",
     "link": "https://www.marketingone.com.au",
     "category": "full",
@@ -2348,5 +2358,35 @@
     "plan": "",
     "reviewed": "2020.02.07",
     "note": "Shared Web Hosting utilizes Plesk Panel interface to enable Let's Encrypt"
+  },
+  {
+    "name": "CA Net, Europe",
+    "link": "https://www.canet.at",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.canet.at/hosting-server/",
+    "plan": "",
+    "reviewed": "2020.03.26",
+    "note": "All plans come with Let's Encrypt for Web and Mail"
+  },
+  {
+    "name": "Nuclear.Hosting",
+    "link": "https://nuclear.hosting",
+    "category": "partial",
+    "tutorial": "https://nuclear.hosting/help/https/#https-secured-encrypted-access-to-website",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.04.01",
+    "note": "Available for all membership types, without any limitations."
+  },
+  {
+    "name": "HahuCloud",
+    "link": "https://www.hahucloud.com",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.05.30",
+    "note": "Available for all membership types, without any limitations."
   }
 ]

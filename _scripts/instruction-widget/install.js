@@ -28,9 +28,12 @@ module.exports = function(context) {
     context.python_name = "python";
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
-    if (context.webserver == "plesk" || context.distro == "nonunix" ||
+    if (context.webserver == "plesk" || context.distro == "windows" ||
         context.distro == "sharedhost") {
         return '';
+    }
+    else if (context.distro == "snap") {
+      snap_install();
     }
     else if (context.distro == "debian" && context.version > 8) {
       debian_install();
@@ -89,8 +92,8 @@ module.exports = function(context) {
   centos_install = function() {
     template = "centos";
 
-    // Certbot only has packages available for RHEL 7 based systems.
-    if (context.version != 7) {
+    // Certbot only has packages available for RHEL 7+ based systems.
+    if (context.version < 7) {
       context.base_command = "/usr/local/bin/certbot-auto";
       // RHEL/CentOS 6 32 bits distros are not supported by certbot-auto.
       if (context.version == 6) {
@@ -104,17 +107,25 @@ module.exports = function(context) {
     } else {
       context.need_epel = true;
       context.base_command = "certbot";
-      context.install_command = "sudo yum install";
       context.package = "certbot";
       context.packaged = true;
 
+      if (context.version == 7) {
+        context.install_command = "sudo yum install";
+        python_prefix = "python2-"
+      } else {
+        context.install_command = "sudo dnf install";
+        python_prefix = "python3-"
+      }
+
+
       if (context.webserver == "apache") {
-        context.package += " python2-certbot-apache";
+        context.package += " " + python_prefix + "certbot-apache";
       } else if (context.webserver == "nginx") {
-        context.package += " python2-certbot-nginx";
+        context.package += " " + python_prefix + "certbot-nginx";
       }
       context.dns_plugins = true;
-      context.dns_package_prefix = "python2-certbot-dns";
+      context.dns_package_prefix = python_prefix + "certbot-dns";
     }
   }
 
@@ -140,12 +151,13 @@ module.exports = function(context) {
   ubuntu_install = function() {
     template = "ubuntu";
 
+    context.ppa = context.version < 19.10;
     context.package = "certbot";
     context.install_command = "sudo apt-get install";
     if (context.webserver == "apache") {
-      context.package += " " + "python-certbot-apache";
+      context.package += " " + "python3-certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package += " " + "python-certbot-nginx";
+      context.package += " " + "python3-certbot-nginx";
     }
     // Debian Jessie, Ubuntu 16.10, or newer
     context.base_command = "certbot";
@@ -213,13 +225,8 @@ module.exports = function(context) {
     }
     if (context.distro == "opbsd"){
       context.install_command = "pkg_add";
-      if (context.version >= 6) {
-          context.package = "certbot";
-          context.base_command = "certbot";
-      } else {
-          context.package = "letsencrypt";
-          context.base_command = "letsencrypt";
-      }
+      context.package = "certbot";
+      context.base_command = "certbot";
     }
 
     // The Apache plugin isn't packaged for BSD yet
@@ -249,6 +256,14 @@ module.exports = function(context) {
     }
     context.dns_plugins = true;
     context.dns_package_prefix = "python-certbot-dns";
+  }
+
+  snap_install = function() {
+    template = "snap";
+    context.base_command = "certbot";
+    context.cron_included = true;
+    context.install_command = "sudo snap install --beta --classic";
+    context.package = "certbot";
   }
 
   auto_install = function() {
