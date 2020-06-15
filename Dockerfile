@@ -21,6 +21,7 @@ ENV LC_ALL C.UTF-8
 # need rsync for deploy script and texlive for building docs
 RUN apt-get install -y --no-install-recommends \
     imagemagick \
+    gsfonts \
     latexmk \
     rsync \
     texlive \
