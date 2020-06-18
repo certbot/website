@@ -250,12 +250,12 @@ module.exports = function(context) {
     context.install_command = "sudo zypper install";
 
     if (context.webserver == "apache") {
-      context.package += " python-certbot-apache";
+      context.package += " python3-certbot-apache";
     } else if (context.webserver == "nginx") {
-      context.package += " python-certbot-nginx";
+      context.package += " python3-certbot-nginx";
     }
     context.dns_plugins = true;
-    context.dns_package_prefix = "python-certbot-dns";
+    context.dns_package_prefix = "python3-certbot-dns";
   }
 
   snap_install = function() {
