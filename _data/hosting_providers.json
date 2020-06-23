@@ -2388,5 +2388,15 @@
     "plan": "",
     "reviewed": "2020.05.30",
     "note": "Available for all membership types, without any limitations."
+  },
+  {
+    "name": "Shellrent",
+    "link": "https://www.shellrent.com",
+    "category": "partial",
+    "tutorial": "https://guide.shellrent.com/installare-lets-encrypt-sui-piani-web-hosting-linux/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.06.23",
+    "note": "Available for free on all web hostings Linux plans."
   }
 ]
