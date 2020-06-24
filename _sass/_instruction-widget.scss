@@ -258,13 +258,23 @@ h1.instruct {
     font-family: 'Roboto Slab';
     font-weight: 400;
     font-size: 20px;
+    line-height: 20px;
     margin: 1em 1.1em;
     @include susy-breakpoint($md) {
       margin-left: 30px;
       font-size: 30px;
+      line-height: 30px;
     }
     .hidden {
       display: none;
+    }
+
+    h1 {
+      @include susy-breakpoint($md) {
+        margin-left: 0;
+        padding: 1em 0;
+        font-size: 35px;
+      }
     }
     p {
       font-size: 16px;
@@ -275,6 +285,17 @@ h1.instruct {
         font-size: 18px;
       }
     }
+    ol ol,
+    ol ul {
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      @include susy-breakpoint($md) {
+        margin-left: 1rem;
+        font-size: 18px;
+      }
+    }
+
     ul {
       list-style-type: none;
       margin-top: 0;
@@ -283,6 +304,10 @@ h1.instruct {
         margin-left: 0;
       }
     }
+    ol ul {
+      list-style-type: square;
+    }
+
     h3 {
       font-size: 22px;
       font-weight: bold;
