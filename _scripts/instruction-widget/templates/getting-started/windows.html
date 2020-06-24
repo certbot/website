@@ -64,19 +64,17 @@ able to use to obtain a certificate from Let's Encrypt.
     </p>
     <h3>Yes, my web server is not currently running on this machine.</h3>
     <p>Stop your webserver, then run this command to get a certificate.
-    Certbot will temporarily spin up a webserver on your machine.
-        <pre>
-            certbot certonly --standalone
-        </pre>
+    Certbot will temporarily spin up a webserver on your machine.</p>
+    <p>
+        <code>C:\WINDOWS\system32&gt; certbot certonly --standalone</code>
     </p>
 
     <h3>No, I need to keep my web server running.</h3>
     <p>
         If you have a webserver that's already using port 80 and don't want to stop it
-        while Certbot runs, run this command and follow the instructions in the terminal.
-        <pre>
-            certbot certonly --webroot
-        </pre>
+	while Certbot runs, run this command and follow the instructions in the terminal.</p>
+    <p>
+        <code>C:\WINDOWS\system32&gt; certbot certonly --webroot</code>
     </p>
     <aside class="note">
       <div class="note-header"><h3>Important Note:</h3></div>
