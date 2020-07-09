@@ -39,12 +39,6 @@
             "version": "0"
         },
         {
-            "name": "Debian 8 (jessie)",
-            "id": "debianjessie",
-            "distro": "debian",
-            "version": "8"
-        },
-        {
             "name": "Debian 9 (stretch)",
             "id": "debianstretch",
             "distro": "debian",
@@ -151,12 +145,6 @@
             "id": "devuanascii",
             "distro": "devuan",
             "version": "2"
-        },
-        {
-            "name": "Devuan Jessie 1.0",
-            "id": "devuanjessie",
-            "distro": "devuan",
-            "version": "1"
         },
         {
             "name": "Devuan testing/unstable",
