@@ -2398,5 +2398,15 @@
     "plan": "",
     "reviewed": "2020.06.23",
     "note": "Available for free on all web hostings Linux plans."
+  },
+  {
+    "name": "NederHost",
+    "link": "https://www.nederhost.nl",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.nederhost.nl/nieuwsarchief/2019",
+    "plan": "",
+    "reviewed": "2020.07.15",
+    "note": "All webhosting plans include Let's Encrypt. The website is in Dutch."
   }
 ]
