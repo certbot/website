@@ -93,10 +93,10 @@
             "version": "0"
         },
         {
-            "name": "Fedora 26+",
+            "name": "Fedora",
             "id": "fedora",
             "distro": "fedora",
-            "version": "26"
+            "version": "0"
         },
         {
             "name": "CentOS 6",
