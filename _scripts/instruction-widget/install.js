@@ -88,21 +88,17 @@ module.exports = function(context) {
   centos_install = function() {
     template = "centos";
 
-    // Certbot only has packages available for RHEL 7+ based systems.
+    // Certbot only has packages available for RHEL 7+ based systems and RHEL 6
+    // is the oldest version we support.
     if (context.version < 7) {
       context.base_command = "/usr/local/bin/certbot-auto";
-      // RHEL/CentOS 6 32 bits distros are not supported by certbot-auto.
-      if (context.version == 6) {
-        context.deprecated_32bits = true
-      } else {
-        context.deprecated_32bits = false
-        context.python_name = "python3";
-      }
+      context.deprecated_32bits = true
       context.need_epel = false;
       context.packaged = false;
     } else {
-      context.need_epel = true;
       context.base_command = "certbot";
+      context.deprecated_32bits = false;
+      context.need_epel = true;
       context.package = "certbot";
       context.packaged = true;
 
@@ -110,7 +106,9 @@ module.exports = function(context) {
         context.install_command = "sudo yum install";
         python_prefix = "python2-"
       } else {
+        // In this case we're on RHEL 8+
         context.install_command = "sudo dnf install";
+        context.python_name = "python3";
         python_prefix = "python3-"
       }
 
