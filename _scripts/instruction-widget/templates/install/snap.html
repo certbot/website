@@ -31,10 +31,11 @@
     remove certbot</tt>, or <tt>sudo yum remove certbot</tt>.
     </p>
 </li>
-{{>installcertbot}}
+
 
 {{#advanced}}
 {{#dns_plugins}}
+{{>installcertbot}}
 <li>
   Confirm plugin containment level
   <p>
@@ -43,10 +44,16 @@
   </p>
   <pre>sudo snap set certbot trust-plugin-with-root=ok</pre>
 
+  <p>
   If you encounter issues with running Certbot, you may need to follow this step, then
   the "Install correct DNS plugin" step, again.
+  </p>
 </li>
 {{/dns_plugins}}
+{{/advanced}}
+
+{{^advanced}}
+{{>installcertbotbeta}}
 {{/advanced}}
 
 {{> dnspluginssetup}}

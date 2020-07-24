@@ -72,6 +72,7 @@ module.exports = function(context) {
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
     partials.installcertbot = require(TEMPLATE_PATH + "installcertbot.html");
+    partials.installcertbotbeta = require(TEMPLATE_PATH + "installcertbotbeta.html");
     partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.dnspluginssetup = require(TEMPLATE_PATH + "dnspluginssetup.html");
 
@@ -256,7 +257,8 @@ module.exports = function(context) {
     template = "snap";
     context.base_command = "certbot";
     context.cron_included = true;
-    context.install_command = "sudo snap install --beta --classic";
+    context.install_command = "sudo snap install --edge --classic";
+    context.install_command_beta = "sudo snap install --beta --classic";
     context.package = "certbot";
     context.dns_plugins = true;
     context.dns_package_prefix = "certbot-dns";
