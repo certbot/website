@@ -33,6 +33,8 @@
 </li>
 {{>installcertbot}}
 
+{{#advanced}}
+{{#dns_plugins}}
 <li>
   Confirm plugin containment level
   <p>
@@ -41,5 +43,7 @@
   </p>
   <pre>sudo snap set certbot trust-plugin-with-root=ok</pre>
 </li>
+{{/dns_plugins}}
+{{/advanced}}
 
 {{> dnspluginssetup}}
