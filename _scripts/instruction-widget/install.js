@@ -258,6 +258,8 @@ module.exports = function(context) {
     context.cron_included = true;
     context.install_command = "sudo snap install --beta --classic";
     context.package = "certbot";
+    context.dns_plugins = true;
+    context.dns_package_prefix = "certbot-dns";
   }
 
   auto_install = function() {
