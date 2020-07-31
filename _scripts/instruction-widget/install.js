@@ -72,7 +72,7 @@ module.exports = function(context) {
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
     partials.installcertbot = require(TEMPLATE_PATH + "installcertbot.html");
-    partials.installcertbotdefaulttab = require(TEMPLATE_PATH + "installcertbotdefaulttab.html");
+    partials.installcertbotwildcard = require(TEMPLATE_PATH + "installcertbotwildcard.html");
     partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.dnspluginssetup = require(TEMPLATE_PATH + "dnspluginssetup.html");
 
