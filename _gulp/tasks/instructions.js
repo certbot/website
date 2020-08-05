@@ -36,7 +36,7 @@ gulp.task('instructions', gulp.series('instructions:clean', (done) => {
       instructions.forEach(function(el) {
         var path = dir + '/' + el.os.id + '-' + el.server.id + '.md';
         var body = '---\n---\n' + el.instructions;
-        fs.writeFile(path, body);
+        fs.writeFile(path, body, function() {});
       });
       done();
     }
