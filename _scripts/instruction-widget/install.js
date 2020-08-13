@@ -31,14 +31,11 @@ module.exports = function(context) {
         context.distro == "sharedhost") {
         return '';
     }
-    else if (context.distro == "snap") {
+    else if (context.distro == "snap" || context.distro == "ubuntu" ) {
       snap_install();
     }
     else if (context.distro == "debian" && context.version > 8) {
       debian_install();
-    }
-    else if (context.distro == "ubuntu" && context.version >= 14.04){
-        ubuntu_install();
     }
     // @todo: Implement or complete these.
     // else if (context.distro == "python"){
@@ -142,6 +139,8 @@ module.exports = function(context) {
     }
   }
 
+  // This function is currently unused, but we keep it around to make it easy
+  // to generate these instructions again if we want to.
   ubuntu_install = function() {
     template = "ubuntu";
 
