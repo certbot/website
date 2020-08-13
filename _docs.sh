@@ -4,9 +4,9 @@ case "$1" in
   "depend" )
     cd _docs
     export CERTBOT_WEBSITE='True'
-    sudo apt update
-    sudo apt install python3-dev python3-venv gcc libaugeas0 libssl-dev \
-                     libffi-dev ca-certificates openssl -y
+    sudo apt-get update
+    sudo apt-get install python3-dev python3-venv gcc libaugeas0 libssl-dev \
+                         libffi-dev ca-certificates openssl -y
     ./tools/venv3.py
     ;;
   "install" )
