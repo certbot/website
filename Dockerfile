@@ -24,6 +24,7 @@ RUN apt-get install -y --no-install-recommends \
     gsfonts \
     latexmk \
     rsync \
+    sudo \
     texlive \
     texlive-latex-extra
 
