@@ -1,5 +1,3 @@
-<!-- The advanced instructions don't use snapd, so this warning isn't needed there -->
-{{^advanced}}
 <aside class="note">
   <div class="note-header">
     <h3>Snap Support</h3>
@@ -9,7 +7,6 @@
   You can find instructions for installing Certbot without using snap by selecting your OS in the dropdown above.
   </p>
 </aside>
-{{/advanced}}
 {{> header}}
 <li>
     Install snapd
@@ -33,5 +30,45 @@
     remove certbot</tt>, or <tt>sudo yum remove certbot</tt>.
     </p>
 </li>
+
+
+{{#advanced}}
+{{#dns_plugins}}
+{{>installcertbotwildcard}}
+<li>
+  Confirm plugin containment level
+  <p>
+  Run this command on the command line on the machine to acknowledge that the installed
+  plugin will have the same <tt>classic</tt> containment as the Certbot snap.
+  </p>
+  <pre>sudo snap set certbot trust-plugin-with-root=ok</pre>
+
+  <p>
+  If you encounter issues with running Certbot, you may need to follow this step, then
+  the "Install correct DNS plugin" step, again.
+  </p>
+</li>
+{{/dns_plugins}}
+{{/advanced}}
+
+{{^advanced}}
 {{>installcertbot}}
+{{/advanced}}
+
 {{> dnspluginssetup}}
+
+{{#advanced}}
+{{#dns_plugins}}
+<li>
+  Connect the DNS plugin snap to the Certbot snap
+  <p>
+    Run the following command, replacing &lt;PLUGIN&gt; with the name of your DNS provider.
+  </p>
+  <pre>sudo snap connect certbot:plugin {{dns_package_prefix_noflag}}-&lt;PLUGIN&gt;</pre>
+  <p>
+    For example, if your DNS provider is Cloudflare, you'd run the following command:
+  </p>
+  <pre>sudo snap connect certbot:plugin {{dns_package_prefix_noflag}}-cloudflare</pre>
+</li>
+{{/dns_plugins}}
+{{/advanced}}
