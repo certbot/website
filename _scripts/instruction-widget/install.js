@@ -259,9 +259,9 @@ module.exports = function(context) {
     context.cron_included = true;
     context.install_command = "sudo snap install";
     context.package = "--classic certbot";
-    context.package_wildcard = "--edge --classic certbot";
+    context.package_wildcard = "--beta --classic certbot";
     context.dns_plugins = true;
-    context.dns_package_prefix = "--edge certbot-dns";
+    context.dns_package_prefix = "--beta certbot-dns";
   }
 
   auto_install = function() {
