@@ -262,6 +262,7 @@ module.exports = function(context) {
     context.package_wildcard = "--beta --classic certbot";
     context.dns_plugins = true;
     context.dns_package_prefix = "--beta certbot-dns";
+    context.dns_package_prefix_noflag = "certbot-dns";
   }
 
   auto_install = function() {
