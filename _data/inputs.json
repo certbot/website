@@ -147,10 +147,16 @@
             "version": "2"
         },
         {
+            "name": "Devuan Beowulf 3.0",
+            "id": "devuanbeowulf",
+            "distro": "devuan",
+            "version": "3"
+        },
+        {
             "name": "Devuan testing/unstable",
             "id": "devuanother",
             "distro": "devuan",
-            "version": "3"
+            "version": "4"
         },
         {
           "name": "openSUSE Tumbleweed",
