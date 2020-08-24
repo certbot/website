@@ -107,6 +107,7 @@ InstructionWidget = (function() {
         if (input.os && input.webserver) {
           // We're on the homepage, redirect to instructions page
           window.location.href = instruction_url(input.os,input.webserver);
+          return;
         }
       }
       Instructions().render(content_container, input);
