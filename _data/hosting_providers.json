@@ -1860,6 +1860,16 @@
     "note": ""
   },
   {
+    "name": "Vélhost",
+    "link": "https://velhost.fr/",
+    "category": "partial",
+    "tutorial": "https://velhost.fr/documentation/#passer-en-https",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.9.3",
+    "note": "All Vélhost servers have SSL available via one click and renews automatically."
+  },
+  {
     "name": "Vildmarksdata Sweden",
     "link": "",
     "category": "partial",
