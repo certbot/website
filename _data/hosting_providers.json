@@ -960,13 +960,13 @@
     "note": ""
   },
   {
-    "name": "Hostpapa.ca",
-    "link": "",
-    "category": "partial",
+    "name": "HostPapa",
+    "link": "https://www.hostpapa.com/",
+    "category": "full",
     "tutorial": "",
-    "announcement": "",
+    "announcement": "https://hostpapasupport.com/lets-encrypt-ssl-certificates-support/",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.09.08",
     "note": ""
   },
   {
