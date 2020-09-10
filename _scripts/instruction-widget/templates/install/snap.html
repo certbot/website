@@ -17,6 +17,25 @@
     <p class="centered">
     <a class="link-button" href='https://snapcraft.io/docs/installing-snapd/'>install snapd</a>
     </p>
+
+    <aside class="note">
+      <div class="note-header">
+        <h3>Configuring snapd on specific shells</h3>
+      </div>
+      <p>
+      On shells like <tt>zsh</tt> or <tt>fish</tt>, the folder <tt>/snap/bin</tt>, which contains the snaps installed on your system,
+      needs to be added to the <tt>PATH</tt> environment variable. You will need to execute one of the following command in your
+      shell to add it permanently.<br/>
+      </p>
+      <p>
+        For <tt>zsh</tt>:
+        <pre style="margin:0;">echo -n 'export PATH=$PATH:/snap/bin' >> ~/.zshrc && . ~/.zshrc</pre>
+      </p>
+      <p>
+        For <tt>fish</tt>:
+        <pre style="margin:0;">echo -n 'set -gx PATH $PATH /snap/bin' >> ~/.config/fish/config.fish && . ~/.config/fish/config.fish</pre>
+      </p>
+    </aside>
 </li>
 <li>
     Remove any Certbot OS packages
