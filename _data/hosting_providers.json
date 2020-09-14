@@ -1857,7 +1857,7 @@
     "announcement": "",
     "plan": "",
     "reviewed": "2019.6.6",
-    "note": "All shared, reseller, semi dedicated and WordPress hosting plans feature Let's Encrypt manual and automatic options. Certificates can be automatically issues or manually issued and will renew automatically."
+    "note": "All shared, reseller, semi dedicated and WordPress hosting plans feature Let's Encrypt manual and automatic options. Certificates can be automatically issued or manually issued and will renew automatically."
   },
   {
     "name": "Vélhost",
