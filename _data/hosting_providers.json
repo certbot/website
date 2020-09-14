@@ -1261,13 +1261,13 @@
   },
   {
     "name": "Netsite",
-    "link": "",
-    "category": "partial",
-    "tutorial": "",
+    "link": "https://www.netsite.dk/",
+    "category": "full",
+    "tutorial": "https://www.netsite.dk/support/hjemmeside/https/",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
-    "note": ""
+    "reviewed": "2020.9.12",
+    "note": "All shared web hosting packages have SSL active + automated + https redirect"
   },
   {
     "name": "Neify Hosting",
