@@ -1851,13 +1851,13 @@
   },
   {
     "name": "VeeroTech",
-    "link": "",
+    "link": "https://www.veerotech.net/",
     "category": "partial",
     "tutorial": "https://www.veerotech.net/kb/install-ssl-certificate-using-lets-encrypt-inside-cpanel/",
     "announcement": "",
     "plan": "",
     "reviewed": "2019.6.6",
-    "note": ""
+    "note": "All shared, reseller, semi dedicated and WordPress hosting plans feature Let's Encrypt manual and automatic options. Certificates can be automatically issued or manually issued and will renew automatically."
   },
   {
     "name": "Vélhost",
