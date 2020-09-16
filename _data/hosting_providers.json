@@ -2418,5 +2418,15 @@
     "plan": "",
     "reviewed": "2020.07.15",
     "note": "All webhosting plans include Let's Encrypt. The website is in Dutch."
+  },
+  {
+    "name": "Conetix",
+    "link": "https://conetix.com.au",
+    "category": "partial",
+    "tutorial": "https://conetix.com.au/support/plesk-obsidian-how-to-install-a-free-lets-encrypt-ssl/",
+    "announcement": "https://conetix.com.au/blog/lets-encrypt-free-certificates-on-all-conetix-host/",
+    "plan": "",
+    "reviewed": "2020.09.16",
+    "note": "Let's Encrypt available on all plans and services for free since 2016."
   }
 ]
