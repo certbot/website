@@ -53,6 +53,11 @@
 
 {{^advanced}}
 {{>installcertbot}}
+  <p>
+  Execute the following instruction on the command line on the machine to ensure
+  that <tt>certbot</tt> command can be run.
+  </p>
+  <pre>sudo ln -s /snap/bin/certbot /usr/sbin/certbot</pre>
 {{/advanced}}
 
 {{> dnspluginssetup}}
