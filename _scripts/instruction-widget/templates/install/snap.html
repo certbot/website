@@ -35,6 +35,7 @@
 {{#advanced}}
 {{#dns_plugins}}
 {{>installcertbotwildcard}}
+{{>preparecertbotsnapcommand}}
 <li>
   Confirm plugin containment level
   <p>
@@ -53,11 +54,7 @@
 
 {{^advanced}}
 {{>installcertbot}}
-  <p>
-  Execute the following instruction on the command line on the machine to ensure
-  that the <tt>certbot</tt> command can be run.
-  </p>
-  <pre>sudo ln -s /snap/bin/certbot /usr/bin/certbot</pre>
+{{>preparecertbotsnapcommand}}
 {{/advanced}}
 
 {{> dnspluginssetup}}
