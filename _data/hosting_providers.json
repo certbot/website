@@ -2428,5 +2428,15 @@
     "plan": "",
     "reviewed": "2020.09.16",
     "note": "Let's Encrypt available on all plans and services for free since 2016."
+  },
+  {
+    "name": "Firebase Hosting",
+    "link": "https://firebase.google.com/",
+    "category": "full",
+    "tutorial": "https://firebase.google.com/docs/hosting/custom-domain#ssl-provisioning",
+    "announcement": "https://firebase.googleblog.com/2014/05/introducing-firebase-hosting.html",
+    "plan": "",
+    "reviewed": "2020.09.20",
+    "note": "All domains/sites automatically use Let's Encrypt. Multiple sites share a single certificate using the SAN field"
   }
 ]
