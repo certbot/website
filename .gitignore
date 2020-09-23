@@ -1,5 +1,8 @@
 _site
 .jekyll-metadata
+.jekyll-cache
 .sass-cache
 node_modules
 _instructions/
+build
+watch

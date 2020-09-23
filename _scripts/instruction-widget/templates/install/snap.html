@@ -35,6 +35,7 @@
 {{#advanced}}
 {{#dns_plugins}}
 {{>installcertbotwildcard}}
+{{>preparecertbotsnapcommand}}
 <li>
   Confirm plugin containment level
   <p>
@@ -53,6 +54,7 @@
 
 {{^advanced}}
 {{>installcertbot}}
+{{>preparecertbotsnapcommand}}
 {{/advanced}}
 
 {{> dnspluginssetup}}
