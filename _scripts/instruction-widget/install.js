@@ -25,13 +25,18 @@ module.exports = function(context) {
     context.dns_plugins = false;
     context.dns_package_prefix = "";
     context.python_name = "python";
+
+    // This is the list of distributions that should be shown our snap
+    // instructions.
+    snap_distros = ["snap", "ubuntu", "arch", "opensuse"];
+
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "windows" ||
         context.distro == "sharedhost") {
         return '';
     }
-    else if (context.distro == "snap" || context.distro == "ubuntu" ) {
+    else if (snap_distros.includes(context.distro)) {
       snap_install();
     }
     else if (context.distro == "debian" && context.version > 8) {
@@ -47,9 +52,6 @@ module.exports = function(context) {
     else if ((context.distro == "opbsd")||(context.distro =="freebsd")){
       bsd_install();
     }
-    else if (context.distro == "arch"){
-      arch_install();
-    }
     else if (context.distro == "fedora"){
       fedora_install();
     }
@@ -60,10 +62,8 @@ module.exports = function(context) {
       macos_install();
     } else if (context.distro == "devuan" && context.version > 1) {
       debian_install();
-    } else if (context.distro == "opensuse") {
-      opensuse_install();
     } else {
-      auto_install();
+      snap_install();
     }
 
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
@@ -175,6 +175,8 @@ module.exports = function(context) {
     }
   }
 
+  // This function is currently unused, but we keep it around to make it easy
+  // to generate these instructions again if we want to.
   arch_install = function() {
     template = "arch";
     context.package = "certbot";
@@ -238,6 +240,8 @@ module.exports = function(context) {
     context.install_command = "brew install";
   }
 
+  // This function is currently unused, but we keep it around to make it easy
+  // to generate these instructions again if we want to.
   opensuse_install = function() {
     template = "opensuse";
     context.package = "certbot";
@@ -265,6 +269,8 @@ module.exports = function(context) {
     context.dns_package_prefix_noflag = "certbot-dns";
   }
 
+  // This function is currently unused, but we keep it around to make it easy
+  // to generate these instructions again if we want to.
   auto_install = function() {
     template = "auto";
     context.base_command = "/usr/local/bin/certbot-auto";
