@@ -171,9 +171,9 @@
           "version": "15.0"
         },
         {
-            "name": "Other UNIX",
+            "name": "Other Linux",
             "id": "pip",
-            "distro": "python",
+            "distro": "linux",
             "version": "0"
         },
         {
