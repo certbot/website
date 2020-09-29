@@ -2442,7 +2442,7 @@
       {
     "name": "Rad Web Hosting",
     "link": "https://radwebhosting.com",
-    "category": "full",
+    "category": "partial",
     "tutorial": "https://radwebhosting.com/client_area/knowledgebase/226/Enable-Lets-Encrypt-AutoSSL-Provider.html",
     "announcement": "",
     "plan": "",
