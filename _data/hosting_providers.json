@@ -2439,7 +2439,7 @@
     "reviewed": "2020.09.20",
     "note": "All domains/sites automatically use Let's Encrypt. Multiple sites share a single certificate using the SAN field"
   },
-      {
+  {
     "name": "Rad Web Hosting",
     "link": "https://radwebhosting.com",
     "category": "partial",
