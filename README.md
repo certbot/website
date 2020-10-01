@@ -24,7 +24,7 @@ git checkout <RELEVANT BRANCH>
 CERTBOT_WEBSITE_PATH=/path/to/your/local/certbot/website/repo
 docker run -p 8000:4000 --rm -v "$CERTBOT_WEBSITE_PATH/nginx.conf:/etc/nginx/conf.d/default.conf:ro" -v $(pwd):/usr/share/nginx/html:ro -it nginx
 ```
-After starting that command running, you can access the website in your browser at http://localhost:8000. To shut the server down, just hit ctrl+c in the terminal you ran the docker command.
+After starting that command running, you can access this website in your browser at http://localhost:8000. To shut the server down, just click ctrl+c in the terminal you ran the docker command.
 
 If you are on linux and your user is not a member of the docker group, you'll need to run the command with `sudo`.
 
