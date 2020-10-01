@@ -130,6 +130,16 @@
     "note": ""
   },
   {
+    "name": "netclusive",
+    "link": "https://netclusive.de/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.netclusive.de/faq/content/31/116/de/kann-ich-meine-webseite-ssl-verschluesseln.html",
+    "plan": "",
+    "reviewed": "2020.10.01",
+    "note": "The website is in German. Old plans of Shared Web Hosting with confixx panel have full supported HTTPS support. New plans of Shared Web Hosting with plesk panel enables the user to register new Let's Encrypt certificates once. Plesk take care of renewals."
+  },
+  {
     "name": "Netlify",
     "link": "https://www.netlify.com/",
     "category": "full",
