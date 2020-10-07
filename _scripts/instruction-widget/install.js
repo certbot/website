@@ -28,7 +28,7 @@ module.exports = function(context) {
 
     // This is the list of distributions that should be shown our snap
     // instructions.
-    snap_distros = ["snap", "ubuntu", "arch", "opensuse"];
+    snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora"];
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -56,7 +56,12 @@ module.exports = function(context) {
       fedora_install();
     }
     else if (context.distro == "centos" || context.distro == "rhel") {
-      centos_install();
+      // The oldest version of RHEL where snapd is packaged is RHEL 7.
+      if (context.version < 7) {
+        centos_install();
+      } else {
+        snap_install();
+      }
     }
     else if (context.distro == "macos") {
       macos_install();
@@ -194,6 +199,8 @@ module.exports = function(context) {
     context.dns_package_prefix = "certbot-dns";
   }
 
+  // This function is currently unused, but we keep it around to make it easy
+  // to generate these instructions again if we want to.
   fedora_install = function() {
     template = "fedora";
     context.package = "certbot";
