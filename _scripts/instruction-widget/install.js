@@ -28,7 +28,7 @@ module.exports = function(context) {
 
     // This is the list of distributions that should be shown our snap
     // instructions.
-    snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora"];
+    var snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora", "debian"];
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -38,9 +38,6 @@ module.exports = function(context) {
     }
     else if (snap_distros.includes(context.distro)) {
       snap_install();
-    }
-    else if (context.distro == "debian" && context.version > 8) {
-      debian_install();
     }
     // @todo: Implement or complete these.
     // else if (context.distro == "python"){
