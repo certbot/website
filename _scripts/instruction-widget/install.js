@@ -39,9 +39,6 @@ module.exports = function(context) {
     else if (snap_distros.includes(context.distro)) {
       snap_install();
     }
-    else if (context.distro == "debian" && context.version > 8) {
-      debian_install();
-    }
     // @todo: Implement or complete these.
     // else if (context.distro == "python"){
     //   return pip_install();
