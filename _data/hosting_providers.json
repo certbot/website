@@ -2448,5 +2448,15 @@
     "plan": "",
     "reviewed": "2020.09.28",
     "note": "Let's Encrypt available on all hosting, VPS, and dedicated server plans."
+  },
+  {
+    "name": "Easyname",
+    "link": "https://www.easyname.at/",
+    "category": "partial",
+    "tutorial": "https://www.easyname.at/de/support/hosting/202-wie-kann-ich-lets-encrypt-fr-meine-domain-aktivieren",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.10.08",
+    "note": "Let's Encrypt available on all paid hosting plans. Only the largest plan has an unlimited number of certifictes."
   }
 ]
