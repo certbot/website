@@ -28,7 +28,7 @@ module.exports = function(context) {
 
     // This is the list of distributions that should be shown our snap
     // instructions.
-    snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora", "debian"];
+    var snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora", "debian"];
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
