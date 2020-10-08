@@ -52,9 +52,6 @@ module.exports = function(context) {
     else if ((context.distro == "opbsd")||(context.distro =="freebsd")){
       bsd_install();
     }
-    else if (context.distro == "fedora"){
-      fedora_install();
-    }
     else if (context.distro == "centos" || context.distro == "rhel") {
       // The oldest version of RHEL where snapd is packaged is RHEL 7.
       if (context.version < 7) {
