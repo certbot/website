@@ -67,18 +67,3 @@
 
 {{> dnspluginssetup}}
 
-{{#advanced}}
-{{#dns_plugins}}
-<li>
-  Connect the DNS plugin snap to the Certbot snap
-  <p>
-    Run the following command, replacing &lt;PLUGIN&gt; with the name of your DNS provider.
-  </p>
-  <pre>sudo snap connect certbot:plugin {{dns_package_prefix_noflag}}-&lt;PLUGIN&gt;</pre>
-  <p>
-    For example, if your DNS provider is Cloudflare, you'd run the following command:
-  </p>
-  <pre>sudo snap connect certbot:plugin {{dns_package_prefix_noflag}}-cloudflare</pre>
-</li>
-{{/dns_plugins}}
-{{/advanced}}
