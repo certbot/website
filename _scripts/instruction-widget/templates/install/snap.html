@@ -39,11 +39,11 @@
     </p>
 </li>
 
+{{>installcertbot}}
+{{>preparecertbotsnapcommand}}
 
 {{#advanced}}
 {{#dns_plugins}}
-{{>installcertbotwildcard}}
-{{>preparecertbotsnapcommand}}
 <li>
   Confirm plugin containment level
   <p>
@@ -58,11 +58,6 @@
   </p>
 </li>
 {{/dns_plugins}}
-{{/advanced}}
-
-{{^advanced}}
-{{>installcertbot}}
-{{>preparecertbotsnapcommand}}
 {{/advanced}}
 
 {{> dnspluginssetup}}
