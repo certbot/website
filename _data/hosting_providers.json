@@ -1620,6 +1620,16 @@
     "note": ""
   },
   {
+    "name": "Seravo",
+    "link": "https://seravo.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://seravo.com/blog/https-is-not-optional/",
+    "plan": "",
+    "reviewed": "2020.11.11",
+    "note": ""
+  },
+  {
     "name": "ServerPilot",
     "link": "https://serverpilot.io/",
     "category": "partial",
