@@ -2448,5 +2448,15 @@
     "plan": "",
     "reviewed": "2020.09.28",
     "note": "Let's Encrypt available on all hosting, VPS, and dedicated server plans."
+  },
+  {
+    "name": "7m pl",
+    "link": "https://7m.pl",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "",
+    "note": ""
   }
 ]
