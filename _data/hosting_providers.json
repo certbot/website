@@ -2448,5 +2448,15 @@
     "plan": "",
     "reviewed": "2020.09.28",
     "note": "Let's Encrypt available on all hosting, VPS, and dedicated server plans."
-  }
+  },
+  {
+    "name": "celltek",
+    "link": "https://celltek-server.de/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": "Let's Encrypt available on all Webhosting, Nginx-Proxy and all Domain services"
+  },
 ]
