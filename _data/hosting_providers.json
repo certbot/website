@@ -1169,6 +1169,16 @@
     "reviewed": "2020.3.3",
     "note": "Site and link are in German"
   },
+   {
+    "name": "MightWeb",
+    "link": "",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.11.14",
+    "note": ""
+  },
   {
     "name": "mijn.host",
     "link": "https://mijn.host/",
