@@ -28,7 +28,7 @@ module.exports = function(context) {
 
     // This is the list of distributions that should be shown our snap
     // instructions.
-    var snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora", "debian"];
+    var snap_distros = ["snap", "ubuntu", "arch", "opensuse", "fedora", "debian", "centos", "rhel"];
 
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
@@ -48,14 +48,6 @@ module.exports = function(context) {
     }
     else if ((context.distro == "opbsd")||(context.distro =="freebsd")){
       bsd_install();
-    }
-    else if (context.distro == "centos" || context.distro == "rhel") {
-      // The oldest version of RHEL where snapd is packaged is RHEL 7.
-      if (context.version < 7) {
-        centos_install();
-      } else {
-        snap_install();
-      }
     }
     else if (context.distro == "macos") {
       macos_install();
@@ -82,6 +74,8 @@ module.exports = function(context) {
    * context and partials associated with that template.
    */
 
+  // This function is currently unused, but we keep it around to make it easy
+  // to generate these instructions again if we want to.
   centos_install = function() {
     template = "centos";
 
