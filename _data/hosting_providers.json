@@ -130,6 +130,16 @@
     "note": ""
   },
   {
+    "name": "netclusive",
+    "link": "https://netclusive.de/",
+    "category": "full",
+    "tutorial": "https://www.netclusive.de/faq/content/36/430/de/kann-ich-meine-webseite-ssl-verschluesseln.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.10.01",
+    "note": "The website is in German."
+  },
+  {
     "name": "Netlify",
     "link": "https://www.netlify.com/",
     "category": "full",
