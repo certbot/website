@@ -1690,6 +1690,16 @@
     "note": ""
   },
   {
+    "name": "SnapPages",
+    "link": "https://www.snappages.net/",
+    "category": "partial",
+    "tutorial": "http://help.snappages.site/en/articles/3508506-securing-your-site",
+    "announcement": "https://www.subsplash.com/websites",
+    "plan": "",
+    "reviewed": "2020.11.01",
+    "note": "Supports customers across the globe"
+  },
+  {
     "name": "snowflake Ops",
     "link": "",
     "category": "partial",
