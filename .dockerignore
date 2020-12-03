@@ -1,0 +1,31 @@
+# ignore docker config
+docker-compose.yml
+Dockerfile
+.dockerignore
+nginx.conf
+
+# ignore repo docs
+EDITING.md
+README.md
+LICENSE.txt
+.git*
+
+# ignore secrets / CI logic
+build_key.enc
+push-build.sh
+.travis.yml
+
+# ignore unnecessary certbot files
+_docs
+!_docs/tools
+!_docs/acme
+!_docs/certbot
+!_docs/certbot-*
+!_docs/letsencrypt-auto-source
+
+# ignore build artifacts
+node_modules
+_site
+_instructions
+.sass-cache
+.jekyll-*

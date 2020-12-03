@@ -8,18 +8,19 @@ ENV RUBY_VERSION 2.6.3
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
 
 # Set UTF-8 character encoding
-RUN apt-get update && apt-get install locales -y
-RUN echo dpkg-reconfigure -f noninteractive tzdata && \
-    sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
-    echo 'LANG="en_US.UTF-8"'>/etc/default/locale && \
-    dpkg-reconfigure --frontend=noninteractive locales && \
-    update-locale LANG=en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL C.UTF-8
 
-# need rsync for deploy script and texlive for building docs
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install locales -y && \
+    echo dpkg-reconfigure -f noninteractive tzdata && \
+    sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    echo 'LANG="en_US.UTF-8"'>/etc/default/locale && \
+    dpkg-reconfigure --frontend=noninteractive locales && \
+    update-locale LANG=en_US.UTF-8 && \
+
+    # Install rsync for deploy script, texlive for building docs
+    apt-get install -y --no-install-recommends \
     imagemagick \
     gsfonts \
     latexmk \
@@ -43,35 +44,13 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 # Install docs dependencies
-COPY _docs/ ./_docs
 COPY _docs.sh ./
+COPY _docs/ ./_docs/
+COPY _docs/tools ./_docs/tools
+COPY _docs/letsencrypt-auto-source ./_docs/letsencrypt-auto-source
 RUN ./_docs.sh depend
 
-# Install js dependencies
-COPY package.json ./
-RUN npm install gulp-cli -g
-RUN npm install
-
-COPY _data ./_data
-COPY _faq_entries ./_faq_entries
-COPY _gulp ./_gulp
-COPY _includes ./_includes
-COPY _layouts ./_layouts
-COPY _sass ./_sass
-COPY _scripts ./_scripts
-COPY about ./about
-COPY faq ./faq
-COPY fonts ./fonts
-COPY images ./images
-COPY privacy ./privacy
-COPY support ./support
-COPY _config.yml ./_config.yml
-COPY favicon.ico ./favicon.ico
-COPY gulpfile.js ./gulpfile.js
-COPY index.html ./index.html
-COPY certbot-deploy ./certbot-deploy
-COPY .git ./.git
-COPY .gitmodules ./.gitmodules
+COPY . .
 
 RUN gulp build
 
