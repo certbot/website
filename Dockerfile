@@ -1,4 +1,4 @@
-FROM node:8
+FROM python:3.6
 
 RUN mkdir /opt/certbot
 WORKDIR /opt/certbot
@@ -29,11 +29,18 @@ RUN apt-get install -y --no-install-recommends \
     texlive-latex-extra
 
 # Install ruby and dependencies
-RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc &&\
-    mkdir /src && cd /src && git clone https://github.com/sstephenson/ruby-build.git &&\
-    cd /src/ruby-build && ./install.sh &&\
-    cd / && rm -rf /src/ruby-build && ruby-build $RUBY_VERSION /usr/local
-RUN gem install jekyll html-proofer
+RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc && \
+    mkdir /src && cd /src && git clone https://github.com/sstephenson/ruby-build.git && \
+    cd /src/ruby-build && ./install.sh && \
+    cd / && rm -rf /src/ruby-build && ruby-build $RUBY_VERSION /usr/local && \
+    gem install jekyll html-proofer && \
+
+    # Install node and dependencies
+    apt-get install -y npm && npm install gulp-cli -g
+
+# Install Javascript packages
+COPY package.json package-lock.json ./
+RUN npm install
 
 # Install docs dependencies
 COPY _docs/ ./_docs
