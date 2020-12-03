@@ -28,7 +28,18 @@ After starting that command running, you can access the website in your browser 
 
 If you are on linux and your user is not a member of the docker group, you'll need to run the command with `sudo`.
 
-### Building locally
+### Building locally with Docker
+
+1. Clone this repo and cd into the project directory.
+2. Get the documentation submodule:
+  * `git submodule init`
+  * `git submodule update`
+3. `docker-compose up`
+
+docker-compose serves the site with nginx to more closely mirror production.
+
+
+### Building locally without Docker
 
 #### Install
 1. Install `ruby 2.0+`, `node 8.0+`, and `npm 2.0+`.
