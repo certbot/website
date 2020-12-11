@@ -34,13 +34,16 @@ RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc && \
     mkdir /src && cd /src && git clone https://github.com/sstephenson/ruby-build.git && \
     cd /src/ruby-build && ./install.sh && \
     cd / && rm -rf /src/ruby-build && ruby-build $RUBY_VERSION /usr/local && \
-    gem install jekyll html-proofer && \
+    gem install jekyll html-proofer
 
-    # Install node and dependencies
-    apt-get install -y npm && npm install gulp-cli -g
+# Install node and dependencies
+RUN apt-get install -y npm
+RUN npm install -g n
+RUN n lts
+RUN npm install -g npm gulp-cli
 
 # Install Javascript packages
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install
 
 # Install docs dependencies
