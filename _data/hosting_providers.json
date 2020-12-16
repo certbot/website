@@ -491,10 +491,10 @@
   },
   {
     "name": "Combell",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.combell.com/",
+    "category": "full",
     "tutorial": "",
-    "announcement": "",
+    "announcement": "https://www.combell.com/en/blog/free-lets-encrypt-ssl-certificate-for-combell-clients/",
     "plan": "",
     "reviewed": "",
     "note": ""
