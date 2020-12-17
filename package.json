@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.19.0",
-    "datatables.net": "^1.10.19",
+    "datatables.net": "^1.10.22",
     "datatables.net-dt": "^1.10.19",
     "del": "^2.2.0",
     "fs": "0.0.2",
