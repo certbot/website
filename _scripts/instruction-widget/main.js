@@ -153,7 +153,7 @@ InstructionWidget = (function() {
     };
 
     // #wildcard pre-selects the "Wildcard tab"
-    if (anchor_params.wildcard === true) {
+    if (anchor_params.wildcard) {
       $('.tab.advanced', content_container).trigger('click');
     }  
   };
