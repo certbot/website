@@ -29,7 +29,7 @@
   <pre>sudo snap install core; sudo snap refresh core</pre>
 </li>
 <li>
-    Remove any Certbot OS packages
+    Remove certbot-auto and any Certbot OS packages
     <p>
     If you have any Certbot packages installed using an OS package manager like
     <tt>apt</tt>, <tt>dnf</tt>, or <tt>yum</tt>, you should remove them before
@@ -38,6 +38,11 @@
     package manager. The exact command to do this depends on your OS, but
     common examples are <tt>sudo apt-get remove certbot</tt>, <tt>sudo dnf
     remove certbot</tt>, or <tt>sudo yum remove certbot</tt>.
+    </p>
+    <p>
+    If you previously used Certbot through the certbot-auto script, you should
+    also remove its installation by following the instructions <a
+    href="/docs/uninstall.html">here</a>.
     </p>
 </li>
 
