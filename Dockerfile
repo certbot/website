@@ -49,8 +49,6 @@ RUN npm install
 # Install docs dependencies
 COPY _docs.sh ./
 COPY _docs/ ./_docs/
-COPY _docs/tools ./_docs/tools
-COPY _docs/letsencrypt-auto-source ./_docs/letsencrypt-auto-source
 RUN ./_docs.sh depend
 
 COPY . .
