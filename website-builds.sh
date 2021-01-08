@@ -1,13 +1,19 @@
 #!/bin/bash
 
-set -e
-
 REF="$1"
 TAG="website-builds:$REF"
 
 if [ -z "$REF" ]; then
-    echo "Usage: $0 ref"
+    echo >&2 "Usage: $0 ref"
+    exit 1
 fi
+
+if ! which docker >/dev/null 2>&1; then
+   echo >&2 "Docker is required to run this script."
+   echo >&2 "https://docs.docker.com/get-docker/"
+   exit 1
+fi
+set -e
 
 docker build --no-cache -t "$TAG" -<<EOF
 FROM nginx:alpine
