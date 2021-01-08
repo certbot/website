@@ -2478,5 +2478,14 @@
     "plan": "",
     "reviewed": "2020.09.28",
     "note": "Let's Encrypt available on all hosting, VPS, and dedicated server plans."
+  },
+  {
+    "name": "Cloudflare",
+    "link": "https://cloudflare.com",
+    "category": "full",
+    "tutorial": "https://developers.cloudflare.com/ssl/client-certificates",
+    "announcement": "",
+    "plan": "",
+    "note": "You must have your DNS hosted on Cloudflare to use their SSL."
   }
 ]
