@@ -21,3 +21,4 @@ _site
 _instructions
 .sass-cache
 .jekyll-*
+_docs/venv*
