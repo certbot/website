@@ -15,14 +15,6 @@ build_key.enc
 push-build.sh
 .travis.yml
 
-# ignore unnecessary certbot files
-_docs
-!_docs/tools
-!_docs/acme
-!_docs/certbot
-!_docs/certbot-*
-!_docs/letsencrypt-auto-source
-
 # ignore build artifacts
 node_modules
 _site
