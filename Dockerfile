@@ -12,14 +12,13 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL C.UTF-8
 
+# Configure locales. Install rsync for deploy script, texlive for building docs.
 RUN apt-get update && apt-get install locales -y && \
     echo dpkg-reconfigure -f noninteractive tzdata && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     echo 'LANG="en_US.UTF-8"'>/etc/default/locale && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8 && \
-
-    # Install rsync for deploy script, texlive for building docs
     apt-get install -y --no-install-recommends \
     imagemagick \
     gsfonts \
