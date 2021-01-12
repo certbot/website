@@ -24,7 +24,6 @@ _docs
 !_docs/letsencrypt-auto-source
 
 # ignore build artifacts
-package-lock.json
 node_modules
 _site
 _instructions

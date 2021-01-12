@@ -38,11 +38,12 @@ RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc && \
 # Install node and dependencies
 RUN apt-get install -y npm
 RUN npm install -g n
-RUN n lts
+RUN n 8.12.0
 RUN npm install -g npm gulp-cli
 
 # Install Javascript packages
 COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
 
 # Install docs dependencies
