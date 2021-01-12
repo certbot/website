@@ -36,7 +36,7 @@ If you are on linux and your user is not a member of the docker group, you'll ne
   * `git submodule update`
 3. `docker-compose up`
 
-docker-compose serves the site with nginx to more closely mirror production.
+docker-compose serves the site with nginx to more closely mirror production. Any changes you make to your local files while the site is running will automatically be picked up and you can access the website in your browser at http://localhost:4000.
 
 
 ### Building locally without Docker
