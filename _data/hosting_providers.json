@@ -130,6 +130,16 @@
     "note": ""
   },
   {
+    "name": "netclusive",
+    "link": "https://netclusive.de/",
+    "category": "full",
+    "tutorial": "https://www.netclusive.de/faq/content/36/430/de/kann-ich-meine-webseite-ssl-verschluesseln.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2020.10.01",
+    "note": "The website is in German."
+  },
+  {
     "name": "Netlify",
     "link": "https://www.netlify.com/",
     "category": "full",
@@ -481,12 +491,12 @@
   },
   {
     "name": "Combell",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.combell.com/",
+    "category": "full",
     "tutorial": "",
-    "announcement": "",
+    "announcement": "https://www.combell.com/en/blog/free-lets-encrypt-ssl-certificate-for-combell-clients/",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2020.12.17",
     "note": ""
   },
   {
@@ -1678,6 +1688,16 @@
     "plan": "",
     "reviewed": "",
     "note": ""
+  },
+  {
+    "name": "SnapPages",
+    "link": "https://www.snappages.net/",
+    "category": "partial",
+    "tutorial": "http://help.snappages.site/en/articles/3508506-securing-your-site",
+    "announcement": "https://www.subsplash.com/websites",
+    "plan": "",
+    "reviewed": "2020.11.01",
+    "note": "Supports customers across the globe"
   },
   {
     "name": "snowflake Ops",
