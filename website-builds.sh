@@ -25,6 +25,7 @@ RUN cd /usr/share/nginx \
 EOF
 
 echo
-echo "Starting server. You can access the website in your browser at http://localhost:8000. Press Ctrl-C to shut down."
+echo "Starting server. You can access the website in your browser at http://localhost:8000."
+echo -e "\033[1;33mPress Ctrl-C to shut down.\033[0m"
 
 docker run --rm -p 8000:4000 -v "$(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro" -it "$TAG"
