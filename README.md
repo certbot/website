@@ -14,7 +14,7 @@ All branches and pull requests are built and tested by Travis.
 
 For branches, the built assets are pushed to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds). Built assets from PRs are not saved because Travis doesn't provide a mechanism to securely push to a Github repo after PRs across forks.
 
-To view the build of any branch, use the `website-builds.sh`, which will fetch the branch from certbot/website-builds and start a docker to serve the files.
+To view the build of any branch, use the script `website-builds.sh`, which will fetch the branch from certbot/website-builds and start a docker to serve the files.
 
 ```
 ./website-builds.sh <NAME OF BRANCH>
