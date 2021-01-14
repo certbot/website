@@ -18,6 +18,8 @@ set -e
 docker build --no-cache -t "$TAG" -<<EOF
 FROM nginx:alpine
 
+ENV NGINX_ENTRYPOINT_QUIET_LOGS 0
+
 RUN cd /usr/share/nginx \
  && wget "https://github.com/certbot/website-builds/archive/$REF.zip" \
  && unzip *.zip \
