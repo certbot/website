@@ -165,6 +165,8 @@ module.exports = function(context) {
     } else if (context.webserver == "nginx") {
       context.package += " app-crypt/certbot-nginx";
     }
+    context.dns_plugins = true;
+    context.dns_package_prefix = "app-crypt/certbot-dns";
   }
 
   // This function is currently unused, but we keep it around to make it easy
