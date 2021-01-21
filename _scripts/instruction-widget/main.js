@@ -13,6 +13,7 @@ InstructionWidget = (function() {
   var content_container;
 
   init = function() {
+    anchor_params = parse_anchor(window.location.hash);
     redirect_anchor();
     select_container = $('.instruction-widget');
     content_container = $('.instructions.content');
@@ -40,12 +41,14 @@ InstructionWidget = (function() {
       version: version,
       webserver: webserver,
       distro_longname: distro_longname,
-      server_longname: server_longname
+      server_longname: server_longname,
+      wildcard: anchor_params.wildcard
     }
   };
 
-  instruction_url = function(os, ws) {
-    return '/lets-encrypt/' + os + '-' + ws;
+  instruction_url = function(os, ws, wildcard) {
+    return '/lets-encrypt/' + os + '-' + ws +
+           (wildcard ? '#wildcard' : '');
   }
 
   jump = function(os, ws) {
@@ -86,12 +89,36 @@ InstructionWidget = (function() {
     }
   };
 
+  // Schema: "#os-ws", "#os-ws,list,of,flags", "#list,of,flags"
+  parse_anchor = function(anchor) {
+    var result = { os: null, ws: null };
+    if (typeof anchor !== 'string') {
+      return result;
+    }
+    var params = anchor.replace(/^#/, '').split(',');
+    // First parameter is assumed to be "os-server" if it contains a '-'
+    var i = 0;
+    if (params.length > i && params[i].indexOf('-') !== -1) {
+      var platform = params[i].split('-');
+      result.os = platform[0];
+      result.ws = platform[1];
+      i++;
+    }
+    // Any remaining parameters are flags
+    for (; i < params.length; i++) {
+      if (params[i]) {
+        result[params[i]] = true;
+      }
+    }
+    return result;
+  };
+
   // Users used to be able to link to an instruction set with an anchor link.
   // We can redirect them to a standalone page.
   redirect_anchor = function() {
-    var params = window.location.hash.replace('#', '').split('-');
-    if (params.length === 2) {
-      window.location.href = instruction_url(params[0], params[1]);
+    if (anchor_params && anchor_params.os && anchor_params.ws) {
+      window.location.href = instruction_url(anchor_params.os, anchor_params.ws, 
+                                             anchor_params.wildcard);
     }
   }
 
@@ -106,7 +133,7 @@ InstructionWidget = (function() {
       if ($('.instruction-widget').parent().hasClass('hero')) {
         if (input.os && input.webserver) {
           // We're on the homepage, redirect to instructions page
-          window.location.href = instruction_url(input.os,input.webserver);
+          window.location.href = instruction_url(input.os, input.webserver, input.wildcard);
           return;
         }
       }
@@ -123,7 +150,12 @@ InstructionWidget = (function() {
       } else {
         location.reload();
       }
-    }
+    };
+
+    // #wildcard pre-selects the "Wildcard tab"
+    if (anchor_params.wildcard) {
+      $('.tab.advanced', content_container).trigger('click');
+    }  
   };
 
   return {
@@ -134,7 +166,7 @@ InstructionWidget = (function() {
 $('document').ready(function() {
   InstructionWidget.init();
   $('.instructions .instruction-widget').ready(function() {
-    var url = window.location.href.split('/');
+    var url = window.location.pathname.split('/');
     var selected = url[url.length - 1];
     if (!(selected === "")) {
       selected = selected.split('-');
