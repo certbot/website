@@ -55,4 +55,4 @@ COPY . .
 
 RUN gulp build
 
-CMD ["gulp", "--series", "instructions", "jekyll:watch"]
+CMD ["gulp", "jekyll:watch"]
