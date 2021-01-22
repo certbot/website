@@ -1,3 +1,44 @@
+{{#advanced}}
+<aside class="note">
+    <div class="note-header">
+        <h3>Experimental</h3>
+    </div>
+    <p>
+        Currently, the only packaged certbot DNS plugin in the official Gentoo repository is <a href="https://packages.gentoo.org/packages/app-crypt/certbot-dns-nsone">app-crypt/certbot-dns-nsone</a>. The instructions below pertaining the use of an overlay are <strong>experimental</strong> and is not officially supported by Gentoo, Let's Encrypt nor EFF.
+    </p>
+</aside>
+<li>
+    Enable the `certbot-dns-plugins` overlay
+    <p>
+        If you require any other DNS plugin other than the <a href="https://packages.gentoo.org/packages/app-crypt/certbot-dns-nsone">app-crypt/certbot-dns-nsone</a> plugin, you will need the required ebuilds to install them. An <a href="https://wiki.gentoo.org/wiki/Ebuild_repository">overlay</a> called <a href="https://github.com/gentoo-mirror/certbot-dns-plugins">certbot-dns-plugins</a> exists with all other certbot DNS plugins. To be able to use those ebuilds, you will need to add the aformentioned overlay.
+    </p>
+    <h3>Using `eselect`</h3>
+    <p>
+        If not installed already, install <a href="https://packages.gentoo.org/packages/app-eselect/eselect-repository">app-eselect/eselect-repository</a>:
+    </p>
+    <pre>sudo emerge -av app-eselect/eselect-repository</pre>
+    <p>
+        Next, enable the overlay and sync it:
+    </p>
+      <pre class="no-before"><ol><li>sudo eselect repository enable certbot-dns-plugins</li>
+    <li>sudo emerge --sync certbot-dns-plugins</li></ol></pre>
+    <h3>Using `layman`</h3>
+    <p>
+        If you're using <a href="https://wiki.gentoo.org/wiki/Layman">layman</a> for managing your overlays, you can simply run:
+    </p>
+    <pre>sudo layman -a certbot-dns-plugins</pre>
+    <h3>Manual overlay installation</h3>
+    <p>
+        If you don't want to use `eselect-repository` or `layman` to manage your overlays, you can also manually install the overlay. Please see the Gentoo Wiki article about <a href="https://wiki.gentoo.org/wiki//etc/portage/repos.conf">/etc/portage/repos.conf</a> for more information.</p>
+    <aside class="note">
+        <div class="note-header">
+            <h3>ACCEPT_KEYWORDS</h3>
+        </div>
+        <p>
+	    All ebuilds have the <a href="https://wiki.gentoo.org/wiki/KEYWORDS">testing KEYWORDS</a> variable set, including potential dependencies from this overlay. Please add the appropriate <a href="https://wiki.gentoo.org/wiki/ACCEPT_KEYWORDS">ACCEPT_KEYWORDS</a> when installing any of the ebuilds.
+	</p>
+    </aside>
+{{/advanced}}
 {{> header}}
 {{>installcertbot}}
 {{> dnspluginssetup}}
