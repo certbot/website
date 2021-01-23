@@ -10,7 +10,7 @@
 <li>
     Enable the `certbot-dns-plugins` overlay
     <p>
-        If you require any other DNS plugin other than the <a href="https://packages.gentoo.org/packages/app-crypt/certbot-dns-nsone">app-crypt/certbot-dns-nsone</a> plugin, you will need the required ebuilds to install them. An <a href="https://wiki.gentoo.org/wiki/Ebuild_repository">overlay</a> called <a href="https://github.com/gentoo-mirror/certbot-dns-plugins">certbot-dns-plugins</a> exists with all other certbot DNS plugins. To be able to use those ebuilds, you will need to add the aformentioned overlay.
+        If you require any DNS plugin other than the <a href="https://packages.gentoo.org/packages/app-crypt/certbot-dns-nsone">app-crypt/certbot-dns-nsone</a> plugin, you will need the required ebuilds to install them. An <a href="https://wiki.gentoo.org/wiki/Ebuild_repository">overlay</a> called <a href="https://github.com/gentoo-mirror/certbot-dns-plugins">certbot-dns-plugins</a> exists with all other certbot DNS plugins. To be able to use those ebuilds, you will need to add the aformentioned overlay.
     </p>
     <h3>Using `eselect`</h3>
     <p>
@@ -38,6 +38,7 @@
 	    All ebuilds have the <a href="https://wiki.gentoo.org/wiki/KEYWORDS">testing KEYWORDS</a> variable set, including potential dependencies from this overlay. Please add the appropriate <a href="https://wiki.gentoo.org/wiki/ACCEPT_KEYWORDS">ACCEPT_KEYWORDS</a> when installing any of the ebuilds.
 	</p>
     </aside>
+</li>
 {{/advanced}}
 {{> header}}
 {{>installcertbot}}
