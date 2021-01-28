@@ -120,6 +120,16 @@
     "note": ""
   },
   {
+    "name": "NDCHost",
+    "link": "https://ndchost.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.1.25",
+    "note": "Free SSL included with all web hosting plans. Certbot supported on all Cloud and Metal server plans. Installation and configuration included free if needed."
+  },
+  {
     "name": "Neocities",
     "link": "https://neocities.org/",
     "category": "full",
