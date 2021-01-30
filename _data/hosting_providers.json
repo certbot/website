@@ -1790,6 +1790,16 @@
     "note": ""
   },
   {
+    "name": "Thecamels",
+    "link": "https://thecamels.org/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://thecamels.org/en/ssl-certificates/lets-encrypt/",
+    "plan": "",
+    "reviewed": "2020.1.30",
+    "note": "Let's Encrypt available on all hosting plans, VPS and metal servers. Active automatically. Certbot supported"
+  },
+  {
     "name": "Thisistap",
     "link": "",
     "category": "partial",
@@ -1872,7 +1882,7 @@
   {
     "name": "UpTime Web Hosting",
     "link": "",
-    "category": "full",
+    "category": "hec",
     "tutorial": "https://uptimewebhosting.com.au/knowledgebase/5/Securing-your-website-with-cPanel-web-hosting-plans.html",
     "announcement": "",
     "plan": "",
