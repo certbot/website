@@ -11,12 +11,12 @@ module Jekyll
       end
 
       def certbot_instructions_watch(options, site=nil)
-        path = "_data/"
+        paths = %w(_data/ _scripts/instruction-widget)
         opts = { force_polling: options["force_polling"] }
 
-        listener = Listen.to(path, opts) do |m, a, _|
+        listener = Listen.to(*paths, opts) do |m, a, _|
           (m + a).each do |path|
-            if File.basename(path) == "inputs.json"
+            if path =~ %r{/inputs.json|/_scripts/instruction-widget/}
               system("gulp", "instructions")
             end
           end
