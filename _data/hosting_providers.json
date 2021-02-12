@@ -2498,5 +2498,15 @@
     "plan": "",
     "reviewed": "2020.09.28",
     "note": "Let's Encrypt available on all hosting, VPS, and dedicated server plans."
+  },
+  {
+    "name": "Zoner Oy",
+    "link": "https://www.zoner.fi/",
+    "category": "partial",
+    "tutorial": "https://www.zoner.fi/tukiohjeet/lets-encrypt-sertifikaatin-kayttoonotto/",
+    "announcement": "https://www.zoner.fi/lets-encrypt-ilmainen-ssl-sertifikaatti/",
+    "plan": "",
+    "reviewed": "2021.02.12",
+    "note": "All webhosting plans include Let's Encrypt."
   }
 ]
