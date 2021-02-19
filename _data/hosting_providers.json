@@ -2509,4 +2509,14 @@
     "reviewed": "2021.02.12",
     "note": "All webhosting plans include Let's Encrypt."
   }
+   {
+    "name": "Clausweb",
+    "link": "https://www.clausweb.ro/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.clausweb.ro/blog/ce-este-un-certificat-ssl-si-la-ce-se-foloseste/",
+    "plan": "",
+    "reviewed": "2019.5.31",
+    "note": "All plans come with Free Let's Encrypt automatically installed for Website and Mail"
+  }
 ]
