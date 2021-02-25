@@ -267,8 +267,13 @@ module.exports = function(context) {
     template = "pip";
     context.base_command = "/opt/certbot/bin/certbot";
     context.cron_included = false;
-    context.install_command = "pip install";
+    context.install_command = "sudo /opt/certbot/bin/pip install";
     context.package = "certbot";
+    if (context.webserver == "apache") {
+      context.package += " certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.package += " certbot-nginx";
+    }
     context.dns_plugins = true;
     context.dns_package_prefix = "certbot-dns";
     context.python_name = "/opt/certbot/bin/python3";

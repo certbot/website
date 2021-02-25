@@ -37,7 +37,7 @@
     "augeas on &lt;your_system_name&gt;" will probably yield helpful results.</p>
 </li>
 <li>
-  Set up a venv with certbot installed
+  Set up a venv
   <p>
   Execute the following instructions on the command line on the machine to set up a virtual
   environment.
@@ -45,40 +45,26 @@
         <li>python3 -m venv /opt/certbot/</li>
         <li>. /opt/certbot/bin/activate</li>
         <li>pip install --upgrade pip</li>
-        <li>pip install certbot certbot-apache certbot-nginx</li>
         <li>deactivate</li>
         <li>exit</li></ol></pre>
   </p>
 </li>
+
+{{> installcertbot}}
+
 <li>
     [Optional] Install any custom third-party plugins
     <p>
     If you use third-party plugins not created by the Certbot team, you can install them by
-    executing the following instructions on the command line on the machine.
-    <pre class="no-before"><ol><li>sudo su</li>
-        <li>. /opt/certbot/bin/activate</li>
-        <li>pip install &lt;other-plugins&gt;</li>
-        <li>deactivate</li>
-        <li>exit</li></ol></pre>
+    executing the following command on the command line on the machine.
+    <pre class="no-before"><ol>
+        <li>sudo /opt/certbot/bin/pip install &lt;other-plugins&gt;</li></ol></pre>
     </p>
 </li>
 
 
 {{#advanced}}
 {{#dns_plugins}}
-<li>
-  Confirm plugin containment level
-  <p>
-  Run this command on the command line on the machine to acknowledge that the installed
-  plugin will have the same <tt>classic</tt> containment as the Certbot snap.
-  </p>
-  <pre>sudo snap set certbot trust-plugin-with-root=ok</pre>
-
-  <p>
-  If you encounter issues with running Certbot, you may need to follow this step, then
-  the "Install correct DNS plugin" step, again.
-  </p>
-</li>
 {{/dns_plugins}}
 {{/advanced}}
 
@@ -86,16 +72,13 @@
 
 <li>
   [Optional] Upgrade certbot
-  <p>When you're ready to upgrade certbot, run the following commands on the command line on the machine.
-    <pre class="no-before"><ol><li>sudo su</li>
-        <li>. /opt/certbot/bin/activate</li>
-        <li>pip install --upgrade certbot certbot-apache certbot-nginx</li>
-        <li>deactivate</li>
-        <li>exit</li></ol></pre>
+  <p>When you're ready to upgrade certbot, run the following command on the command line on the machine.
+    <pre class="no-before"><ol>
+        <li>sudo /opt/certbot/bin/pip install --upgrade certbot certbot-apache certbot-nginx</li></ol></pre>
     </p>
 
   <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat the instructions
   from "Set up a venv with certbot installed",{{#advanced}} DNS plugin installation instructions,{{/advanced}}
-  (and "Install any custom third-party plugins" if needed).</p>
-  <p>For automatic upgrades, lines 2-4 of these instructions can be run by a monthly cron job.</p>
+  and "Install any custom third-party plugins" if needed.</p>
+  <p>For automatic upgrades, the command in this step can be run by a monthly cron job.</p>
 </li>
