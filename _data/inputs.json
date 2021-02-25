@@ -40,7 +40,7 @@
         },
         {
             "name": "pip",
-            "id": "pip",
+            "id": "python",
             "distro": "pip",
             "version": "0"
         },
