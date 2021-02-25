@@ -41,12 +41,10 @@
   <p>
   Execute the following instructions on the command line on the machine to set up a virtual
   environment.
-  <pre class="no-before"><ol><li>sudo su</li>
-        <li>python3 -m venv /opt/certbot/</li>
-        <li>. /opt/certbot/bin/activate</li>
-        <li>pip install --upgrade pip</li>
-        <li>deactivate</li>
-        <li>exit</li></ol></pre>
+  <pre class="no-before"><ol>
+        <li>sudo python3 -m venv /opt/certbot/</li>
+        <li>{{install_command}} --upgrade pip</li>
+  </ol></pre>
   </p>
 </li>
 
@@ -59,7 +57,7 @@
     If you use third-party plugins not created by the Certbot team, you can install them by
     executing the following command on the command line on the machine.
     <pre class="no-before"><ol>
-        <li>sudo /opt/certbot/bin/pip install &lt;other-plugins&gt;</li></ol></pre>
+        <li>{{install_command}} &lt;other-plugins&gt;</li></ol></pre>
     </p>
 </li>
 
@@ -75,11 +73,9 @@
   [Optional] Upgrade certbot
   <p>When you're ready to upgrade certbot, run the following command on the command line on the machine.
     <pre class="no-before"><ol>
-        <li>sudo /opt/certbot/bin/pip install --upgrade certbot certbot-apache certbot-nginx</li></ol></pre>
+        <li>{{install_command}} --upgrade {{package}}</li></ol></pre>
     </p>
 
-  <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat the instructions
-  from "Set up a venv with certbot installed",{{#advanced}} DNS plugin installation instructions,{{/advanced}}
-  and "Install any custom third-party plugins" if needed.</p>
+  <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat all installation instructions.</p>
   <p>For automatic upgrades, the command in this step can be run by a monthly cron job.</p>
 </li>
