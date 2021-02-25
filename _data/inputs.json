@@ -39,6 +39,12 @@
             "version": "0"
         },
         {
+            "name": "pip",
+            "id": "pip",
+            "distro": "pip",
+            "version": "0"
+        },
+        {
             "name": "Debian 9 (stretch)",
             "id": "debianstretch",
             "distro": "debian",

@@ -53,6 +53,8 @@ module.exports = function(context) {
       macos_install();
     } else if (context.distro == "devuan" && context.version > 1) {
       debian_install();
+    } else if (context.distro == "pip") {
+      pip_install();
     } else {
       snap_install();
     }
@@ -259,6 +261,17 @@ module.exports = function(context) {
     context.package = "--classic certbot";
     context.dns_plugins = true;
     context.dns_package_prefix = "certbot-dns";
+  }
+
+  pip_install == function () {
+    template = "pip";
+    context.base_command = "/opt/certbot/bin/certbot";
+    context.cron_included = false;
+    context.install_command = "pip install";
+    context.package = "certbot";
+    context.dns_plugins = true;
+    context.dns_package_prefix = "certbot-dns";
+    context.python_name = "/opt/certbot/bin/python3";
   }
 
   // This function is currently unused, but we keep it around to make it easy
