@@ -1,31 +1,37 @@
+<aside class="note">
+  <div class="note-header">
+    <h3>Partial support</h3>
+  </div>
+  <p>
+  The Certbot team supports this installation method on a best effort basis. If you are on
+  a more obscure or heavily customized system, these instructions may not work and the
+  Certbot team may be unable to help you resolve the problem.
+  </p>
+</aside>
+
 {{> header}}
 <li>
     Install system dependencies
 
-    <p>These include:
-      <ul>
-        <li>Python 3.6+, including venv. This might be called <code>python3-dev</code>,
-          <code>python3-devel</code>, or <code>python3-venv</code>.</li>
-        <li>Augeas for the Apache plugin: <code>libaugeas0</code> or <code>augeaslibs</code></li>
-        <li>If you're having trouble installing cryptography, you may need to install additional
-          dependencies. See
-          <a href="https://cryptography.io/en/latest/installation.html#building-cryptography-on-linux">
-          the cryptography project's site</a> for more infoformation.</li>
-      </ul>
-    </p>
+    <p>System dependencies may include Python 3.6+, including venv (this might be called <code>python3-dev</code>,
+      <code>python3-devel</code>, or <code>python3-venv</code>) and Augeas for the Apache
+      plugin (<code>libaugeas0</code> or <code>augeaslibs</code>).</p>
+
+    <p>If you're having trouble installing cryptography, you may need to install additional
+      dependencies. See
+      <a href="https://cryptography.io/en/latest/installation.html#building-cryptography-on-linux">
+      the cryptography project's site</a> for more infoformation.</p>
 
     <p>Commands to install system dependencies may look like the following, run on the command
-    line on the machine:</p>
-
-    <pre><code>
-    # For APT-based distributions (e.g. Debian, Ubuntu ...)
-    sudo apt update
-    sudo apt install python3-dev python3-venv libaugeas0
-    # For RPM-based distributions (e.g. Fedora, CentOS ...)
-    # NB1: old distributions will use yum instead of dnf
-    # NB2: RHEL-based distributions use python3X-devel instead of python3-devel (e.g. python36-devel)
-    sudo dnf install python3-devel augeas-libs redhat-rpm-config
-    </code></pre>
+    line on the machine:
+      <pre class="no-before"><ol><li># For APT-based distributions (e.g. Debian, Ubuntu ...)</li>
+        <li>sudo apt update</li>
+        <li>sudo apt install python3-dev python3-venv libaugeas0</li>
+        <li># For RPM-based distributions (e.g. Fedora, CentOS ...)</li>
+        <li># NB1: old distributions will use yum instead of dnf</li>
+        <li># NB2: RHEL-based distributions use python3X-devel instead of python3-devel (e.g. python36-devel)</li>
+        <li>sudo dnf install python3-devel augeas-libs redhat-rpm-config</li></ol></pre>
+    </p>
 
     <p>These packages may have slightly different names on other distributions; a search such as
     "augeas on &lt;your_system_name&gt;" will probably yield helpful results.</p>
@@ -35,30 +41,26 @@
   <p>
   Execute the following instructions on the command line on the machine to set up a virtual
   environment.
+  <pre class="no-before"><ol><li>sudo su</li>
+        <li>python3 -m venv /opt/certbot/</li>
+        <li>. /opt/certbot/bin/activate</li>
+        <li>pip install --upgrade pip</li>
+        <li>pip install certbot certbot-apache certbot-nginx</li>
+        <li>deactivate</li>
+        <li>exit</li></ol></pre>
   </p>
-  <pre><code>
-    sudo su
-    python3 -m venv /opt/certbot/
-    . /opt/certbot/bin/activate
-    pip install --upgrade pip
-    pip install certbot certbot-apache certbot-nginx
-    deactivate
-    exit
-  </code></pre>
 </li>
 <li>
     [Optional] Install any custom third-party plugins
     <p>
     If you use third-party plugins not created by the Certbot team, you can install them by
     executing the following instructions on the command line on the machine.
+    <pre class="no-before"><ol><li>sudo su</li>
+        <li>. /opt/certbot/bin/activate</li>
+        <li>pip install &lt;other-plugins&gt;</li>
+        <li>deactivate</li>
+        <li>exit</li></ol></pre>
     </p>
-    <pre><code>
-      sudo su
-      . /opt/certbot/bin/activate
-      pip install &lt;other-plugins&gt;
-      deactivate
-      exit
-    </code></pre>
 </li>
 
 
@@ -83,28 +85,17 @@
 {{> dnspluginssetup}}
 
 <li>
-  Upgrade certbot
-  <p>To upgrade certbot, run the following commands on the command line on the machine.</p>
-  <pre><code>
-    sudo su
-    . /opt/certbot/bin/activate
-    pip install --upgrade certbot certbot-apache certbot-nginx
-    deactivate
-    exit
-  </code></pre>
+  [Optional] Upgrade certbot
+  <p>When you're ready to upgrade certbot, run the following commands on the command line on the machine.
+    <pre class="no-before"><ol><li>sudo su</li>
+        <li>. /opt/certbot/bin/activate</li>
+        <li>pip install --upgrade certbot certbot-apache certbot-nginx</li>
+        <li>deactivate</li>
+        <li>exit</li></ol></pre>
+    </p>
+
   <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat the instructions
-  from "Set up a venv with certbot installed",{{#advanced}} DNS plugin installation instructions,{{/advanced}},
+  from "Set up a venv with certbot installed",{{#advanced}} DNS plugin installation instructions,{{/advanced}}
   (and "Install any custom third-party plugins" if needed).</p>
   <p>For automatic upgrades, lines 2-4 of these instructions can be run by a monthly cron job.</p>
 </li>
-
-<aside class="note">
-  <div class="note-header">
-    <h3>Further Support</h3>
-  </div>
-  <p>
-  The Certbot team supports this installation method on a best effort basis. If you are on
-  a more obscure or heavily customized system, these instructions may not work and the
-  Certbot team may be unable to help you resolve the problem.
-  </p>
-</aside>
