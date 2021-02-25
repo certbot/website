@@ -263,7 +263,7 @@ module.exports = function(context) {
     context.dns_package_prefix = "certbot-dns";
   }
 
-  pip_install == function () {
+  pip_install = function () {
     template = "pip";
     context.base_command = "/opt/certbot/bin/certbot";
     context.cron_included = false;
