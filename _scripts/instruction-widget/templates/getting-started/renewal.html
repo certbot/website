@@ -73,3 +73,16 @@
   look for the lock icon in the URL bar.
   </p>
 </li>
+
+{{#upgrade_instructions}}
+<li>
+  [Optional] Upgrade certbot
+  <p>When you're ready to upgrade certbot, run the following command on the command line on the machine.
+    <pre class="no-before"><ol>
+        <li>{{install_command}} --upgrade {{package}}</li></ol></pre>
+    </p>
+
+  <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat all installation instructions.</p>
+  <p>For automatic upgrades, the command in this step can be run by a monthly cron job.</p>
+</li>
+{{/upgrade_instructions}}

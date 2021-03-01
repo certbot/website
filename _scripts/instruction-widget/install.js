@@ -279,6 +279,7 @@ module.exports = function(context) {
     context.dns_package_prefix = "certbot-dns";
     context.python_name = "/opt/certbot/bin/python";
     context.original_certbot_location = "/opt/certbot/bin";
+    context.upgrade_instructions = true;
   }
 
   // This function is currently unused, but we keep it around to make it easy
