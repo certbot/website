@@ -40,7 +40,7 @@
         },
         {
             "name": "pip",
-            "id": "python",
+            "id": "pip",
             "distro": "pip",
             "version": "0"
         },
@@ -165,9 +165,15 @@
           "version": "15.0"
         },
         {
-            "name": "Other Linux",
-            "id": "pip",
-            "distro": "linux",
+            "name": "Other Linux (snapd)",
+            "id": "othersnap",
+            "distro": "snap",
+            "version": "0"
+        },
+        {
+            "name": "Other Linux (pip)",
+            "id": "otherpip",
+            "distro": "pip",
             "version": "0"
         },
         {
