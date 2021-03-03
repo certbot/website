@@ -53,6 +53,8 @@ module.exports = function(context) {
       macos_install();
     } else if (context.distro == "devuan" && context.version > 1) {
       debian_install();
+    } else if (context.distro == "pip") {
+      pip_install();
     } else {
       snap_install();
     }
@@ -60,7 +62,7 @@ module.exports = function(context) {
     partials.auto = require(TEMPLATE_PATH + "commonauto.html");
     partials.header = require(TEMPLATE_PATH + "header.html");
     partials.installcertbot = require(TEMPLATE_PATH + "installcertbot.html");
-    partials.preparecertbotsnapcommand = require(TEMPLATE_PATH + "preparecertbotsnapcommand.html");
+    partials.preparecertbotsymlinkcommand = require(TEMPLATE_PATH + "preparecertbotsymlinkcommand.html");
     partials.dnsplugins = require(TEMPLATE_PATH + "dnsplugins.html");
     partials.dnspluginssetup = require(TEMPLATE_PATH + "dnspluginssetup.html");
 
@@ -259,6 +261,25 @@ module.exports = function(context) {
     context.package = "--classic certbot";
     context.dns_plugins = true;
     context.dns_package_prefix = "certbot-dns";
+    context.original_certbot_location = "/snap/bin";
+  }
+
+  pip_install = function () {
+    template = "pip";
+    context.base_command = "certbot";
+    context.cron_included = false;
+    context.install_command = "sudo /opt/certbot/bin/pip install";
+    context.package = "certbot";
+    if (context.webserver == "apache") {
+      context.package += " certbot-apache";
+    } else if (context.webserver == "nginx") {
+      context.package += " certbot-nginx";
+    }
+    context.dns_plugins = true;
+    context.dns_package_prefix = "certbot-dns";
+    context.python_name = "/opt/certbot/bin/python";
+    context.original_certbot_location = "/opt/certbot/bin";
+    context.upgrade_instructions = true;
   }
 
   // This function is currently unused, but we keep it around to make it easy

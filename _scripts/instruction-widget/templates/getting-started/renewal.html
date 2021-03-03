@@ -73,3 +73,18 @@
   look for the lock icon in the URL bar.
   </p>
 </li>
+
+{{#upgrade_instructions}}
+<li>
+  [Monthly] Upgrade certbot
+  <p>It's important to occasionally update Certbot to keep it up-to-date. To do this, run the
+    following command on the command line on the machine.
+    <pre class="no-before"><ol>
+        <li>{{install_command}} --upgrade {{package}}{{#advanced}} certbot-dns-&lt;PLUGIN&gt;{{/advanced}}</li></ol></pre>
+    </p>
+
+  {{#advanced}}<p>As above, replace <code>&lt;PLUGIN&gt;</code> with the name of your DNS provider.</p>{{/advanced}}
+
+  <p>If this step leads to errors, run <code>sudo rm -rf /opt/certbot</code> and repeat all installation instructions.</p>
+</li>
+{{/upgrade_instructions}}

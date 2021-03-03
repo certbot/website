@@ -39,6 +39,12 @@
             "version": "0"
         },
         {
+            "name": "pip",
+            "id": "pip",
+            "distro": "pip",
+            "version": "0"
+        },
+        {
             "name": "Debian 9 (stretch)",
             "id": "debianstretch",
             "distro": "debian",
@@ -159,9 +165,15 @@
           "version": "15.0"
         },
         {
-            "name": "Other Linux",
-            "id": "pip",
-            "distro": "linux",
+            "name": "Other Linux (snapd)",
+            "id": "othersnap",
+            "distro": "snap",
+            "version": "0"
+        },
+        {
+            "name": "Other Linux (pip)",
+            "id": "otherpip",
+            "distro": "pip",
             "version": "0"
         },
         {

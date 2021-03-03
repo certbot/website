@@ -1,0 +1,84 @@
+<aside class="note">
+  <div class="note-header">
+    <h3>Partial support</h3>
+  </div>
+  <p>
+  The Certbot team supports this installation method on a best effort basis. If you are on
+  a more obscure or heavily customized system, these instructions may not work and the
+  Certbot team may be unable to help you resolve the problem.
+  </p>
+</aside>
+
+{{> header}}
+<li>
+    Install system dependencies
+
+    <p>System dependencies may include Python 3.6+, including venv (this might be called <code>python3</code>,
+      <code>python3</code>, or <code>python3-venv</code>) and Augeas for the Apache
+      plugin (<code>libaugeas0</code> or <code>augeaslibs</code>).</p>
+
+    <p>If you're having trouble installing cryptography, you may need to install additional
+      dependencies. See
+      <a href="https://cryptography.io/en/latest/installation.html#building-cryptography-on-linux">
+      the cryptography project's site</a> for more infoformation.</p>
+
+    <p>Commands to install system dependencies may look like the following, run on the command
+    line on the machine.</p>
+    <p>For APT-based distributions (e.g. Debian, Ubuntu ...):
+      <pre class="no-before"><ol>
+        <li>sudo apt update</li>
+        <li>sudo apt install python3 python3-venv libaugeas0</li>
+      </ol></pre>
+    </p>
+    <p>For RPM-based distributions (e.g. Fedora, CentOS ...):
+      <pre class="no-before"><ol>
+        <li>sudo dnf install python3 augeas-libs</li></ol></pre></p>
+    <p>
+      * Note that old distributions use <code>yum</code> instead of <code>dnf</code>, and that
+      RHEL-based distributions use <code>python3X</code> instead of <code>python3</code>
+      (e.g. <code>python36</code>).
+    </p>
+
+    <p>These packages may have slightly different names on other distributions; a search such as
+    "augeas on &lt;your_system_name&gt;" will probably yield helpful results.</p>
+</li>
+<li>
+    Remove certbot-auto and any Certbot OS packages
+    <p>
+    If you have any Certbot packages installed using an OS package manager like
+    <code>apt</code>, <code>dnf</code>, or <code>yum</code>, you should remove them before
+    installing the Certbot snap to ensure that when you run the command
+    <code>certbot</code> the snap is used rather than the installation from your OS
+    package manager. The exact command to do this depends on your OS, but
+    common examples are <code>sudo apt-get remove certbot</code>, <code>sudo dnf
+    remove certbot</code>, or <code>sudo yum remove certbot</code>.
+    </p>
+    <p>
+    If you previously used Certbot through the certbot-auto script, you should
+    also remove its installation by following the instructions <a
+    href="/docs/uninstall.html">here</a>.
+    </p>
+</li>
+<li>
+  Set up a Python virtual environment
+  <p>
+  Execute the following instructions on the command line on the machine to set up a virtual
+  environment.
+  <pre class="no-before"><ol>
+        <li>sudo python3 -m venv /opt/certbot/</li>
+        <li>{{install_command}} --upgrade pip</li>
+  </ol></pre>
+  </p>
+</li>
+
+{{> installcertbot}}
+{{>preparecertbotsymlinkcommand}}
+
+
+{{#advanced}}
+{{#dns_plugins}}
+{{/dns_plugins}}
+{{/advanced}}
+
+{{> dnspluginssetup}}
+
