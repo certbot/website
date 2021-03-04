@@ -10,6 +10,8 @@ module.exports = function(context) {
         context.imperative = "you'll have to";
         if (context.webserver == "plesk") {
             plesk_getting_started();
+        } else if (context.distro == "bitnami") {
+            bitnami_getting_started();
         } else if (context.distro == "sharedhost") {
             shared_hosting_getting_started();
         } else if (context.distro == "windows") {
@@ -45,6 +47,10 @@ module.exports = function(context) {
 
     plesk_getting_started = function() {
         template = "plesk";
+    }
+
+    bitnami_getting_started = function() {
+        template = "bitnami";
     }
 
     certonly_getting_started = function() {
