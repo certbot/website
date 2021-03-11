@@ -33,6 +33,12 @@
             "version": "0"
         },
         {
+            "name": "Bitnami",
+            "id": "bitnami",
+            "distro": "bitnami",
+            "version": 0
+        },
+        {
             "name": "snapd",
             "id": "snap",
             "distro": "snap",

@@ -33,7 +33,7 @@ module.exports = function(context) {
     // Each case listed here should map to a template.
     // They don't necessarily need to map to distros.
     if (context.webserver == "plesk" || context.distro == "windows" ||
-        context.distro == "sharedhost") {
+        context.distro == "bitnami" || context.distro == "sharedhost") {
         return '';
     }
     else if (snap_distros.includes(context.distro)) {
