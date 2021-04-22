@@ -7,11 +7,11 @@ case "$1" in
     sudo apt-get update
     sudo apt-get install python3-dev python3-venv gcc libaugeas0 libssl-dev \
                          libffi-dev ca-certificates openssl -y
-    ./tools/venv3.py
+    ./tools/venv.py
     ;;
   "install" )
     cd _docs
-    source ./venv3/bin/activate
+    source ./venv/bin/activate
     pip install --upgrade git+https://github.com/EFForg/sphinx_rtd_theme.git
     cd certbot
     make -C docs clean html epub latex latexpdf > /dev/null
