@@ -39,7 +39,7 @@ RUN echo 'gem: --no-document' >> /usr/local/etc/gemrc && \
 RUN apt-get install -y npm
 RUN npm install -g n
 RUN n 8.12.0
-RUN npm install -g npm gulp-cli
+RUN npm install -g npm@"<7" gulp-cli
 
 # Install Javascript packages
 COPY package.json ./
