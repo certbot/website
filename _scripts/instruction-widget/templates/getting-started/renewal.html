@@ -8,15 +8,6 @@
   <pre>sudo {{base_command}} renew --dry-run</pre>
   </p>
 
-  <p>
-  The command to renew certbot is installed in one of the following locations:
-  <ul>
-    <li><tt>/etc/crontab/</tt></li>
-    <li><tt>/etc/cron.*/*</tt></li>
-    <li><tt>systemctl list-timers</tt></li>
-  </ul>
-  </p>
-
   {{#certonly}}
   <p>
   If you needed to stop your webserver to run Certbot, you'll want to add hook
