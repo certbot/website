@@ -43,6 +43,7 @@ module.exports = function(context) {
         context.officially = "officially ";
         context.imperative = "you should probably"
         template = "haproxy";
+        context.certonly = true;
     }
 
     plesk_getting_started = function() {
