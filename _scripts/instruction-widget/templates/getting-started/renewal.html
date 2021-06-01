@@ -17,12 +17,22 @@
 {{/cron_included}}
 
   {{#certonly}}
+  {{#haproxy}}
+  <p>
+  Next, you'll want to add <code>pre</code> and <code>post</code> hooks to stop and start your
+  webserver automatically. Run the following commands to create the hook files in the appropriate
+  directory:
+  </p>
+  {{/haproxy}}
+  {{^haproxy}}
   <p>
   If you needed to stop your webserver to run Certbot, you'll want to
   add <code>pre</code> and <code>post</code> hooks to stop and start your webserver automatically.
   For example, if your webserver is HAProxy, run the following commands to create the hook files
   in the appropriate directory:
   </p>
+  {{/haproxy}}
+
 
   <pre class="no-before"><ol><li>sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'</li>
     <li>sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'</li>
