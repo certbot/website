@@ -2510,6 +2510,16 @@
     "note": "All webhosting plans include Let's Encrypt."
   },
   {
+    "name": "webkeeper.ch",
+    "link": "https://www.webkeeper.ch/",
+    "category": "partial",
+    "tutorial": "https://www.webkeeper.ch/de/support-kb/webhosting/installation-lets-encrypt-zertifikat",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.5.28",
+    "note": "Deutsch, English, Italiano / All webhosting plans include Let's Encrypt."
+  },
+  {
     "name": "Clausweb",
     "link": "https://www.clausweb.ro/",
     "category": "full",
