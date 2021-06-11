@@ -165,10 +165,10 @@
           "version": "0"
         },
         {
-          "name": "openSUSE Leap 15.0",
+          "name": "openSUSE Leap 15.x",
           "id": "leap",
           "distro": "opensuse",
-          "version": "15.0"
+          "version": "15"
         },
         {
             "name": "Other Linux (snapd)",
