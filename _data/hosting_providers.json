@@ -1,13 +1,13 @@
 [
   {
     "name": "WebOké",
-    "link": "https://weboke.nl/",
+    "link": "https://www.weboke.nl/",
     "category": "partial",
     "tutorial": "https://www.weboke.nl/knowledgebase/80/Gratis-Lets-encrypt-certificaat-instellen.html",
     "announcement": "https://weboke.nl/webhosting",
     "plan": "",
     "reviewed": "2021.6.22",
-    "note": "All webhosting plans that WebOké offers inculde free Let's Encrypt certificates which can be installed within 1 minute."
+    "note": "Website is in dutch"
   },
   {
     "name": "Antagonist",
