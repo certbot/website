@@ -1,5 +1,15 @@
 [
   {
+    "name": "WebOké",
+    "link": "https://www.weboke.nl/",
+    "category": "partial",
+    "tutorial": "https://www.weboke.nl/knowledgebase/80/Gratis-Lets-encrypt-certificaat-instellen.html",
+    "announcement": "https://weboke.nl/webhosting",
+    "plan": "",
+    "reviewed": "2021.6.22",
+    "note": "Website is in dutch"
+  },
+  {
     "name": "Antagonist",
     "link": "https://www.antagonist.nl/",
     "category": "full",
