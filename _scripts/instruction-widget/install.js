@@ -211,9 +211,9 @@ module.exports = function(context) {
     context.base_command = "certbot";
     if (context.distro == "freebsd"){
       context.dns_plugins = true;
-      context.dns_package_prefix = "py37-certbot-dns";
+      context.dns_package_prefix = "py38-certbot-dns";
       context.portcommand = "py-certbot";
-      context.package = "py37-certbot";
+      context.package = "py38-certbot";
       context.install_command = "pkg install";
     }
     if (context.distro == "opbsd"){
