@@ -2,17 +2,17 @@
 
 Website for [EFF's Certbot](https://certbot.eff.org/) project. Uses Jekyll for static site generation.
 
-[![Build Status](https://travis-ci.com/certbot/website.svg?branch=master)](https://travis-ci.com/certbot/website)
+[![Build Status](https://github.com/certbot/website/actions/workflows/ci.yml/badge.svg)](https://github.com/certbot/website/actions/workflows/ci.yml)
 
 ## Development
 
-### Building with Travis
+### Building with GitHub Actions
 
-If you're developing directly on this repository rather than on a fork, it's probably easiest to let Travis build the site for you.
+If you're developing directly on this repository rather than on a fork, it's probably easiest to let GitHub Actions build the site for you.
 
-All branches and pull requests are built and tested by Travis.
+All branches and pull requests are built and tested by GitHub Actions.
 
-For branches, the built assets are pushed to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds). Built assets from PRs are not saved because Travis doesn't provide a mechanism to securely push to a Github repo after PRs across forks.
+For branches, the built assets are pushed to an analagous branch in [certbot/website-builds](https://github.com/certbot/website-builds). Built assets from PRs are not saved because GitHub Actions doesn't provide a mechanism to securely push to a Github repo after PRs across forks.
 
 To view the build of any branch, use the script `website-builds.sh`, which will fetch the branch from certbot/website-builds and start a docker to serve the files.
 
