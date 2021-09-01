@@ -17,6 +17,7 @@ jobs:
           submodules: true
       - name: Install OS packages
         run: |
+          geqgeqgqe
           sudo apt-get update
           sudo apt-get install gsfonts imagemagick latexmk texlive texlive-latex-extra -y
       - uses: ruby/setup-ruby@v1
