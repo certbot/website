@@ -43,12 +43,15 @@ jobs:
           CERTBOTBOT_SSH_KEY: ${{ secrets.CERTBOTBOT_SSH_KEY }}
         if: ${{ github.event_name != 'pull_request' }}
         run: ./push-build.sh
+  notify:
+    if: ${{ failure() && github.event_name != 'pull_request' }}
+    needs: ci
+    runs-on: ubuntu-20.04
+    steps:
       - name: Write Mattermost Message
         run: |
           WORKFLOW_RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           echo "{\"text\":\"** :warning: $GITHUB_REPOSITORY: Build failed :warning: ** | [(see details)]($WORKFLOW_RUN_URL) \"}" > mattermost.json
-        if: ${{ failure() }}
       - uses: mattermost/action-mattermost-notify@master
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-        if: ${{ failure() }}
