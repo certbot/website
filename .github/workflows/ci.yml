@@ -17,6 +17,7 @@ jobs:
           submodules: true
       - name: Install OS packages
         run: |
+          geqhgjkeqgheq
           sudo apt-get update
           sudo apt-get install gsfonts imagemagick latexmk texlive texlive-latex-extra -y
       - uses: ruby/setup-ruby@v1
@@ -45,9 +46,10 @@ jobs:
         run: ./push-build.sh
       - name: Write Mattermost Message
         run: |
-          echo "{\"text\":\"** :warning: certbot/website: Build failed :warning: ** | [(see details)]($GITHUB_WORKFLOW_URL) \"}" > mattermost.json
+          WORKFLOW_RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          echo "{\"text\":\"** :warning: $GITHUB_REPOSITORY: Build failed :warning: ** | [(see details)]($WORKFLOW_RUN_URL) \"}" > mattermost.json
         if: ${{ failure() }}
-      - uses: mattermost/action-mattermost-notify@master
-        env:
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-        if: ${{ failure() }}
+          #- uses: mattermost/action-mattermost-notify@master
+          #  env:
+          #    MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          #  if: ${{ failure() }}
