@@ -17,7 +17,6 @@ jobs:
           submodules: true
       - name: Install OS packages
         run: |
-          gegqgfeq
           sudo apt-get update
           sudo apt-get install gsfonts imagemagick latexmk texlive texlive-latex-extra -y
       - uses: ruby/setup-ruby@v1
@@ -55,7 +54,6 @@ jobs:
         run: |
           WORKFLOW_RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           echo "{\"text\":\"** :warning: $GITHUB_REPOSITORY: Build failed :warning: ** | [(see details)]($WORKFLOW_RUN_URL) \"}" > mattermost.json
-          cat mattermost.josn
       - uses: mattermost/action-mattermost-notify@master
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
