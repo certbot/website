@@ -48,6 +48,7 @@ jobs:
         run: |
           WORKFLOW_RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           echo "{\"text\":\"** :warning: $GITHUB_REPOSITORY: Build failed :warning: ** | [(see details)]($WORKFLOW_RUN_URL) \"}" > mattermost.json
+          cat mattermost.json
         if: ${{ failure() }}
           #- uses: mattermost/action-mattermost-notify@master
           #  env:
