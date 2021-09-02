@@ -36,6 +36,7 @@ jobs:
         run: ./_docs.sh depend
       - name: Build and test
         run: |
+          gulp --version
           gulp build
           npm test
       - name: Push build
