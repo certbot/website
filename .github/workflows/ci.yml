@@ -19,36 +19,17 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install gsfonts imagemagick latexmk texlive texlive-latex-extra -y
-      - uses: ruby/setup-ruby@v1
-        with:
-          bundler: "none"
-          ruby-version: 2.6.3
-      - name: Install Ruby packages
-        run: gem install jekyll html-proofer
       - uses: actions/setup-node@v2
         with:
           node-version: 8.12.0
       - name: Install Node packages
         run: |
+          gulp --version || true
+          npm install gulp
+          gulp --version || true
+          npm install -g gulp
+          gulp --version || true
+          npm install gulp-cli
+          gulp --version || true
           npm install -g gulp-cli
-          npm install
-      - name: Install docs packages
-        run: ./_docs.sh depend
-      - name: Build and test
-        run: |
-          gulp --version
-          gulp build
-          npm test
-      - name: Push build
-        env:
-          CERTBOTBOT_SSH_KEY: ${{ secrets.CERTBOTBOT_SSH_KEY }}
-        if: ${{ github.event_name != 'pull_request' }}
-        run: ./push-build.sh
-      - name: Write Mattermost Message
-        run: |
-          echo "{\"text\":\"** :warning: certbot/website: Build failed :warning: ** | [(see details)]($GITHUB_WORKFLOW_URL) \"}" > mattermost.json
-        if: ${{ failure() }}
-      - uses: mattermost/action-mattermost-notify@master
-        env:
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-        if: ${{ failure() }}
+          gulp --version || true
