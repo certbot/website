@@ -10,10 +10,8 @@ README.md
 LICENSE.txt
 .git*
 
-# ignore secrets / CI logic
-build_key.enc
+# ignore CI logic
 push-build.sh
-.travis.yml
 
 # ignore build artifacts
 node_modules
