@@ -11,7 +11,7 @@
   Set up automatic renewal
   <p>
   Run the following line, which will add a cron job to <code>/etc/crontab</code>.
-  <pre class="one-line">echo "0 0,12 * * * root {{python_name}} -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; {{base_command}} renew -q" | sudo tee -a /etc/crontab > /dev/null</pre>
+  <pre class="one-line">echo "0 0,12 * * * root {{python_name}} -c 'import random; import time; time.sleep(random.random() * 3600)' &amp;&amp; {{#cron_base_command}}{{cron_base_command}}{{/cron_base_command}}{{^cron_base_command}}{{base_command}}{{/cron_base_command}} renew -q" | sudo tee -a /etc/crontab > /dev/null</pre>
   </p>
 
 {{/cron_included}}
