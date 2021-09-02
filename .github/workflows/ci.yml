@@ -30,7 +30,7 @@ jobs:
           node-version: 8.12.0
       - name: Install Node packages
         run: |
-          npm install gulp-cli
+          npm install -g gulp-cli
           npm install
       - name: Install docs packages
         run: ./_docs.sh depend
