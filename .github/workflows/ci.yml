@@ -43,11 +43,17 @@ jobs:
           CERTBOTBOT_SSH_KEY: ${{ secrets.CERTBOTBOT_SSH_KEY }}
         if: ${{ github.event_name != 'pull_request' }}
         run: ./push-build.sh
+  notify:
+    # Only notify about failed builds, do not notify about failed builds for
+    # PRs, and only notify about failed pushes to master.
+    if: ${{ failure() && github.event_name != 'pull_request' && (github.event_name != 'push' || github.ref == 'refs/heads/master') }}
+    needs: ci
+    runs-on: ubuntu-20.04
+    steps:
       - name: Write Mattermost Message
         run: |
-          echo "{\"text\":\"** :warning: certbot/website: Build failed :warning: ** | [(see details)]($GITHUB_WORKFLOW_URL) \"}" > mattermost.json
-        if: ${{ failure() }}
+          WORKFLOW_RUN_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          echo "{\"text\":\"** :warning: $GITHUB_REPOSITORY: Build failed :warning: ** | [(see details)]($WORKFLOW_RUN_URL) \"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         env:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-        if: ${{ failure() }}
