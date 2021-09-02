@@ -21,12 +21,5 @@ jobs:
       - name: Install Node packages
         run: |
           set -x
-          gulp --version || true
-          npm install gulp
-          gulp --version || true
-          npm install -g gulp
-          gulp --version || true
-          npm install gulp-cli
-          gulp --version || true
           npm install -g gulp-cli
           gulp --version || true
