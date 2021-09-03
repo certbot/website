@@ -1,0 +1,300 @@
+<div class="instruction-pane automated">
+  <h1>IBM i installation procedure</h1>
+
+  <ol>
+    <li>
+      SSH into the server
+      <p>SSH into the server running your HTTP website as a user with *ALLOBJ special authority.</p>
+    </li>
+    <li>
+      Set up your environment
+
+      <p>It is assumed that you are running these commands from an SSH terminal.</p>
+      <p>You must first assure that your <code>PATH</code> environment variable is set up correctly.</p>
+      <pre class="no-before"><ol>
+          <li>PATH=/QOpenSys/pkgs/bin:$PATH</li>
+          <li>export PATH</li>
+        </ol></pre>
+    </li>
+    <li>
+      Install system dependencies
+
+      <p>Install Python 3.9 and necessary packages by running:
+        <pre class="no-before"><ol>
+          <li>yum install python39-pip python39-cryptography</li>
+        </ol></pre>
+      </p>
+    </li>
+    <li>
+      Set up a Python virtual environment
+      <p>
+        Execute the following instruction on the command line to set up a virtual
+        environment.
+        <pre class="no-before"><ol>
+          <li>python3.9 -m venv --system-site-packages /opt/certbot</li>
+      </ol></pre>
+      </p>
+    </li>
+    <li>
+      Install Certbot
+      <p>
+        Run this command on the command line on the machine to install Certbot.
+        <pre>/opt/certbot/bin/pip install certbot</pre>
+      </p>
+    </li>
+    <li>
+      Choose how you'd like to run Certbot
+      <p>
+        Are you ok with temporarily stopping your website?
+      </p>
+      <h3>Yes, my web server is not currently running on this machine.</h3>
+      <p>
+        Stop your webserver, then run this command to get a certificate.
+        Certbot will temporarily spin up a webserver on your machine.
+      </p>
+      <pre> /opt/certbot/bin/certbot certonly --standalone
+        </pre>
+      <p></p>
+      <h3>No, I need to keep my web server running.</h3>
+      <p>
+        If you have a webserver that's already using port 80 and don't want to stop it
+        while Certbot runs, run this command and follow the instructions in the terminal.
+      </p>
+      <pre>/opt/certbot/bin/certbot certonly --webroot
+        </pre>
+      <p></p>
+      <aside class="note">
+        <div class="note-header">
+          <h3>Important Note:</h3>
+        </div>
+        <p>To use the webroot plugin, your server must be configured to serve files from hidden directories. If
+          <tt>/.well-known</tt> is treated specially by your webserver configuration, you might need to modify the
+          configuration to ensure that files inside <tt>/.well-known/acme-challenge</tt> are served by the webserver.
+        </p>
+      </aside>
+    </li>
+
+    <li>
+      Install your certificate
+      <p>
+        Proper technique will vary depending on the web server in use.
+      </p>
+    </li>
+
+    <li>
+      Confirm that Certbot worked
+      <p>
+        To confirm that your site is set up properly, visit <tt>https://yourwebsite.com/</tt> in your browser and
+        look for the lock icon in the URL bar. Most browsers will also let you inspect the certificate by clicking
+        on the lock icon.
+      </p>
+    </li>
+
+    <li>
+      Renewing your certificate manually
+      <p>
+        Certificate renewal can be done by running the following in your terminal:
+        <pre class="no-before"><ol>
+          <li>/opt/certbot/bin/certbot renew</li>
+    </ol></pre>
+      </p>
+      <p>You can do a "dry run" of the renewal (making no modifications) by running:</p>
+      <p><code>/opt/certbot/bin/certbot renew --dry-run</code></p>
+    </li>
+    <li>
+      Set up automatic renewal
+      <p>
+        To set up automatic renewal of your certificate, first create a shell script that performs
+        the following tasks:
+        <br> - Stops your web server
+        <br> - Runs <code>/opt/certbot/bin/certbot renew -q</code>
+        <br> - Installs the certificate
+        <br> - Starts your web server
+        <br> - (optional) Records the activity, for instance by running <code>system "SNDMSG MSG('Certificate renewal
+          process complete') TOUSR(*SYSOPR)"</code>
+        <p>
+          Once that is completed, you can create a job scheduler entry. This example
+          Shows how to create a job scheduler entry that runs at 1:11 AM on the first
+          and third sundays.
+          <pre class="no-before"><ol>
+          <li>ADDJOBSCDE JOB(CERTRENEW) CMD(QSH CMD('/path/to/script.sh')) 
+            FRQ(*MONTHLY) SCDDATE(*NONE) SCDDAY(*SUN) SCDTIME(011111) 
+            RELDAYMON(1 3) SAVE(*YES)</li>
+        </ol></pre>
+          <p>Replace the job name and path to script as needed.</p>
+        </p>
+      </p>
+    </li>
+    <li>
+      [Monthly] Upgrade certbot
+      <p>It's important to occasionally update Certbot to keep it up-to-date. To do this, run the
+        following command on the command line on the machine.
+      </p>
+      <pre class="no-before"><ol>
+            <li>/opt/certbot/bin/pip install --upgrade certbot</li></ol></pre>
+      <p></p>
+      <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat all installation instructions.
+      </p>
+    </li>
+  </ol>
+</div>
+<div class="instruction-pane advanced">
+
+  <ol>
+    <li>
+      Check if your DNS provider is supported
+      <p>
+        See if your DNS provider is supported by Certbot by checking
+        <a href="/docs/using.html#dns-plugins">this list in our
+          documentation</a>.
+      </p>
+      <p class="centered">
+        <a class="link-button" href="/docs/using.html#dns-plugins">check if your DNS provider supports Certbot</a>
+      </p>
+      <h3>Not supported?</h3>
+      <p>
+        If your DNS provider is not supported, pause here: run Certbot with the manual plugin by using
+        <a href="/docs/using.html#manual">these steps from our documentation</a>.
+      </p>
+      <h3>Supported?</h3>
+      <p>
+        If your DNS provider is supported, continue with the remaining instructions below.
+      </p>
+    </li>
+
+
+    <li>
+      SSH into the server
+      <p>SSH into the server running your HTTP website as a user with *ALLOBJ special authority.</p>
+    </li>
+    <li>
+      Set up your environment
+
+      <p>It is assumed that you are running these commands from an SSH terminal.</p>
+      <p>You must first assure that your <code>PATH</code> environment variable is set up correctly.</p>
+      <pre class="no-before"><ol>
+            <li>PATH=/QOpenSys/pkgs/bin:$PATH</li>
+            <li>export PATH</li>
+          </ol></pre>
+    </li>
+    <li>
+      Install system dependencies
+
+      <p>Install Python 3.9 and necessary packages by running:
+        <pre class="no-before"><ol>
+            <li>yum install python39-pip python39-cryptography</li>
+          </ol></pre>
+      </p>
+    </li>
+    <li>
+      Set up a Python virtual environment
+      <p>
+        Execute the following instruction on the command line to set up a virtual
+        environment.
+        <pre class="no-before"><ol>
+            <li>python3.9 -m venv --system-site-packages /opt/certbot</li>
+        </ol></pre>
+      </p>
+    </li>
+    <li>
+      Install Certbot
+      <p>
+        Run this command on the command line on the machine to install Certbot.
+        <pre>/opt/certbot/bin/pip install certbot</pre>
+      </p>
+    </li>
+    <li>
+      Install correct DNS plugin
+      <p>
+        Run the following command, replacing &lt;PLUGIN&gt; with the name of your DNS provider.
+      </p>
+      <pre>/opt/certbot/bin/pip install certbot-dns-&lt;PLUGIN&gt;</pre>
+      <p>
+        For example, if your DNS provider is Cloudflare, you'd run the following command:
+      </p>
+      <pre>/opt/certbot/bin/pip install certbot-dns-cloudflare</pre>
+    </li>
+    <li>
+      Set up credentials
+      <p>
+        You'll need to set up DNS credentials.<br />
+        Follow the steps in the "Credentials" section for your DNS provider to access or create the
+        appropriate credential configuration file. Find credentials instructions for your DNS provider
+        by clicking the <a href="/docs/using.html#dns-plugins">DNS plugin's name on the Documentation list</a>.
+      </p>
+      <p class="centered">
+        <a class="link-button" href="/docs/using.html#dns-plugins">find your DNS plugin's Credential steps</a>
+      </p>
+    </li>
+
+    <li>
+      Get a certificate
+      <p>
+        Run one of the commands in the "Examples" section of the <a href="/docs/using.html#dns-plugins">instructions for
+          your DNS provider</a>.
+      </p>
+    </li>
+
+    <li>
+      Install your certificate
+      <p>
+        Proper technique will vary depending on the web server in use.
+      </p>
+    </li>
+
+    <li>
+      Confirm that Certbot worked
+      <p>
+        To confirm that your site is set up properly, visit <tt>https://yourwebsite.com/</tt> in your browser and
+        look for the lock icon in the URL bar. Most browsers will also let you inspect the certificate by clicking
+        on the lock icon.
+      </p>
+    </li>
+
+    <li>
+      Renewing your certificate manually
+      <p>
+        Certificate renewal can be done by running the following in your terminal:
+        <pre class="no-before"><ol>
+            <li>/opt/certbot/bin/certbot renew</li>
+      </ol></pre>
+      </p>
+      <p>You can do a "dry run" of the renewal (making no modifications) by running:</p>
+      <p><code>/opt/certbot/bin/certbot renew --dry-run</code></p>
+    </li>
+    <li>
+      Set up automatic renewal
+      <p>
+        To set up automatic renewal of your certificate, first create a shell script that performs
+        the following tasks:
+        <br> - Stops your web server
+        <br> - Runs <code>/opt/certbot/bin/certbot renew -q</code>
+        <br> - Starts your web server
+        <br> - (optional) Records the activity, for instance by running <code>system "SNDMSG MSG('Certificate renewal
+          process complete') TOUSR(*SYSOPR)"</code>
+        <p>
+          Once that is completed, you can create a job scheduler entry. This example
+          Shows how to create a job scheduler entry that runs at 1:11 AM on the first
+          and third sundays.
+          <pre class="no-before"><ol>
+            <li>ADDJOBSCDE JOB(CERTRENEW) CMD(QSH CMD('/path/to/script.sh')) 
+              FRQ(*MONTHLY) SCDDATE(*NONE) SCDDAY(*SUN) SCDTIME(011111) 
+              RELDAYMON(1 3) SAVE(*YES)</li>
+          </ol></pre>
+          <p>Replace the job name and path to script as needed.</p>
+        </p>
+      </p>
+    </li>
+    <li>
+      [Monthly] Upgrade certbot
+      <p>It's important to occasionally update Certbot to keep it up-to-date. To do this, run the
+        following command on the command line on the machine.
+      </p>
+      <pre class="no-before"><ol>
+              <li>/opt/certbot/bin/pip install --upgrade certbot</li></ol></pre>
+      <p></p>
+      <p>If this step leads to errors, run <code>rm -rf /opt/certbot</code> and repeat all installation instructions.
+      </p>
+    </li>
+  </ol>
+</div>

@@ -187,6 +187,12 @@
             "id": "windows",
             "distro": "windows",
             "version": "0"
+        },
+        {
+            "name": "IBM i",
+            "id": "ibmi",
+            "distro": "ibmi",
+            "version": "0"
         }
     ]
 }

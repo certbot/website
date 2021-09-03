@@ -16,6 +16,8 @@ module.exports = function(context) {
             shared_hosting_getting_started();
         } else if (context.distro == "windows") {
             windows_getting_started();
+        } else if (context.distro == "ibmi") {
+            ibmi_getting_started();
         } else if (context.certonly) {
             certonly_getting_started();
         } else if (context.webserver == "apache") {
@@ -62,6 +64,9 @@ module.exports = function(context) {
 
     windows_getting_started = function() {
         template = "windows";
+    }
+    ibmi_getting_started = function() {
+        template = "ibmi";
     }
 
     nginx_getting_started = function() {
