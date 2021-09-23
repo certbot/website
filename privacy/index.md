@@ -27,13 +27,13 @@ Let’s Encrypt also operates [Community Forums](https://community.letsencrypt.o
 
 Let’s Encrypt may change these policies or providers from time to time. If you have questions about Let’s Encrypt’s privacy practices, please contact them directly at [security@letsencrypt.org](mailto:security@letsencrypt.org).
 
-The Certbot community can be contacted through the Freenode Project’s IRC service, chat.freenode.net, on the #certbot-devel channel. This IRC service is operated by Freenode, which does not publish a privacy policy.
-
 In addition, you may elect to provide information to EFF through Certbot, such as your contact information or bug reports. That information will be protected by the [EFF Technology Project Privacy Policy](https://www.eff.org/code/privacy/policy).
 
 <h2>Changes to This Policy</h2>
 
 EFF's Certbot Privacy Policy may change from time to time. However, any revised privacy policy will be consistent with EFF's mission. 
+
+*Updated on August 23rd, 2021 to reflect removal of Freenode IRC channel and migration to Mattermost.*
 
 *Updated on April 2nd, 2020 to change Freenode IRC channel.*
 
@@ -44,6 +44,8 @@ EFF's Certbot Privacy Policy may change from time to time. However, any revised 
 *Updated on June 7th, 2017 to clarify which values are collected in the User Agent string.*
 
 #### Previous Privacy Policies
+
+[April 2, 2020 - August 22, 2021](https://github.com/certbot/website/blob/d8e039e8d217f749924725212ad213e28cf8d023/privacy/index.md)
 
 [October 25, 2018 - April 2, 2020](https://github.com/certbot/website/blob/eedd40a1a55b0ac6b27a96adfb23e707356b834a/privacy/index.md)
 
