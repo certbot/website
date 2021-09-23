@@ -234,6 +234,7 @@ module.exports = function(context) {
     template = "macos";
     context.base_command = "certbot";
     context.install_command = "brew install";
+    context.cron_base_command = "$(command -v certbot)";
   }
 
   // This function is currently unused, but we keep it around to make it easy
