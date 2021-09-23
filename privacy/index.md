@@ -1,4 +1,4 @@
-  ---
+---
 layout: page
 title: Certbot Privacy Policy
 class: privacy
