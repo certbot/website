@@ -1,6 +1,8 @@
 name: Certbot website CI
 on:
   push:
+    branches:
+      - master
   pull_request:
   schedule:
     # Run at 4pm UTC or 9am PST
