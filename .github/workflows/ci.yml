@@ -53,7 +53,7 @@ jobs:
         # and
         # https://github.com/certbot/website/blob/master/README.md#building-with-github-actions
         # for more info.
-        if: ${{ github.event_name != 'pull_request' && github.actor != "dependabot[bot]" }}
+        if: ${{ github.event_name != 'pull_request' && github.actor != 'dependabot[bot]' }}
         run: ./push-build.sh
   notify:
     # Only notify about failed builds, do not notify about failed builds for
