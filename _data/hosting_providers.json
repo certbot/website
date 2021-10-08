@@ -2548,5 +2548,15 @@
     "plan": "",
     "reviewed": "2020.2.19",
     "note": "All plans come with Free Let's Encrypt automatically installed for Website and Mail"
+  },
+  {
+    "name": "Hartserver",
+    "link": "https://hartserver.net/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://twitter.com/hartserver/status/988699270780981248",
+    "plan": "",
+    "reviewed": "2021.10.08",
+    "note": "All free and paid hosting plans get Let's Encrypt certificates automatically installed as standard"
   }
 ]
