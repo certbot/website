@@ -2558,5 +2558,15 @@
     "plan": "",
     "reviewed": "2021.10.08",
     "note": "All free and paid hosting plans get Let's Encrypt certificates automatically installed as standard"
+  },
+  {
+    "name": "UKFast",
+    "link": "https://ukfast.co.uk/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.10.09",
+    "note": ""
   }
 ]
