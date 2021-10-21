@@ -2568,5 +2568,15 @@
     "plan": "",
     "reviewed": "2021.10.09",
     "note": ""
+  },
+  {
+    "name": "Linode",
+    "link": "https://www.linode.com/",
+    "category": "partial",
+    "tutorial": "https://www.linode.com/docs/guides/enabling-https-using-certbot-with-nginx-on-ubuntu/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.10.20",
+    "note": ""
   }
 ]
