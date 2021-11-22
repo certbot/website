@@ -2568,5 +2568,15 @@
     "plan": "",
     "reviewed": "2021.10.09",
     "note": ""
+  },
+  {
+    "name": "NFOservers",
+    "link": "https://nfoservers.com",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "https://forums.nfoservers.com/viewtopic.php?f=6&t=14580",
+    "plan": "",
+    "reviewed": "2021.11.21",
+    "note": ""
   }
 ]
