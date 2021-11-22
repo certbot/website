@@ -292,12 +292,12 @@
   {
     "name": "NFOservers",
     "link": "https://nfoservers.com",
-    "category": "full",
+    "category": "partial",
     "tutorial": "",
     "announcement": "https://forums.nfoservers.com/viewtopic.php?f=6&t=14580",
     "plan": "",
     "reviewed": "2021.11.21",
-    "note": ""
+    "note": "Lets Encrypt is not available for subdomains"
   },
   {
     "name": "34SP.com",
