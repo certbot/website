@@ -290,6 +290,16 @@
     "note": "The website is in Hungarian."
   },
   {
+    "name": "NFOservers",
+    "link": "https://nfoservers.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://forums.nfoservers.com/viewtopic.php?f=6&t=14580",
+    "plan": "",
+    "reviewed": "2021.11.21",
+    "note": ""
+  },
+  {
     "name": "34SP.com",
     "link": "",
     "category": "partial",
@@ -2569,14 +2579,4 @@
     "reviewed": "2021.10.09",
     "note": ""
   },
-  {
-    "name": "NFOservers",
-    "link": "https://nfoservers.com",
-    "category": "no",
-    "tutorial": "",
-    "announcement": "https://forums.nfoservers.com/viewtopic.php?f=6&t=14580",
-    "plan": "",
-    "reviewed": "2021.11.21",
-    "note": ""
-  }
 ]
