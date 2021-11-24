@@ -297,7 +297,7 @@
     "announcement": "https://forums.nfoservers.com/viewtopic.php?f=6&t=14580",
     "plan": "",
     "reviewed": "2021.11.21",
-    "note": "Lets Encrypt is not available for subdomains"
+    "note": "Only available for your own domains, not available on free subdomains"
   },
   {
     "name": "34SP.com",
