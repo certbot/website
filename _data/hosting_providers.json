@@ -2578,5 +2578,115 @@
     "plan": "",
     "reviewed": "2021.10.09",
     "note": ""
+  },
+  {
+    "name": "nazwa.pl",
+    "link": "https://nazwa.pl/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "Home.pl",
+    "link": "https://home.pl/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "az.pl",
+    "link": "https://az.pl/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "Small.pl",
+    "link": "https://www.small.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "ct8.pl",
+    "link": "https://www.ct8.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "cyber_Folks",
+    "link": "https://cyberfolks.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "SeoHost.pl",
+    "link": "https://seohost.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "Kei.pl",
+    "link": "https://www.kei.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "zenbox.pl",
+    "link": "https://zenbox.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "dhosting.pl",
+    "link": "https://dhosting.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
+  },
+  {
+    "name": "Kylos",
+    "link": "https://www.kylos.pl/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": ""
   }
 ]
