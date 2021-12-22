@@ -823,10 +823,10 @@
     "name": "Google Sites",
     "link": "https://sites.google.com",
     "category": "partial",
-    "tutorial": "",
+    "tutorial": "https://support.google.com/sites/answer/6372878?hl=en",
     "announcement": "",
     "plan": "",
-    "reviewed": "",
+    "reviewed": "2021.12.22.",
     "note": ""
   },
   {
