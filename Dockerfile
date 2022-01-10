@@ -53,6 +53,8 @@ RUN ./_docs.sh depend
 
 COPY . .
 
+RUN apt-get install -y tex-gyre
+
 RUN gulp build
 
 CMD ["gulp", "jekyll:watch"]
