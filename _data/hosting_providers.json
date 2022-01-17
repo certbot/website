@@ -2578,5 +2578,115 @@
     "plan": "",
     "reviewed": "2021.10.09",
     "note": ""
+  },
+  {
+    "name": "nazwa.pl",
+    "link": "https://nazwa.pl/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "Home.pl",
+    "link": "https://home.pl/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "az.pl",
+    "link": "https://az.pl/",
+    "category": "no",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "Small.pl",
+    "link": "https://www.small.pl/",
+    "category": "partial",
+    "tutorial": "https://pomoc.small.pl/SSL/#generowanie-darmowych-certyfikat%C3%B3w-lets-encrypt",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "ct8.pl",
+    "link": "https://www.ct8.pl/",
+    "category": "partial",
+    "tutorial": "https://wiki.mydevil.net/SSL#Generowanie_darmowych_certyfikat.C3.B3w_Let.27s_Encrypt",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "cyber_Folks",
+    "link": "https://cyberfolks.pl/",
+    "category": "partial",
+    "tutorial": "https://cyberfolks.pl/pomoc/jak-uruchomic-certyfikat-ssl-lets-encrypt/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "SeoHost.pl",
+    "link": "https://seohost.pl/",
+    "category": "partial",
+    "tutorial": "https://seohost.pl/pomoc/jak-aktywowac-darmowy-certyfikat-ssl-lets-encrypt",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "Kei.pl",
+    "link": "https://www.kei.pl/",
+    "category": "partial",
+    "tutorial": "https://www.kei.pl/pomoc/certyfikat-lets-encrypt",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "zenbox.pl",
+    "link": "https://zenbox.pl/",
+    "category": "partial",
+    "tutorial": "https://pomoc.zenbox.pl/pl/kb/articles/jak-moge-wlaczyc-certyfikat-lets-encrypt-dla-mojej-domeny",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "dhosting.pl",
+    "link": "https://dhosting.pl/",
+    "category": "partial",
+    "tutorial": "https://dhosting.pl/pomoc/baza-wiedzy/lets-encrypt-i-sni/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
+  },
+  {
+    "name": "Kylos",
+    "link": "https://www.kylos.pl/",
+    "category": "full",
+    "tutorial": "https://panel.kylos.pl/knowledgebase/246/Darmowe-certyfikaty-SSL-dla-stron-WWW-w-cPanel.html",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2021.12.18",
+    "note": "The website is in Polish."
   }
 ]
