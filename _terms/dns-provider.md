@@ -1,6 +1,0 @@
----
-title: DNS Provider
-lookup: dns-provider
----
-A Domain Name System (DNS) provider is an organization that runs DNS servers (also called nameservers) to host DNS records for domain names. Your DNS provider could be the same as, or different from, your DNS registrar (whom you pay to register your domain name), or your hosting provider (whom you pay to host your web site). You can also change your DNS provider if your current provider doesn’t offer the features that you want. Your DNS provider must follow various Internet technical standards in order for Let’s Encrypt to confirm that it’s you who controls your domain name when you request a certificate. You need to interact with your DNS provider in order to change the DNS records that refer to your domain name. 
-Some DNS providers can help you create Let’s Encrypt certificates (including wildcard certificates) easily using Let’s Encrypt’s DNS validation method, including by providing a software interface that Certbot can use for updating DNS records automatically.

@@ -1,6 +1,0 @@
----
-title: Port 80
-lookup: port-80
----
-Different Internet services are distinguished by using different TCP port numbers. Unencrypted HTTP normally uses TCP port 80, while encrypted HTTPS normally uses TCP port 443. 
-To use certbot --webroot, certbot --apache, or certbot --nginx, you should have an existing HTTP website that’s already online hosted on the server where you’re going to use Certbot. This site should be available to the rest of the Internet on port 80. To use certbot --standalone, you don’t need an existing site, but you have to make sure connections to port 80 on your server are not blocked by a firewall, including a firewall that may be run by your Internet service provider or web hosting provider. Please check with your ISP or hosting provider if you’re not sure. (Using DNS validation does not require Let’s Encrypt to make any inbound connection to your server, so with this method in particular it’s not necessary to have an existing HTTP website or the ability to receive connections on port 80.)
