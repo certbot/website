@@ -2593,10 +2593,10 @@
     "name": "Home.pl",
     "link": "https://home.pl/",
     "category": "no",
-    "tutorial": "",
+    "tutorial": "https://pomoc.home.pl/baza-wiedzy/certyfikat-ssl-na-serwerze-w-home-pl-informacje-podstawowe",
     "announcement": "",
-    "plan": "",
-    "reviewed": "2021.12.18",
+    "plan": "https://home.pl/ssl/#szczegoly",
+    "reviewed": "2022.03.02",
     "note": "The website is in Polish."
   },
   {
