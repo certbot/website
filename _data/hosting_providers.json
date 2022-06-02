@@ -581,13 +581,13 @@
   },
   {
     "name": "Do.de",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.do.de",
+    "category": "full",
     "tutorial": "",
-    "announcement": "",
+    "announcement": "https://www.do.de/wiki/lets-encrypt-ssl-zertifikate",
     "plan": "",
-    "reviewed": "",
-    "note": ""
+    "reviewed": "2022.6.2",
+    "note": "The website is in German."
   },
   {
     "name": "Domain & Webspace Tremmel",
