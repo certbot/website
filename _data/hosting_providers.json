@@ -1,5 +1,15 @@
 [
   {
+    "name": "Site.nl",
+    "link": "https://site.nl/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://site.nl/ssl-certificaat",
+    "reviewed": "2022.8.17",
+    "note": "Free & automated SSL for both webhosting and website builder users"
+  },
+  {
     "name": "WebOké",
     "link": "https://www.weboke.nl/",
     "category": "partial",
