@@ -2699,4 +2699,24 @@
     "reviewed": "2021.12.18",
     "note": "The website is in Polish."
   }
+    {
+    "name": "MyHost (NZ)",
+    "link": "https://myhost.nz/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://myhost.nz/hosting/web-hosting",
+    "reviewed": "2022.09.16",
+    "note": ""
+  }
+  {
+    "name": "SiteHost",
+    "link": "https://sitehost.nz/",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "https://sitehost.nz/blog/2017/ssl-what-you-need-to-know",
+    "plan": "",
+    "reviewed": "2022.09.16",
+    "note": ""
+  }
 ]
