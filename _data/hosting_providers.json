@@ -2712,7 +2712,7 @@
   {
     "name": "SiteHost",
     "link": "https://sitehost.nz/",
-    "category": "full",
+    "category": "partial",
     "tutorial": "",
     "announcement": "https://sitehost.nz/blog/2017/ssl-what-you-need-to-know",
     "plan": "",
