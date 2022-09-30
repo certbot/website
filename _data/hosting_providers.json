@@ -1,5 +1,15 @@
 [
   {
+    "name": "Snel.com",
+    "link": "https://snel.com/",
+    "category": "full",
+    "tutorial": "https://www.snel.com/support/lets-encrypt-on-debian-9-with-apache-webserver/",
+    "announcement": "https://www.snel.com/managed-servers/cloud-vps/",
+    "plan": "https://www.snel.com/support/lets-encrypt-ssl-on-directadmin/",
+    "reviewed": "2022.09.30",
+    "note": "Snel.com - Your friendly hosting provider""
+  },
+  {
     "name": "Site.nl",
     "link": "https://site.nl/",
     "category": "full",
