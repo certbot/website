@@ -1,5 +1,15 @@
 [
   {
+    "name": "Snel.com",
+    "link": "https://www.snel.com",
+    "category": "partial",
+    "tutorial": "https://www.snel.com/support/set-up-ssl-for-my-website/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2022.10.03",
+    "note": ""
+  },
+  {
     "name": "Site.nl",
     "link": "https://site.nl/",
     "category": "full",
