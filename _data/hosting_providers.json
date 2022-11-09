@@ -2,12 +2,12 @@
   {
     "name": "Snel.com",
     "link": "https://www.snel.com",
-    "category": "partial",
+    "category": "full",
     "tutorial": "https://www.snel.com/support/set-up-ssl-for-my-website/",
-    "announcement": "",
+    "announcement": "https://www.snel.com/webhosting/",
     "plan": "",
-    "reviewed": "2022.10.03",
-    "note": ""
+    "reviewed": "2022.11.09",
+    "note": "Free & automated SSL for all-in web hosting plans"
   },
   {
     "name": "Site.nl",
