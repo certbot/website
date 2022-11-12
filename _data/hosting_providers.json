@@ -1530,6 +1530,16 @@
     "note": ""
   },
   {
+    "name": "Porkbun",
+    "link": "https://porkbun.com/products/web_hosting",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://porkbun.com/products/ssl",
+    "plan": "",
+    "reviewed": "2022.11.12",
+    "note": "Let's Encrypt available on all plans and services"
+  },
+  {
     "name": "Professional Hosting",
     "link": "",
     "category": "partial",
