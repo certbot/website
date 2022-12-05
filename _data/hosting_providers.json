@@ -1,5 +1,15 @@
 [
   {
+    "name": "interhost.co.il",
+    "link": "https://www.interhost.co.il",
+    "category": "partial",
+    "tutorial": "https://interhost.co.il/ssl-installation/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2022.12.07",
+    "note": "Tier 1 Hosting Services & Network Solutions "
+  },
+  {
     "name": "Snel.com",
     "link": "https://www.snel.com",
     "category": "full",
