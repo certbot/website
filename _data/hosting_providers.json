@@ -2191,13 +2191,13 @@
   },
   {
     "name": "KnownHost",
-    "link": "",
-    "category": "partial",
+    "link": "https://www.knownhost.com",
+    "category": "full",
     "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "",
-    "note": "*Pending re-verification"
+    "announcement": "https://www.knownhost.com/kb/shared-reseller-hosting/#free_ssl",
+    "plan": "https://www.knownhost.com/web-hosting",
+    "reviewed": "2022.12.13",
+    "note": "Free & automated SSL for all-in web hosting plans"
   },
   {
     "name": "PlotHost",
