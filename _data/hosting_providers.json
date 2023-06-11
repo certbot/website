@@ -1,5 +1,15 @@
 [
   {
+    "name": "Avantiv",
+    "link": "https://avantiv.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://avantiv.com/hospedagem-de-sites/",
+    "reviewed": "2023.06.10",
+    "note": "Free SSL certificate for all web hosting plans"
+  },
+  {
     "name": "interhost.co.il",
     "link": "https://www.interhost.co.il",
     "category": "partial",
