@@ -1343,11 +1343,11 @@
     "name": "NearlyFreeSpeech.NET",
     "link": "https://www.nearlyfreespeech.net/",
     "category": "partial",
-    "tutorial": "https://members.nearlyfreespeech.net/faq?q=SSLCertificates#SSLCertificates",
+    "tutorial": "https://faq.nearlyfreespeech.net/section/ourservice/sslcertificates#sslcertificates",
     "announcement": "",
     "plan": "",
-    "reviewed": "2019.6.1",
-    "note": "You need to log in to access the tutorial."
+    "reviewed": "2023.9.1",
+    "note": ""
   },
   {
     "name": "Netsite",
