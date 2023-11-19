@@ -1,5 +1,15 @@
 [
   {
+    "name": "Viridio.net",
+    "link": "https://viridio.net",
+    "category": "partial",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://viridio.net/ssl-certificates/",
+    "reviewed": "2023.11.18",
+    "note": "Formerly AISO.net. Free Let's Encrypt SSL certificates, confusing interface."
+  },
+  {
     "name": "Avantiv",
     "link": "https://avantiv.com",
     "category": "full",
