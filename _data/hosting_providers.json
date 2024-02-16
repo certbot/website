@@ -1,4 +1,14 @@
 [
+   {
+    "name": "IABAI",
+    "link": "https://www.iab.ai",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.01.01",
+    "note": "Free SSL certificate for all web hosting plans"
+  },
   {
     "name": "Avantiv",
     "link": "https://avantiv.com",
