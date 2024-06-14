@@ -250,16 +250,6 @@
     "note": "All production and development environments include Let's Encrypt certificates automatically."
   },
   {
-    "name": "Pride Tech Design",
-    "link": "https://pridetechdesign.com/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "2019.5.31",
-    "note": ""
-  },
-  {
     "name": "Render",
     "link": "https://render.com/",
     "category": "full",
