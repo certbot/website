@@ -2778,5 +2778,15 @@
     "plan": "",
     "reviewed": "2022.10.17",
     "note": ""
+  },
+  {
+    "name": "Hoasted",
+    "link": "https://www.hoasted.com/",
+    "category": "partial",
+    "tutorial": "https://support.hoasted.com/article/101-ssl-met-lets-encrypt-certificaat",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.8.16",
+    "note": "This website is in Dutch."
   }
 ]
