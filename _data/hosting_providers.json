@@ -2789,4 +2789,15 @@
     "reviewed": "2024.8.16",
     "note": "This website is in Dutch."
   }
+   ,
+  {
+    "name": "MonoVM",
+    "link": "https://www.monovm.com/",
+    "category": "partial",
+    "tutorial": "https://monovm.com",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.11.24",
+    "note": "This website is in English."
+  }
 ]
