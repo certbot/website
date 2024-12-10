@@ -1342,12 +1342,12 @@
   {
     "name": "NearlyFreeSpeech.NET",
     "link": "https://www.nearlyfreespeech.net/",
-    "category": "partial",
-    "tutorial": "https://members.nearlyfreespeech.net/faq?q=SSLCertificates#SSLCertificates",
-    "announcement": "",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://members.nearlyfreespeech.net/faq?q=SSLCertificates#SSLCertificates",
     "plan": "",
-    "reviewed": "2019.6.1",
-    "note": "You need to log in to access the tutorial."
+    "reviewed": "2024.12.11",
+    "note": ""
   },
   {
     "name": "Netsite",
