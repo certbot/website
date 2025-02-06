@@ -10,6 +10,16 @@
     "note": "Free & automated SSL for all webhosting and domains"
     },
    {
+    "name": "Olvy Cloud",
+    "link": "https://olvy.net",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://olvy.net/ssl-certificates/",
+    "plan": "",
+    "reviewed": "2025.01.31",
+    "note": "Free SSL certificate for all web hosting plans"
+   },
+   {
     "name": "IABAI",
     "link": "https://www.iab.ai",
     "category": "full",
