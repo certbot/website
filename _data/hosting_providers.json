@@ -1520,6 +1520,16 @@
     "note": ""
   },
   {
+    "name": "Ouvaton",
+    "link": "https://ouvaton.coop/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://ouvaton.coop/certificat-ssl/",
+    "plan": "",
+    "reviewed": "2019.11.24",
+    "note": ""
+  },
+  {
     "name": "pair Networks",
     "link": "",
     "category": "partial",
