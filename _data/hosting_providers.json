@@ -2808,5 +2808,15 @@
     "plan": "",
     "reviewed": "2024.8.16",
     "note": "This website is in Dutch."
+  },
+  {
+    "name": "cdmon",
+    "link": "https://www.cdmon.com/es/",
+    "category": "full",
+    "tutorial": "https://www.cdmon.com/es/blog/comprender-la-seguridad-online-protocolos-ssl-y-tls",
+    "announcement": "",
+    "plan": "https://www.cdmon.com/es/seguridad-ssl",
+    "reviewed": "",
+    "note": "Free and automatic SSL included in all hosting plans."
   }
 ]
