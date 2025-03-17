@@ -2808,5 +2808,15 @@
     "plan": "",
     "reviewed": "2024.8.16",
     "note": "This website is in Dutch."
+  },
+  {
+    "name": "Framer",
+    "link": "https://www.framer.com/",
+    "category": "full",
+    "tutorial": "https://www.framer.com/help/articles/do-i-have-to-setup-ssl-when-adding-a-custom-domain-to-a-framer-project/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2025.03.17",
+    "note": ""
   }
 ]
