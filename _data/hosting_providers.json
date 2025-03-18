@@ -2813,8 +2813,8 @@
     "name": "Framer",
     "link": "https://www.framer.com/",
     "category": "full",
-    "tutorial": "https://www.framer.com/help/articles/do-i-have-to-setup-ssl-when-adding-a-custom-domain-to-a-framer-project/",
-    "announcement": "",
+    "tutorial": "",
+    "announcement": "https://www.framer.com/help/articles/do-i-have-to-setup-ssl-when-adding-a-custom-domain-to-a-framer-project/",
     "plan": "",
     "reviewed": "2025.03.17",
     "note": ""
