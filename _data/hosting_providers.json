@@ -2809,7 +2809,7 @@
     "reviewed": "2024.8.16",
     "note": "This website is in Dutch."
 },
-{
+  {
     "name": "Framer",
     "link": "https://www.framer.com/",
     "category": "full",
@@ -2829,4 +2829,5 @@
     "reviewed": "",
     "note": "Free and automatic SSL included in all hosting plans."
 }
+
 ]
