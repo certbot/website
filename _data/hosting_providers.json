@@ -2810,6 +2810,16 @@
     "note": "This website is in Dutch."
   },
   {
+    "name": "Framer",
+    "link": "https://www.framer.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.framer.com/help/articles/do-i-have-to-setup-ssl-when-adding-a-custom-domain-to-a-framer-project/",
+    "plan": "",
+    "reviewed": "2025.03.17",
+    "note": ""
+  },
+  {
     "name": "cdmon",
     "link": "https://www.cdmon.com/es/",
     "category": "full",
