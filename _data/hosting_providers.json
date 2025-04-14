@@ -2819,4 +2819,15 @@
     "reviewed": "2025.03.17",
     "note": ""
   }
+   ,
+  {
+    "name": "MonoVM",
+    "link": "https://www.monovm.com/",
+    "category": "partial",
+    "tutorial": "https://monovm.com",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.11.24",
+    "note": "This website is in English."
+  }
 ]
