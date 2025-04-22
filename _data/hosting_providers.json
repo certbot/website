@@ -2818,5 +2818,15 @@
     "plan": "",
     "reviewed": "2025.03.17",
     "note": ""
+  },
+  {
+    "name": "Hosterfy",
+    "link": "https://www.hosterfy.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.hosterfy.com/fr/hebergement-web-illimite-cpanel",
+    "plan": "",
+    "reviewed": "2025.04.22",
+    "note": "Free & automated SSL for all web hosting plans"
   }
 ]
