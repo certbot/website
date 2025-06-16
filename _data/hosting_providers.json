@@ -1393,7 +1393,7 @@
     "name": "NearlyFreeSpeech.NET",
     "link": "https://www.nearlyfreespeech.net/",
     "category": "full",
-    "tutorial": "",
+    "tutorial": "https://faq.nearlyfreespeech.net/section/ourservice/sslcertificates#sslcertificates",
     "announcement": "https://members.nearlyfreespeech.net/faq?q=SSLCertificates#SSLCertificates",
     "plan": "",
     "reviewed": "2024.12.11",
