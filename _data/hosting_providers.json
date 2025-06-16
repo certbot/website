@@ -1,4 +1,54 @@
 [
+{
+    "name": "Theory7",
+    "link": "https://www.theory7.net",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.theory7.net/webhosting/",
+    "reviewed": "2025.02.03",
+    "note": "Free & automated SSL for all webhosting and domains"
+    },
+   {
+    "name": "Olvy Cloud",
+    "link": "https://olvy.net",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://olvy.net/ssl-certificates/",
+    "plan": "",
+    "reviewed": "2025.01.31",
+    "note": "Free SSL certificate for all web hosting plans"
+   },
+   {
+    "name": "Namesilo",
+    "link": "https://www.namesilo.com",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.08.31",
+    "note": ""
+  },
+   {
+    "name": "IABAI",
+    "link": "https://www.iab.ai",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.01.01",
+    "note": "Free SSL certificate for all web hosting plans"
+  },
+  {
+    "name": "Viridio.net",
+    "link": "https://viridio.net",
+    "category": "partial",
+    "tutorial": "https://viridio.net/ssl-certificates/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2023.11.18",
+    "note": "Formerly AISO.net. Free Let's Encrypt SSL certificates, confusing interface."
+  },
   {
     "name": "Avantiv",
     "link": "https://avantiv.com",
@@ -120,6 +170,16 @@
     "note": ""
   },
   {
+    "name": "Esmero",
+    "link": "https://www.esmero.nl/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.esmero.nl/webhosting",
+    "plan": "",
+    "reviewed": "2024.6.14",
+    "note": "The website is in Dutch."
+  },
+  {
     "name": "EvergreenTech.io",
     "link": "https://evergreentech.io/",
     "category": "full",
@@ -238,16 +298,6 @@
     "plan": "https://docs.platform.sh/configuration/routes/https.html",
     "reviewed": "2020.02.03",
     "note": "All production and development environments include Let's Encrypt certificates automatically."
-  },
-  {
-    "name": "Pride Tech Design",
-    "link": "https://pridetechdesign.com/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "",
-    "plan": "",
-    "reviewed": "2019.5.31",
-    "note": ""
   },
   {
     "name": "Render",
@@ -1342,11 +1392,11 @@
   {
     "name": "NearlyFreeSpeech.NET",
     "link": "https://www.nearlyfreespeech.net/",
-    "category": "partial",
+    "category": "full",
     "tutorial": "https://faq.nearlyfreespeech.net/section/ourservice/sslcertificates#sslcertificates",
-    "announcement": "",
+    "announcement": "https://members.nearlyfreespeech.net/faq?q=SSLCertificates#SSLCertificates",
     "plan": "",
-    "reviewed": "2023.9.1",
+    "reviewed": "2024.12.11",
     "note": ""
   },
   {
@@ -2620,16 +2670,6 @@
     "note": "All plans come with Free Let's Encrypt automatically installed for Website and Mail"
   },
   {
-    "name": "Hartserver",
-    "link": "https://hartserver.net/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "https://twitter.com/hartserver/status/988699270780981248",
-    "plan": "",
-    "reviewed": "2021.10.08",
-    "note": "All free and paid hosting plans get Let's Encrypt certificates automatically installed as standard"
-  },
-  {
     "name": "UKFast",
     "link": "https://ukfast.co.uk/",
     "category": "no",
@@ -2778,5 +2818,35 @@
     "plan": "",
     "reviewed": "2022.10.17",
     "note": ""
+  },
+  {
+    "name": "Hoasted",
+    "link": "https://www.hoasted.com/",
+    "category": "partial",
+    "tutorial": "https://support.hoasted.com/article/101-ssl-met-lets-encrypt-certificaat",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.8.16",
+    "note": "This website is in Dutch."
+  },
+  {
+    "name": "Framer",
+    "link": "https://www.framer.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.framer.com/help/articles/do-i-have-to-setup-ssl-when-adding-a-custom-domain-to-a-framer-project/",
+    "plan": "",
+    "reviewed": "2025.03.17",
+    "note": ""
+  },
+  {
+    "name": "Hosterfy",
+    "link": "https://www.hosterfy.com/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://www.hosterfy.com/fr/hebergement-web-illimite-cpanel",
+    "plan": "",
+    "reviewed": "2025.04.22",
+    "note": "Free & automated SSL for all web hosting plans"
   }
 ]
