@@ -40,6 +40,16 @@
     "note": "Free SSL certificate for all web hosting plans"
   },
   {
+    "name": "Viridio.net",
+    "link": "https://viridio.net",
+    "category": "partial",
+    "tutorial": "https://viridio.net/ssl-certificates/",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2023.11.18",
+    "note": "Formerly AISO.net. Free Let's Encrypt SSL certificates, confusing interface."
+  },
+  {
     "name": "Avantiv",
     "link": "https://avantiv.com",
     "category": "full",
