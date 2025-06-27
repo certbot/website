@@ -1,0 +1,57 @@
+name: Add a Host
+description: Adds a new host to our Hosting Providers list
+title: "[New Host]: "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Name of host provider
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: "Usually a link to the provider's main page; it's where clicking on the name will go."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Coverage level for HTTPS support
+      options: 
+        - Full
+        - Partial
+        - No
+    validations:
+      required: true
+  - type: input
+    id: announcement
+    attributes:
+      label: Announcement
+      description: "Link for announcement"
+  - type: input
+    id: tutorial
+    attributes:
+      label: Tutorial
+      description: "Link for a tutorial"
+  - type: input
+    id: plan
+    attributes:
+      label: Plan
+      description: "Link for planned support"
+  - type: input
+    id: reviewed
+    attributes:
+      label: Reviewed
+      description: "Should be a date in format 2019.7.11"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Note
+      description: "Good for things like noting which products have https, or that the site is available only in certain languages. it's not meant for advertising."
+    validations:
+      required: true
