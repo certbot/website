@@ -30,6 +30,16 @@
     "note": ""
   },
    {
+    "name": "regfish",
+    "link": "https://regfish.de",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.11.05",
+    "note": "Free SSL certificates for all hosting plans"
+  },
+  {
     "name": "IABAI",
     "link": "https://www.iab.ai",
     "category": "full",
