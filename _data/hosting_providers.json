@@ -27,7 +27,7 @@
     "announcement": "",
     "plan": "",
     "reviewed": "2025.08.05",
-    "note": "see entry 'How can I activate my SSL'"
+    "note": "See entry 'How can I activate my SSL'"
   },
    {
     "name": "IABAI",
@@ -67,7 +67,7 @@
     "announcement": "",
     "plan": "",
     "reviewed": "2022.12.07",
-    "note": "Tier 1 Hosting Services & Network Solutions "
+    "note": "Tier 1 Hosting Services & Network Solutions"
   },
   {
     "name": "Snel.com",
@@ -1837,7 +1837,7 @@
     "announcement": "https://www.subsplash.com/websites",
     "plan": "",
     "reviewed": "2020.11.01",
-    "note": "Supports customers across the globe"
+    "note": ""
   },
   {
     "name": "snowflake Ops",
@@ -2507,7 +2507,7 @@
     "announcement": "https://blog.alwaysdata.com/2016/11/28/https-native-support-for-lets-encrypt/",
     "plan": "",
     "reviewed": "2020.01.07",
-    "note": "Available for all plans from free account to dedicated servers"
+    "note": ""
   },
   {
     "name": "Wikstrom Telephone Company (Wiktel)",
@@ -2567,7 +2567,7 @@
     "announcement": "https://www.canet.at/hosting-server/",
     "plan": "",
     "reviewed": "2020.03.26",
-    "note": "All plans come with Let's Encrypt for Web and Mail"
+    "note": ""
   },
   {
     "name": "Nuclear.Hosting",
@@ -2577,7 +2577,7 @@
     "announcement": "",
     "plan": "",
     "reviewed": "2020.04.01",
-    "note": "Available for all membership types, without any limitations."
+    "note": ""
   },
   {
     "name": "HahuCloud",
@@ -2587,7 +2587,7 @@
     "announcement": "",
     "plan": "",
     "reviewed": "2020.05.30",
-    "note": "Available for all membership types, without any limitations."
+    "note": ""
   },
   {
     "name": "Shellrent",
@@ -2617,7 +2617,7 @@
     "announcement": "https://conetix.com.au/blog/lets-encrypt-free-certificates-on-all-conetix-host/",
     "plan": "",
     "reviewed": "2020.09.16",
-    "note": "Let's Encrypt available on all plans and services for free since 2016."
+    "note": ""
   },
   {
     "name": "Firebase Hosting",
@@ -2667,7 +2667,7 @@
     "announcement": "https://www.clausweb.ro/blog/ce-este-un-certificat-ssl-si-la-ce-se-foloseste/",
     "plan": "",
     "reviewed": "2020.2.19",
-    "note": "All plans come with Free Let's Encrypt automatically installed for Website and Mail"
+    "note": ""
   },
   {
     "name": "UKFast",
