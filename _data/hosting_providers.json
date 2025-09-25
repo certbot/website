@@ -2849,4 +2849,15 @@
     "reviewed": "2025.04.22",
     "note": "Free & automated SSL for all web hosting plans"
   }
+   ,
+  {
+    "name": "MonoVM",
+    "link": "https://www.monovm.com/",
+    "category": "partial",
+    "tutorial": "https://monovm.com",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2024.11.24",
+    "note": "This website is in English."
+  }
 ]
