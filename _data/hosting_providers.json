@@ -1,5 +1,15 @@
 [
 {
+    "name": "Mayam.host",
+    "link": "https://mayam.host",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://mayam.host/hosting",
+    "plan": "",
+    "reviewed": "2026.01.09",
+    "note": "Free SSL for all webhosting plans"
+},
+{
     "name": "Neubox",
     "link": "https://www.neubox.com",
     "category": "full",
