@@ -2878,5 +2878,15 @@
     "plan": "",
     "reviewed": "2025.04.22",
     "note": "Free & automated SSL for all web hosting plans"
+  },
+  {
+    "name": "PythonAnywhere",
+    "link": "https://www.pythonanywhere.com",
+    "category": "partial",
+    "tutorial": "https://help.pythonanywhere.com/pages/HTTPSSetup",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2026.03.04",
+    "note": "Full HTTPS support is available for non-custom domains."
   }
 ]
