@@ -2877,6 +2877,6 @@
     "announcement": "",
     "plan": "",
     "reviewed": "2026.03.04",
-    "note": "Free SSL certificate for all hosted web apps."
+    "note": "Full HTTPS support is available for non-custom domains."
   }
 ]
