@@ -2872,7 +2872,7 @@
   {
     "name": "PythonAnywhere",
     "link": "https://www.pythonanywhere.com",
-    "category": "full",
+    "category": "partial",
     "tutorial": "https://help.pythonanywhere.com/pages/HTTPSSetup",
     "announcement": "",
     "plan": "",
