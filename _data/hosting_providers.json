@@ -2874,7 +2874,7 @@
     "link": "https://www.pythonanywhere.com",
     "category": "full",
     "tutorial": "https://help.pythonanywhere.com/pages/HTTPSSetup",
-    "announcement": "https://blog.pythonanywhere.com/173/",
+    "announcement": "",
     "plan": "",
     "reviewed": "2026.03.04",
     "note": "Free SSL certificate for all hosted web apps."
