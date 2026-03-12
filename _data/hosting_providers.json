@@ -250,6 +250,16 @@
     "note": ""
   },
   {
+    "name": "Klarned",
+    "link": "https://www.klarned.is/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "all (addon domains and staging subdomains)",
+    "reviewed": "",
+    "note": "Free SSL included with all web hosting plans for staging and addon domains. Automatically installed. No tech-knowledge needed."
+  },
+  {
     "name": "manitu",
     "link": "https://www.manitu.de/",
     "category": "full",
