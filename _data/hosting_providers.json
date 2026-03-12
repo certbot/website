@@ -257,7 +257,7 @@
     "announcement": "",
     "plan": "all (addon domains and staging subdomains)",
     "reviewed": "",
-    "note": "Free SSL included with all web hosting plans for staging and addon domains. Automatically installed. No tech-knowledge needed."
+    "note": "Free TLS included with all web hosting plans for staging and addon domains. Automatically installed. No tech-knowledge needed."
   },
   {
     "name": "manitu",
