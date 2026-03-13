@@ -254,8 +254,8 @@
     "link": "https://www.klarned.is/",
     "category": "full",
     "tutorial": "",
-    "announcement": "",
-    "plan": "all (addon domains and staging subdomains)",
+    "announcement": "https://www.klarned.is/extra-package-information/",
+    "plan": "",
     "reviewed": "",
     "note": "Free TLS included with all web hosting plans for staging and addon domains. Automatically installed. No tech-knowledge needed."
   },
