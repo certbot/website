@@ -22,4 +22,4 @@ If you notice information that’s out of date or incorrect, [submit a pull requ
     - `full` providers shouldn't need a tutorial to turn on https. an exception might include instructions of what to do if something goes wrong and the automatic https doesn't work.
 - If one provider offers multiple products, either split into two entries or note it in the `note` field.
 - The `note` field is good for things like noting which products have https, or that the site is available only in certain languages. it's not meant to advertise the hosting provider's site/offerings, or for a generic description like "offers free certificates."
-- All unused fields should be `""`
+- All unused fields should be an empty string: `""`
