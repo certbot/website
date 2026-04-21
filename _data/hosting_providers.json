@@ -2908,5 +2908,15 @@
     "plan": "",
     "reviewed": "2026.03.18",
     "note": ""
+  },
+  {
+    "name": "Hostpoint",
+    "link": "https://www.hostpoint.ch",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "https://support.hostpoint.ch/en/products/security/freessl/how-can-i-activate-freessl-for-my-website",
+    "plan": "",
+    "reviewed": "2026.04.21",
+    "note": "Since 2018 newly created websites have automatically full https support enabled."
   }
 ]
