@@ -2918,5 +2918,15 @@
     "plan": "",
     "reviewed": "2026.04.21",
     "note": ""
-  }
+  },
+  {
+    "name": "KaasHosting",
+    "link": "https://www.kaashosting.nl/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://www.kaashosting.nl/web-hosting",
+    "reviewed": "2026.04.22",
+    "note": "The website is in Dutch."
+  },
 ]
