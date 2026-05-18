@@ -262,11 +262,11 @@
   {
     "name": "manitu",
     "link": "https://www.manitu.de/",
-    "category": "full",
-    "tutorial": "",
-    "announcement": "https://twitter.com/manitu_de/status/854284891948806146",
+    "category": "partial",
+    "tutorial": "https://www.manitu.de/service/faq/entry/1101/Ich-moechte-meinen-Kunden-eine-sichere-Verbindung-per-SSL-anbieten-Wie-funktioniert-das/",
+    "announcement": "",
     "plan": "",
-    "reviewed": "2019.5.31",
+    "reviewed": "2026.5.5",
     "note": ""
   },
   {
