@@ -2928,5 +2928,15 @@
     "plan": "https://www.kaashosting.nl/web-hosting",
     "reviewed": "2026.04.22",
     "note": "The website is in Dutch."
+  },
+  {
+    "name": "Webnames.ca",
+    "link": "https://www.webnames.ca/",
+    "category": "partial",
+    "tutorial": "https://www.webnames.ca/help/hosting/Content/Resources/Articles/Hosting/Websites_and_Domains/Securing_Your_Websites/LetsEncrypt.htm",
+    "announcement": "",
+    "plan": "",
+    "reviewed": "2026.07.03",
+    "note": ""
   }
 ]
