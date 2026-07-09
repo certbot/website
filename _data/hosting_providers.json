@@ -69,6 +69,16 @@
     "reviewed": "2024.01.01",
     "note": "Free SSL certificate for all web hosting plans"
   },
+    {
+      "name": "iDatam",
+      "link": "https://www.idatam.com/", 
+      "category": "full", 
+      "tutorial": "https://www.idatam.com/tutorials/",
+      "announcement": "https://www.idatam.com/blogs/",
+      "plan": "",
+      "reviewed": "2026.07.09",
+      "note": "Top Tier Web Hosting Service"
+    },
   {
     "name": "Viridio.net",
     "link": "https://viridio.net",
