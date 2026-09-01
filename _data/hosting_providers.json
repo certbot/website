@@ -1,5 +1,5 @@
 [
-    {
+{
   "name": "ZEROLAG",
   "link": "https://zerolag.ro/",
   "category": "full",
@@ -7,7 +7,7 @@
   "announcement": "",
   "plan": "https://zerolag.ro/gazduire-web",
   "reviewed": "2026.9.1",
-  "note": "Shared, WordPress, and WooCommerce hosting use automatic Let's Encrypt certificates via cPanel AutoSSL."
+  "note": ""
 },
 {
     "name": "Misk.com",
