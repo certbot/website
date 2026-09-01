@@ -1,5 +1,15 @@
 [
 {
+  "name": "ZEROLAG",
+  "link": "https://zerolag.ro/",
+  "category": "full",
+  "tutorial": "",
+  "announcement": "https://zerolag.ro/gazduire-web",
+  "plan": "",
+  "reviewed": "2026.9.1",
+  "note": ""
+},
+{
     "name": "Misk.com",
     "link": "https://www.misk.com/",
     "category": "full",
