@@ -2948,5 +2948,14 @@
     "plan": "",
     "reviewed": "2026.07.03",
     "note": ""
-  }
+  },
+    {
+    "name": "Proton Mail",
+    "link": "https://proton.me/mail",
+    "category": "full",
+    "tutorial": "https://proton.me/business/mail/custom-email-domain": "",
+    "plan": "",
+    "reviewed": "2026.18.08",
+    "note": ""
+    }
 ]
