@@ -2958,5 +2958,15 @@
     "plan": "",
     "reviewed": "2026.9.30",
     "note": ""
+  },
+  {
+    "name": "Pethost",
+    "link": "https://pethost.dev/",
+    "category": "full",
+    "tutorial": "",
+    "announcement": "",
+    "plan": "https://pethost.dev/#faq",
+    "reviewed": "2026.10.25",
+    "note": ""
   }
 ]
